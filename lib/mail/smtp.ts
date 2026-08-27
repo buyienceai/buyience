@@ -110,6 +110,7 @@ export async function sendLeadNotification(opts: {
   }
 
   const to = env("MAIL_TO") || "hello@buyience.com";
+  const cc = env("MAIL_CC");
   const fromAddress = env("MAIL_FROM_ADDRESS") || "no-reply@buyience.com";
   const fromName = env("MAIL_FROM_NAME") || "Buyience";
   const label = FORM_LABELS[opts.formType];
@@ -142,6 +143,7 @@ export async function sendLeadNotification(opts: {
   await transport.sendMail({
     from: `"${fromName}" <${fromAddress}>`,
     to,
+    ...(cc ? { cc } : {}),
     replyTo: opts.email,
     subject: `[Buyience] ${label} — ${opts.email}`,
     text: textLines.join("\n"),

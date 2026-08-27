@@ -28,6 +28,7 @@ export default function RequestDemoPage() {
       lastName: String(data.get("lastName") ?? ""),
       email: String(data.get("email") ?? ""),
       company: String(data.get("company") ?? ""),
+      phone: String(data.get("phone") ?? ""),
       message: String(data.get("message") ?? ""),
       website2: "",
     });
@@ -118,6 +119,17 @@ export default function RequestDemoPage() {
                   required
                   name="company"
                   placeholder="e.g. Acme Distribution Inc."
+                  className="mt-1.5 w-full rounded-xl border border-[#D7D0EC] px-3 py-2.5 text-[16px] font-medium text-[#1B1033] placeholder:font-normal placeholder:text-[#9B90BA] outline-none focus:border-[#6E2CF4] focus:ring-2 focus:ring-[#6E2CF4]/20 sm:px-3.5 sm:text-[15px]"
+                />
+              </label>
+              <label className="mt-3 block text-left text-[13px] font-semibold text-[#1B1033] sm:mt-4 sm:text-sm">
+                Phone number <span className="req text-[#D14343]">*</span>
+                <input
+                  required
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="e.g. +1 (415) 555-0132"
                   className="mt-1.5 w-full rounded-xl border border-[#D7D0EC] px-3 py-2.5 text-[16px] font-medium text-[#1B1033] placeholder:font-normal placeholder:text-[#9B90BA] outline-none focus:border-[#6E2CF4] focus:ring-2 focus:ring-[#6E2CF4]/20 sm:px-3.5 sm:text-[15px]"
                 />
               </label>
