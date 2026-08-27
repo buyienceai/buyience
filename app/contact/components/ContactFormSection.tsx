@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import ThankYouDialog from "@/components/ThankYouDialog";
 import { submitLead } from "@/lib/leads/submit";
 
 interface ContactFormSectionProps {
@@ -19,9 +20,25 @@ export default function ContactFormSection({ selectedReason, onSelectReason }: C
 
   // Validation & Submission state
   const [errors, setErrors] = useState({ name: false, email: false, message: false });
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [thankYouOpen, setThankYouOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setCompany("");
+    setPhone("");
+    setMessage("");
+    setHoneypot("");
+    setErrors({ name: false, email: false, message: false });
+    setSubmitError(null);
+  };
+
+  const handleThankYouClose = () => {
+    setThankYouOpen(false);
+    resetForm();
+  };
 
   // Configuration for adaptative placeholder and hints based on contact reason
   const config: Record<
@@ -76,7 +93,7 @@ export default function ContactFormSection({ selectedReason, onSelectReason }: C
 
     // Spambot honeypot check (client soft-exit; server also soft-succeeds)
     if (honeypot) {
-      setIsSuccess(true);
+      setThankYouOpen(true);
       return;
     }
 
@@ -115,12 +132,8 @@ export default function ContactFormSection({ selectedReason, onSelectReason }: C
       return;
     }
 
-    setIsSuccess(true);
+    setThankYouOpen(true);
     setSubmitting(false);
-    const formContainer = document.getElementById("form");
-    if (formContainer) {
-      formContainer.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
   };
 
   return (
@@ -172,9 +185,8 @@ export default function ContactFormSection({ selectedReason, onSelectReason }: C
           </div>
         </div>
 
-        {/* Right Column: Form card / Success Screen */}
+        {/* Right Column: Form card */}
         <div className="card">
-          {!isSuccess ? (
             <form onSubmit={handleSubmit} noValidate>
               <p className="card-h">Send us a message</p>
               <p className="card-sub">One form, routed to the right person.</p>
@@ -307,18 +319,14 @@ export default function ContactFormSection({ selectedReason, onSelectReason }: C
                 <p className="fine">We&apos;ll only use your details to reply to you.</p>
               </div>
             </form>
-          ) : (
-            <div className="success show" role="status">
-              <div className="tick">✓</div>
-              <h3>Message sent.</h3>
-              <p id="successMsg">{currentConfig.done}</p>
-              <span className="eta" id="successEta">
-                {currentConfig.eta}
-              </span>
-            </div>
-          )}
         </div>
       </div>
+      <ThankYouDialog
+        open={thankYouOpen}
+        onClose={handleThankYouClose}
+        title="Thank you!"
+        message={currentConfig.done}
+      />
     </section>
   );
 }

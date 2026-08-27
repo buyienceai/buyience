@@ -30,7 +30,7 @@ export default function HomeFAQ({ purple = false }: { purple?: boolean }) {
     },
     {
       q: "What does it cost?",
-      a: `Founder-launch pricing locks you in at ${format(prices.growMonthly)}/mo before standard pricing rises to $249 — simple and transparent, with no hidden fees. You can start a free trial today and upgrade when you are ready.`,
+      a: `Founder-launch pricing locks you in at ${format(prices.growMonthly)}/mo before standard pricing rises to ${format(prices.growStandard)} — simple and transparent, with no hidden fees. You can start a free trial today and upgrade when you are ready.`,
     },
   ];
 

@@ -95,7 +95,7 @@ export default function PricingHero({
             <b>Founders Launch Pricing</b>
             <p>
               60% off for life — {formatMoney(prices.growMonthly, currency)}/mo instead of the standard{" "}
-              <b>$249/mo</b>. Your rate never rises while your subscription is active.
+              <b>{formatMoney(prices.growStandard, currency)}/mo</b>. Your rate never rises while your subscription is active.
             </p>
           </div>
           <div

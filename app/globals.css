@@ -3766,8 +3766,10 @@ a.nav-btn-outline-block {
 
 .integrations-page .container {
   max-width: var(--w-max);
+  width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+  box-sizing: border-box;
 }
 
 .integrations-page section {
@@ -4126,6 +4128,9 @@ a.nav-btn-outline-block {
   .integrations-page .dir-layout {
     grid-template-columns: 1fr;
     gap: 20px;
+    /* Pills row is wider than the viewport; without min-width:0 the
+       grid item expands the whole page and clips search + cards. */
+    min-width: 0;
   }
 }
 
@@ -4137,6 +4142,13 @@ a.nav-btn-outline-block {
 @media(max-width:900px) {
   .integrations-page .dir-side {
     position: static;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .integrations-page .dir-main {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
@@ -4210,6 +4222,7 @@ a.nav-btn-outline-block {
     flex-direction: row;
     overflow-x: auto;
     flex-wrap: nowrap;
+    max-width: 100%;
     padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -4256,10 +4269,14 @@ a.nav-btn-outline-block {
 .integrations-page .search {
   position: relative;
   margin-bottom: 20px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .integrations-page .search input {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--ink);
@@ -4288,6 +4305,8 @@ a.nav-btn-outline-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  width: 100%;
+  min-width: 0;
 }
 
 @media(max-width:960px) {
@@ -4299,6 +4318,7 @@ a.nav-btn-outline-block {
 @media(max-width:620px) {
   .integrations-page .dir .grid {
     grid-template-columns: 1fr;
+    min-width: 0;
   }
 }
 
@@ -4311,6 +4331,8 @@ a.nav-btn-outline-block {
   flex-direction: column;
   gap: 12px;
   position: relative;
+  min-width: 0;
+  max-width: 100%;
   transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
 
@@ -4381,6 +4403,10 @@ a.nav-btn-outline-block {
   color: var(--ink-soft);
 }
 
+.integrations-page .int-name {
+  min-width: 0;
+}
+
 .integrations-page .int-name b {
   display: block;
   font-size: 15.5px;
@@ -4399,6 +4425,8 @@ a.nav-btn-outline-block {
   font-size: 13.5px;
   color: var(--muted);
   flex: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .integrations-page .int-status {
@@ -4485,6 +4513,8 @@ a.nav-btn-outline-block {
   border: 1px solid #2A1F5C;
   border-radius: 8px;
   padding: 9px 12px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .integrations-page .byo-card.req {

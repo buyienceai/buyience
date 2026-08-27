@@ -1,16 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useRef, useState } from "react";
 import MarketingLayout from "@/components/MarketingLayout";
 import SectionCapsule from "@/components/SectionCapsule";
 import Button from "@/components/Button";
+import ThankYouDialog from "@/components/ThankYouDialog";
 import { submitLead } from "@/lib/leads/submit";
 
 export default function RequestDemoPage() {
-  const router = useRouter();
+  const formRef = useRef<HTMLFormElement>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [thankYouOpen, setThankYouOpen] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,7 +38,14 @@ export default function RequestDemoPage() {
       return;
     }
 
-    router.push("/thank-you");
+    setSubmitting(false);
+    setThankYouOpen(true);
+  }
+
+  function handleThankYouClose() {
+    setThankYouOpen(false);
+    formRef.current?.reset();
+    setSubmitError(null);
   }
 
   return (
@@ -70,6 +78,7 @@ export default function RequestDemoPage() {
             </div>
 
             <form
+              ref={formRef}
               onSubmit={handleSubmit}
               className="rounded-2xl border border-[#E8E4F4] bg-white p-4 shadow-[0_12px_40px_rgba(23,18,65,0.08)] sm:rounded-3xl sm:p-6 md:p-8"
             >
@@ -141,6 +150,12 @@ export default function RequestDemoPage() {
             </form>
           </div>
         </section>
+      <ThankYouDialog
+        open={thankYouOpen}
+        onClose={handleThankYouClose}
+        title="Thank you!"
+        message="We've received your demo request and will be in touch shortly."
+      />
     </MarketingLayout>
   );
 }

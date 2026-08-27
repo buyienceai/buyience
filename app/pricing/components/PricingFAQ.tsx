@@ -29,7 +29,7 @@ export default function PricingFAQ() {
     },
     {
       q: "What does \"lock in for life\" mean?",
-      a: `Founder-launch customers keep today's ${format(prices.growMonthly)}/mo price for as long as their subscription remains active — when standard pricing rises to $249/mo, your rate doesn't change.`,
+      a: `Founder-launch customers keep today's ${format(prices.growMonthly)}/mo price for as long as their subscription remains active — when standard pricing rises to ${format(prices.growStandard)}/mo, your rate doesn't change.`,
     },
   ];
 

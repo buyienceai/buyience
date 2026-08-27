@@ -88,6 +88,8 @@ export function formatMoney(
 
 export type PlanPrices = {
   growMonthly: number;
+  /** Post–founder-launch Grow list price (e.g. announcement “rises to”). */
+  growStandard: number;
   growAnnual: number;
   growWas: number;
   growSave: number;
@@ -105,6 +107,7 @@ export type PlanPrices = {
 const PRICES: Record<CurrencyCode, PlanPrices> = {
   USD: {
     growMonthly: 99,
+    growStandard: 249,
     growAnnual: 990,
     growWas: 1188,
     growSave: 198,
@@ -120,6 +123,7 @@ const PRICES: Record<CurrencyCode, PlanPrices> = {
   },
   GBP: {
     growMonthly: 79,
+    growStandard: 199,
     growAnnual: 790,
     growWas: 948,
     growSave: 158,
@@ -135,6 +139,7 @@ const PRICES: Record<CurrencyCode, PlanPrices> = {
   },
   EUR: {
     growMonthly: 89,
+    growStandard: 229,
     growAnnual: 890,
     growWas: 1068,
     growSave: 178,
@@ -150,6 +155,7 @@ const PRICES: Record<CurrencyCode, PlanPrices> = {
   },
   INR: {
     growMonthly: 5999,
+    growStandard: 14999,
     growAnnual: 59990,
     growWas: 71988,
     growSave: 11998,
