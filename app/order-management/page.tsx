@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { isSeoIndexingEnabled, pageMetadata } from "@/lib/seo";
 import OrderManagementPageContent from "./OrderManagementPageContent";
 import { orderManagementFaqJsonLd } from "./data/faqs";
 
@@ -12,14 +12,16 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function OrderManagementPage() {
-  const jsonLd = orderManagementFaqJsonLd();
+  const jsonLd = isSeoIndexingEnabled() ? orderManagementFaqJsonLd() : null;
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ) : null}
       <OrderManagementPageContent />
     </>
   );

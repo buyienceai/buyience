@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Manrope, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import { CurrencyProvider } from "@/components/CurrencyProvider";
-import { getSiteUrl } from "@/lib/seo";
+import { getSiteUrl, isSeoIndexingEnabled, seoRobots } from "@/lib/seo";
 import "./globals.css";
 
 const GTM_ID = "GTM-KMWGZ8VH";
@@ -28,6 +28,8 @@ const defaultTitle = "B2B Commerce Platform with AI Quoting | Buyience Nova Core
 const defaultDescription =
   "AI-powered B2B commerce platform for wholesalers & distributors. Customer-specific pricing, real-time inventory, and quote generation. Launch in days.";
 
+const seoEnabled = isSeoIndexingEnabled();
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
@@ -35,20 +37,19 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: defaultDescription,
-  verification: {
-    google: "HT1ZDn2e00LbZe1Aq9wW2iYNu9Y3MN6kkhDZMz5N5RE",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    "max-snippet": -1,
-    "max-video-preview": -1,
-    "max-image-preview": "large",
-  },
+  // Search Console verification only on the indexed production host.
+  ...(seoEnabled
+    ? {
+        verification: {
+          google: "HT1ZDn2e00LbZe1Aq9wW2iYNu9Y3MN6kkhDZMz5N5RE",
+        },
+      }
+    : {}),
+  robots: seoRobots(),
   openGraph: {
     title: defaultTitle,
     description: defaultDescription,
-    url: "/",
+    ...(seoEnabled ? { url: "/" } : {}),
     siteName: "Buyience",
     type: "website",
     images: [{ url: "/og.png" }],

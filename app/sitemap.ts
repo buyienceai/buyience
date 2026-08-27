@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/app/blog/lib/posts";
-import { getSiteUrl } from "@/lib/seo";
+import { getSiteUrl, isSeoIndexingEnabled } from "@/lib/seo";
 
 const STATIC_ROUTES = [
   "/",
@@ -36,6 +36,9 @@ const STATIC_ROUTES = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Stage / preview: empty sitemap so crawlers get nothing useful.
+  if (!isSeoIndexingEnabled()) return [];
+
   const siteUrl = getSiteUrl();
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((path) => ({

@@ -25,6 +25,14 @@ Four forms POST to Next.js API routes that store rows in Neon Postgres (via Driz
 | `/become-a-solution-partner` | `POST /api/leads/solution-partner` |
 | `/become-a-technology-partner` | `POST /api/leads/technology-partner` |
 
+### SEO indexing (production only)
+
+Crawl/index signals (robots allow, sitemap, Google verification, JSON-LD) are **off by default**.
+
+Set `SEO_INDEXING=true` only on the real production Vercel environment (e.g. `buyience.com`). Leave it unset on Preview / stage ([buyience.vercel.app](https://buyience.vercel.app/)) so those deploys stay `noindex` and serve an empty sitemap.
+
+Optional: set `NEXT_PUBLIC_SITE_URL=https://buyience.com` on production for stable canonicals.
+
 ### Environment variables
 
 Copy [`.env.example`](.env.example) to `.env.local`:

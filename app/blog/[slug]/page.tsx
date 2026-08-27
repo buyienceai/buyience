@@ -6,7 +6,7 @@ import BlogArticleContent from "../components/BlogArticleContent";
 import BlogAuthor from "../components/BlogAuthor";
 import BlogNavigation from "../components/BlogNavigation";
 import RelatedPosts from "../components/RelatedPosts";
-import { getSiteUrl } from "@/lib/seo";
+import { getSiteUrl, isSeoIndexingEnabled, seoRobots } from "@/lib/seo";
 import {
   getAdjacentPosts,
   getAllPosts,
@@ -29,14 +29,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return { title: "Blog" };
 
   const url = `/blog/${post.slug}`;
+  const indexing = isSeoIndexingEnabled();
   return {
     title: { absolute: post.title },
     description: post.description,
-    alternates: { canonical: url },
+    robots: seoRobots(),
+    ...(indexing ? { alternates: { canonical: url } } : {}),
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url,
+      ...(indexing ? { url } : {}),
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.authorName],
@@ -61,27 +63,29 @@ export default async function BlogPostPage({ params }: PageProps) {
   const related = getRelatedPosts(slug, 3);
 
   const siteUrl = getSiteUrl();
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.description,
-    image: post.coverImage,
-    datePublished: post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post.authorName,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Buyience",
-      url: siteUrl,
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${siteUrl}/blog/${post.slug}`,
-    },
-  };
+  const jsonLd = isSeoIndexingEnabled()
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        image: post.coverImage,
+        datePublished: post.publishedAt,
+        author: {
+          "@type": "Person",
+          name: post.authorName,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Buyience",
+          url: siteUrl,
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/blog/${post.slug}`,
+        },
+      }
+    : null;
 
   return (
     <MarketingLayout
@@ -103,10 +107,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         },
       }}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ) : null}
       <article className="blog-article">
         <div className="container blog-article-inner">
           <BlogArticleHeader post={post} />
