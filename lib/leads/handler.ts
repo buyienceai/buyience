@@ -3,6 +3,7 @@ import "server-only";
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
 import { leadSubmissions } from "@/lib/db/schema";
+import { sendLeadNotification } from "@/lib/mail/smtp";
 import { LEAD_PATH_TO_FORM_TYPE, type LeadPath, validateLead } from "./validate";
 
 function clientMeta(request: Request) {
@@ -62,11 +63,12 @@ export async function handleLeadPost(path: LeadPath, request: Request) {
 
   try {
     const { ip, userAgent } = clientMeta(request);
+    const formType = LEAD_PATH_TO_FORM_TYPE[path];
     const db = getDb();
     const [row] = await db
       .insert(leadSubmissions)
       .values({
-        formType: LEAD_PATH_TO_FORM_TYPE[path],
+        formType,
         email: validated.email,
         payload: validated.payload,
         honeypotTriggered: false,
@@ -74,6 +76,18 @@ export async function handleLeadPost(path: LeadPath, request: Request) {
         userAgent,
       })
       .returning({ id: leadSubmissions.id });
+
+    try {
+      await sendLeadNotification({
+        formType,
+        email: validated.email,
+        payload: validated.payload,
+        submissionId: row.id,
+      });
+    } catch (mailErr) {
+      // Lead is already saved — don't fail the request if SMTP is down
+      console.error(`[leads/${path}] mail notification failed`, mailErr);
+    }
 
     return NextResponse.json({ ok: true, id: row.id });
   } catch (err) {

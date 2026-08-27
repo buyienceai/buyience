@@ -35,7 +35,7 @@ Buyience helps B2B sellers replace spreadsheets and email with a single system w
 
 ## Company
 
-- [About](https://buyience.com/about): Company story, mission, founders (Girish — Founder & CEO; Jordian — Co-founder), company facts, and values.
+- [About](https://buyience.com/about): Company story, mission, founders (Girish K. Laathar — Co-founder; Jordian Farahani — Co-founder), and values.
 - [Contact](https://buyience.com/contact): Contact/sales inquiry page.
 - [Request a Demo](https://buyience.com/request-a-demo): Book a product demo.
 - [Blog](https://buyience.com/blog): Articles on B2B commerce, quoting, and industry topics.
