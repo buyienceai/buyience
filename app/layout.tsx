@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Manrope, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import { CurrencyProvider } from "@/components/CurrencyProvider";
 import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
+
+const GTM_ID = "GTM-KMWGZ8VH";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -32,6 +35,9 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: defaultDescription,
+  verification: {
+    google: "HT1ZDn2e00LbZe1Aq9wW2iYNu9Y3MN6kkhDZMz5N5RE",
+  },
   robots: {
     index: true,
     follow: true,
@@ -69,7 +75,27 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${bricolage.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm" strategy="beforeInteractive">{`
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');
+        `}</Script>
+      </head>
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <CurrencyProvider>{children}</CurrencyProvider>
       </body>
     </html>
