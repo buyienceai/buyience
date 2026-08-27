@@ -1,0 +1,64 @@
+# Buyience
+
+> Buyience builds Nova Core, an AI-powered, API-first B2B commerce platform for wholesalers, distributors, and manufacturers. It unifies an AI Quote Engine, CPQ product configurator, a real-time Digital Sales Room for negotiation, order management, multi-warehouse inventory, and supplier management on one database, one price book, and one API — built on MACH (Microservices, API-first, Cloud-native, Headless) architecture. 
+
+Buyience helps B2B sellers replace spreadsheets and email with a single system where quoting, negotiation, ordering, inventory, and supplier workflows all resolve the same customer data, pricing rules, and stock levels. Founded in UK, Buyience helps wholesalers and distributors modernize commerce with AI-powered tools.
+
+
+## Platform
+
+- [Homepage](https://buyience.com/): Product overview, AI Quote Engine demo, core capabilities, and FAQ.
+- [Nova Core](https://buyience.com/nova-core): The platform itself — how the six modules (Quote Engine, CPQ, Sales Room, Orders, Inventory, Suppliers) share one core, onboarding timeline, and platform FAQ.
+- [Platform Overview](https://buyience.com/platform-overview): Summary of the unified B2B commerce suite and its modules.
+- [MACH Architecture](https://buyience.com/mach-architecture): Technical architecture — microservices, API-first design, cloud-native infrastructure, headless frontend.
+- [Solutions](https://buyience.com/solutions): Use-case and industry breakdown (manufacturers, wholesalers/distributors, multi-brand operators) with links into each platform module.
+
+## Core Modules & Capabilities
+
+- [AI Quote Engine](https://buyience.com/ai-quote-engine): AI-generated, margin-protected quotes with win-probability scoring, priced against customer history and live margin floors.
+- [CPQ Configurator](https://buyience.com/cpq-configurator): Product configurator for complex/configurable products with automatic bill-of-materials (BOM) generation and conflict resolution.
+- [Digital Sales Room](https://buyience.com/digital-sales-room): Real-time, WebSocket-powered negotiation room replacing email back-and-forth, with live margin visibility.
+- [Order Management](https://buyience.com/order-management): Quote-to-order conversion, approval workflows, Net 30/60/90 payment terms, and order tracking.
+- [Inventory Management](https://buyience.com/inventory-management): Multi-warehouse, real-time stock visibility, allocation, and transfer orders.
+- [Supplier Management](https://buyience.com/supplier-management): Supplier onboarding, purchase orders, approval workflows, and compliance tracking.
+- [Pricing & Margin Control](https://buyience.com/pricing-and-margin-control): How contract rates, tiered/volume pricing, and margin floors resolve consistently across quotes, negotiations, and the storefront.
+- [B2B Storefront](https://buyience.com/b2b-storefront): Self-service buyer portal with customer-specific pricing, order history, and 24/7 ordering.
+
+## Integrations
+
+- [Integrations](https://buyience.com/integrations): Full list of supported integrations (Shopify, WooCommerce, Stripe, Razorpay, PayPal, Klaviyo, Brevo, Shiprocket, GA4, Google Ads, and more).
+- [WordPress / WooCommerce Plugin](https://buyience.com/wordpress-plugin-buyience-novacore-b2b-quote-engine): Native plugin that adds B2B ordering, pricing, and the AI Quote Engine to an existing WooCommerce store without migration.
+
+## Pricing
+
+- [Pricing](https://buyience.com/pricing): Plan tiers (Grow, Pro, Enterprise), founder-launch pricing, feature/limit comparison table, add-ons, and pricing FAQ.
+
+## Company
+
+- [About](https://buyience.com/about): Company story, mission, founders (Girish — Founder & CEO; Jordian — Co-founder), company facts, and values.
+- [Contact](https://buyience.com/contact): Contact/sales inquiry page.
+- [Request a Demo](https://buyience.com/request-a-demo): Book a product demo.
+- [Blog](https://buyience.com/blog): Articles on B2B commerce, quoting, and industry topics.
+
+## Partners
+
+- [Become a Solution Partner](https://buyience.com/become-a-solution-partner): Partner program for implementation/solution partners.
+- [Become a Technology Partner](https://buyience.com/become-a-technology-partner): Partner program for technology/integration partners.
+
+## Application
+
+- [Start Free Trial / Sign Up](https://app.buyience.com/register): Create a Buyience account (14-day free trial, no card required).
+- [Login](https://app.buyience.com/login): Sign in to an existing Buyience account.
+
+## Legal
+
+- [Terms & Conditions](https://buyience.com/terms-and-conditions)
+- [Privacy Policy](https://buyience.com/privacy-policy)
+- [Refund Policy](https://buyience.com/refund-policy)
+
+## Optional
+ 
+- [LinkedIn](https://www.linkedin.com/company/buyience): Company updates and posts.
+- [X / Twitter](https://x.com/buyience): Company updates and posts.
+
+ 
