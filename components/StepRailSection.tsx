@@ -25,7 +25,10 @@ export interface StepRailStep {
 
 export interface StepRailSectionProps {
   eyebrow?: string;
-  heading: string;
+  heading: React.ReactNode;
+  /** Accessible name for the step list when `heading` is not plain text */
+  headingLabel?: string;
+  headingClassName?: string;
   lede?: string;
   steps: StepRailStep[];
   /** Sitewide alternating-section-background rule */
@@ -56,12 +59,15 @@ export interface StepRailSectionProps {
 export default function StepRailSection({
   eyebrow = "HOW IT WORKS",
   heading,
+  headingLabel,
+  headingClassName,
   lede,
   steps,
   purple = false,
 }: StepRailSectionProps) {
   const reduceMotion = useReducedMotion();
   const colCount = steps.length;
+  const listLabel = headingLabel ?? (typeof heading === "string" ? heading : undefined);
 
   return (
     <section className={`how ${purple ? "bg-(--surface)" : ""}`.trim()}>
@@ -74,14 +80,14 @@ export default function StepRailSection({
           className="center-head"
         >
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-          <h2>{heading}</h2>
+          <h2 className={headingClassName}>{heading}</h2>
           {lede && <p className="lede">{lede}</p>}
         </motion.div>
 
         <ol
           className="relative mx-auto mt-14 grid w-full max-w-280 list-none grid-cols-1 gap-8 p-0 max-md:pl-1 md:mt-16 md:gap-0 md:[grid-template-columns:repeat(var(--step-cols),minmax(0,1fr))]"
           style={{ ["--step-cols" as string]: colCount } as React.CSSProperties}
-          aria-label={heading}
+          aria-label={listLabel}
         >
           {/* Mobile: vertical fill track — left offset centers on size-12 icons (+ max-md:pl-1) */}
           <div

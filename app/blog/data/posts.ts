@@ -25,6 +25,132 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
+    title: "Managing Custom and Bulk Orders for Corporate Gift Programs",
+    description:
+      "How to run custom and bulk corporate gift orders without losing details between quote and fulfillment \u2014 order intake, approvals, proofing, and multi-recipient shipping.",
+    excerpt:
+      "Corporate gift programs fail operationally in a specific, predictable place: the handoff between what was agreed during the sale and what actually gets produced and shipped. Custom specifications live in email threads, recipient lists arrive as loose spreadsheets, and proofing happens informally. The fix is treating custom requirements as structured order data rather than conversational context \u2014 captured once, at intake, and visible to everyone downstream.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-09-09",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/managing-custom-and-bulk-orders-for-corporate-gift-programs.png",
+    coverImageAlt: "Custom and bulk order management for corporate gift programs",
+  },
+  {
+    slug: "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead",
+    title: "Why Corporate Gifting Companies Outgrow Shopify (and What to Use Instead)",
+    description:
+      "Shopify works well for corporate gifting companies at low volume. Here's exactly where it starts to break as bulk quoting, custom orders, and B2B accounts grow \u2014 and what to look for instead.",
+    excerpt:
+      "Shopify is a genuinely good starting point for a corporate gifting business \u2014 fast to launch, easy to run, well-documented. The problem isn't Shopify itself; it's that it was built for consumer checkout, not B2B quoting, bulk pricing, and account-based ordering. Most gifting companies feel the mismatch first in quoting speed and pricing consistency, then in order and fulfillment complexity as B2B accounts grow. This post covers exactly where that mismatch shows up and what a purpose-built B2B alternative needs to handle instead.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-09-02",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead.png",
+    coverImageAlt: "Shopify alternative for corporate gifting companies",
+  },
+  {
+    slug: "b2b-corporate-gifting-at-scale-quoting-bulk-pricing-and-order-management",
+    title: "B2B Corporate Gifting at Scale: Quoting, Bulk Pricing, and Order Management",
+    description:
+      "How corporate gifting companies can scale past manual quoting and spreadsheet order management \u2014 bulk pricing, custom orders, and fulfillment that holds up under volume.",
+    excerpt:
+      "Corporate gifting businesses hit a specific wall as they grow \u2014 the same tools that worked for a handful of custom orders a month can't handle bulk quoting, tiered pricing, and fulfillment coordination for hundreds of orders at once. The fix isn't working harder inside a spreadsheet; it's a system built for bulk B2B quoting, customizable order rules, and inventory that stays accurate under volume. This guide covers where corporate gifting operations typically break, and what to build instead.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-08-26",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/b2b-corporate-gifting-at-scale-quoting-bulk-pricing-and-order-management.png",
+    coverImageAlt: "Corporate gifting quoting, bulk pricing, and order management",
+  },
+  {
+    slug: "industrial-supply-distributors-moving-from-phone-email-orders-to-self-service",
+    title: "Industrial Supply Distributors: Moving From Phone/Email Orders to Self-Service",
+    description:
+      "A practical guide for industrial and fastener distributors moving from phone and email ordering to a self-service B2B portal \u2014 without alienating your existing customers.",
+    excerpt:
+      "Phone and email ordering has been the default in fastener and industrial distribution for decades, and it works \u2014 until order volume grows past what a team can handle personally without delay or error. Moving to self-service doesn't mean removing the relationship or the phone line; it means giving customers who want to reorder a known SKU in thirty seconds the ability to do that, while keeping people available for the orders that genuinely need a conversation. This guide covers how to make that transition without disrupting the accounts that value the personal touch.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-08-19",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/industrial-supply-distributors-moving-from-phone-email-orders-to-self-service.png",
+    coverImageAlt: "Self-service ordering for industrial supply distributors",
+  },
+  {
+    slug: "how-to-price-fasteners-and-mro-parts-for-repeat-b2b-buyers",
+    title: "How to Price Fasteners and MRO Parts for Repeat B2B Buyers",
+    description:
+      "A practical framework for pricing fasteners and MRO parts for repeat B2B buyers \u2014 rewarding loyalty without eroding margin or losing pricing consistency.",
+    excerpt:
+      "Repeat buyers are the backbone of fastener and MRO distribution, and most distributors intuitively price them differently than new accounts \u2014 usually just not consistently or deliberately. The fix isn't a single \"loyal customer discount.\" It's a structured approach that separates what a repeat relationship is actually worth from what a single large order is worth, and prices each factor on its own terms rather than blending them into a gut-feel number.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-08-12",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/how-to-price-fasteners-and-mro-parts-for-repeat-b2b-buyers.png",
+    coverImageAlt: "Pricing fasteners and MRO parts for repeat B2B buyers",
+  },
+  {
+    slug: "quote-turnaround-time-the-metric-fastener-distributors-ignore",
+    title: "Quote Turnaround Time: The Metric Fastener Distributors Ignore",
+    description:
+      "Quote turnaround time is one of the biggest hidden drivers of win rate for fastener and MRO distributors. Here's how to measure it, benchmark it, and actually improve it.",
+    excerpt:
+      "Most fastener and MRO distributors track win rate, average order value, and revenue per rep \u2014 but rarely track how long it actually takes to get a quote out the door. That's a gap, because quote turnaround time is one of the few metrics that directly predicts win rate in competitive, time-sensitive B2B buying situations. This post covers how to measure it properly, what a reasonable benchmark looks like, and where the time actually goes.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-08-05",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/quote-turnaround-time-the-metric-fastener-distributors-ignore.png",
+    coverImageAlt: "Quote turnaround time for fastener distributors",
+  },
+  {
+    slug: "volume-discount-structures-that-actually-protect-your-margin",
+    title: "Volume Discount Structures That Actually Protect Your Margin",
+    description:
+      "How to design volume discount pricing for fastener and MRO distribution that wins bigger orders without quietly eroding margin \u2014 a practical framework.",
+    excerpt:
+      "Volume discounts are supposed to trade lower unit price for higher order size \u2014 a fair exchange when it's modeled correctly. The failure mode isn't offering volume discounts; it's setting break points and discount depths without checking them against actual cost structure and margin floor, which turns a growth lever into a slow margin leak. This guide covers how to build volume discount tiers that hold up under real negotiation pressure.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-07-29",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/volume-discount-structures-that-actually-protect-your-margin.png",
+    coverImageAlt: "Volume discount pricing that protects B2B margin",
+  },
+  {
     slug: "tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide",
     title: "Tiered Pricing for Fastener & MRO Distributors: A Practical Setup Guide",
     description:

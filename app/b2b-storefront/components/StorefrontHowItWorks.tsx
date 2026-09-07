@@ -37,6 +37,7 @@ export default function StorefrontHowItWorks({ purple = false }: { purple?: bool
     <StepRailSection
       eyebrow="HOW IT WORKS"
       heading="From sign-up to live in four steps."
+      headingClassName="max-md:whitespace-normal whitespace-nowrap"
       lede="No complex implementation, no consultants. Most businesses go live in days."
       steps={steps}
       purple={purple}

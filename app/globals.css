@@ -20795,6 +20795,16 @@ a.nav-btn-outline-block {
   margin-top: 12px;
 }
 
+.storefront-page .how .center-head {
+  max-width: min(100%, 56rem);
+}
+
+.storefront-page .how .center-head .lede {
+  max-width: var(--w-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .storefront-page .lede {
   color: var(--muted);
   line-height: 1.7;
