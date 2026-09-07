@@ -17782,6 +17782,7 @@ a.nav-btn-outline-block {
   .supplier-page .eyebrow,
   .sales-room-page .eyebrow,
   .order-management-page .eyebrow,
+  .storefront-page .eyebrow,
   .packaging-page .eyebrow,
   .gifting-page .eyebrow,
   .integrations-page .eyebrow,
@@ -20643,4 +20644,7 @@ a.nav-btn-outline-block {
     font-size: 15.5px;
     line-height: 1.6;
   }
+}
+.storefront-page .sf-callout-section {
+  padding-top: 8px;
 }
