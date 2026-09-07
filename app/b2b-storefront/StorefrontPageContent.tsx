@@ -10,7 +10,6 @@ import StorefrontDivesSection from "./components/StorefrontDivesSection";
 import StorefrontDeploy from "./components/StorefrontDeploy";
 import StorefrontConnected from "./components/StorefrontConnected";
 import StorefrontComparison from "./components/StorefrontComparison";
-import StorefrontPricingCallout from "./components/StorefrontPricingCallout";
 import StorefrontWhatChanges from "./components/StorefrontWhatChanges";
 import StorefrontFAQ from "./components/StorefrontFAQ";
 import StorefrontLearnMore from "./components/StorefrontLearnMore";
@@ -49,7 +48,6 @@ export default function StorefrontPageContent() {
       <StorefrontDeploy purple />
       <StorefrontConnected />
       <StorefrontComparison />
-      <StorefrontPricingCallout />
       <StorefrontWhatChanges purple />
       <StorefrontFAQ />
       <StorefrontLearnMore />

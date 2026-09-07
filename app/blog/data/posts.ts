@@ -25,6 +25,42 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide",
+    title: "Tiered Pricing for Fastener & MRO Distributors: A Practical Setup Guide",
+    description:
+      "A step-by-step guide to building tiered pricing for fastener and MRO distribution — customer tiers, volume breaks, and how to combine them without breaking your margin.",
+    excerpt:
+      "Tiered pricing for fastener and MRO distribution needs two layers working together — customer-segment tiers (who's buying) and volume breaks (how much they're buying) — resolved automatically at the line-item level. Most distributors that try to run this manually end up with pricing that's inconsistent, hard to audit, and slowly loses margin. This guide walks through defining tiers, setting volume breaks, layering contract pricing on top, and rolling it out without disrupting active sales relationships.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-07-22",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide.png",
+    coverImageAlt: "Tiered pricing setup for fastener and MRO distributors",
+  },
+  {
+    slug: "how-fastener-distributors-can-stop-losing-margin-on-manual-quotes",
+    title: "How Fastener Distributors Can Stop Losing Margin on Manual Quotes",
+    description:
+      "Manual quoting quietly erodes margin for fastener and MRO distributors. See where the leaks happen and how automated, tiered pricing with margin floors fixes it.",
+    excerpt:
+      "Manual quoting causes fastener and MRO distributors to lose margin through stale pricing, inconsistent discounting, and no enforced margin floor. Fixing it means automating tiered/contract pricing at the line level, enforcing a system-level margin floor, and keeping one source of truth for pricing — not asking reps to work faster inside the same broken process.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-07-15",
+    readingTime: "7 min read",
+    coverImage:
+      "/blog/covers/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes.png",
+    coverImageAlt: "Fastener distributor quoting and margin protection",
+  },
+  {
     slug: "how-distributors-can-automate-quote-to-order-processes-2026-playbook",
     title: "How Distributors Can Automate Quote-to-Order Processes (2026 Playbook)",
     description:

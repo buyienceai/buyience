@@ -23,6 +23,8 @@ export type WhatChangesSectionProps = {
   toLabel: string;
   items: WhatChangesItem[];
   purple?: boolean;
+  /** Optional block under the comparison table (e.g. pricing callout) */
+  footer?: React.ReactNode;
 };
 
 export default function WhatChangesSection({
@@ -34,6 +36,7 @@ export default function WhatChangesSection({
   toLabel,
   items,
   purple = false,
+  footer,
 }: WhatChangesSectionProps) {
   const reduceMotion = useReducedMotion() === true;
 
@@ -118,6 +121,8 @@ export default function WhatChangesSection({
             })}
           </ul>
         </motion.div>
+
+        {footer ? <div className="mt-10 md:mt-12">{footer}</div> : null}
       </div>
     </section>
   );

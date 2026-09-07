@@ -20946,7 +20946,7 @@ a.nav-btn-outline-block {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   background: #fff;
   border: 1px solid #E7DEFB;
   border-radius: 22px;
@@ -20970,6 +20970,9 @@ a.nav-btn-outline-block {
   padding: 16px 20px;
   border-bottom: 1px solid #F0EAFB;
   background: linear-gradient(90deg, #FAF7FF, #fff);
+  border-radius: 22px 22px 0 0;
+  position: relative;
+  z-index: 2;
 }
 
 .storefront-page .sf-portal-pulse {
@@ -21462,16 +21465,7 @@ a.nav-btn-outline-block {
   margin-top: 16px;
 }
 
-/* Pricing callout */
-.storefront-page .sf-callout-section {
-  padding-top: 0;
-  padding-bottom: 8px;
-}
-
-.storefront-page .sf-callout-section + section {
-  padding-top: 40px;
-}
-
+/* Pricing callout (lives inside comparison section footer) */
 .storefront-page .sf-callout {
   position: relative;
   overflow: hidden;
