@@ -49,9 +49,9 @@ export default function StorefrontPageContent() {
       <StorefrontDeploy purple />
       <StorefrontConnected />
       <StorefrontComparison />
-      <StorefrontPricingCallout purple />
-      <StorefrontWhatChanges />
-      <StorefrontFAQ purple />
+      <StorefrontPricingCallout />
+      <StorefrontWhatChanges purple />
+      <StorefrontFAQ />
       <StorefrontLearnMore />
     </MarketingLayout>
   );

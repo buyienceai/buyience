@@ -13,11 +13,11 @@ export default function StorefrontHero() {
         <div className="sf-hero-copy flex min-h-0 flex-col text-left">
           <div className="sf-hero-copy-main">
             <SectionCapsule>B2B self-service commerce</SectionCapsule>
-            <h1>
+            <h1 className="text-[1.75rem] leading-[1.1] font-extrabold tracking-normal sm:text-[clamp(2.1rem,5vw,4rem)] sm:leading-[1.03]">
               Give your wholesale buyers{" "}
               <span className="grad-text">24/7 self-service ordering.</span>
             </h1>
-            <p className="lede">
+            <p className="lede max-w-[34rem] sm:text-[18.5px] sm:leading-[1.7]">
               A branded B2B portal where customers see their own pricing, place orders, track shipments and reorder —
               without calling your sales team. Deploy hosted or headless.
             </p>
