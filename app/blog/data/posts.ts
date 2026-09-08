@@ -25,6 +25,23 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "digital-sales-room-dsr",
+    title: "Digital Sales Room (DSR)",
+    description:
+      "What a digital sales room is, how it works in B2B distribution and wholesale, key features, and how it differs from a shared folder or a proposal tool. A complete guide.",
+    excerpt:
+      "A digital sales room (DSR) is a secure, shared online workspace where a seller and a buyer work through a deal together — reviewing quotes, negotiating pricing, exchanging questions, and reaching agreement — in one place, with a record of everything that happened.",
+    category: "product",
+    categoryLabel: "Product Information",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2027-01-19",
+    readingTime: "11 min read",
+    coverImage: "/blog/covers/digital-sales-room-dsr.png",
+    coverImageAlt: "Digital sales room for B2B distribution and wholesale",
+  },
+  {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
     title: "Managing Custom and Bulk Orders for Corporate Gift Programs",
     description:
