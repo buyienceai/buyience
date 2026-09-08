@@ -6180,8 +6180,22 @@ a.nav-btn-outline-block {
 }
 
 .blog-page .blog-article-inner {
-  /* Match sitewide layout width via .container (var(--w-max)) */
+  /* Self-sufficient centering — don't rely on Tailwind's `.container`
+     utility (breakpoint max-widths, no margin:auto by default). */
+  width: 100%;
   max-width: var(--w-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .blog-page .blog-article-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .blog-page .blog-article-header {
@@ -6230,7 +6244,7 @@ a.nav-btn-outline-block {
 
 .blog-page .blog-article-header h1 {
   margin: 0 0 12px;
-  max-width: 28ch;
+  max-width: none;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -6240,7 +6254,7 @@ a.nav-btn-outline-block {
 
 .blog-page .blog-article-dek {
   margin: 0 0 16px;
-  max-width: 62ch;
+  max-width: none;
   font-size: 18px;
   line-height: 1.65;
   color: var(--muted);
@@ -6261,9 +6275,10 @@ a.nav-btn-outline-block {
   object-fit: cover;
 }
 
-/* Prose — readable measure, left-aligned with layout */
+/* Prose — full layout column (same width as cover / site chrome) */
 .blog-page .blog-prose {
-  max-width: 720px;
+  max-width: none;
+  width: 100%;
   margin: 0;
   color: var(--ink-soft);
   font-size: 17.5px;
@@ -6391,17 +6406,45 @@ a.nav-btn-outline-block {
   margin: 2.5em 0;
 }
 
+/* Blog embedded FAQ accordion (FaqSection bare mode) */
+.blog-page .blog-faq-section {
+  margin: 56px 0 0;
+  padding: 0;
+}
+
+.blog-page .blog-faq-section .center-head {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 8px;
+}
+
+.blog-page .blog-faq-section .center-head .eyebrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-page .blog-faq-section .center-head h2 {
+  margin-top: 12px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.blog-page .blog-faq-section .faq-list {
+  margin-top: 28px;
+}
+
 /* Author */
 .blog-page .blog-author {
   display: flex;
   gap: 18px;
   align-items: flex-start;
-  max-width: 720px;
+  max-width: none;
+  width: 100%;
   margin: 48px 0 0;
   padding: 24px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
+  box-sizing: border-box;
 }
 
 .blog-page .blog-author-av {

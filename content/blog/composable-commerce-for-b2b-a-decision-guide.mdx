@@ -23,6 +23,8 @@ When these workflow components remain tightly coupled — even inside a technica
 ## The Three Composability Layers B2B Teams Actually Need
 Most composable commerce frameworks describe two layers: infrastructure composability (cloud, containers, deployment pipelines) and service composability (pricing service, catalog service, order service). B2B operations need a third layer that rarely appears in vendor architectures.
 
+![Three layers for B2B composability: Infrastructure, Services, and Workflows converging into more agile, profitable B2B commerce](/blog/inline/composable-commerce-three-layers.jpg)
+
 **Infrastructure composability.** The foundation. Cloud-native deployment, independent scaling, CI/CD pipelines that allow services to ship independently. This is table stakes in 2026 and the layer where most MACH-aligned vendors deliver reliably. The decision here is straightforward: if your current platform can't deploy pricing updates without a full release cycle, you have an infrastructure problem.
 
 **Service composability.** The layer most composable commerce discussions focus on. Each commerce capability — pricing, catalog, search, checkout, inventory — operates as an independent service with its own API contract. You can swap a search provider without touching checkout. You can upgrade pricing logic without redeploying the catalog. This is where the best-of-breed promise lives, and it's genuinely valuable — until you reach the B2B-specific workflows that span multiple services simultaneously.

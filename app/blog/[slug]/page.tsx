@@ -114,7 +114,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         />
       ) : null}
       <article className="blog-article">
-        <div className="container blog-article-inner">
+        <div className="blog-article-inner">
           <BlogArticleHeader post={post} />
           {source ? (
             <BlogArticleContent source={source} />
