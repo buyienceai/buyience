@@ -40,19 +40,74 @@ The gap isn't in Shopify's B2B feature list. It's architectural: Shopify is buil
 
 ## Side-by-side
 
-| | Shopify Plus | Buyience (Nova Core) |
-| --- | --- | --- |
-| **Core model** | Catalogue and checkout | Quote and negotiation |
-| **B2B pricing** | Company catalogues, quantity rules, custom pricing | Tier × volume × contract resolved per line item |
-| **Net terms** | Native (Net 30/60/90) | Native (Net 30/60/90) |
-| **Quoting** | Draft orders; RFQ via apps | AI Quote Engine as the primary path |
-| **Live negotiation** | Not native — happens off-platform | Digital Sales Room with preserved history |
-| **Margin floor enforcement** | Not native | Enforced at line level before send |
-| **DTC + wholesale together** | Strong — shared catalogue and inventory | B2B-focused |
-| **Multi-warehouse inventory** | Supported | Available-to-promise at quote time |
-| **Implementation speed** | ~90 days typical for native B2B builds | Fast setup, smaller scope |
-| **Ecosystem** | Very large app and partner ecosystem | Smaller, newer |
-| **Indicative cost** | ~$2,300/month plus apps | SMB-tier subscription pricing |
+<div className="blog-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Shopify Plus</th>
+        <th>Buyience (Nova Core)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Core model</strong></td>
+        <td>Catalogue and checkout</td>
+        <td>Quote and negotiation</td>
+      </tr>
+      <tr>
+        <td><strong>B2B pricing</strong></td>
+        <td>Company catalogues, quantity rules, custom pricing</td>
+        <td>Tier × volume × contract resolved per line item</td>
+      </tr>
+      <tr>
+        <td><strong>Net terms</strong></td>
+        <td>Native (Net 30/60/90)</td>
+        <td>Native (Net 30/60/90)</td>
+      </tr>
+      <tr>
+        <td><strong>Quoting</strong></td>
+        <td>Draft orders; RFQ via apps</td>
+        <td>AI Quote Engine as the primary path</td>
+      </tr>
+      <tr>
+        <td><strong>Live negotiation</strong></td>
+        <td>Not native — happens off-platform</td>
+        <td>Digital Sales Room with preserved history</td>
+      </tr>
+      <tr>
+        <td><strong>Margin floor enforcement</strong></td>
+        <td>Not native</td>
+        <td>Enforced at line level before send</td>
+      </tr>
+      <tr>
+        <td><strong>DTC + wholesale together</strong></td>
+        <td>Strong — shared catalogue and inventory</td>
+        <td>B2B-focused</td>
+      </tr>
+      <tr>
+        <td><strong>Multi-warehouse inventory</strong></td>
+        <td>Supported</td>
+        <td>Available-to-promise at quote time</td>
+      </tr>
+      <tr>
+        <td><strong>Implementation speed</strong></td>
+        <td>~90 days typical for native B2B builds</td>
+        <td>Fast setup, smaller scope</td>
+      </tr>
+      <tr>
+        <td><strong>Ecosystem</strong></td>
+        <td>Very large app and partner ecosystem</td>
+        <td>Smaller, newer</td>
+      </tr>
+      <tr>
+        <td><strong>Indicative cost</strong></td>
+        <td>~$2,300/month plus apps</td>
+        <td>SMB-tier subscription pricing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Two entries deserve emphasis, in fairness: Shopify's ecosystem and maturity are genuinely far ahead of ours, and its DTC-plus-wholesale story is something we don't attempt to match. Those are real advantages, not caveats.
 

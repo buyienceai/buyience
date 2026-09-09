@@ -6359,6 +6359,18 @@ a.nav-btn-outline-block {
   font-size: 15px;
 }
 
+.blog-page .blog-prose .blog-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-page .blog-prose .blog-table-wrap table {
+  margin: 0;
+  min-width: 640px;
+}
+
 .blog-page .blog-prose th,
 .blog-page .blog-prose td {
   border: 1px solid var(--border);
