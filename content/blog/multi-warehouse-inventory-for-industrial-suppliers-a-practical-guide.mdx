@@ -1,0 +1,95 @@
+**TL;DR:** Running inventory across more than one warehouse solves real problems — shorter delivery times, regional redundancy, room to grow — but it introduces a coordination problem that single-location distributors never have to solve: knowing, in real time, exactly what's available where. Distributors who get this wrong end up overselling stock that's already spoken for, or sitting on excess inventory in one location while another runs a stockout. This guide covers how to structure multi-warehouse inventory so the numbers stay trustworthy.
+
+Growing past a single warehouse is usually a good sign — it means you're covering more territory, serving more customers, or reducing the risk of a single point of failure in your supply chain. It's also the point where inventory management stops being simple. A fastener or MRO distributor running one location can generally trust that "50 units in stock" means 50 units, full stop. Add a second location, and that number splits into a question: 50 units where, and is that number actually current right now?
+
+## Why multi-warehouse inventory gets complicated fast
+
+The core challenge isn't storage — it's synchronization. Every sale, transfer, receipt, and adjustment needs to update the right location's count immediately, and every other part of the business that relies on that number — your storefront, your quoting system, your sales team — needs to see the update at the same time everyone else does.
+
+When that synchronization lags or breaks, a few predictable problems show up:
+
+**Overselling.** A customer orders a quantity that's technically in stock across your network but not actually available at the warehouse that would fulfill it, because the count they saw was stale or aggregated incorrectly.
+
+**Phantom stockouts.** The opposite problem — a warehouse actually has stock, but the system shows it as unavailable because a transfer or receipt hasn't been reconciled yet, so a sale gets declined or delayed unnecessarily.
+
+**Manual reconciliation becoming a full-time job.** Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
+
+**Inconsistent fulfillment logic.** Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
+
+## Step 1: Decide what "available" actually means
+
+Before anything else, define what counts as available inventory at a given location — because it's rarely just "units physically on the shelf." Available stock typically needs to exclude:
+
+- Units already allocated to unfulfilled orders
+- Units in transit between warehouses (in most cases, until they're received and counted at the destination)
+- Units held for quality inspection or return processing
+- Safety stock your business has deliberately decided not to sell below
+
+Getting this definition wrong is one of the most common causes of overselling — a warehouse shows 200 units, but 60 of those are already committed to orders in process, meaning true available inventory is 140. If your systems don't distinguish between total on-hand and available-to-promise, every quote and every storefront listing built on that number is slightly wrong.
+
+## Step 2: Set clear fulfillment logic per warehouse
+
+Once you can trust the numbers, the next question is which warehouse fulfills which order. Common approaches, often combined:
+
+- **Proximity-based** — fulfill from whichever warehouse is closest to the customer, minimizing shipping time and cost
+- **Stock-level-based** — fulfill from whichever location has sufficient stock, when proximity options are out
+- **Cost-based** — fulfill from whichever combination minimizes total shipping and handling cost, particularly relevant for split shipments
+- **Priority/override rules** — certain customers or order types may need to fulfill from a specific warehouse regardless of the default logic, for reasons like existing relationships or specific product availability
+
+The specific logic matters less than having one that's consistent and applied automatically. Ad hoc fulfillment decisions, made order by order without a defined rule set, are where inconsistent delivery times and unnecessary shipping costs creep in.
+
+## Step 3: Build real-time visibility into quoting and sales, not just operations
+
+A lot of distributors get multi-warehouse inventory right on the operations side — the warehouse team knows what's where — but the information doesn't make it back to sales and quoting in real time. A rep quoting a customer needs to know, at the moment of quoting, what's actually available and where it would ship from, not a number that was accurate as of this morning's manual export.
+
+This connects directly to the same pattern that shows up in [manual quoting and pricing](/blog/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes): whenever a number that changes in real time is only updated manually or periodically, the gap between what the system shows and what's actually true becomes a source of errors — overselling, missed delivery expectations, and quotes built on stale information.
+
+## Step 4: Handle transfers deliberately, not as an afterthought
+
+Moving stock between warehouses — to rebalance inventory, respond to regional demand shifts, or consolidate for a large order — needs its own clear process, because a transfer in progress is inventory that exists but isn't cleanly assignable to either location's available count.
+
+A workable approach treats a transfer as its own tracked state: stock is deducted from the originating warehouse's available count as soon as the transfer is initiated (even before physical pickup, in most cases), and only added to the destination warehouse's available count once received and counted there — not the moment it arrives on a truck. The gap in between should be visible in reporting, not invisible, so nobody assumes stock is available at either end when it's actually in transit.
+
+## Step 5: Set stockout and reorder rules per location, not just company-wide
+
+A single reorder point across your whole business will be wrong for at least one location. A warehouse serving a high-volume region needs a different safety stock threshold than one serving a smaller or less predictable territory. Setting reorder points per warehouse, per SKU category — rather than one blanket rule — keeps you from carrying excess inventory in a slow location while running consistently tight at a fast-moving one.
+
+This is also where good historical data pays off: reorder points set once and never revisited tend to drift out of alignment with actual demand patterns, especially for a growing distributor whose regional mix is shifting over time.
+
+## Where this typically breaks down
+
+Distributors managing multi-warehouse inventory without a system built for it usually end up with some combination of: a spreadsheet per warehouse that someone manually reconciles, a storefront or quoting tool that shows one aggregated number regardless of location, and a fulfillment process that depends on whoever happens to answer the phone knowing where stock actually sits. Each of these works at small scale and becomes a liability as SKU count, warehouse count, or order volume grows.
+
+## How Nova Core handles this
+
+Nova Core's multi-warehouse inventory tracks live stock across locations with real-time updates that flow directly into quoting and the customer storefront — so a quote reflects actual, available-to-promise inventory at the moment it's built, not a stale snapshot. Combined with order tracking and supplier management, it gives distributors one system of record for inventory rather than a set of disconnected spreadsheets per location.
+
+[Start your free trial →](https://buyience.com/) — 14 days, no card required.
+
+Want to see how live multi-warehouse inventory flows into quoting in Nova Core? [Request a demo](/request-a-demo).
+
+## FAQ: Multi-Warehouse Inventory for Distributors
+
+### What does "available inventory" mean in a multi-warehouse setup?
+
+It typically means total on-hand stock minus units already allocated to unfulfilled orders, units in transit, and any safety stock the business has decided not to sell below — not simply the raw physical count on a shelf.
+
+### How do I decide which warehouse fulfills a given order?
+
+Most distributors combine proximity, current stock levels, and shipping cost into a consistent fulfillment rule, with override logic for specific customers or product types where needed. What matters most is that the logic is applied consistently rather than decided order by order.
+
+### What causes overselling in a multi-warehouse system?
+
+Usually a gap between what the system shows as available and what's actually available — often because allocated or in-transit stock isn't excluded from the count, or because updates from one warehouse aren't reflected in real time everywhere else.
+
+### Should reorder points be the same across all warehouses?
+
+No. Reorder points and safety stock levels should reflect each location's actual demand pattern. A single company-wide reorder rule is almost always too conservative for some locations and too aggressive for others.
+
+### How should inventory in transit between warehouses be tracked?
+
+As its own distinct state — deducted from the originating warehouse's available count once the transfer starts, and only added to the destination's count once physically received and counted, not the moment it's in transit.
+
+### Can multi-warehouse inventory be managed in spreadsheets?
+
+For a small number of locations and SKUs, for a period of time, yes. As warehouse count, SKU count, and order volume grow, manual reconciliation between separate spreadsheets becomes increasingly error-prone and time-consuming to maintain.

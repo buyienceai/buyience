@@ -42,6 +42,114 @@ export const blogPosts: BlogPost[] = [
     coverImageAlt: "Digital sales room for B2B distribution and wholesale",
   },
   {
+    slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
+    title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
+    description:
+      "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
+    excerpt:
+      "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2027-03-02",
+    readingTime: "9 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
+    coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
+  },
+  {
+    slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
+    title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
+    description:
+      "Corporate gifting RFPs are won on response quality and speed. Here's how to qualify them, structure a response, and move from award to order without losing the details.",
+    excerpt:
+      "Corporate gifting RFPs are expensive to respond to and easy to lose for reasons unrelated to your actual capability — a missed compliance requirement, a slow response, or pricing that couldn't be revised fast enough during evaluation. The businesses that win consistently qualify hard before responding, build responses from reusable components rather than from scratch, and treat the gap between award and first order as a defined process rather than an improvisation.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2027-02-16",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
+    coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
+  },
+  {
+    slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
+    title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
+    description:
+      "Custom-branded gift quotes involve setup fees, per-unit decoration costs, and multi-variant configurations that spreadsheets handle badly. Here's how to structure them properly.",
+    excerpt:
+      "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2027-02-02",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
+    coverImageAlt: "Quoting custom-branded corporate gifts without a spreadsheet",
+  },
+  {
+    slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
+    title: "Seasonal Demand Spikes: Inventory Planning for Corporate Gifting Brands",
+    description:
+      "Corporate gifting demand concentrates into a few weeks a year. Here's how to plan inventory, supplier lead times, and capacity so the peak doesn't break your operation.",
+    excerpt:
+      "Corporate gifting demand doesn't spread evenly across the year — it concentrates heavily into a handful of weeks, which means annual averages are close to useless for planning. Effective planning works backward from peak-week capacity rather than forward from annual volume, commits inventory early enough to clear supplier lead times, and separates what genuinely must be pre-committed from what can stay flexible. This guide covers how to build that plan.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2027-01-05",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
+    coverImageAlt: "Seasonal inventory planning for corporate gifting brands",
+  },
+  {
+    slug: "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide",
+    title: "Multi-Warehouse Inventory for Industrial Suppliers: A Practical Guide",
+    description:
+      "How fastener and industrial suppliers can manage multi-warehouse inventory without overselling, stockouts, or manual reconciliation — a practical setup guide.",
+    excerpt:
+      "Running inventory across more than one warehouse solves real problems — shorter delivery times, regional redundancy, room to grow — but it introduces a coordination problem that single-location distributors never have to solve: knowing, in real time, exactly what's available where. Distributors who get this wrong end up overselling stock that's already spoken for, or sitting on excess inventory in one location while another runs a stockout. This guide covers how to structure multi-warehouse inventory so the numbers stay trustworthy.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-20",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide.png",
+    coverImageAlt: "Multi-warehouse inventory for industrial suppliers",
+  },
+  {
+    slug: "net-30-60-90-terms-in-industrial-distribution-what-actually-works",
+    title: "Net 30/60/90 Terms in Industrial Distribution: What Actually Works",
+    description:
+      "A practical look at Net 30/60/90 payment terms for fastener and industrial distributors — how to set them, when to extend them, and how to protect cash flow while doing it.",
+    excerpt:
+      "Net terms are standard practice in industrial and fastener distribution, but \"standard\" doesn't mean \"safe by default.\" The distributors who manage terms well tie them to a defined credit policy, apply them consistently rather than case-by-case, and track them in the same system that handles quoting and orders — not in a separate spreadsheet that goes stale. This guide covers how to set a terms policy, when to extend or restrict it, and what breaks when terms live disconnected from the rest of your sales process.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-06",
+    readingTime: "8 min read",
+    coverImage:
+      "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works.png",
+    coverImageAlt: "Net 30/60/90 payment terms for industrial distributors",
+  },
+  {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
     title: "Managing Custom and Bulk Orders for Corporate Gift Programs",
     description:
@@ -197,7 +305,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-07-15",
+    publishedAt: "2026-09-08",
     readingTime: "7 min read",
     coverImage:
       "/blog/covers/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes.png",
