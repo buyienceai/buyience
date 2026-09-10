@@ -24,23 +24,7 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
-  {
-    slug: "digital-sales-room-dsr",
-    title: "Digital Sales Room (DSR)",
-    description:
-      "What a digital sales room is, how it works in B2B distribution and wholesale, key features, and how it differs from a shared folder or a proposal tool. A complete guide.",
-    excerpt:
-      "A digital sales room (DSR) is a secure, shared online workspace where a seller and a buyer work through a deal together — reviewing quotes, negotiating pricing, exchanging questions, and reaching agreement — in one place, with a record of everything that happened.",
-    category: "product",
-    categoryLabel: "Product Information",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2027-01-19",
-    readingTime: "11 min read",
-    coverImage: "/blog/covers/digital-sales-room-dsr.png",
-    coverImageAlt: "Digital sales room for B2B distribution and wholesale",
-  },
+  /* Temporarily commented out
   {
     slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
     title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
@@ -53,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2027-03-02",
+    publishedAt: "2026-10-09",
     readingTime: "9 min read",
     coverImage:
       "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
@@ -71,7 +55,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2027-02-16",
+    publishedAt: "2026-10-04",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
@@ -89,7 +73,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2027-02-02",
+    publishedAt: "2026-09-29",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
@@ -107,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2027-01-05",
+    publishedAt: "2026-09-24",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
@@ -125,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-20",
+    publishedAt: "2026-09-19",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide.png",
@@ -143,12 +127,13 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-06",
+    publishedAt: "2026-09-14",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works.png",
     coverImageAlt: "Net 30/60/90 payment terms for industrial distributors",
   },
+  */
   {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
     title: "Managing Custom and Bulk Orders for Corporate Gift Programs",
@@ -305,7 +290,7 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-08",
+    publishedAt: "2026-07-15",
     readingTime: "7 min read",
     coverImage:
       "/blog/covers/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes.png",

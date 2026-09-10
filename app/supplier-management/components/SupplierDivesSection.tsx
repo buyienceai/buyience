@@ -96,7 +96,7 @@ export default function SupplierDivesSection({ purple = false }: { purple?: bool
           visual: (
             <MiniUi label="Certificate statuses">
               <MiniRow tone="done" tag="VALID">
-                ISO 9001 · expires Mar 2027
+                ISO 9001 · expires Dec 2026
               </MiniRow>
               <MiniRow tone="warn" tag="EXPIRING">
                 Liability insurance · 21 days left

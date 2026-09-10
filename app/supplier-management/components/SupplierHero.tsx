@@ -45,7 +45,7 @@ export default function SupplierHero() {
       { tag: "FIELD", text: `Currency ${currency} · Payment terms Net 30` },
     ],
     3: [
-      { tag: "VALID", text: "ISO 9001 · expires Mar 2027", status: "ok" },
+      { tag: "VALID", text: "ISO 9001 · expires Dec 2026", status: "ok" },
       { tag: "EXPIRING", text: "Liability insurance · 21 days left", status: "warn" },
       { tag: "FIELD", text: "Import licence.pdf · uploaded, awaiting verify" },
     ],

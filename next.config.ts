@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
       { source: "/pricing/gbp", destination: "/pricing?currency=gbp", permanent: true },
       { source: "/pricing/inr", destination: "/pricing?currency=inr", permanent: true },
       { source: "/all-blogs", destination: "/blog", permanent: true },
+      { source: "/blog/digital-sales-room-dsr", destination: "/blog", permanent: true },
       { source: "/categories/:slug", destination: "/blog", permanent: true },
     ];
   },
