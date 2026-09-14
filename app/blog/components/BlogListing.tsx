@@ -8,29 +8,50 @@ import BlogCard from "./BlogCard";
 
 type Props = {
   posts: BlogPost[];
-  featuredSlug: string;
   counts: Record<BlogCategoryId, number>;
 };
 
-export default function BlogListing({ posts, featuredSlug, counts }: Props) {
+/**
+ * Parse publish dates as UTC calendar days for stable client-side ordering.
+ */
+function publishedAtMs(iso: string): number {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  if (match) {
+    return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  }
+  const ms = new Date(iso).getTime();
+  return Number.isNaN(ms) ? 0 : ms;
+}
+
+function byPublishedAtDesc(a: BlogPost, b: BlogPost): number {
+  return publishedAtMs(b.publishedAt) - publishedAtMs(a.publishedAt);
+}
+
+export default function BlogListing({ posts, counts }: Props) {
   const [active, setActive] = useState<BlogCategoryId>("all");
 
-  const featured = useMemo(
-    () => posts.find((p) => p.slug === featuredSlug) ?? posts[0],
-    [posts, featuredSlug],
+  // Always sort by publish date DESC before filter / featured / count UI.
+  const sortedPosts = useMemo(
+    () => [...posts].sort(byPublishedAtDesc),
+    [posts],
   );
 
   const filtered = useMemo(() => {
-    if (active === "all") return posts;
-    return posts.filter((p) => p.category === active);
-  }, [posts, active]);
+    const list =
+      active === "all"
+        ? sortedPosts
+        : sortedPosts.filter((p) => p.category === active);
+    return [...list].sort(byPublishedAtDesc);
+  }, [sortedPosts, active]);
 
+  // Featured slot = newest in the current filtered set (date is source of truth).
+  const featured = filtered[0];
   const gridPosts = useMemo(
-    () => filtered.filter((p) => p.slug !== featured.slug || active !== "all"),
-    [filtered, featured.slug, active],
+    () => (featured ? filtered.filter((p) => p.slug !== featured.slug) : filtered),
+    [filtered, featured],
   );
 
-  const showFeatured = active === "all" || featured.category === active;
+  const showFeatured = Boolean(featured) && filtered.length > 0;
 
   return (
     <section className="blog-listing" aria-label="Blog posts">
@@ -61,7 +82,7 @@ export default function BlogListing({ posts, featuredSlug, counts }: Props) {
         ) : null}
 
         <p className="blog-count-line">
-          Showing {filtered.length} of {posts.length} posts
+          Showing {filtered.length} of {sortedPosts.length} posts
         </p>
       </div>
     </section>

@@ -329,7 +329,6 @@ export const blogPosts: BlogPost[] = [
     readingTime: "27 min read",
     coverImage: "/blog/covers/how-distributors-can-automate-quote-to-order-processes-2026-playbook.png",
     coverImageAlt: "Distributor quote-to-order automation illustration",
-    featured: true,
   },
   {
     slug: "why-manufacturers-need-a-modern-b2b-ecommerce-platform-in-2026",
