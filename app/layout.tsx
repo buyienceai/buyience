@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Manrope, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { CurrencyProvider } from "@/components/CurrencyProvider";
 import { getSiteUrl, isSeoIndexingEnabled, seoRobots } from "@/lib/seo";
 import "./globals.css";
@@ -98,6 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <CurrencyProvider>{children}</CurrencyProvider>
+        <Analytics />
       </body>
     </html>
   );
