@@ -132,6 +132,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide.png",
     coverImageAlt: "Multi-warehouse inventory for industrial suppliers",
   },
+  */
   {
     slug: "net-30-60-90-terms-in-industrial-distribution-what-actually-works",
     title: "Net 30/60/90 Terms in Industrial Distribution: What Actually Works",
@@ -150,7 +151,6 @@ export const blogPosts: BlogPost[] = [
       "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works.png",
     coverImageAlt: "Net 30/60/90 payment terms for industrial distributors",
   },
-  */
   {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
     title: "Managing Custom and Bulk Orders for Corporate Gift Programs",
