@@ -54,10 +54,13 @@ export default function WpPluginDemo() {
         style={{ flex: "0 1 auto", height: "auto" }}
         aria-label="Buyience NovaCore — settings preview"
       >
-        <div className="aiq-head">
-          <span className="aiq-head-dot" aria-hidden="true" />
-          <span className="aiq-head-title">Buyience NovaCore — settings preview</span>
-          <span className="aiq-head-live">● Interactive</span>
+        <div className="aiq-head min-w-0 gap-2">
+          <span className="aiq-head-dot shrink-0" aria-hidden="true" />
+          <span className="aiq-head-title min-w-0 flex-1 truncate text-[13px] sm:text-[14px]">
+            <span className="sm:hidden">NovaCore — settings</span>
+            <span className="hidden sm:inline">Buyience NovaCore — settings preview</span>
+          </span>
+          <span className="aiq-head-live shrink-0 text-[10px] sm:text-[11px]">● Interactive</span>
         </div>
 
         <div
@@ -121,9 +124,9 @@ export default function WpPluginDemo() {
 
           <div>
             <div className="aiq-label">What the buyer sees</div>
-            <div className="mt-1.5 rounded-[14px] border border-[#EFE7FC] bg-[#FAF7FF] p-3.5">
+            <div className="mt-1.5 rounded-[14px] border border-[#EFE7FC] bg-[#FAF7FF] p-3 sm:p-3.5">
               <div className="flex gap-3">
-                <div className="size-14 shrink-0 overflow-hidden rounded-[12px] border border-[#EFE7FC] bg-white">
+                <div className="size-12 shrink-0 overflow-hidden rounded-[12px] border border-[#EFE7FC] bg-white sm:size-14">
                   <Image
                     src="/images/products/industrial-bearing.png"
                     alt="Industrial Bearing — SKF 6205-2RS"
@@ -134,51 +137,57 @@ export default function WpPluginDemo() {
                   />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[14px] font-extrabold text-[#1B1033]">
+                  <div className="text-[13px] font-extrabold text-[#1B1033] sm:text-[14px]">
                     Industrial Bearing — SKF 6205-2RS
                   </div>
-                  <div className="mt-1 text-[12px] font-semibold text-[#6A5A8C]">
+                  <div className="mt-1 text-[11px] font-semibold text-[#6A5A8C] sm:text-[12px]">
                     SKU: SKF-6205 · In stock
                   </div>
                 </div>
               </div>
 
-              <div className="mt-2.5 flex flex-wrap items-center justify-between gap-2">
+              <div className="mt-2.5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                 <div className="flex min-w-0 flex-wrap items-baseline gap-2">
                   {priceHidden ? (
-                    <span className="text-[18px] font-extrabold text-[#1B1033]">Price on request</span>
+                    <span className="text-[17px] font-extrabold text-[#1B1033] sm:text-[18px]">
+                      Price on request
+                    </span>
                   ) : isTrade ? (
                     <>
-                      <span className="text-[18px] font-extrabold text-[#1B1033]">{format(NET, 2)}</span>
-                      <span className="text-[13px] font-semibold text-[#9A94C4] line-through">
+                      <span className="text-[17px] font-extrabold text-[#1B1033] sm:text-[18px]">
+                        {format(NET, 2)}
+                      </span>
+                      <span className="text-[12px] font-semibold text-[#9A94C4] line-through sm:text-[13px]">
                         {format(LIST, 2)}
                       </span>
-                      <span className="rounded-full bg-[#E8F8F0] px-2 py-0.5 text-[10.5px] font-bold tracking-wide text-[#0F7A4A] uppercase">
+                      <span className="rounded-full bg-[#E8F8F0] px-2 py-0.5 text-[10px] font-bold tracking-wide text-[#0F7A4A] uppercase sm:text-[10.5px]">
                         Your contract price
                       </span>
                     </>
                   ) : (
-                    <span className="text-[18px] font-extrabold text-[#1B1033]">{format(LIST, 2)}</span>
+                    <span className="text-[17px] font-extrabold text-[#1B1033] sm:text-[18px]">
+                      {format(LIST, 2)}
+                    </span>
                   )}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
                   {mode === "both" || mode === "cart" ? (
-                    <a
-                      href="https://wordpress.org/plugins/buyience-novacore-b2b-quote-engine/"
-                      className="rounded-[12px] border border-[#E7DEFB] bg-white px-3.5 py-2.5 text-[13px] font-bold text-[#6E2CF4] no-underline"
-                    >
+                    <span className="rounded-[12px] border border-[#E7DEFB] bg-white px-3.5 py-2.5 text-center text-[13px] font-bold text-[#6E2CF4] sm:text-left">
                       Add to cart
-                    </a>
+                    </span>
                   ) : null}
                   {mode === "both" || mode === "quote" ? (
-                    <a
-                      href={nova ? "/digital-sales-room" : "/request-a-demo"}
-                      className="aiq-send"
-                      style={{ marginTop: 0, width: "auto", color: "#fff", textDecoration: "none" }}
+                    <span
+                      className="aiq-send !mt-0 w-full text-center text-[13.5px] !py-[11px] sm:w-auto sm:text-left"
+                      style={{
+                        color: "#fff",
+                        textDecoration: "none",
+                        cursor: "default",
+                      }}
                     >
-                      {nova ? "Request a quote → Sales Room" : "Request a quote"}
-                    </a>
+                      {nova ? "Quote → Sales Room" : "Request a quote"}
+                    </span>
                   ) : null}
                 </div>
               </div>
