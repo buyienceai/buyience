@@ -32,21 +32,21 @@ export default function WpHero() {
               replatforming.
             </p>
           </div>
-          <div className="quote-hero-copy-foot" style={{ marginTop: 0, gap: 16 }}>
-            <div className="cta-row flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="quote-hero-copy-foot" style={{ marginTop: 0, gap: 14 }}>
+            <div className="cta-row flex w-full flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
               <Button
                 variant="primary"
-                size="lg"
+                size="sm"
                 href="https://wordpress.org/plugins/buyience-novacore-b2b-quote-engine/"
-                className="w-full justify-center sm:w-auto"
+                className="w-full justify-center !border-0 !px-5 !py-[11px] !text-[14px] !font-bold sm:w-auto"
               >
                 Get on WordPress.org
               </Button>
               <Button
                 variant="ghost"
-                size="lg"
+                size="sm"
                 href="/request-a-demo"
-                className="w-full justify-center sm:w-auto"
+                className="w-full justify-center !px-5 !py-[11px] !text-[14px] !font-bold sm:w-auto"
               >
                 Request a demo
               </Button>

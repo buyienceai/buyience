@@ -173,19 +173,12 @@ export default function WpPluginDemo() {
 
                 <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
                   {mode === "both" || mode === "cart" ? (
-                    <span className="rounded-[12px] border border-[#E7DEFB] bg-white px-3.5 py-2.5 text-center text-[13px] font-bold text-[#6E2CF4] sm:text-left">
+                    <span className="inline-flex items-center justify-center rounded-xl border border-[#E7DEFB] bg-white px-3.5 py-[9px] text-center text-[13px] font-bold text-[#6E2CF4] sm:text-left">
                       Add to cart
                     </span>
                   ) : null}
                   {mode === "both" || mode === "quote" ? (
-                    <span
-                      className="aiq-send !mt-0 w-full text-center text-[13.5px] !py-[11px] sm:w-auto sm:text-left"
-                      style={{
-                        color: "#fff",
-                        textDecoration: "none",
-                        cursor: "default",
-                      }}
-                    >
+                    <span className="inline-flex w-full cursor-default items-center justify-center rounded-xl bg-[#6E2CF4] px-3.5 py-[9px] text-center text-[13px] font-bold !text-white shadow-[0_8px_20px_rgba(110,44,244,0.28)] sm:w-auto sm:text-left">
                       {nova ? "Quote → Sales Room" : "Request a quote"}
                     </span>
                   ) : null}
