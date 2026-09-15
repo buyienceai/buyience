@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SectionCapsule from "@/components/SectionCapsule";
+import ThankYouDialog from "@/components/ThankYouDialog";
 import { submitLead } from "@/lib/leads/submit";
 
 export default function PartnerHero() {
@@ -30,9 +31,36 @@ export default function PartnerHero() {
     itypeOther: false,
     site: false,
   });
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [thankYouOpen, setThankYouOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleThankYouClose = () => {
+    setThankYouOpen(false);
+    setFirst("");
+    setLast("");
+    setEmail("");
+    setPhone("");
+    setLocation("");
+    setLocationOther("");
+    setCompany("");
+    setItype("");
+    setItypeOther("");
+    setSite("");
+    setPlans("");
+    setHoneypot("");
+    setErrors({
+      first: false,
+      email: false,
+      location: false,
+      locationOther: false,
+      company: false,
+      itype: false,
+      itypeOther: false,
+      site: false,
+    });
+    setSubmitError(null);
+  };
 
   const focusFirstInvalid = (next: typeof errors) => {
     const order = ["first", "email", "location", "locationOther", "company", "itype", "itypeOther", "site"] as const;
@@ -58,7 +86,7 @@ export default function PartnerHero() {
     if (submitting) return;
 
     if (honeypot) {
-      setIsSuccess(true);
+      setThankYouOpen(true);
       return;
     }
 
@@ -120,7 +148,7 @@ export default function PartnerHero() {
       return;
     }
 
-    setIsSuccess(true);
+    setThankYouOpen(true);
     setSubmitting(false);
   };
 
@@ -230,7 +258,6 @@ export default function PartnerHero() {
           className="card"
           id="tFormContainer"
         >
-          {!isSuccess ? (
             <form onSubmit={handleSubmit} noValidate>
               <p className="card-h">Apply for technology partnership</p>
               <p className="card-sub">Tell us about your product and integration plans.</p>
@@ -508,18 +535,14 @@ export default function PartnerHero() {
                 <p className="fine">We only use your details to talk to you about the partnership.</p>
               </div>
             </form>
-          ) : (
-            <div className="success show" id="tSuccess" role="status">
-              <div className="tick">✓</div>
-              <h3>Application received.</h3>
-              <p>
-                It goes straight to the engineering team. If there&apos;s a fit, you&apos;ll hear from a person who can
-                actually answer API questions.
-              </p>
-            </div>
-          )}
         </motion.div>
       </div>
+      <ThankYouDialog
+        open={thankYouOpen}
+        onClose={handleThankYouClose}
+        title="Thank you!"
+        message="It goes straight to the engineering team. If there's a fit, you'll hear from a person who can actually answer API questions."
+      />
     </header>
   );
 }

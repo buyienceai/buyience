@@ -143,6 +143,7 @@ export function validateLead(
     const lastName = requireNonEmpty(body.lastName, fields, "lastName");
     const email = requireEmail(body.email, fields);
     const company = requireNonEmpty(body.company, fields, "company");
+    const phone = requireNonEmpty(body.phone, fields, "phone");
     const message = optionalString(body.message);
 
     if (Object.keys(fields).length > 0) return { ok: false, fields };
@@ -151,7 +152,7 @@ export function validateLead(
       ok: true,
       email,
       honeypot: false,
-      payload: { firstName, lastName, email, company, message },
+      payload: { firstName, lastName, email, company, phone, message },
     };
   }
 

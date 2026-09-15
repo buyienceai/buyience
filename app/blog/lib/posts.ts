@@ -1,19 +1,35 @@
 import { blogPosts, type BlogPost, type BlogPostCategory } from "../data/posts";
 import type { BlogCategoryId } from "../data/categories";
 
+/**
+ * Parse publish dates as UTC calendar days so sorting is stable across timezones.
+ * Accepts `YYYY-MM-DD` and fuller ISO strings.
+ */
+function publishedAtMs(iso: string): number {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  if (match) {
+    return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  }
+  const ms = new Date(iso).getTime();
+  return Number.isNaN(ms) ? 0 : ms;
+}
+
+function byPublishedAtDesc(a: BlogPost, b: BlogPost): number {
+  return publishedAtMs(b.publishedAt) - publishedAtMs(a.publishedAt);
+}
+
 export function getAllPosts(): BlogPost[] {
-  return [...blogPosts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  );
+  return [...blogPosts].sort(byPublishedAtDesc);
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
 
+/** Newest post by `publishedAt` — date order is the single source of truth. */
 export function getFeaturedPost(): BlogPost {
   const posts = getAllPosts();
-  return posts.find((p) => p.featured) ?? posts[0];
+  return posts[0];
 }
 
 export function getPostsByCategory(category: BlogCategoryId): BlogPost[] {
@@ -60,7 +76,10 @@ export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
 }
 
 export function formatPublishedDate(iso: string): string {
-  const date = new Date(iso);
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  const date = match
+    ? new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])))
+    : new Date(iso);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",

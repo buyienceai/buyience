@@ -136,7 +136,7 @@ export default function AboutHero() {
                   Our story
                 </p>
                 <p className="m-0 mt-0.5 text-[11px] font-semibold text-[#6A5A8C]">
-                  Buyience · About us
+                  Buyience · About
                 </p>
               </div>
               <span className="shrink-0 rounded-full bg-(--violet-tint) px-2.5 py-1 text-[11px] font-bold tracking-wide text-(--violet-deep)">

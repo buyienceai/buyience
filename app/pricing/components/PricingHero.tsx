@@ -26,7 +26,9 @@ export default function PricingHero({
   setCurrency,
 }: PricingHeroProps) {
   const [open, setOpen] = useState(false);
+  const [dropUp, setDropUp] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const listboxId = useId();
   const prices = getPlanPrices(currency);
   const meta = CURRENCY_META[currency];
@@ -36,6 +38,18 @@ export default function PricingHero({
   const SPOTS_LEFT = 19;
   const SPOTS_TAKEN = SPOTS_TOTAL - SPOTS_LEFT;
   const spotsFillPct = (SPOTS_TAKEN / SPOTS_TOTAL) * 100;
+
+  /** Prefer opening down; flip up only when the viewport lacks room below. */
+  function updateDropDirection() {
+    const trigger = triggerRef.current;
+    if (!trigger) return;
+    const rect = trigger.getBoundingClientRect();
+    const gap = 6;
+    const menuHeight = 180; // ~4 options + padding
+    const spaceBelow = window.innerHeight - rect.bottom - gap;
+    const spaceAbove = rect.top - gap;
+    setDropUp(spaceBelow < menuHeight && spaceAbove > spaceBelow);
+  }
 
   useEffect(() => {
     function onPointerDown(event: MouseEvent) {
@@ -53,6 +67,20 @@ export default function PricingHero({
       document.removeEventListener("keydown", onKeyDown);
     };
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    updateDropDirection();
+    function onReposition() {
+      updateDropDirection();
+    }
+    window.addEventListener("resize", onReposition);
+    window.addEventListener("scroll", onReposition, true);
+    return () => {
+      window.removeEventListener("resize", onReposition);
+      window.removeEventListener("scroll", onReposition, true);
+    };
+  }, [open]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,7 +123,7 @@ export default function PricingHero({
             <b>Founders Launch Pricing</b>
             <p>
               60% off for life — {formatMoney(prices.growMonthly, currency)}/mo instead of the standard{" "}
-              <b>$249/mo</b>. Your rate never rises while your subscription is active.
+              <b>{formatMoney(prices.growStandard, currency)}/mo</b>. Your rate never rises while your subscription is active.
             </p>
           </div>
           <div
@@ -140,12 +168,16 @@ export default function PricingHero({
 
           <div className="currency-dropdown" ref={dropdownRef}>
             <button
+              ref={triggerRef}
               type="button"
               className="currency-trigger"
               aria-haspopup="listbox"
               aria-expanded={open}
               aria-controls={listboxId}
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={() => {
+                if (!open) updateDropDirection();
+                setOpen((prev) => !prev);
+              }}
             >
               <span>
                 {meta.symbol} {meta.label}
@@ -156,8 +188,12 @@ export default function PricingHero({
               />
             </button>
             {open && (
-              <ul id={listboxId} className="currency-menu" role="listbox" aria-label="Currency">
-                {CURRENCY_CODES.map((code) => {
+              <ul
+                id={listboxId}
+                className={`currency-menu${dropUp ? " drop-up" : ""}`}
+                role="listbox"
+                aria-label="Currency"
+              >                {CURRENCY_CODES.map((code) => {
                   const option = CURRENCY_META[code];
                   const selected = code === currency;
                   return (

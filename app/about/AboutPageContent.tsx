@@ -9,7 +9,6 @@ import FeatureGridSection from "@/components/FeatureGridSection";
 import CapabilitiesChipGridSection from "@/components/CapabilitiesChipGridSection";
 import AboutHero from "./components/AboutHero";
 import AboutFounders from "./components/AboutFounders";
-import AboutFacts from "./components/AboutFacts";
 
 const iconProps = {
   width: 20,
@@ -235,7 +234,6 @@ export default function AboutPageContent() {
       </div>
 
       <AboutFounders purple />
-      <AboutFacts />
 
       <FeatureGridSection
         id="values"
@@ -243,7 +241,6 @@ export default function AboutPageContent() {
         heading="Our values."
         lede="The principles that guide every feature we build and every decision we make."
         features={VALUE_FEATURES}
-        purple
       />
 
       <FeatureGridSection
@@ -251,6 +248,7 @@ export default function AboutPageContent() {
         eyebrow="WHAT MAKES US DIFFERENT"
         heading="Why Nova Core, not the rest."
         features={DIFFERENTIATOR_FEATURES}
+        purple
       />
 
       <CapabilitiesChipGridSection
@@ -259,7 +257,6 @@ export default function AboutPageContent() {
         heading="Learn more about Buyience"
         lede="Discover how our team can help bring your unique digital vision to life."
         items={LEARN_MORE}
-        purple
       />
     </MarketingLayout>
   );

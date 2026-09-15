@@ -3,7 +3,7 @@ import MarketingLayout from "@/components/MarketingLayout";
 import { pageMetadata } from "@/lib/seo";
 import BlogHero from "./components/BlogHero";
 import BlogListing from "./components/BlogListing";
-import { getAllPosts, getCategoryCounts, getFeaturedPost } from "./lib/posts";
+import { getAllPosts, getCategoryCounts } from "./lib/posts";
 
 export const metadata: Metadata = pageMetadata({
   title: "B2B Commerce Blog | Tips, Guides & Industry Insights | Buyience",
@@ -14,7 +14,6 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BlogPage() {
   const posts = getAllPosts();
-  const featured = getFeaturedPost();
   const counts = getCategoryCounts();
 
   return (
@@ -38,7 +37,7 @@ export default function BlogPage() {
       }}
     >
       <BlogHero />
-      <BlogListing posts={posts} featuredSlug={featured.slug} counts={counts} />
+      <BlogListing posts={posts} counts={counts} />
     </MarketingLayout>
   );
 }

@@ -18,7 +18,10 @@ export default function AnnouncementBar() {
         </span>
         <p className="min-w-0 flex-1 text-right text-[13px] font-medium leading-snug tracking-wide text-white sm:max-w-none sm:flex-none sm:text-center sm:text-[15px]">
           lock in <b className="font-bold text-white">{format(prices.growMonthly)}/mo</b>
-          <span className="hidden sm:inline"> before standard pricing rises to $249</span>
+          <span className="hidden sm:inline">
+            {" "}
+            before standard pricing rises to {format(prices.growStandard)}
+          </span>
           <span className="mx-1 text-white/40 sm:mx-1.5" aria-hidden="true">
             ·
           </span>

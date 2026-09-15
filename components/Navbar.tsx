@@ -543,7 +543,7 @@ export default function Navbar() {
                                 {icons.help}
                               </span>
                               <div>
-                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">About Us</span>
+                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">About</span>
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Get to know Buyience</span>
                               </div>
                             </Link>
@@ -616,20 +616,20 @@ export default function Navbar() {
               >
                 Login
               </Button>
+              <Link
+                href="/request-a-demo"
+                className="nav-btn-outline"
+              >
+                Request Demo
+              </Link>
               <Button
                 variant="primary"
                 size="sm"
-                href="/request-a-demo"
+                href="https://app.buyience.com/register"
                 className="!border-0 !px-[18px] !py-[9px] !text-[13px] !font-bold"
               >
-                Request Demo
-              </Button>
-              <Link
-                href="https://app.buyience.com/register"
-                className="nav-btn-outline"
-              >
                 Start free trial
-              </Link>
+              </Button>
             </div>
 
             {/* Mobile Menu Burger Button */}
@@ -790,7 +790,7 @@ export default function Navbar() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden pl-2 pb-4 flex flex-col gap-3"
                       >
-                        <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>About Us</Link>
+                        <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>About</Link>
                         <Link href="/contact" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Contact Us</Link>
                         <Link href="/become-a-solution-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Solution Partners</Link>
                         <Link href="/become-a-technology-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Technology Partners</Link>
@@ -807,21 +807,21 @@ export default function Navbar() {
 
               {/* Drawer Action CTAs */}
               <div className="flex flex-col gap-3 mt-8">
-                <Button
-                  variant="primary"
-                  href="/request-a-demo"
-                  className="w-full justify-center font-bold py-3.5"
-                  onClick={() => setIsDrawerOpen(false)}
-                >
-                  Request Demo
-                </Button>
                 <Link
-                  href="https://app.buyience.com/register"
+                  href="/request-a-demo"
                   className="nav-btn-outline nav-btn-outline-block"
                   onClick={() => setIsDrawerOpen(false)}
                 >
-                  Start free trial
+                  Request Demo
                 </Link>
+                <Button
+                  variant="primary"
+                  href="https://app.buyience.com/register"
+                  className="w-full justify-center font-bold py-3.5"
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  Start free trial
+                </Button>
               </div>
             </motion.div>
           </>

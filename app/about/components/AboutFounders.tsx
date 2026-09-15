@@ -5,13 +5,13 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const FOUNDERS = [
   {
-    name: "Girish",
-    role: "Founder & CEO",
+    name: "Girish K. Laathar",
+    role: "Co-founder",
     bio: "Girish founded Buyience and leads it as CEO, shaping Nova Core's product and engineering directly — from the AI Quote Engine to the platform architecture. He kept seeing the same gap that B2C tools and enterprise platforms both left open, and set out to close it for the businesses caught in between.",
     initial: "G",
   },
   {
-    name: "Jordian",
+    name: "Jordian Farahani",
     role: "Co-founder",
     bio: "Jordian co-founded Buyience and helps drive the company alongside Girish, bringing a complementary perspective to how Nova Core is built and taken to market.",
     initial: "J",

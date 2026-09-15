@@ -8,6 +8,7 @@ import MarginCapabilities from "./components/MarginCapabilities";
 import MarginHowItWorks from "./components/MarginHowItWorks";
 import MarginDivesSection from "./components/MarginDivesSection";
 import MarginImpact from "./components/MarginImpact";
+import MarginFloorDefined from "./components/MarginFloorDefined";
 import MarginFAQ from "./components/MarginFAQ";
 
 export default function MarginPageContent() {
@@ -33,7 +34,6 @@ export default function MarginPageContent() {
         },
         description:
           "Customer-specific rates, volume tiers, and margin floors — enforced on every quote, AI or human.",
-        purple: true,
       }}
     >
       <MarginHero />
@@ -42,7 +42,8 @@ export default function MarginPageContent() {
       <MarginHowItWorks purple />
       <MarginDivesSection />
       <MarginImpact purple />
-      <MarginFAQ />
+      <MarginFloorDefined />
+      <MarginFAQ purple />
     </MarketingLayout>
   );
 }

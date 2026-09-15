@@ -1,16 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useRef, useState } from "react";
 import MarketingLayout from "@/components/MarketingLayout";
 import SectionCapsule from "@/components/SectionCapsule";
 import Button from "@/components/Button";
+import ThankYouDialog from "@/components/ThankYouDialog";
 import { submitLead } from "@/lib/leads/submit";
 
 export default function RequestDemoPage() {
-  const router = useRouter();
+  const formRef = useRef<HTMLFormElement>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [thankYouOpen, setThankYouOpen] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -27,6 +28,7 @@ export default function RequestDemoPage() {
       lastName: String(data.get("lastName") ?? ""),
       email: String(data.get("email") ?? ""),
       company: String(data.get("company") ?? ""),
+      phone: String(data.get("phone") ?? ""),
       message: String(data.get("message") ?? ""),
       website2: "",
     });
@@ -37,7 +39,14 @@ export default function RequestDemoPage() {
       return;
     }
 
-    router.push("/thank-you");
+    setSubmitting(false);
+    setThankYouOpen(true);
+  }
+
+  function handleThankYouClose() {
+    setThankYouOpen(false);
+    formRef.current?.reset();
+    setSubmitError(null);
   }
 
   return (
@@ -70,6 +79,7 @@ export default function RequestDemoPage() {
             </div>
 
             <form
+              ref={formRef}
               onSubmit={handleSubmit}
               className="rounded-2xl border border-[#E8E4F4] bg-white p-4 shadow-[0_12px_40px_rgba(23,18,65,0.08)] sm:rounded-3xl sm:p-6 md:p-8"
             >
@@ -113,6 +123,17 @@ export default function RequestDemoPage() {
                 />
               </label>
               <label className="mt-3 block text-left text-[13px] font-semibold text-[#1B1033] sm:mt-4 sm:text-sm">
+                Phone number <span className="req text-[#D14343]">*</span>
+                <input
+                  required
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="e.g. +1 (415) 555-0132"
+                  className="mt-1.5 w-full rounded-xl border border-[#D7D0EC] px-3 py-2.5 text-[16px] font-medium text-[#1B1033] placeholder:font-normal placeholder:text-[#9B90BA] outline-none focus:border-[#6E2CF4] focus:ring-2 focus:ring-[#6E2CF4]/20 sm:px-3.5 sm:text-[15px]"
+                />
+              </label>
+              <label className="mt-3 block text-left text-[13px] font-semibold text-[#1B1033] sm:mt-4 sm:text-sm">
                 What are you looking to solve?
                 <textarea
                   name="message"
@@ -141,6 +162,12 @@ export default function RequestDemoPage() {
             </form>
           </div>
         </section>
+      <ThankYouDialog
+        open={thankYouOpen}
+        onClose={handleThankYouClose}
+        title="Thank you!"
+        message="We've received your demo request and will be in touch shortly."
+      />
     </MarketingLayout>
   );
 }

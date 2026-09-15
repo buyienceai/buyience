@@ -16,6 +16,35 @@ export function getSiteUrl(): string {
   return "http://localhost:3000";
 }
 
+/**
+ * Opt-in crawl/index signals (robots, sitemap, Search Console verification, JSON-LD).
+ *
+ * Set `SEO_INDEXING=true` only on the real production Vercel environment
+ * (e.g. buyience.com). Leave unset on Preview / stage (buyience.vercel.app)
+ * so those deploys stay noindex and do not expose sitemap / structured data.
+ *
+ * Prefer this over `VERCEL_ENV === "production"` — a stage branch can still
+ * be the project's Production branch and would otherwise look "live" to SEO.
+ */
+export function isSeoIndexingEnabled(): boolean {
+  return process.env.SEO_INDEXING === "true";
+}
+
+/** Robots metadata for root layout / pages when indexing is on or off. */
+export function seoRobots(): NonNullable<Metadata["robots"]> {
+  if (!isSeoIndexingEnabled()) {
+    return { index: false, follow: false, nocache: true };
+  }
+
+  return {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+  };
+}
+
 const DEFAULT_OG_IMAGE = "/og.png";
 
 type PageMetadataInput = {
@@ -34,15 +63,18 @@ export function pageMetadata({
 }: PageMetadataInput): Metadata {
   const canonical = path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
   const images = [{ url: image }];
+  const indexing = isSeoIndexingEnabled();
 
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical },
+    robots: seoRobots(),
+    // Canonicals only on the indexed production host — avoid advertising stage URLs.
+    ...(indexing ? { alternates: { canonical } } : {}),
     openGraph: {
       title,
       description,
-      url: canonical,
+      ...(indexing ? { url: canonical } : {}),
       type: "website",
       images,
     },

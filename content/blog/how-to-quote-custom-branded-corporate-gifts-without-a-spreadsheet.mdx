@@ -1,0 +1,121 @@
+**TL;DR:** Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.
+
+A client asks for 400 branded water bottles. Two colours in the logo, printed on one side, split across three bottle colours, delivered before an event in five weeks.
+
+That's a single sentence, and pricing it correctly involves at least six independent variables. Most gifting businesses work it out in a spreadsheet — pull the base cost, look up the decoration rate, add the setup fee, check whether the quantity crosses a break, apply the client's margin, and format the result. Twenty minutes later there's a number, and it's probably right.
+
+The problem isn't that this is hard. It's that it's hard every single time, and the logic gets rebuilt from scratch for each quote rather than existing anywhere permanent.
+
+## Why custom gift quoting resists spreadsheets specifically
+
+Standard B2B quoting is largely a lookup: find the product, apply the customer's price, multiply by quantity. Custom-branded gifting is a configuration — the price depends on choices that interact with each other, and the number of possible combinations grows multiplicatively rather than additively.
+
+Consider what actually varies in a single order:
+
+- Base product and its own quantity break structure
+- Decoration method — screen print, pad print, embroidery, laser engraving, full-colour digital, each with different cost behaviour
+- Number of colours in the imprint, which changes cost for some methods and not others
+- Number of imprint locations — a logo on the front and a tagline on the back is two decorations, usually with separate setup
+- Setup or origination fees, which are typically fixed per colour per location regardless of quantity
+- Variant split — 400 units across three colours may or may not require separate production runs
+- Packaging — bulk pack, individual gift box, insert card, custom sleeve
+- Turnaround — standard versus rush, with rush often carrying a surcharge
+
+A spreadsheet can hold all of these. What it can't easily do is encode the relationships between them — that setup fees scale with colours multiplied by locations, that some decoration methods have per-colour costs and others don't, that a variant split may trigger a minimum-per-variant that changes the effective quantity break. Those relationships end up living in the head of whoever builds the quotes.
+
+## Separate fixed costs from per-unit costs
+
+The single most useful structural distinction in custom gift quoting is between costs that scale with quantity and costs that don't.
+
+**Fixed costs** occur once per order regardless of quantity: screen setup, digitising an embroidery file, plate origination, colour matching, sampling. These are the reason small custom orders have surprisingly high per-unit prices — a £60 setup fee across 50 units is £1.20 per unit; across 500 units it's £0.12.
+
+**Per-unit costs** scale directly: the base product, the decoration run cost per piece, individual packaging, per-unit handling.
+
+Blending these into a single per-unit number — which is what most spreadsheet quotes end up producing — creates two problems. First, it makes quantity changes require a full recalculation rather than a simple adjustment, because the fixed portion doesn't scale. Second, it makes the quote hard for a client to interrogate. When a client asks "what if we did 600 instead of 400," a quote with separated components answers that instantly and shows why the per-unit price improves. A blended one requires starting over.
+
+Structure the quote so these are distinct line components even if the client ultimately sees a per-unit price. The internal separation is what makes revision fast.
+
+## Model decoration as a rule set, not a lookup
+
+Decoration pricing is where the real complexity lives, and it's worth encoding once rather than reconstructing per quote. For each method you offer, define:
+
+- Setup cost basis — per colour, per location, per file, or flat
+- Whether setup repeats across variants — does a colour change in the base product require re-setup, or is the screen reusable
+- Per-unit run cost and how it varies by colour count or stitch count
+- Quantity breaks specific to decoration, which are often different from the base product's breaks
+- Minimum order quantity for the method
+- Additional cost triggers — colour matching to a brand standard, oversized imprints, difficult substrates
+
+Once these exist as rules, a quote becomes: pick the method, specify colours and locations, and the cost resolves. The rep isn't recalculating decoration logic under time pressure; they're selecting configuration options.
+
+This is the core of what CPQ (configure, price, quote) means in a gifting context — the "configure" step is doing real work, not just choosing a product.
+
+## Handle variant splits explicitly
+
+Splitting an order across variants — three bottle colours, four apparel sizes — is standard in gifting and a common source of quoting errors.
+
+The questions that need explicit answers in your pricing rules:
+
+**Does the total quantity or the per-variant quantity determine the quantity break?** A 400-unit order split three ways may be priced at the 400 break or at three separate ~133 breaks depending on how your supplier handles it. Getting this wrong in either direction is costly — either you underquote and absorb the difference, or you overquote and lose to a competitor who structured it correctly.
+
+**Is there a minimum per variant?** Many suppliers require a minimum per colour or size, which can force a client to adjust their split.
+
+**Does decoration setup repeat per variant?** Usually not for the same imprint on different colours of the same item, but sometimes yes if ink colour must change for contrast — a detail that's easy to miss and expensive to discover after quoting.
+
+These rules are stable across quotes. Encoding them once means every quote applies them correctly, rather than depending on the rep remembering the exception for a particular product line.
+
+## Build lead time into the quote, not alongside it
+
+For gifting, delivery timing is frequently a hard constraint tied to an event, and a quote that doesn't address it is incomplete. Lead time is itself a function of the configuration: decoration method affects production time, variant splits can extend it, rush production carries a surcharge, and the underlying stock may or may not be available.
+
+Treating turnaround as a quotable component — with rush tiers priced explicitly — means a client asking "can we get this two weeks earlier" gets a straight answer with a price attached, rather than a promise someone has to check on later and possibly retract.
+
+This connects to inventory: a quote should be built against available-to-promise stock, not catalogue availability. Committing to a date without confirming the base product can actually be sourced in time is where gifting quotes turn into fulfilment problems, a pattern covered further in our post on [managing custom and bulk gift orders](/blog/managing-custom-and-bulk-orders-for-corporate-gift-programs).
+
+## Make revisions cheap
+
+Custom gift quotes get revised. The client changes quantity, drops a colour, adds a second imprint location, asks for individual gift boxing instead of bulk pack. In a spreadsheet workflow, each revision is a substantial rebuild — which means revisions are slow, which means the deal slows down, and each rebuild is a fresh opportunity for an arithmetic error.
+
+When the configuration logic is encoded, a revision is a change to one input. Quantity moves from 400 to 600, and every dependent cost — quantity break, fixed cost amortisation, decoration run cost — updates together. That's what makes it realistic to iterate with a client in a single conversation rather than across three days of email.
+
+Fast, accurate revision is also a competitive advantage in its own right: the supplier who can answer three what-ifs in one call frequently wins over the one who needs to come back tomorrow with each.
+
+## Keep margin visible through the configuration
+
+Because custom gift quotes stack several cost components, margin can erode without it being obvious. A rep absorbs a setup fee to win the deal, discounts the per-unit rate slightly, and throws in upgraded packaging — each individually small, cumulatively meaningful.
+
+The protection is the same principle that applies across B2B pricing: a margin floor calculated on the full configured cost, visible at the moment of quoting, with anything below it routed for approval. Checking margin after the quote is sent is checking too late.
+
+## How Nova Core handles custom gift quoting
+
+Nova Core's CPQ treats custom configuration as structured data — decoration method, colour and location counts, setup fees, variant splits, packaging, and turnaround all defined as rules that resolve automatically when a rep configures a quote. Fixed and per-unit costs stay separated internally, so a quantity change or a specification revision recalculates in seconds. Margin floors apply to the fully configured cost, and the accepted configuration carries through to the order without re-entry, so what was quoted is what gets produced.
+
+[Start your free trial →](https://buyience.com/) — 14 days, no card required.
+
+Quoting custom-branded gifts with complex decoration or variant structures? [Request a demo](/request-a-demo) and we'll map your configuration rules.
+
+## FAQ: Quoting Custom-Branded Corporate Gifts
+
+### Why are spreadsheets a poor fit for custom gift quoting?
+
+Because custom gift pricing is a configuration rather than a lookup — decoration method, colour count, imprint locations, setup fees, and variant splits interact with each other. A spreadsheet can store the numbers but not easily encode the relationships between them, so the logic gets rebuilt by hand for every quote.
+
+### What's the difference between fixed and per-unit costs in a gift quote?
+
+Fixed costs occur once per order regardless of quantity — screen setup, file digitising, colour matching. Per-unit costs scale with quantity — the base product, decoration run cost, individual packaging. Keeping them separate internally makes quantity revisions fast and explains to clients why per-unit price improves at volume.
+
+### How should setup fees be structured in a quote?
+
+Typically per colour per imprint location, since that reflects how decoration setup actually works for most methods. The rules should also specify whether setup repeats across product variants, which varies by method and by whether ink colours need to change.
+
+### Should a quantity break apply to the total order or per variant?
+
+It depends on how your supplier prices the split, and it needs an explicit rule rather than a per-quote judgement. Getting it wrong means either absorbing an unquoted cost or overpricing against competitors who structured it correctly.
+
+### How should rush turnaround be priced?
+
+As an explicit quotable component with defined tiers, so a client asking for earlier delivery gets a price and a commitment immediately, rather than a provisional answer that has to be checked and potentially withdrawn.
+
+### How do I stop margin eroding across a complex custom quote?
+
+Calculate the margin floor against the fully configured cost — base product, decoration, setup, packaging, and any surcharges — and make it visible during quoting, with sub-floor pricing routed for approval before the quote is sent rather than reviewed after.

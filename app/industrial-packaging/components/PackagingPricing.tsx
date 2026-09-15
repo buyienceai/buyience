@@ -83,7 +83,7 @@ export default function PackagingPricing() {
           transition={{ duration: 0.5 }}
           className="launch-note reveal in"
         >
-          {format(prices.growMonthly)} is the launch price — it moves to $249/mo. Lock it in for life.
+          {format(prices.growMonthly)} is the launch price — it moves to {format(prices.growStandard)}/mo. Lock it in for life.
         </motion.p>
 
         <motion.p

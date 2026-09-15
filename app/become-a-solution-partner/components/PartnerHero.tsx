@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import SectionCapsule from "@/components/SectionCapsule";
+import ThankYouDialog from "@/components/ThankYouDialog";
 import { submitLead } from "@/lib/leads/submit";
 
 const LOCATION_OPTIONS = [
@@ -23,25 +24,34 @@ const LOCATION_OPTIONS = [
   "Other",
 ] as const;
 
+const EMPTY_FORM = {
+  first: "",
+  last: "",
+  email: "",
+  phone: "",
+  loc: "",
+  locOther: "",
+  company: "",
+  ptype: "",
+  ptypeOther: "",
+  about: "",
+  website2: "", // honeypot
+};
+
 export default function PartnerHero() {
-  const [formData, setFormData] = useState({
-    first: "",
-    last: "",
-    email: "",
-    phone: "",
-    loc: "",
-    locOther: "",
-    company: "",
-    ptype: "",
-    ptypeOther: "",
-    about: "",
-    website2: "", // honeypot
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
 
   const [errors, setErrors] = useState<Record<string, boolean>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [thankYouOpen, setThankYouOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleThankYouClose = () => {
+    setThankYouOpen(false);
+    setFormData(EMPTY_FORM);
+    setErrors({});
+    setSubmitError(null);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -75,7 +85,7 @@ export default function PartnerHero() {
 
     // Honeypot check
     if (formData.website2) {
-      setSubmitted(true);
+      setThankYouOpen(true);
       return;
     }
 
@@ -116,7 +126,7 @@ export default function PartnerHero() {
       return;
     }
 
-    setSubmitted(true);
+    setThankYouOpen(true);
     setSubmitting(false);
   };
 
@@ -199,7 +209,6 @@ export default function PartnerHero() {
 
         {/* APPLICATION FORM CARD */}
         <div className="card reveal in">
-          {!submitted ? (
             <form onSubmit={handleSubmit} noValidate>
               <p className="card-h">Apply to the partner program</p>
               <p className="card-sub">Tell us about your business and we&apos;ll be in touch.</p>
@@ -395,15 +404,14 @@ export default function PartnerHero() {
                 <p className="fine">We only use your details to talk to you about the partner program.</p>
               </div>
             </form>
-          ) : (
-            <div className="success show" role="status">
-              <div className="tick">✓</div>
-              <h3>Application received.</h3>
-              <p>You&apos;ll hear from us directly — applications go to the founding team, not a queue.</p>
-            </div>
-          )}
         </div>
       </div>
+      <ThankYouDialog
+        open={thankYouOpen}
+        onClose={handleThankYouClose}
+        title="Thank you!"
+        message="You'll hear from us directly — applications go to the founding team, not a queue."
+      />
     </header>
   );
 }
