@@ -132,7 +132,6 @@ export default function IntegrationsDirectory() {
                             width={28}
                             height={28}
                             className="tile-logo"
-                            unoptimized
                           />
                         ) : (
                           item.tileText

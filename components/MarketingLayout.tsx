@@ -1,8 +1,13 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FinalCTA, { type FinalCTAProps } from "@/components/FinalCTA";
+import type { FinalCTAProps } from "@/components/FinalCTA";
+
+const FinalCTA = dynamic(() => import("@/components/FinalCTA"), {
+  ssr: true,
+});
 
 export type MarketingLayoutProps = {
   children: React.ReactNode;

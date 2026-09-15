@@ -1,13 +1,15 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import MarketingLayout from "@/components/MarketingLayout";
 import HomeHero from "./components/HomeHero";
-import HomeLogos from "./components/HomeLogos";
-import HomeCapabilities from "./components/HomeCapabilities";
-import HomeStats from "./components/HomeStats";
-import HomeModuleTabs from "./components/HomeModuleTabs";
-import HomeMACH from "./components/HomeMACH";
-import HomeAudiences from "./components/HomeAudiences";
-import HomeFAQ from "./components/HomeFAQ";
+
+const HomeLogos = dynamic(() => import("./components/HomeLogos"));
+const HomeCapabilities = dynamic(() => import("./components/HomeCapabilities"));
+const HomeStats = dynamic(() => import("./components/HomeStats"));
+const HomeModuleTabs = dynamic(() => import("./components/HomeModuleTabs"));
+const HomeMACH = dynamic(() => import("./components/HomeMACH"));
+const HomeAudiences = dynamic(() => import("./components/HomeAudiences"));
+const HomeFAQ = dynamic(() => import("./components/HomeFAQ"));
 
 export default function HomePageContent() {
   return (
@@ -18,7 +20,7 @@ export default function HomePageContent() {
       <HomeStats />
       <HomeModuleTabs />
       <HomeMACH />
-      <HomeAudiences  />
+      <HomeAudiences />
       <HomeFAQ purple />
     </MarketingLayout>
   );

@@ -29,7 +29,7 @@ export default function AnnouncementBar() {
           <span className="mx-1 text-white/40 sm:mx-1.5" aria-hidden="true">
             ·
           </span>
-          <Link
+          <Link prefetch={false}
             href="/pricing"
             className="font-bold whitespace-nowrap text-[#D6FB4F] transition-colors hover:text-[#E6FF8A]"
           >

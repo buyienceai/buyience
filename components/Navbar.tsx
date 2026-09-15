@@ -189,7 +189,7 @@ export default function Navbar() {
         <Container className="h-full">
           <div className="flex h-full items-center gap-6">
             {/* Logo */}
-            <Link href="/" className="flex shrink-0 items-center">
+            <Link prefetch={false} href="/" className="flex shrink-0 items-center">
               <Image
                 src="/images/buyience.png"
                 alt="buyience"
@@ -250,7 +250,7 @@ export default function Navbar() {
                             Core Platform
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/platform-overview" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/platform-overview" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
                                 {icons.overview}
                               </span>
@@ -259,7 +259,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">The complete B2B commerce platform</span>
                               </div>
                             </Link>
-                            <Link href="/ai-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/ai-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
                                 {icons.bolt}
                               </span>
@@ -268,7 +268,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">AI-powered pricing with win probability</span>
                               </div>
                             </Link>
-                            <Link href="/digital-sales-room" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/digital-sales-room" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-pink-50 text-pink-600 group-hover/item:bg-pink-100 transition-colors">
                                 {icons.chat}
                               </span>
@@ -277,7 +277,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Real-time negotiation &amp; deal rooms</span>
                               </div>
                             </Link>
-                            <Link href="/pricing-and-margin-control" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/pricing-and-margin-control" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
                                 {icons.shield}
                               </span>
@@ -286,7 +286,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Floors, customer rates, volume tiers</span>
                               </div>
                             </Link>
-                            <Link href="/cpq-configurator" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/cpq-configurator" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-orange-50 text-orange-600 group-hover/item:bg-orange-100 transition-colors">
                                 {icons.cog}
                               </span>
@@ -300,7 +300,7 @@ export default function Navbar() {
                           <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
                             Architecture
                           </div>
-                          <Link href="/mach-architecture" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                          <Link prefetch={false} href="/mach-architecture" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                             <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-indigo-50 text-indigo-600 group-hover/item:bg-indigo-100 transition-colors">
                               {icons.code}
                             </span>
@@ -317,7 +317,7 @@ export default function Navbar() {
                             Operations
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/order-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/order-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
                                 {icons.write}
                               </span>
@@ -326,7 +326,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Quote-to-order lifecycle</span>
                               </div>
                             </Link>
-                            <Link href="/inventory-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/inventory-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
                                 {icons.wallet}
                               </span>
@@ -335,7 +335,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Multi-warehouse, real-time sync</span>
                               </div>
                             </Link>
-                            <Link href="/supplier-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/supplier-management" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
                                 {icons.users}
                               </span>
@@ -344,7 +344,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Onboarding, compliance &amp; logistics</span>
                               </div>
                             </Link>
-                            <Link href="/b2b-storefront" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/b2b-storefront" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-pink-50 text-pink-600 group-hover/item:bg-pink-100 transition-colors">
                                 {icons.layout}
                               </span>
@@ -358,7 +358,7 @@ export default function Navbar() {
                           <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
                             Integration
                           </div>
-                          <Link href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                          <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                             <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-50 text-amber-600 group-hover/item:bg-amber-100 transition-colors">
                               {icons.connect}
                             </span>
@@ -381,7 +381,7 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter("solutions")}
                 onMouseLeave={handleMouseLeave}
               >
-                <Link
+                <Link prefetch={false}
                   href="/solutions"
                   className={`flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 transition-colors cursor-pointer ${
                     activeMenu === "solutions" ? "text-slate-900" : "text-[#1f2937] hover:text-slate-900"
@@ -414,7 +414,7 @@ export default function Navbar() {
                             By Capability
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
                                 {icons.dashboard}
                               </span>
@@ -423,7 +423,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">One platform for the whole operation</span>
                               </div>
                             </Link>
-                            <Link href="/pricing-and-margin-control" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/pricing-and-margin-control" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
                                 {icons.shield}
                               </span>
@@ -441,7 +441,7 @@ export default function Navbar() {
                             By Industry
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/automotive-solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/automotive-solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-slate-100 text-slate-700 group-hover/item:bg-slate-200 transition-colors">
                                 {icons.cog}
                               </span>
@@ -450,7 +450,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Parts catalogs &amp; dealer pricing</span>
                               </div>
                             </Link>
-                            <Link href="/mro-solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/mro-solutions" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
                                 {icons.wallet}
                               </span>
@@ -459,7 +459,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Contract pricing &amp; replenishment</span>
                               </div>
                             </Link>
-                            <Link href="/corporate-gifting" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/corporate-gifting" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-orange-50 text-orange-600 group-hover/item:bg-orange-100 transition-colors">
                                 {icons.gift}
                               </span>
@@ -468,7 +468,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Kitted quotes &amp; seasonal margin protection</span>
                               </div>
                             </Link>
-                            <Link href="/industrial-packaging" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/industrial-packaging" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-indigo-50 text-indigo-600 group-hover/item:bg-indigo-100 transition-colors">
                                 {icons.box3d}
                               </span>
@@ -478,7 +478,7 @@ export default function Navbar() {
                               </div>
                             </Link>
                           </div>
-                          <Link href="/solutions#industries" className="flex items-center gap-1 text-xs font-bold text-violet-600 hover:text-violet-700 transition-colors pl-3 mt-4">
+                          <Link prefetch={false} href="/solutions#industries" className="flex items-center gap-1 text-xs font-bold text-violet-600 hover:text-violet-700 transition-colors pl-3 mt-4">
                             All industries →
                           </Link>
                         </div>
@@ -488,10 +488,10 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/integrations">
+              <Link prefetch={false} className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/integrations">
                 Integrations
               </Link>
-              <Link className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/pricing">
+              <Link prefetch={false} className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/pricing">
                 Pricing
               </Link>
 
@@ -538,7 +538,7 @@ export default function Navbar() {
                             Company
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/about" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/about" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
                                 {icons.help}
                               </span>
@@ -547,7 +547,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Get to know Buyience</span>
                               </div>
                             </Link>
-                            <Link href="/contact" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/contact" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
                                 {icons.doc}
                               </span>
@@ -561,7 +561,7 @@ export default function Navbar() {
                           <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
                             Learn
                           </div>
-                          <Link href="/blog" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                          <Link prefetch={false} href="/blog" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                             <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
                               {icons.book}
                             </span>
@@ -578,7 +578,7 @@ export default function Navbar() {
                             Partners
                           </div>
                           <div className="flex flex-col gap-2">
-                            <Link href="/become-a-solution-partner" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/become-a-solution-partner" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-pink-50 text-pink-600 group-hover/item:bg-pink-100 transition-colors">
                                 {icons.layout}
                               </span>
@@ -587,7 +587,7 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Agencies &amp; consultants</span>
                               </div>
                             </Link>
-                            <Link href="/become-a-technology-partner" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <Link prefetch={false} href="/become-a-technology-partner" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
                               <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-50 text-amber-600 group-hover/item:bg-amber-100 transition-colors">
                                 {icons.code}
                               </span>
@@ -616,7 +616,7 @@ export default function Navbar() {
               >
                 Login
               </Button>
-              <Link
+              <Link prefetch={false}
                 href="/request-a-demo"
                 className="nav-btn-outline"
               >
@@ -670,7 +670,7 @@ export default function Navbar() {
               className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white p-6 shadow-2xl flex flex-col overflow-y-auto lg:hidden"
             >
               <div className="flex items-center justify-between border-b border-slate-100 pb-5 mb-5">
-                <Link href="/" className="flex items-center" onClick={() => setIsDrawerOpen(false)}>
+                <Link prefetch={false} href="/" className="flex items-center" onClick={() => setIsDrawerOpen(false)}>
                   <Image
                     src="/images/buyience.png"
                     alt="buyience"
@@ -710,21 +710,21 @@ export default function Navbar() {
                         className="overflow-hidden pl-2 pb-4 flex flex-col gap-3"
                       >
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">Core Platform</div>
-                        <Link href="/platform-overview" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Platform Overview</Link>
-                        <Link href="/ai-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>AI Quote Engine</Link>
-                        <Link href="/digital-sales-room" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Digital Sales Room</Link>
-                        <Link href="/pricing-and-margin-control" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Pricing &amp; Margin Control</Link>
-                        <Link href="/cpq-configurator" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Product Configurator</Link>
+                        <Link prefetch={false} href="/platform-overview" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Platform Overview</Link>
+                        <Link prefetch={false} href="/ai-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>AI Quote Engine</Link>
+                        <Link prefetch={false} href="/digital-sales-room" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Digital Sales Room</Link>
+                        <Link prefetch={false} href="/pricing-and-margin-control" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Pricing &amp; Margin Control</Link>
+                        <Link prefetch={false} href="/cpq-configurator" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Product Configurator</Link>
                         
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">Operations</div>
-                        <Link href="/order-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Order Management</Link>
-                        <Link href="/inventory-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Inventory Management</Link>
-                        <Link href="/supplier-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Supplier Management</Link>
-                        <Link href="/b2b-storefront" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>B2B Storefront</Link>
+                        <Link prefetch={false} href="/order-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Order Management</Link>
+                        <Link prefetch={false} href="/inventory-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Inventory Management</Link>
+                        <Link prefetch={false} href="/supplier-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Supplier Management</Link>
+                        <Link prefetch={false} href="/b2b-storefront" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>B2B Storefront</Link>
                         
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">Architecture &amp; Integration</div>
-                        <Link href="/mach-architecture" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MACH Architecture</Link>
-                        <Link href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>WordPress / WooCommerce</Link>
+                        <Link prefetch={false} href="/mach-architecture" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MACH Architecture</Link>
+                        <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>WordPress / WooCommerce</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -749,26 +749,26 @@ export default function Navbar() {
                         className="overflow-hidden pl-2 pb-4 flex flex-col gap-3"
                       >
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Capability</div>
-                        <Link href="/solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Unified B2B Commerce</Link>
-                        <Link href="/pricing-and-margin-control" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Pricing &amp; Margin Control</Link>
+                        <Link prefetch={false} href="/solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Unified B2B Commerce</Link>
+                        <Link prefetch={false} href="/pricing-and-margin-control" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Pricing &amp; Margin Control</Link>
                         
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Industry</div>
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Industry</div>
-                        <Link href="/automotive-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Automotive</Link>
-                        <Link href="/mro-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MRO / Industrial</Link>
-                        <Link href="/corporate-gifting" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Corporate Gifting</Link>
-                        <Link href="/industrial-packaging" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Industrial Packaging</Link>
-                        <Link href="/solutions#industries" className="text-sm font-bold text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>All industries →</Link>
+                        <Link prefetch={false} href="/automotive-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Automotive</Link>
+                        <Link prefetch={false} href="/mro-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MRO / Industrial</Link>
+                        <Link prefetch={false} href="/corporate-gifting" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Corporate Gifting</Link>
+                        <Link prefetch={false} href="/industrial-packaging" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Industrial Packaging</Link>
+                        <Link prefetch={false} href="/solutions#industries" className="text-sm font-bold text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>All industries →</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
 
                 {/* Plain Links */}
-                <Link href="/integrations" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
+                <Link prefetch={false} href="/integrations" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
                   Integrations
                 </Link>
-                <Link href="/pricing" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
+                <Link prefetch={false} href="/pricing" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
                   Pricing
                 </Link>
 
@@ -790,11 +790,11 @@ export default function Navbar() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden pl-2 pb-4 flex flex-col gap-3"
                       >
-                        <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>About</Link>
-                        <Link href="/contact" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Contact Us</Link>
-                        <Link href="/become-a-solution-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Solution Partners</Link>
-                        <Link href="/become-a-technology-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Technology Partners</Link>
-                        <Link href="/blog" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Blog</Link>
+                        <Link prefetch={false} href="/about" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>About</Link>
+                        <Link prefetch={false} href="/contact" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Contact Us</Link>
+                        <Link prefetch={false} href="/become-a-solution-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Solution Partners</Link>
+                        <Link prefetch={false} href="/become-a-technology-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Technology Partners</Link>
+                        <Link prefetch={false} href="/blog" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Blog</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -807,7 +807,7 @@ export default function Navbar() {
 
               {/* Drawer Action CTAs */}
               <div className="flex flex-col gap-3 mt-8">
-                <Link
+                <Link prefetch={false}
                   href="/request-a-demo"
                   className="nav-btn-outline nav-btn-outline-block"
                   onClick={() => setIsDrawerOpen(false)}

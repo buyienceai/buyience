@@ -43,7 +43,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link
+      <Link prefetch={false}
         href={href}
         className={combinedClassName}
         onClick={props.onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
