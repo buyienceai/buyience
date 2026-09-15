@@ -165,10 +165,7 @@ export default function MroContractDemo() {
   }
 
   return (
-    <div
-      className="quote-hero-visual aiq-console-wrap relative flex min-h-0 w-full flex-col self-start"
-      style={{ alignSelf: "start" }}
-    >
+    <div className="quote-hero-visual aiq-console-wrap relative flex min-h-0 w-full flex-col self-stretch">
       <div
         className="aiq-console flex min-h-0 w-full flex-1 flex-col"
         aria-label="Contract Desk — Cross-Reference & Net Price"
@@ -346,7 +343,11 @@ export default function MroContractDemo() {
             )}
           </div>
 
-          <a href="/ai-quote-engine" className="aiq-send" style={{ display: "block", textAlign: "center" ,color:"white" }}>
+          <a
+            href="/ai-quote-engine"
+            className="aiq-send"
+            style={{ display: "block", textAlign: "center", color: "#fff", textDecoration: "none" }}
+          >
             Add to quote →
           </a>
         </div>

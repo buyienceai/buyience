@@ -200,9 +200,13 @@ export default function AutomotiveCounterDemo() {
             ))}
           </div>
 
-          <button type="button" className="aiq-send">
+          <a
+            href="/digital-sales-room"
+            className="aiq-send"
+            style={{ display: "block", textAlign: "center", color: "#fff", textDecoration: "none" }}
+          >
             Send to sales room →
-          </button>
+          </a>
         </div>
       </div>
       <p className="mt-3 text-center text-[12px] font-medium text-[#6A5A8C]">

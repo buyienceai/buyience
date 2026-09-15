@@ -13,13 +13,10 @@ export default function MroHero() {
   return (
     <header className="quote-hero relative flex flex-col overflow-hidden bg-hero-grid sm:min-h-[var(--home-hero-h)] sm:justify-center">
       <div className="pointer-events-none absolute inset-0 bg-hero-glows" aria-hidden="true" />
-      <div
-        className="quote-hero-inner relative z-10 mx-auto grid w-full max-w-[var(--w-max,1200px)] grid-cols-1 items-start gap-10 px-5 py-12 sm:grid-cols-2 sm:px-8"
-        style={{ alignItems: "start" }}
-      >
+      <div className="quote-hero-inner relative z-10 mx-auto grid w-full max-w-[var(--w-max,1200px)] grid-cols-1 items-stretch gap-10 px-5 py-12 sm:grid-cols-2 sm:px-8">
         <div
-          className="quote-hero-copy flex min-h-0 flex-col justify-start self-start text-left"
-          style={{ justifyContent: "flex-start", alignSelf: "start" }}
+          className="quote-hero-copy flex min-h-0 flex-col self-stretch text-left"
+          style={{ justifyContent: "flex-start" }}
         >
           <div className="quote-hero-copy-main">
             <SectionCapsule>Industries · MRO</SectionCapsule>
