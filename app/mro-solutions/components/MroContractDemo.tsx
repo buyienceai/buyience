@@ -346,7 +346,7 @@ export default function MroContractDemo() {
             )}
           </div>
 
-          <a href="/ai-quote-engine" className="aiq-send" style={{ display: "block", textAlign: "center" }}>
+          <a href="/ai-quote-engine" className="aiq-send" style={{ display: "block", textAlign: "center" ,color:"white" }}>
             Add to quote →
           </a>
         </div>
