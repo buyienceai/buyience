@@ -30,6 +30,21 @@ const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const
 
 const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contain: true }> = {
   "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
+  "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "b2b-corporate-gifting-at-scale-quoting-bulk-pricing-and-order-management": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "managing-custom-and-bulk-orders-for-corporate-gift-programs": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

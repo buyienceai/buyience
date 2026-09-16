@@ -165,8 +165,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-09-09",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/managing-custom-and-bulk-orders-for-corporate-gift-programs.png",
+    coverImage: "/blog/covers/machine-custom-and-bulk-order-herosection.png",
     coverImageAlt: "Custom and bulk order management for corporate gift programs",
   },
   {
@@ -183,8 +182,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-09-02",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead.png",
+    coverImage: "/blog/covers/why-Corporate-Gifting-herosection.png",
     coverImageAlt: "Shopify alternative for corporate gifting companies",
   },
   {
@@ -201,8 +199,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-08-26",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/b2b-corporate-gifting-at-scale-quoting-bulk-pricing-and-order-management.png",
+    coverImage: "/blog/covers/b2b-corporate-gifting-hero.png",
     coverImageAlt: "Corporate gifting quoting, bulk pricing, and order management",
   },
   {

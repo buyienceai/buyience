@@ -4,6 +4,10 @@ Most gifting companies handle this through diligence and memory — someone who 
 
 ## Where custom and bulk gift orders actually go wrong
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/machine-custom-email-threads.png" alt="From email threads to structured orders — every requirement stays connected to the order" />
+</figure>
+
 **Specifications live in email, not in the order.** The client asked for the logo centered rather than on the corner, and mentioned it in a reply three messages deep in a thread. Whoever prepares the production file never sees that message.
 
 **Recipient lists change after the order is placed.** A client sends a list of 250 names, then updates it twice before production — a new hire added, two people who left, three corrected addresses. Without a defined process for versioning that list, it's genuinely unclear at production time which version is authoritative.
@@ -29,10 +33,13 @@ The single highest-leverage change is capturing custom requirements as structure
 
 ## Handle recipient lists as versioned data, not attachments
 
+
 Multi-recipient orders deserve their own process, because a recipient list is data that changes, not a static document. A few practices that prevent the common failures:
 
 Set a list-lock deadline tied to production, communicated to the client at order confirmation. Changes after that date are handled as exceptions with a cost and schedule implication, rather than absorbed silently.
-
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/machine-custom-one-order.png" alt="One order, one source of truth — recipient lists, proofs, and approvals tied to the order" />
+</figure>
 **Validate addresses at intake, not at shipping.** Running address validation when the list arrives surfaces problems while there's still time to ask the client to correct them, rather than generating undeliverable packages after production.
 
 Treat the list as attached to the order record, with a clear current version, rather than as an email attachment that exists in several slightly different copies across a thread.
@@ -51,6 +58,7 @@ Proofing is where a surprising share of corporate gifting disputes originate, an
 
 ## Check availability against the deadline at quoting, not at fulfillment
 
+
 Bulk gift orders frequently require quantities large enough to exceed current stock, and the relevant question isn't just "can we get these" but "can we get these in time." That check belongs at quoting:
 
 - Confirm available-to-promise inventory, excluding stock already committed to other orders
@@ -58,7 +66,9 @@ Bulk gift orders frequently require quantities large enough to exceed current st
 - Reserve or flag stock for an order in active negotiation, so a second large quote doesn't get built against the same units
 
 Catching a timing problem at quoting means offering the client an alternative product or an adjusted quantity while they're still deciding. Catching it during fulfillment means a difficult call about a deadline you can no longer meet.
-
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/machine-custom-deliver-before-you-quote.png" alt="Know you can deliver before you quote — connect inventory, lead times, and deadlines" />
+</figure>
 ## Sequence production backward from the arrival date
 
 **Corporate gifting deadlines are usually fixed and externally imposed.** That makes backward scheduling the natural approach: start from the arrive-by date, subtract shipping transit time, subtract production and customization time, subtract proofing and approval time, and the result is the real deadline for finalizing the order — which is often meaningfully earlier than clients expect.
