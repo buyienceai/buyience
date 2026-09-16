@@ -6398,6 +6398,12 @@ a.nav-btn-outline-block {
   min-width: 640px;
 }
 
+.blog-page .blog-prose .blog-table-wrap--center th,
+.blog-page .blog-prose .blog-table-wrap--center td {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .blog-page .blog-prose th,
 .blog-page .blog-prose td {
   border: 1px solid var(--border);
