@@ -267,8 +267,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-07-29",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/volume-discount-structures-that-actually-protect-your-margin.png",
+    coverImage: "/blog/covers/volume-discount-structures-herosection.png",
     coverImageAlt: "Volume discount pricing that protects B2B margin",
   },
   {
