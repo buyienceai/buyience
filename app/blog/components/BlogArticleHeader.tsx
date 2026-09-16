@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { BlogPost } from "../data/posts";
-import { formatPublishedDate } from "../lib/posts";
+import { formatPublishedDate, getBlogCoverDisplay } from "../lib/posts";
 import BlogMeta from "./BlogMeta";
 
 type Props = {
@@ -9,9 +9,7 @@ type Props = {
 };
 
 export default function BlogArticleHeader({ post }: Props) {
-  const coverContain = post.slug === "digital-sales-room-dsr";
-  const coverWidth = coverContain ? 1672 : 1488;
-  const coverHeight = coverContain ? 941 : 720;
+  const { width: coverWidth, height: coverHeight, contain: coverContain } = getBlogCoverDisplay(post.slug);
 
   return (
     <header className="blog-article-header">

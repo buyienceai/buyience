@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "../data/posts";
-import { formatPublishedDate } from "../lib/posts";
+import { formatPublishedDate, getBlogCoverDisplay } from "../lib/posts";
 import BlogMeta from "./BlogMeta";
 
 type Props = {
@@ -11,6 +11,7 @@ type Props = {
 
 export default function BlogCard({ post, variant = "default" }: Props) {
   const isFeatured = variant === "featured";
+  const { width: coverWidth, height: coverHeight, contain: coverContain } = getBlogCoverDisplay(post.slug);
 
   return (
     <article
@@ -18,12 +19,12 @@ export default function BlogCard({ post, variant = "default" }: Props) {
       data-cat={post.category}
     >
       <Link href={`/blog/${post.slug}`} className="blog-card-link">
-        <div className="blog-card-media">
+        <div className={`blog-card-media${coverContain ? " blog-card-media--contain" : ""}`}>
           <Image
             src={post.coverImage}
             alt={post.coverImageAlt}
-            width={1488}
-            height={720}
+            width={coverWidth}
+            height={coverHeight}
             className="blog-card-img"
             sizes={
               isFeatured

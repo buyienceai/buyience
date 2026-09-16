@@ -5994,6 +5994,15 @@ a.nav-btn-outline-block {
   transition: transform .35s ease;
 }
 
+.blog-page .blog-card-media--contain {
+  aspect-ratio: auto;
+}
+
+.blog-page .blog-card-media--contain .blog-card-img {
+  height: auto;
+  object-fit: contain;
+}
+
 .blog-page .blog-card:hover .blog-card-img {
   transform: scale(1.03);
 }
@@ -6040,9 +6049,18 @@ a.nav-btn-outline-block {
   aspect-ratio: 1488 / 720;
 }
 
+.blog-page .blog-card--featured .blog-card-media--contain {
+  aspect-ratio: auto;
+}
+
 .blog-page .blog-card--featured .blog-card-img {
   object-fit: cover;
   object-position: center center;
+}
+
+.blog-page .blog-card--featured .blog-card-media--contain .blog-card-img {
+  height: auto;
+  object-fit: contain;
 }
 
 .blog-page .blog-card--featured .blog-card-body {

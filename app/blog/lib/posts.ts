@@ -26,6 +26,16 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
 
+const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const;
+
+const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contain: true }> = {
+  "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
+};
+
+export function getBlogCoverDisplay(slug: string) {
+  return BLOG_COVER_BY_SLUG[slug] ?? DEFAULT_BLOG_COVER;
+}
+
 /** Newest post by `publishedAt` — date order is the single source of truth. */
 export function getFeaturedPost(): BlogPost {
   const posts = getAllPosts();
