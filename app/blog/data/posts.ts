@@ -250,8 +250,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-08-05",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/quote-turnaround-time-the-metric-fastener-distributors-ignore.png",
+    coverImage: "/blog/covers/quote-turnaround-time-herosection.png",
     coverImageAlt: "Quote turnaround time for fastener distributors",
   },
   {
