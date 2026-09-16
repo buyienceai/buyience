@@ -216,8 +216,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-08-19",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/industrial-supply-distributors-moving-from-phone-email-orders-to-self-service.png",
+    coverImage: "/blog/covers/industrial-supply-distributors-herosection.png",
     coverImageAlt: "Self-service ordering for industrial supply distributors",
   },
   {
