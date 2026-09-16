@@ -233,8 +233,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-08-12",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/how-to-price-fasteners-and-mro-parts-for-repeat-b2b-buyers.png",
+    coverImage: "/blog/covers/how-to-price-fasteners-herosection.png",
     coverImageAlt: "Pricing fasteners and MRO parts for repeat B2B buyers",
   },
   {
