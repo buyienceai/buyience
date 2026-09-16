@@ -6275,6 +6275,15 @@ a.nav-btn-outline-block {
   object-fit: cover;
 }
 
+.blog-page .blog-article-cover--contain {
+  aspect-ratio: auto;
+}
+
+.blog-page .blog-article-cover--contain .blog-article-cover-img {
+  height: auto;
+  object-fit: contain;
+}
+
 /* Prose — full layout column (same width as cover / site chrome) */
 .blog-page .blog-prose {
   max-width: none;

@@ -9,6 +9,10 @@ type Props = {
 };
 
 export default function BlogArticleHeader({ post }: Props) {
+  const coverContain = post.slug === "digital-sales-room-dsr";
+  const coverWidth = coverContain ? 1672 : 1488;
+  const coverHeight = coverContain ? 941 : 720;
+
   return (
     <header className="blog-article-header">
       <div className="blog-article-top">
@@ -31,12 +35,12 @@ export default function BlogArticleHeader({ post }: Props) {
         readingTime={post.readingTime}
         size="md"
       />
-      <div className="blog-article-cover">
+      <div className={`blog-article-cover${coverContain ? " blog-article-cover--contain" : ""}`}>
         <Image
           src={post.coverImage}
           alt={post.coverImageAlt}
-          width={1488}
-          height={720}
+          width={coverWidth}
+          height={coverHeight}
           className="blog-article-cover-img"
           sizes="(max-width: 900px) 100vw, min(100vw, var(--w-max))"
           priority
