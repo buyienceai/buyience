@@ -21,6 +21,7 @@ export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [accPlatform, setAccPlatform] = useState(false);
   const [accSolutions, setAccSolutions] = useState(false);
+  const [accIntegrations, setAccIntegrations] = useState(false);
   const [accResources, setAccResources] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -296,19 +297,6 @@ export default function Navbar() {
                               </div>
                             </Link>
                           </div>
-
-                          <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
-                            Architecture
-                          </div>
-                          <Link prefetch={false} href="/mach-architecture" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
-                            <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-indigo-50 text-indigo-600 group-hover/item:bg-indigo-100 transition-colors">
-                              {icons.code}
-                            </span>
-                            <div>
-                              <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">MACH Architecture</span>
-                              <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Microservices, API-first, cloud-native, headless</span>
-                            </div>
-                          </Link>
                         </div>
 
                         {/* Col 2 */}
@@ -354,19 +342,6 @@ export default function Navbar() {
                               </div>
                             </Link>
                           </div>
-
-                          <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
-                            Integration
-                          </div>
-                          <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
-                            <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-50 text-amber-600 group-hover/item:bg-amber-100 transition-colors">
-                              {icons.connect}
-                            </span>
-                            <div>
-                              <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">WordPress / WooCommerce</span>
-                              <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Add B2B to your WordPress site</span>
-                            </div>
-                          </Link>
                         </div>
                       </div>
                     </motion.div>
@@ -433,6 +408,19 @@ export default function Navbar() {
                               </div>
                             </Link>
                           </div>
+
+                          <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
+                            Architecture
+                          </div>
+                          <Link prefetch={false} href="/mach-architecture" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                            <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-indigo-50 text-indigo-600 group-hover/item:bg-indigo-100 transition-colors">
+                              {icons.code}
+                            </span>
+                            <div>
+                              <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">MACH Architecture</span>
+                              <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Microservices, API-first, cloud-native, headless</span>
+                            </div>
+                          </Link>
                         </div>
 
                         {/* Industry */}
@@ -488,9 +476,61 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link prefetch={false} className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/integrations">
-                Integrations
-              </Link>
+              {/* INTEGRATIONS */}
+              <div
+                className="relative"
+                data-menu
+                onMouseEnter={() => handleMouseEnter("integrations")}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link prefetch={false}
+                  href="/integrations"
+                  className={`flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 transition-colors cursor-pointer ${
+                    activeMenu === "integrations" ? "text-slate-900" : "text-[#1f2937] hover:text-slate-900"
+                  }`}
+                  aria-expanded={activeMenu === "integrations" ? "true" : "false"}
+                  aria-controls="menu-integrations"
+                >
+                  Integrations
+                  <ChevronDown
+                    className={`h-3.5 w-3.5 text-slate-400 transition-transform duration-200 ${
+                      activeMenu === "integrations" ? "rotate-180 text-slate-700" : ""
+                    }`}
+                  />
+                </Link>
+
+                <AnimatePresence>
+                  {activeMenu === "integrations" && (
+                    <motion.div
+                      id="menu-integrations"
+                      initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[360px] max-w-[calc(100vw-40px)] bg-white border border-slate-100 rounded-3xl shadow-xl p-8 z-50"
+                    >
+                      <div className="text-left">
+                        <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3">
+                          Integrations
+                        </div>
+                        <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                          <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-50 text-amber-600 group-hover/item:bg-amber-100 transition-colors">
+                            {icons.connect}
+                          </span>
+                          <div>
+                            <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">WordPress / WooCommerce</span>
+                            <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Add B2B to your WordPress site</span>
+                          </div>
+                        </Link>
+                        <Link prefetch={false} href="/integrations" className="flex items-center gap-1 text-xs font-bold text-violet-600 hover:text-violet-700 transition-colors pl-3 mt-4">
+                          View All
+                        </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link prefetch={false} className="flex items-center gap-1 text-[14px] font-medium py-1 px-0.5 text-[#1f2937] hover:text-slate-900 transition-colors" href="/pricing">
                 Pricing
               </Link>
@@ -721,10 +761,6 @@ export default function Navbar() {
                         <Link prefetch={false} href="/inventory-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Inventory Management</Link>
                         <Link prefetch={false} href="/supplier-management" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Supplier Management</Link>
                         <Link prefetch={false} href="/b2b-storefront" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>B2B Storefront</Link>
-                        
-                        <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">Architecture &amp; Integration</div>
-                        <Link prefetch={false} href="/mach-architecture" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MACH Architecture</Link>
-                        <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>WordPress / WooCommerce</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -751,8 +787,10 @@ export default function Navbar() {
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Capability</div>
                         <Link prefetch={false} href="/solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Unified B2B Commerce</Link>
                         <Link prefetch={false} href="/pricing-and-margin-control" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Pricing &amp; Margin Control</Link>
+
+                        <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">Architecture</div>
+                        <Link prefetch={false} href="/mach-architecture" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MACH Architecture</Link>
                         
-                        <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Industry</div>
                         <div className="text-[9px] font-bold tracking-widest text-slate-400 uppercase font-mono mt-2">By Industry</div>
                         <Link prefetch={false} href="/automotive-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Automotive</Link>
                         <Link prefetch={false} href="/mro-solutions" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>MRO / Industrial</Link>
@@ -764,10 +802,31 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
 
-                {/* Plain Links */}
-                <Link prefetch={false} href="/integrations" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
-                  Integrations
-                </Link>
+                {/* Integrations Accordion */}
+                <div className="border-b border-slate-100">
+                  <button
+                    onClick={() => setAccIntegrations(!accIntegrations)}
+                    className="w-full py-4 flex items-center justify-between text-base font-bold text-slate-800 focus:outline-none cursor-pointer"
+                    aria-expanded={accIntegrations ? "true" : "false"}
+                  >
+                    Integrations
+                    <ChevronDown className={`h-4.5 w-4.5 text-slate-400 transition-transform ${accIntegrations ? "rotate-180" : ""}`} />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {accIntegrations && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden pl-2 pb-4 flex flex-col gap-3"
+                      >
+                        <Link prefetch={false} href="/wordpress-plugin-buyience-novacore-b2b-quote-engine" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>WordPress / WooCommerce</Link>
+                        <Link prefetch={false} href="/integrations" className="text-sm font-bold text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>View All</Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
                 <Link prefetch={false} href="/pricing" className="w-full py-4 text-base font-bold text-slate-800 border-b border-slate-100 block" onClick={() => setIsDrawerOpen(false)}>
                   Pricing
                 </Link>
