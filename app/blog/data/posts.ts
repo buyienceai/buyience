@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-09-04",
     readingTime: "11 min read",
-    coverImage: "/blog/covers/digital-sales-room-dsr.png",
+    coverImage: "/blog/covers/digital-sales-room-herosection.png",
     coverImageAlt: "Digital sales room for B2B distribution and wholesale",
   },
   /* Temporarily commented out
