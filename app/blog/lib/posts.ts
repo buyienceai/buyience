@@ -90,6 +90,41 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "composable-commerce-for-b2b-a-decision-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "why-most-b2b-erp-integrations-fail": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "the-real-cost-of-headless-commerce-for-b2b-companies": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "b2b-reordering-is-broken-and-why-that-matters": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-b2b-teams-manage-customer-specific-pricing-at-scale": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

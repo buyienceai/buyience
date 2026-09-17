@@ -365,8 +365,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-05-28",
     readingTime: "31 min read",
-    coverImage: "/blog/covers/composable-commerce-for-b2b-a-decision-guide.png",
-    coverImageAlt: "Composable commerce decision guide",
+    coverImage:
+      "/blog/covers/composable-commerce-for-b2b-a-decision-guide-herosection.png",
+    coverImageAlt:
+      "Composable B2B workflows resolving pricing, inventory, customer terms, and approvals into one commercial decision",
   },
   {
     slug: "ai-quote-generation-in-b2b-what-is-real-vs-marketing",
@@ -400,8 +402,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-05-13",
     readingTime: "35 min read",
     coverImage:
-      "/blog/covers/the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it.png",
-    coverImageAlt: "Universal Commerce Protocol readiness",
+      "/blog/covers/the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it-herosection.png",
+    coverImageAlt:
+      "Universal Commerce Protocol connecting AI agents to B2B pricing, inventory, quoting, and product data",
   },
   {
     slug: "why-most-b2b-erp-integrations-fail",
@@ -416,8 +419,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-28",
     readingTime: "9 min read",
-    coverImage: "/blog/covers/why-most-b2b-erp-integrations-fail.png",
-    coverImageAlt: "B2B ERP integration challenges",
+    coverImage:
+      "/blog/covers/why-most-b2b-erp-integrations-fail-herosection.png",
+    coverImageAlt:
+      "B2B ERP integration failing from unclear scope versus clear architecture with defined system roles",
   },
   {
     slug: "the-real-cost-of-headless-commerce-for-b2b-companies",
@@ -432,8 +437,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-23",
     readingTime: "14 min read",
-    coverImage: "/blog/covers/the-real-cost-of-headless-commerce-for-b2b-companies.png",
-    coverImageAlt: "Cost of headless commerce for B2B",
+    coverImage:
+      "/blog/covers/the-real-cost-of-headless-commerce-for-b2b-companies-herosection.png",
+    coverImageAlt:
+      "Headless commerce freedom bringing integration, workflow, business logic, infrastructure, and maintenance responsibility",
   },
   {
     slug: "erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works",
@@ -448,8 +455,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-17",
     readingTime: "14 min read",
-    coverImage: "/blog/covers/erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works.png",
-    coverImageAlt: "ERP-first vs commerce-first architecture",
+    coverImage:
+      "/blog/covers/erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works-herosection.png",
+    coverImageAlt:
+      "ERP-first and commerce-first both failing when one system tries to own the full B2B stack",
   },
   {
     slug: "b2b-reordering-is-broken-and-why-that-matters",
@@ -464,8 +473,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-14",
     readingTime: "14 min read",
-    coverImage: "/blog/covers/b2b-reordering-is-broken-and-why-that-matters.png",
-    coverImageAlt: "B2B reordering portal",
+    coverImage:
+      "/blog/covers/b2b-reordering-is-broken-and-why-that-matters-herosection.png",
+    coverImageAlt:
+      "Broken B2B reordering with search-again friction versus order history, repeat, and order flow",
   },
   {
     slug: "how-b2b-teams-manage-customer-specific-pricing-at-scale",
@@ -480,8 +491,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-07",
     readingTime: "13 min read",
-    coverImage: "/blog/covers/how-b2b-teams-manage-customer-specific-pricing-at-scale.png",
-    coverImageAlt: "Customer-specific B2B pricing",
+    coverImage:
+      "/blog/covers/how-b2b-teams-manage-customer-specific-pricing-at-scale-herosection.png",
+    coverImageAlt:
+      "Same product resolving to different customer-specific contract, volume, and negotiated prices at scale",
   },
   {
     slug: "the-real-cost-of-manual-quote-approvals-in-b2b",

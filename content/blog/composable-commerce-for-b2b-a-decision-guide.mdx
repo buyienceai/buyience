@@ -12,6 +12,11 @@ The gap isn't in the infrastructure. It's in the workflows. Most composable comm
 This is the decision B2B teams need to make before choosing a composable stack: are you composing services, or are you composing workflows? The answer determines whether the architecture delivers operational flexibility or just architectural flexibility.
 
 ## Why B2B Composability Is Architecturally Different
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/composable-commerce-for-b2b-a-decision-guide-browser-cart-checkout.png" alt="B2B as commercial negotiation with pricing, configuration, terms, approvals, and inventory versus simple browse-cart-checkout" />
+</figure>
+
 Composable commerce gained traction in DTC and B2C, where the primary composability challenge is the frontend: decouple the presentation layer, experiment with experiences, iterate faster than the monolith allows. A headless storefront with a composable backend delivers real value when the core workflow is browse → cart → checkout.
 
 [B2B commerce](https://buyience.com/blog/what-is-b2b-ecommerce-a-complete-guide) doesn't follow that workflow. The core transaction pattern involves negotiated pricing, configured products, multi-stakeholder approvals, contracted terms, and often a quoting cycle that precedes any order. The operational spine of B2B isn't a shopping flow — it's a commercial negotiation expressed as a workflow.
@@ -23,7 +28,9 @@ When these workflow components remain tightly coupled — even inside a technica
 ## The Three Composability Layers B2B Teams Actually Need
 Most composable commerce frameworks describe two layers: infrastructure composability (cloud, containers, deployment pipelines) and service composability (pricing service, catalog service, order service). B2B operations need a third layer that rarely appears in vendor architectures.
 
-![Three layers for B2B composability: Infrastructure, Services, and Workflows converging into more agile, profitable B2B commerce](/blog/inline/composable-commerce-three-layers.jpg)
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/composable-commerce-for-b2b-a-decision-guide-three-layers.png" alt="Three layers for B2B composability: infrastructure, services, and workflows converging into operational flexibility" />
+</figure>
 
 **Infrastructure composability.** The foundation. Cloud-native deployment, independent scaling, CI/CD pipelines that allow services to ship independently. This is table stakes in 2026 and the layer where most MACH-aligned vendors deliver reliably. The decision here is straightforward: if your current platform can't deploy pricing updates without a full release cycle, you have an infrastructure problem.
 
@@ -76,6 +83,11 @@ These signals indicate you're not ready yet: your quoting, pricing, and approval
 If the first set describes your current state, the decision is about which composable stack evaluates well at all three layers — infrastructure, service, and workflow. If the second set is more accurate, the prerequisite work is workflow formalisation: document the commercial process before decomposing the architecture.
 
 ## Moving Forward
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/composable-commerce-for-b2b-a-decision-guide-compose-for-today.png" alt="Composable commercial workflow adapting for new markets, customers, product lines, and business models" />
+</figure>
+
 Composable commerce is the right architectural direction for B2B. The modular, API-first, cloud-native principles behind it are sound, and the adoption trajectory is clear. But architecture without workflow composability is infrastructure modernisation, not commercial transformation.
 
 The B2B teams getting the most from composable commerce aren't the ones with the most services deployed. They're the ones who decomposed their commercial workflows first — then selected an architecture that makes those workflows independently configurable, contextually resolved, and operationally coherent.
