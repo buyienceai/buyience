@@ -11,7 +11,7 @@ Volume does reduce some costs — fewer transactions to process, more efficient 
 ## Step 1: Know your true margin floor before setting any break
 
 <figure className="blog-inline-figure">
-  <img src="/blog/covers/volume-discount-structures-margin-floor.png" alt="Set the margin floor before the discount — every volume break starts with the minimum profitable price" />
+  <img src="/blog/covers/volume-discount-structures-margin-floor.png" alt="Margin floor calculated from landed cost and cost-to-serve before setting volume breaks" />
 </figure>
 
 This sounds obvious, but it's the step most frequently skipped or done loosely. Your margin floor for volume discounting purposes needs to reflect:
@@ -37,7 +37,7 @@ A product with high fixed per-order costs and low marginal fulfillment cost per 
 ## Step 3: Set break points around real order-size patterns
 
 <figure className="blog-inline-figure">
-  <img src="/blog/covers/volume-discount-structures-customers-actually-buy.png" alt="Set break points where customers actually buy — use real order-size distribution, not round numbers" />
+  <img src="/blog/covers/volume-discount-structures-customers-actually-buy.png" alt="Volume break points aligned to real order-size patterns instead of arbitrary round numbers" />
 </figure>
 
 Break points chosen arbitrarily — round numbers that sound good on a price sheet — often miss where your actual order sizes cluster. Two common failure patterns:
@@ -59,7 +59,7 @@ Without an explicit answer, this is exactly the kind of ambiguity that leads to 
 ## Step 5: Build in negotiation guardrails, not just base rules
 
 <figure className="blog-inline-figure">
-  <img src="/blog/covers/volume-discount-structures-negotiations-get-tough.png" alt="Protect the floor when negotiations get tough — quotes below the margin floor trigger approval" />
+  <img src="/blog/covers/volume-discount-structures-negotiations-get-tough.png" alt="Below-floor volume quote routed for approval before it reaches the customer" />
 </figure>
 
 Volume discount structures tend to hold up fine on paper and then get stretched in real negotiations — a customer pushes for a deeper discount than their order size technically qualifies for, and a rep under pressure to close grants it. This is less about the discount structure being wrong and more about it lacking enforcement at the point of negotiation.

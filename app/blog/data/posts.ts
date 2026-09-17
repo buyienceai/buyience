@@ -39,7 +39,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-04",
     readingTime: "11 min read",
     coverImage: "/blog/covers/digital-sales-room-herosection.png",
-    coverImageAlt: "Digital sales room for B2B distribution and wholesale",
+    coverImageAlt:
+      "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
   /* Temporarily commented out
   {
@@ -114,6 +115,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
     coverImageAlt: "Seasonal inventory planning for corporate gifting brands",
   },
+  */
   {
     slug: "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide",
     title: "Multi-Warehouse Inventory for Industrial Suppliers: A Practical Guide",
@@ -123,16 +125,14 @@ export const blogPosts: BlogPost[] = [
       "Running inventory across more than one warehouse solves real problems — shorter delivery times, regional redundancy, room to grow — but it introduces a coordination problem that single-location distributors never have to solve: knowing, in real time, exactly what's available where. Distributors who get this wrong end up overselling stock that's already spoken for, or sitting on excess inventory in one location while another runs a stockout. This guide covers how to structure multi-warehouse inventory so the numbers stay trustworthy.",
     category: "b2b",
     categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-19",
+    authorName: "Girish Laathar",
+    authorInitials: "GL",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-09-17",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide.png",
+    coverImage: "/blog/covers/multi-warehouse-inventory-herosection.png",
     coverImageAlt: "Multi-warehouse inventory for industrial suppliers",
   },
-  */
   {
     slug: "net-30-60-90-terms-in-industrial-distribution-what-actually-works",
     title: "Net 30/60/90 Terms in Industrial Distribution: What Actually Works",
@@ -166,7 +166,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-09",
     readingTime: "8 min read",
     coverImage: "/blog/covers/machine-custom-and-bulk-order-herosection.png",
-    coverImageAlt: "Custom and bulk order management for corporate gift programs",
+    coverImageAlt:
+      "Structured workflow for managing custom and bulk corporate gift orders",
   },
   {
     slug: "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead",
@@ -183,7 +184,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-02",
     readingTime: "8 min read",
     coverImage: "/blog/covers/why-Corporate-Gifting-herosection.png",
-    coverImageAlt: "Shopify alternative for corporate gifting companies",
+    coverImageAlt:
+      "Why corporate gifting businesses outgrow Shopify for B2B quoting and bulk orders",
   },
   {
     slug: "b2b-corporate-gifting-at-scale-quoting-bulk-pricing-and-order-management",
@@ -200,7 +202,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-08-26",
     readingTime: "8 min read",
     coverImage: "/blog/covers/b2b-corporate-gifting-hero.png",
-    coverImageAlt: "Corporate gifting quoting, bulk pricing, and order management",
+    coverImageAlt:
+      "Scaling corporate gifting with automated quoting, bulk pricing, and order management",
   },
   {
     slug: "industrial-supply-distributors-moving-from-phone-email-orders-to-self-service",
@@ -217,7 +220,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-08-19",
     readingTime: "8 min read",
     coverImage: "/blog/covers/industrial-supply-distributors-herosection.png",
-    coverImageAlt: "Self-service ordering for industrial supply distributors",
+    coverImageAlt:
+      "Industrial distributor shifting routine reorders from phone and email to self-service",
   },
   {
     slug: "how-to-price-fasteners-and-mro-parts-for-repeat-b2b-buyers",
@@ -234,7 +238,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-08-12",
     readingTime: "8 min read",
     coverImage: "/blog/covers/how-to-price-fasteners-herosection.png",
-    coverImageAlt: "Pricing fasteners and MRO parts for repeat B2B buyers",
+    coverImageAlt:
+      "Tiered pricing framework for fasteners and MRO parts sold to repeat B2B buyers",
   },
   {
     slug: "quote-turnaround-time-the-metric-fastener-distributors-ignore",
@@ -251,7 +256,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-08-05",
     readingTime: "8 min read",
     coverImage: "/blog/covers/quote-turnaround-time-herosection.png",
-    coverImageAlt: "Quote turnaround time for fastener distributors",
+    coverImageAlt:
+      "Faster quote turnaround helping fastener distributors win time-sensitive B2B deals",
   },
   {
     slug: "volume-discount-structures-that-actually-protect-your-margin",
@@ -268,7 +274,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-07-29",
     readingTime: "8 min read",
     coverImage: "/blog/covers/volume-discount-structures-herosection.png",
-    coverImageAlt: "Volume discount pricing that protects B2B margin",
+    coverImageAlt:
+      "Volume discount tiers that stay above a protected margin floor for B2B distributors",
   },
   {
     slug: "tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide",
