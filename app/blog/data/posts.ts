@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
       "Running inventory across more than one warehouse solves real problems — shorter delivery times, regional redundancy, room to grow — but it introduces a coordination problem that single-location distributors never have to solve: knowing, in real time, exactly what's available where. Distributors who get this wrong end up overselling stock that's already spoken for, or sitting on excess inventory in one location while another runs a stockout. This guide covers how to structure multi-warehouse inventory so the numbers stay trustworthy.",
     category: "b2b",
     categoryLabel: "B2B",
-    authorName: "Girish Laathar",
+    authorName: "Girish.K",
     authorInitials: "GL",
     authorImage: "/blog/authors/girish1.png",
     publishedAt: "2026-09-17",
@@ -509,8 +509,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-04-03",
     readingTime: "15 min read",
-    coverImage: "/blog/covers/the-real-cost-of-manual-quote-approvals-in-b2b.png",
-    coverImageAlt: "Manual quote approval costs",
+    coverImage:
+      "/blog/covers/the-real-cost-of-manual-quote-approvals-in-b2b-herosection.png",
+    coverImageAlt:
+      "Manual quote approval review acting as the bottleneck between quote creation and sending to the customer",
   },
   {
     slug: "why-manual-b2b-quoting-is-costing-you-deals",
@@ -541,8 +543,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-16",
     readingTime: "23 min read",
-    coverImage: "/blog/covers/mach-architecture-for-modern-b2b-commerce.png",
-    coverImageAlt: "MACH architecture for B2B commerce",
+    coverImage:
+      "/blog/covers/mach-architecture-for-modern-b2b-commerce-herosection.png",
+    coverImageAlt:
+      "B2B commerce moving from a tightly coupled monolith to modular MACH-based architecture",
   },
   {
     slug: "ai-quote-engine-for-b2b-commerce",
