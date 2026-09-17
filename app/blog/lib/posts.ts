@@ -80,6 +80,16 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "why-manufacturers-need-a-modern-b2b-ecommerce-platform-in-2026": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "ai-quote-generation-in-b2b-what-is-real-vs-marketing": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

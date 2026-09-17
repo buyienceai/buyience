@@ -8,8 +8,12 @@ Some of these claims are real. But the gap between the marketing narrative and o
 The core issue isn't whether AI can improve quoting. It can. The issue is that AI is being applied to a data problem most organisations haven't solved yet. When you apply intelligence to unreliable data, you don't get smart quotes. You get confidently wrong ones.
 
 ## What AI Actually Does in B2B Quoting Today
-Strip away the marketing language and the current state of AI in B2B quoting falls into four functional categories. Each delivers different levels of real value.
 
+
+Strip away the marketing language and the current state of AI in B2B quoting falls into four functional categories. Each delivers different levels of real value.
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-not-all-ai-quoting.png" alt="AI quoting capabilities ranging from production-ready document parsing to data-dependent price suggestion" />
+</figure>
 **Document parsing and data extraction.** This is where AI delivers the most immediate, proven value. NLP that reads inbound RFQs — PDFs, emails, spreadsheets, forwarded purchase orders — and extracts product identifiers, quantities, delivery requirements, and customer details into structured data. This eliminates hours of manual data entry per quote request and is genuinely production-ready across multiple platforms today.
 
 **Configuration assistance.** For businesses selling configurable products, AI can guide product selection by interpreting buyer requirements and suggesting valid configurations. This is valuable when catalogs are large, configurations have complex dependency rules, and reps lack deep technical knowledge across every product line. It works well when product data and configuration rules are well-structured. It fails when they aren't.
@@ -19,6 +23,11 @@ Strip away the marketing language and the current state of AI in B2B quoting fal
 **Workflow automation.** AI-powered routing — determining which approval path a quote should follow, predicting whether a quote will need revision, flagging quotes that deviate from historical patterns. This is a legitimate application, but calling it "AI" is generous in most implementations. Rule-based routing with statistical pattern matching is more accurate. Useful, but not transformative.
 
 ## The Data Problem Nobody Wants to Talk About
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-data-layer-is.png" alt="AI quote resting on a data foundation of product, pricing, inventory, and customer domains" />
+</figure>
+
 Here's the uncomfortable truth about AI quoting: the intelligence layer is the easy part. The hard part — the part that determines whether AI quoting actually works in production — is the data layer underneath it.
 
 AI quoting software needs four data domains to generate an accurate, commercially defensible quote: product data (what's being sold and how it's configured), pricing data (what it costs for this specific customer, inclusive of contracted rates, volume tiers, and payment terms), inventory data (what's available, in which warehouse, at what lead time), and customer data (who's buying, what terms they've negotiated, what approval rules apply).
@@ -30,8 +39,11 @@ When AI quoting software queries these fragmented sources, it assembles a quote 
 Research confirms this is widespread. Industry data suggests the majority of organisations rate their data quality as average or worse, and poor data quality is the primary reason many AI initiatives never reach production. In quoting, that cost manifests as margin leakage, order errors, and the operational overhead of correcting quotes that should have been right the first time.
 
 ## The Three Levels of AI Quoting Maturity
-Not all AI quoting implementations are equal. The maturity of the implementation depends less on the AI model and more on the data infrastructure supporting it. Three distinct levels emerge.
 
+Not all AI quoting implementations are equal. The maturity of the implementation depends less on the AI model and more on the data infrastructure supporting it. Three distinct levels emerge.
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-ai-actually-live.png" alt="Three AI quoting maturity levels from fragmented data to AI native to the commerce data layer" />
+</figure>
 **Level 1: AI on top of fragmented data.** The most common implementation. An AI layer sits on top of existing systems — ERP, CRM, spreadsheets — and queries them at the moment of quote creation. The AI is genuinely intelligent, but it's working with data that's inconsistent, stale, or incomplete. Quotes are generated faster, but error rates don't meaningfully improve because the underlying data problems are unchanged. This is the "faster guessing" scenario: you're automating the assembly of a quote from unreliable inputs.
 
 **Level 2: AI on top of integrated data.** A meaningful step up. Data from the ERP, PIM, CRM, and WMS is integrated into a unified layer — typically through middleware or an integration platform. The AI queries a single source of truth rather than assembling from multiple systems. Quotes are more consistent, but the limitation is latency: integrated data is only as current as the last sync, and in B2B environments where pricing and inventory change within the same day, batch integration creates a window of inaccuracy.

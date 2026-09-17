@@ -347,8 +347,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-07-06",
     readingTime: "29 min read",
-    coverImage: "/blog/covers/why-manufacturers-need-a-modern-b2b-ecommerce-platform-in-2026.png",
-    coverImageAlt: "Modern B2B ecommerce for manufacturers",
+    coverImage:
+      "/blog/covers/why-manufacturers-need-a-modern-b2b-ecommerce-platform-in-2026-herosection.png",
+    coverImageAlt:
+      "Manufacturers moving from call-for-price and paper quotes to a modern self-service B2B buying experience",
   },
   {
     slug: "composable-commerce-for-b2b-a-decision-guide",
@@ -379,8 +381,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-05-29",
     readingTime: "30 min read",
-    coverImage: "/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing.png",
-    coverImageAlt: "AI quote generation in B2B",
+    coverImage:
+      "/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-herosection.png",
+    coverImageAlt:
+      "AI-generated quote accuracy depending on product, pricing, inventory, and customer data quality",
   },
   {
     slug: "the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it",
