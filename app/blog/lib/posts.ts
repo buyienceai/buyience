@@ -65,6 +65,21 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-fastener-distributors-can-stop-losing-margin-on-manual-quotes": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-distributors-can-automate-quote-to-order-processes-2026-playbook": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

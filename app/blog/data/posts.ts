@@ -291,9 +291,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-07-22",
     readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/tiered-pricing-for-fastener-and-mro-distributors-a-practical-setup-guide.png",
-    coverImageAlt: "Tiered pricing setup for fastener and MRO distributors",
+    coverImage: "/blog/covers/tiered-pricing-for-fastener-herosection.png",
+    coverImageAlt:
+      "Customer tiers and volume breaks combining into smart pricing for fastener and MRO distributors",
   },
   {
     slug: "how-fastener-distributors-can-stop-losing-margin-on-manual-quotes",
@@ -310,8 +310,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-07-15",
     readingTime: "7 min read",
     coverImage:
-      "/blog/covers/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes.png",
-    coverImageAlt: "Fastener distributor quoting and margin protection",
+      "/blog/covers/how-fastener-distributors-can-stop-losing-margin-on-manual-quotes-herosection.png",
+    coverImageAlt:
+      "Manual quotes leaking margin through stale prices, inconsistent discounts, and no margin floor",
   },
   {
     slug: "how-distributors-can-automate-quote-to-order-processes-2026-playbook",
@@ -327,8 +328,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-07-08",
     readingTime: "27 min read",
-    coverImage: "/blog/covers/how-distributors-can-automate-quote-to-order-processes-2026-playbook.png",
-    coverImageAlt: "Distributor quote-to-order automation illustration",
+    coverImage:
+      "/blog/covers/how-distributors-can-automate-quote-to-order-processes-2026-playbook-herosection.png",
+    coverImageAlt:
+      "Automated quote-to-order flow from email, PDF, and portal through to order booked",
   },
   {
     slug: "why-manufacturers-need-a-modern-b2b-ecommerce-platform-in-2026",
