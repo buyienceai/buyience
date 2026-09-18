@@ -6419,6 +6419,17 @@ a.nav-btn-outline-block {
   text-underline-offset: 2px;
 }
 
+.blog-page .blog-prose a.blog-cta-brand {
+  color: var(--violet);
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.blog-page .blog-prose a.blog-cta-brand:hover {
+  color: var(--violet-deep);
+  text-decoration: none !important;
+}
+
 .blog-page .blog-prose ul,
 .blog-page .blog-prose ol {
   margin: 0 0 1.25em;
