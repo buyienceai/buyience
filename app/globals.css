@@ -6075,7 +6075,8 @@ a.nav-btn-outline-block {
   }
 
   .blog-page .blog-card--featured .blog-card-excerpt {
-    max-width: 72ch;
+    max-width: none;
+    width: 100%;
   }
 }
 
