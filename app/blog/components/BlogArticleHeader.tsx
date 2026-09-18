@@ -22,17 +22,7 @@ export default function BlogArticleHeader({ post }: Props) {
         </Link>
         <span className="blog-article-cat">{post.categoryLabel}</span>
       </div>
-      <h1>{post.title}</h1>
-      <p className="blog-article-dek">{post.excerpt}</p>
-      <BlogMeta
-        authorName={post.authorName}
-        authorInitials={post.authorInitials}
-        authorImage={post.authorImage}
-        dateLabel={formatPublishedDate(post.publishedAt)}
-        dateIso={post.publishedAt}
-        readingTime={post.readingTime}
-        size="md"
-      />
+
       <div className={`blog-article-cover${coverContain ? " blog-article-cover--contain" : ""}`}>
         <Image
           src={post.coverImage}
@@ -44,6 +34,18 @@ export default function BlogArticleHeader({ post }: Props) {
           priority
         />
       </div>
+
+      <h1>{post.title}</h1>
+      <p className="blog-article-dek">{post.excerpt}</p>
+      <BlogMeta
+        authorName={post.authorName}
+        authorInitials={post.authorInitials}
+        authorImage={post.authorImage}
+        dateLabel={formatPublishedDate(post.publishedAt)}
+        dateIso={post.publishedAt}
+        readingTime={post.readingTime}
+        size="md"
+      />
     </header>
   );
 }
