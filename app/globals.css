@@ -6419,12 +6419,19 @@ a.nav-btn-outline-block {
   text-underline-offset: 2px;
 }
 
+/* Trial / demo CTAs: highlight only, no underline */
+.blog-page .blog-prose a[href="https://app.buyience.com/register"],
+.blog-page .blog-prose a[href="/request-a-demo"],
+.blog-page .blog-prose a[href^="/request-a-demo?"],
 .blog-page .blog-prose a.blog-cta-brand {
   color: var(--violet);
   font-weight: 700;
   text-decoration: none !important;
 }
 
+.blog-page .blog-prose a[href="https://app.buyience.com/register"]:hover,
+.blog-page .blog-prose a[href="/request-a-demo"]:hover,
+.blog-page .blog-prose a[href^="/request-a-demo?"]:hover,
 .blog-page .blog-prose a.blog-cta-brand:hover {
   color: var(--violet-deep);
   text-decoration: none !important;
