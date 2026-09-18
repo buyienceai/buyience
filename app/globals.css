@@ -342,11 +342,75 @@ h3, h4 {
   background: #5B21D8;
 }
 
-.faq-list details p {
+.faq-list details .faq-a {
   padding: 0 4px 24px;
   color: var(--muted);
   font-size: 15.5px;
+  line-height: 1.65;
   max-width: 66ch;
+}
+
+.faq-list details .faq-a > :first-child {
+  margin-top: 0;
+}
+
+.faq-list details .faq-a > :last-child {
+  margin-bottom: 0;
+}
+
+.faq-list details .faq-a p {
+  margin: 0 0 0.7em;
+  padding: 0;
+  max-width: none;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.faq-list details .faq-a ul,
+.faq-list details .faq-a ol {
+  margin: 0 0 0.7em;
+  padding-left: 1.35em;
+  list-style-position: outside;
+}
+
+.faq-list details .faq-a ul {
+  list-style-type: disc;
+}
+
+.faq-list details .faq-a ol {
+  list-style-type: decimal;
+}
+
+.faq-list details .faq-a li {
+  margin: 0.28em 0;
+}
+
+.faq-list details .faq-a li::marker {
+  color: currentColor;
+}
+
+.faq-list details .faq-a a {
+  color: var(--violet);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.faq-list details .faq-a a:hover {
+  color: var(--violet-deep);
+}
+
+.faq-list details .faq-a strong {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.faq-list details .faq-a blockquote {
+  margin: 0 0 0.7em;
+  padding: 0 0 0 0.85em;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
 }
 
 .faq-card-list {

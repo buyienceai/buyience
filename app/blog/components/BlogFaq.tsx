@@ -1,6 +1,7 @@
 "use client";
 
 import FaqSection from "@/components/FaqSection";
+import { renderFaqAnswer } from "../lib/renderFaqAnswer";
 
 export type BlogFaqItem = {
   q: string;
@@ -23,7 +24,10 @@ export default function BlogFaq({
     <FaqSection
       eyebrow="FAQ"
       title={title}
-      items={items}
+      items={items.map((item) => ({
+        q: item.q,
+        a: renderFaqAnswer(item.a),
+      }))}
       card
       bare
       className="blog-faq-section"

@@ -59,7 +59,9 @@ export default function FaqSection({
       {items.map((faq, idx) => (
         <details key={idx}>
           <summary>{faq.q}</summary>
-          <p>{faq.a}</p>
+          <div className="faq-a">
+            {typeof faq.a === "string" ? <p>{faq.a}</p> : faq.a}
+          </div>
         </details>
       ))}
     </motion.div>
