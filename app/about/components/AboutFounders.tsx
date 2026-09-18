@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
 const FOUNDERS = [
@@ -8,13 +9,15 @@ const FOUNDERS = [
     name: "Girish K. Laathar",
     role: "Co-founder",
     bio: "Girish founded Buyience and leads it as CEO, shaping Nova Core's product and engineering directly — from the AI Quote Engine to the platform architecture. He kept seeing the same gap that B2C tools and enterprise platforms both left open, and set out to close it for the businesses caught in between.",
-    initial: "G",
+    image: "/blog/authors/girish1.png",
+    imageAlt: "Girish K. Laathar, Co-founder of Buyience",
   },
   {
     name: "Jordian Farahani",
     role: "Co-founder",
     bio: "Jordian co-founded Buyience and helps drive the company alongside Girish, bringing a complementary perspective to how Nova Core is built and taken to market.",
-    initial: "J",
+    image: "/blog/authors/jordian.jpg",
+    imageAlt: "Jordian Farahani, Co-founder of Buyience",
   },
 ];
 
@@ -61,12 +64,14 @@ export default function AboutFounders({ purple = false }: { purple?: boolean }) 
               variants={cardVariants}
               className="rounded-3xl border border-(--border) bg-white p-7 text-left shadow-(--shadow-1) sm:p-8"
             >
-              <div
-                className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-(--violet-tint) text-[18px] font-extrabold text-(--violet-deep)"
-                style={{ fontFamily: "var(--font-heading)" }}
-                aria-hidden="true"
-              >
-                {founder.initial}
+              <div className="mb-5 size-12 overflow-hidden rounded-2xl bg-(--violet-tint)">
+                <Image
+                  src={founder.image}
+                  alt={founder.imageAlt}
+                  width={96}
+                  height={96}
+                  className="size-full object-cover object-top"
+                />
               </div>
               <h3 className="mb-1 text-[18px] font-bold tracking-[-0.01em]">{founder.name}</h3>
               <p className="m-0 mb-4 font-mono text-[11px] font-semibold tracking-[0.08em] text-(--violet-deep) uppercase">

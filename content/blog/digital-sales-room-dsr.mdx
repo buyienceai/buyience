@@ -1,7 +1,5 @@
 ## What is a digital sales room?
 
-A digital sales room (DSR) is a secure, shared online workspace where a seller and a buyer work through a deal together — reviewing quotes, negotiating pricing, exchanging questions, and reaching agreement — in one place, with a record of everything that happened.
-
 Instead of a deal living across an email thread, a PDF attachment, a phone call, and someone's memory, it lives in a single space both sides can open. The buyer sees the current quote rather than trying to work out which of four attachments is the latest. The seller sees what the buyer has looked at and where they hesitated. When the terms change, both parties see the change and the reason for it.
 
 In B2B distribution specifically, a digital sales room addresses a problem that gets worse as deals get more complex: a multi-line quote with tiered pricing, volume breaks, and negotiated terms is genuinely hard to discuss over email. Every revision produces a new attachment, every concession lives in a sentence buried in a reply, and neither side is fully certain what the current agreement actually is until someone rebuilds it by hand.
@@ -43,14 +41,15 @@ A digital sales room makes the deal itself the container, rather than the corres
 4. **Revisions are versioned, not replaced.** Each version of the quote is preserved. When either side asks what changed between round two and round three, the answer is visible rather than reconstructed.
 5. **The seller sees engagement signals.** Which line items got attention, whether the buyer returned to the quote, whether they shared it internally. Not surveillance — just the visibility a seller would naturally have in a room but loses entirely over email.
 6. **Agreement is reached and recorded in place.** The accepted terms are the ones in the room, with a complete record of how they were arrived at.
-
-## Key features of a digital sales room
+![Step-by-step view of how a B2B digital sales room supports quote review and negotiation](/blog/covers/digital-sales-room.png)
+## Key features of a digital sales room 
 
 1. **Live, current pricing.** The quote in the room reflects the customer's actual pricing — their tier, applicable volume breaks, any contract rates — rather than a static document that was accurate when generated. In distribution, where a single customer can have several pricing layers applying simultaneously, this matters more than it does in flat-rate SaaS selling.
 2. **Real-time negotiation.** Both parties can be in the room at once, working through terms live. A counter-offer appears immediately rather than waiting for an email cycle. For deals where speed is a competitive factor — and in fastener, MRO, and industrial distribution it usually is — this compresses a multi-day exchange into a single session.
 3. **Full negotiation history.** Every offer, counter, and revision is preserved with its reasoning. This is the feature buyers underrate and sellers come to rely on: six months later, when a customer asks why their price is what it is, the answer exists rather than depending on someone's recollection.
 4. **Margin visibility for the seller.** The seller's view shows where a proposed price sits relative to the margin floor — before the concession is made, not after the order ships. The buyer doesn't see this. It's the difference between a rep negotiating with information and a rep negotiating on instinct.
 5. **Multi-stakeholder access.** B2B buying decisions rarely involve one person. A purchasing manager may need a maintenance lead to confirm specifications and a finance contact to approve terms. A shared room lets a buyer bring colleagues in without forwarding a chain of attachments and hoping the right version travels.
+![Multiple buyer stakeholders collaborating on a quote inside one digital sales room](/blog/covers/digital-sales-buying-decisions.png)
 6. **Engagement signals.** Which items the buyer examined, how long they spent, whether they came back. These indicate where the real questions are — a buyer who repeatedly returns to one line item is telling you something that their polite email reply isn't.
 7. **Document and specification handling.** Spec sheets, compliance documentation, certificates of conformance, drawings. In industrial distribution these are frequently part of the deal, and they belong with the quote rather than as separate attachments in a parallel thread.
 8. **Approval routing.** When a requested price falls below the margin floor, the exception routes for approval from within the room, rather than pausing the negotiation while the rep tracks down a manager.
@@ -61,15 +60,58 @@ A digital sales room makes the deal itself the container, rather than the corres
 
 Most writing about digital sales rooms assumes a SaaS sales motion: a long cycle, a large committee, a subscription contract, heavy sales collateral. Distribution is a different shape, and the useful features differ accordingly.
 
-| | SaaS sales | B2B distribution |
-| --- | --- | --- |
-| **Deal shape** | One product, tiered plans | Many SKUs, many line items |
-| **Pricing complexity** | Plan-based | Customer tier × volume breaks × contract rates, per line |
-| **Cycle length** | Weeks to months | Hours to days for transactional orders |
-| **What's negotiated** | Seats, term, discount | Unit price, quantity, freight, lead time, payment terms |
-| **Key collateral** | Case studies, demos, security docs | Spec sheets, compliance certs, availability |
-| **Repeat frequency** | Annual renewal | Weekly or monthly reorders |
-| **Biggest risk** | Losing a large deal | Margin erosion across many small deals |
+<div className="blog-table-wrap blog-table-wrap--center">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>SaaS sales</th>
+        <th>B2B distribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Deal shape</strong></td>
+        <td>One product, tiered plans</td>
+        <td>Many SKUs, many line items</td>
+      </tr>
+      <tr>
+        <td><strong>Pricing complexity</strong></td>
+        <td>Plan-based</td>
+        <td>Customer tier × volume breaks × contract rates, per line</td>
+      </tr>
+      <tr>
+        <td><strong>Cycle length</strong></td>
+        <td>Weeks to months</td>
+        <td>Hours to days for transactional orders</td>
+      </tr>
+      <tr>
+        <td><strong>What&apos;s negotiated</strong></td>
+        <td>Seats, term, discount</td>
+        <td>Unit price, quantity, freight, lead time, payment terms</td>
+      </tr>
+      <tr>
+        <td><strong>Key collateral</strong></td>
+        <td>Case studies, demos, security docs</td>
+        <td>Spec sheets, compliance certs, availability</td>
+      </tr>
+      <tr>
+        <td><strong>Repeat frequency</strong></td>
+        <td>Annual renewal</td>
+        <td>Weekly or monthly reorders</td>
+      </tr>
+      <tr>
+        <td><strong>Biggest risk</strong></td>
+        <td>Losing a large deal</td>
+        <td>Margin erosion across many small deals</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/email-vs-digital-sales-room.png" alt="Side-by-side comparison of email quoting versus a digital sales room for B2B deals" />
+</figure>
 
 The distribution implications:
 
@@ -77,7 +119,7 @@ The distribution implications:
 - **Speed matters more.** When a buyer is quoting three suppliers on a commoditized part, a same-session negotiation beats a three-day email exchange regardless of who has better pricing.
 - **Margin protection matters more.** Distribution margins are thinner. A concession that's rounding error on a SaaS contract is a meaningful share of gross profit on a parts order.
 - **Availability is part of the negotiation.** "Can you get 400 by the 15th" is often the actual question. A DSR without live inventory visibility can't answer it in the room.
-
+![Margin floor and approval controls protecting pricing inside a digital sales room](/blog/covers/digital-sales-protect-margins.png)
 ## What a digital sales room is not
 
 - **Not a shared folder.** Dropbox or Drive gives both parties file access. It doesn't give live pricing, negotiation structure, versioned terms, or engagement visibility.
@@ -136,13 +178,13 @@ Their current quote with correct pricing, line-level detail, availability and le
 
 By showing the seller where a proposed price sits relative to the margin floor at the moment of negotiation, and by routing anything below the floor for approval — so the constraint is enforced before a concession is made rather than discovered afterward.
 
-## The digital sales room in Nova Core
+## The digital sales room in Buyience Nova Core
 
-Nova Core's Digital Sales Room is built for distribution deal shapes: line-level negotiation across multi-SKU quotes, customer pricing resolved automatically from tier and volume rules, real-time margin floor visibility for the seller, and live inventory so availability questions get answered in the room. Negotiation history is preserved per revision, and accepted terms convert directly to an order without re-entry.
+Buyience Nova Core's Digital Sales Room is built for distribution deal shapes: line-level negotiation across multi-SKU quotes, customer pricing resolved automatically from tier and volume rules, real-time margin floor visibility for the seller, and live inventory so availability questions get answered in the room. Negotiation history is preserved per revision, and accepted terms convert directly to an order without re-entry.
 
 It works alongside the AI Quote Engine, so a quote can go from request to negotiated agreement without leaving the platform.
 
-Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit [buyience.com](https://buyience.com/) to start your free trial — or [request a demo](/request-a-demo) and we'll walk through a Digital Sales Room with your deal shape.
+Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit <a href="https://app.buyience.com/register" class="blog-cta-brand">buyience.com</a> to start your free trial — or [request a demo](/request-a-demo) and we'll walk through a Digital Sales Room with your deal shape.
 
 ## Related terms
 

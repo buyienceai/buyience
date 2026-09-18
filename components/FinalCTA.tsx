@@ -1,9 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Button from "@/components/Button";
 import SectionCapsule from "@/components/SectionCapsule";
-import DottedGlobe from "@/components/DottedGlobe";
+
+const DottedGlobe = dynamic(() => import("@/components/DottedGlobe"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export type FinalCTAAction = {
   label: string;

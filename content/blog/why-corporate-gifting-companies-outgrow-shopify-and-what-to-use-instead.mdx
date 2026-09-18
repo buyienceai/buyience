@@ -4,15 +4,15 @@ This isn't a case against Shopify generally — it's excellent at what it was bu
 
 ## Where the mismatch first becomes visible
 
-**Quoting doesn't fit Shopify's checkout model.** Shopify is built around fixed prices and instant checkout — a customer sees a price, adds to cart, pays. Corporate gifting B2B sales usually work the opposite way: a client describes what they need, gets a custom quote based on quantity and customization, negotiates, and then orders. Shopify has no native concept of a negotiable quote that becomes an order — most gifting companies end up handling quoting entirely outside Shopify, in email or a separate document, and only using the platform once a price is finally agreed and someone manually creates a matching order or discount code.
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/why-Corporate-Order-need-Quote.png" alt="Corporate gift order that requires a custom quote instead of standard checkout" />
+</figure>
 
-**Bulk and tiered pricing require workarounds, not native support.** Shopify's pricing model is built for one price per product (with some discount-code flexibility), not layered volume breaks combined with client-specific rates. Gifting companies commonly patch this with apps, manual discount codes per client, or price lists managed outside the platform entirely — workable at low volume, increasingly fragile as the number of active B2B accounts grows.
-
-**Custom order details get separated from the order record.** A logo placement instruction, a specific ship-by date, a note about excluding certain recipients from a bulk shipment — these live in email or a support ticket, disconnected from the actual order in Shopify's system, because there's no structured place to attach B2B-specific requirements to an order.
-
-**Account-based selling isn't how Shopify is structured.** B2B relationships involve a client with a history, negotiated terms, and multiple contacts placing orders on behalf of the same company — a fundamentally different structure than Shopify's individual customer-account model, which was built around one person, one login, one order at a time.
-
-**Multi-recipient bulk shipping is a persistent friction point.** Shipping one order to 300 individual employee addresses is a common corporate gifting scenario and not a workflow Shopify's checkout was designed around — most gifting companies handle this with a combination of apps, manual CSV uploads, and a fair amount of manual double-checking.
+- **Quoting doesn't fit Shopify's checkout model.** Shopify is built around fixed prices and instant checkout — a customer sees a price, adds to cart, pays. Corporate gifting B2B sales usually work the opposite way: a client describes what they need, gets a custom quote based on quantity and customization, negotiates, and then orders. Shopify has no native concept of a negotiable quote that becomes an order — most gifting companies end up handling quoting entirely outside Shopify, in email or a separate document, and only using the platform once a price is finally agreed and someone manually creates a matching order or discount code.
+- **Bulk and tiered pricing require workarounds, not native support.** Shopify's pricing model is built for one price per product (with some discount-code flexibility), not layered volume breaks combined with client-specific rates. Gifting companies commonly patch this with apps, manual discount codes per client, or price lists managed outside the platform entirely — workable at low volume, increasingly fragile as the number of active B2B accounts grows.
+- **Custom order details get separated from the order record.** A logo placement instruction, a specific ship-by date, a note about excluding certain recipients from a bulk shipment — these live in email or a support ticket, disconnected from the actual order in Shopify's system, because there's no structured place to attach B2B-specific requirements to an order.
+- **Account-based selling isn't how Shopify is structured.** B2B relationships involve a client with a history, negotiated terms, and multiple contacts placing orders on behalf of the same company — a fundamentally different structure than Shopify's individual customer-account model, which was built around one person, one login, one order at a time.
+- **Multi-recipient bulk shipping is a persistent friction point.** Shipping one order to 300 individual employee addresses is a common corporate gifting scenario and not a workflow Shopify's checkout was designed around — most gifting companies handle this with a combination of apps, manual CSV uploads, and a fair amount of manual double-checking.
 
 ## What this actually costs, in practice
 
@@ -26,17 +26,16 @@ It's also worth noting that this pattern tends to compound rather than stay flat
 
 The fix isn't a more complex Shopify setup — it's a platform actually built around how B2B gifting sales work, which means:
 
-**Quoting as a first-class workflow, not a workaround.** The ability to build a custom quote — bulk quantity, customization line items, client-specific pricing — inside the same system that becomes the order, rather than quoting in email and manually re-entering the result.
+- **Quoting as a first-class workflow, not a workaround.** The ability to build a custom quote — bulk quantity, customization line items, client-specific pricing — inside the same system that becomes the order, rather than quoting in email and manually re-entering the result.
+- **Native tiered and volume pricing.** Quantity breaks and client-specific rates that resolve automatically, without a growing list of manually maintained discount codes.
+- **Structured fields for customization and fulfillment requirements.** Logo placement, ship-by dates, and recipient-specific instructions attached directly to the order record, visible to whoever handles fulfillment — not buried in a separate email thread.
+- **Real account-based structure.** Support for a company account with multiple contacts, order history, and negotiated terms — matching how B2B relationships actually work, rather than treating every order as an individual consumer transaction.
+- **Bulk, multi-recipient fulfillment as a supported workflow, not an add-on.** The ability to manage an order that ships to hundreds of individual addresses without manual CSV gymnastics for every large order.
+- **Room to keep what works.** A good B2B platform for gifting companies shouldn't mean abandoning brand storefront design or losing the parts of the ecommerce experience that already work well — headless, API-first architecture lets a gifting company keep a customized frontend while getting proper B2B infrastructure underneath it.
 
-**Native tiered and volume pricing.** Quantity breaks and client-specific rates that resolve automatically, without a growing list of manually maintained discount codes.
-
-**Structured fields for customization and fulfillment requirements.** Logo placement, ship-by dates, and recipient-specific instructions attached directly to the order record, visible to whoever handles fulfillment — not buried in a separate email thread.
-
-**Real account-based structure.** Support for a company account with multiple contacts, order history, and negotiated terms — matching how B2B relationships actually work, rather than treating every order as an individual consumer transaction.
-
-Bulk, multi-recipient fulfillment as a supported workflow, not an add-on. The ability to manage an order that ships to hundreds of individual addresses without manual CSV gymnastics for every large order.
-
-**Room to keep what works.** A good B2B platform for gifting companies shouldn't mean abandoning brand storefront design or losing the parts of the ecommerce experience that already work well — headless, API-first architecture lets a gifting company keep a customized frontend while getting proper B2B infrastructure underneath it.
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/why-Corporate-storefront.png" alt="Corporate gifting storefront kept intact while upgrading to headless B2B commerce" />
+</figure>
 
 ## Making the switch without disrupting active client relationships
 
@@ -50,7 +49,7 @@ Migrating off Shopify is a real project, not a weekend task, and the goal should
 
 Nova Core is built specifically for B2B commerce — quoting, tiered and bulk pricing, CPQ for custom orders, and order management that supports the account-based, multi-recipient reality of corporate gifting — while remaining headless and API-first, so a gifting brand can keep its existing storefront design and plug B2B infrastructure in underneath it rather than starting the frontend from scratch.
 
-Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit [buyience.com](https://buyience.com/) to start your free trial — or [request a demo](/request-a-demo).
+Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit <a href="https://app.buyience.com/register" class="blog-cta-brand">buyience.com</a> to start your free trial — or [request a demo](/request-a-demo).
 
 ## FAQ: Shopify vs. B2B Commerce Platforms for Corporate Gifting
 

@@ -113,7 +113,7 @@ export const integrationsData: Integration[] = [
     tileText: "Sr",
     description: "Shipping labels, courier selection, and delivery tracking connected to your orders.",
     status: "live",
-    logo: "/images/integrations/shiprocket.png",
+    logo: "/images/integrations/shiprocket.webp",
   },
 
   // ANALYTICS

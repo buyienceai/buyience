@@ -6,9 +6,13 @@ const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       { protocol: "https", hostname: "framerusercontent.com", pathname: "/images/**" },
     ],
+  },
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
   // Pin Turbopack to this repo so the parent ~/package-lock.json is not treated as root
   turbopack: {

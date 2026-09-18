@@ -13,7 +13,7 @@ export const stackLogos: StackLogo[] = [
   { name: "PayPal", logo: "/images/integrations/paypal.svg", tileText: "Pp" },
   { name: "Klaviyo", logo: "/images/integrations/klaviyo.svg", tileText: "Kl" },
   { name: "Brevo", logo: "/images/integrations/brevo.svg", tileText: "Br" },
-  { name: "Shiprocket", logo: "/images/integrations/shiprocket.png", tileText: "Sr" },
+  { name: "Shiprocket", logo: "/images/integrations/shiprocket.webp", tileText: "Sr" },
   { name: "GA4", logo: "/images/integrations/ga4.svg", tileText: "G4" },
   { name: "Google Ads", logo: "/images/integrations/google-ads.svg", tileText: "GA" },
 ];

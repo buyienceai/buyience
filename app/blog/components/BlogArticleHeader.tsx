@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { BlogPost } from "../data/posts";
-import { formatPublishedDate } from "../lib/posts";
+import { formatPublishedDate, getBlogCoverDisplay } from "../lib/posts";
 import BlogMeta from "./BlogMeta";
 
 type Props = {
@@ -9,6 +9,8 @@ type Props = {
 };
 
 export default function BlogArticleHeader({ post }: Props) {
+  const { width: coverWidth, height: coverHeight, contain: coverContain } = getBlogCoverDisplay(post.slug);
+
   return (
     <header className="blog-article-header">
       <div className="blog-article-top">
@@ -21,7 +23,12 @@ export default function BlogArticleHeader({ post }: Props) {
         <span className="blog-article-cat">{post.categoryLabel}</span>
       </div>
       <h1>{post.title}</h1>
-      <p className="blog-article-dek">{post.excerpt}</p>
+      <p
+        className="blog-article-dek"
+        style={{ width: "100%", maxWidth: "100%", display: "block" }}
+      >
+        {post.excerpt}
+      </p>
       <BlogMeta
         authorName={post.authorName}
         authorInitials={post.authorInitials}
@@ -31,12 +38,12 @@ export default function BlogArticleHeader({ post }: Props) {
         readingTime={post.readingTime}
         size="md"
       />
-      <div className="blog-article-cover">
+      <div className={`blog-article-cover${coverContain ? " blog-article-cover--contain" : ""}`}>
         <Image
           src={post.coverImage}
           alt={post.coverImageAlt}
-          width={1488}
-          height={720}
+          width={coverWidth}
+          height={coverHeight}
           className="blog-article-cover-img"
           sizes="(max-width: 900px) 100vw, min(100vw, var(--w-max))"
           priority

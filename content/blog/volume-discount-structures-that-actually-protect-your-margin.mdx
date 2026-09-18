@@ -10,6 +10,10 @@ Volume does reduce some costs — fewer transactions to process, more efficient 
 
 ## Step 1: Know your true margin floor before setting any break
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/volume-discount-structures-margin-floor.png" alt="Margin floor calculated from landed cost and cost-to-serve before setting volume breaks" />
+</figure>
+
 This sounds obvious, but it's the step most frequently skipped or done loosely. Your margin floor for volume discounting purposes needs to reflect:
 
 - True landed cost per unit, including freight and handling, not just the base unit cost from your supplier
@@ -32,6 +36,10 @@ A product with high fixed per-order costs and low marginal fulfillment cost per 
 
 ## Step 3: Set break points around real order-size patterns
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/volume-discount-structures-customers-actually-buy.png" alt="Volume break points aligned to real order-size patterns instead of arbitrary round numbers" />
+</figure>
+
 Break points chosen arbitrarily — round numbers that sound good on a price sheet — often miss where your actual order sizes cluster. Two common failure patterns:
 
 - Break points set too low relative to typical order size, meaning most customers qualify for the discount by default, effectively lowering your baseline price without the intended trade of larger commitment
@@ -49,6 +57,10 @@ Volume discounts rarely operate in isolation — most distributors also have cus
 Without an explicit answer, this is exactly the kind of ambiguity that leads to a rep stacking discounts in a way that clears neither number's individual floor, let alone the two combined.
 
 ## Step 5: Build in negotiation guardrails, not just base rules
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/volume-discount-structures-negotiations-get-tough.png" alt="Below-floor volume quote routed for approval before it reaches the customer" />
+</figure>
 
 Volume discount structures tend to hold up fine on paper and then get stretched in real negotiations — a customer pushes for a deeper discount than their order size technically qualifies for, and a rep under pressure to close grants it. This is less about the discount structure being wrong and more about it lacking enforcement at the point of negotiation.
 
@@ -70,7 +82,7 @@ All of this is manageable in principle with careful spreadsheet modeling — unt
 
 Nova Core's AI Quote Engine enforces margin floors on every quote, at the line-item level, whether a discount comes from a volume break, a customer tier, or a negotiated exception — with any quote that would cross the floor flagged or routed for approval before it goes out. Combined with real-time negotiation through the Digital Sales Room, it gives distributors visibility into exactly where a deal sits against the floor, in the moment, rather than discovering the answer after the order ships.
 
-Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit [buyience.com](https://buyience.com/) to start your free trial — or [request a demo](/request-a-demo).
+Buyience offers a **14-day free trial** with full access to every feature — no credit card required to start. Visit <a href="https://app.buyience.com/register" class="blog-cta-brand">buyience.com</a> to start your free trial — or [request a demo](/request-a-demo).
 
 ## FAQ: Volume Discount Structures for Distributors
 

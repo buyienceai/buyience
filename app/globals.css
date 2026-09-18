@@ -342,11 +342,75 @@ h3, h4 {
   background: #5B21D8;
 }
 
-.faq-list details p {
+.faq-list details .faq-a {
   padding: 0 4px 24px;
   color: var(--muted);
   font-size: 15.5px;
+  line-height: 1.65;
   max-width: 66ch;
+}
+
+.faq-list details .faq-a > :first-child {
+  margin-top: 0;
+}
+
+.faq-list details .faq-a > :last-child {
+  margin-bottom: 0;
+}
+
+.faq-list details .faq-a p {
+  margin: 0 0 0.7em;
+  padding: 0;
+  max-width: none;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.faq-list details .faq-a ul,
+.faq-list details .faq-a ol {
+  margin: 0 0 0.7em;
+  padding-left: 1.35em;
+  list-style-position: outside;
+}
+
+.faq-list details .faq-a ul {
+  list-style-type: disc;
+}
+
+.faq-list details .faq-a ol {
+  list-style-type: decimal;
+}
+
+.faq-list details .faq-a li {
+  margin: 0.28em 0;
+}
+
+.faq-list details .faq-a li::marker {
+  color: currentColor;
+}
+
+.faq-list details .faq-a a {
+  color: var(--violet);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.faq-list details .faq-a a:hover {
+  color: var(--violet-deep);
+}
+
+.faq-list details .faq-a strong {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.faq-list details .faq-a blockquote {
+  margin: 0 0 0.7em;
+  padding: 0 0 0 0.85em;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
 }
 
 .faq-card-list {
@@ -5994,6 +6058,15 @@ a.nav-btn-outline-block {
   transition: transform .35s ease;
 }
 
+.blog-page .blog-card-media--contain {
+  aspect-ratio: auto;
+}
+
+.blog-page .blog-card-media--contain .blog-card-img {
+  height: auto;
+  object-fit: contain;
+}
+
 .blog-page .blog-card:hover .blog-card-img {
   transform: scale(1.03);
 }
@@ -6040,9 +6113,18 @@ a.nav-btn-outline-block {
   aspect-ratio: 1488 / 720;
 }
 
+.blog-page .blog-card--featured .blog-card-media--contain {
+  aspect-ratio: auto;
+}
+
 .blog-page .blog-card--featured .blog-card-img {
   object-fit: cover;
   object-position: center center;
+}
+
+.blog-page .blog-card--featured .blog-card-media--contain .blog-card-img {
+  height: auto;
+  object-fit: contain;
 }
 
 .blog-page .blog-card--featured .blog-card-body {
@@ -6057,7 +6139,8 @@ a.nav-btn-outline-block {
   }
 
   .blog-page .blog-card--featured .blog-card-excerpt {
-    max-width: 72ch;
+    max-width: none;
+    width: 100%;
   }
 }
 
@@ -6253,8 +6336,11 @@ a.nav-btn-outline-block {
 }
 
 .blog-page .blog-article-dek {
+  display: block;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
   margin: 0 0 16px;
-  max-width: none;
   font-size: 18px;
   line-height: 1.65;
   color: var(--muted);
@@ -6273,6 +6359,15 @@ a.nav-btn-outline-block {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.blog-page .blog-article-cover--contain {
+  aspect-ratio: auto;
+}
+
+.blog-page .blog-article-cover--contain .blog-article-cover-img {
+  height: auto;
+  object-fit: contain;
 }
 
 /* Prose — full layout column (same width as cover / site chrome) */
@@ -6324,18 +6419,70 @@ a.nav-btn-outline-block {
   text-underline-offset: 2px;
 }
 
+/* Trial / demo CTAs: highlight only, no underline */
+.blog-page .blog-prose a[href="https://app.buyience.com/register"],
+.blog-page .blog-prose a[href="/request-a-demo"],
+.blog-page .blog-prose a[href^="/request-a-demo?"],
+.blog-page .blog-prose a.blog-cta-brand {
+  color: var(--violet);
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.blog-page .blog-prose a[href="https://app.buyience.com/register"]:hover,
+.blog-page .blog-prose a[href="/request-a-demo"]:hover,
+.blog-page .blog-prose a[href^="/request-a-demo?"]:hover,
+.blog-page .blog-prose a.blog-cta-brand:hover {
+  color: var(--violet-deep);
+  text-decoration: none !important;
+}
+
 .blog-page .blog-prose ul,
 .blog-page .blog-prose ol {
   margin: 0 0 1.25em;
-  padding-left: 1.35em;
+  padding-left: 1.6em;
+  /* Tailwind Preflight sets list-style: none — restore markers for article lists */
+  list-style-position: outside;
+}
+
+.blog-page .blog-prose ul {
+  list-style-type: disc;
+}
+
+.blog-page .blog-prose ol {
+  list-style-type: decimal;
+}
+
+.blog-page .blog-prose ul ul {
+  list-style-type: circle;
+  margin-bottom: 0.35em;
+  margin-top: 0.35em;
+}
+
+.blog-page .blog-prose ol ol {
+  list-style-type: lower-alpha;
+  margin-bottom: 0.35em;
+  margin-top: 0.35em;
 }
 
 .blog-page .blog-prose li {
-  margin-bottom: 0.45em;
+  margin-bottom: 0.55em;
+  display: list-item;
+  padding-left: 0.15em;
 }
 
 .blog-page .blog-prose li::marker {
-  color: var(--violet);
+  color: currentColor;
+  font-weight: 700;
+}
+
+/* Loose markdown lists wrap each item in <p> — keep spacing tight */
+.blog-page .blog-prose li > p {
+  margin: 0;
+}
+
+.blog-page .blog-prose li > p + p {
+  margin-top: 0.4em;
 }
 
 .blog-page .blog-prose blockquote {
@@ -6369,6 +6516,12 @@ a.nav-btn-outline-block {
 .blog-page .blog-prose .blog-table-wrap table {
   margin: 0;
   min-width: 640px;
+}
+
+.blog-page .blog-prose .blog-table-wrap--center th,
+.blog-page .blog-prose .blog-table-wrap--center td {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .blog-page .blog-prose th,

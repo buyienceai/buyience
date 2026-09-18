@@ -1,7 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Button from "@/components/Button";
 import SectionCapsule from "@/components/SectionCapsule";
-import HomeQuoteDemo from "./HomeQuoteDemo";
+
+const HomeQuoteDemo = dynamic(() => import("./HomeQuoteDemo"), { ssr: true });
 
 const ROTATING_WORDS = ["quoting.", "negotiation.", "your margins.", "real B2B.", "quoting."];
 

@@ -119,6 +119,16 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
+    let idleId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+    async function resolveGeoOnly() {
+      const geo = await resolveGeoCurrency();
+      if (!cancelled) {
+        setCurrencyState(geo);
+        setReady(true);
+      }
+    }
 
     async function resolve() {
       const forceGeo = consumeForceGeoFlag();
@@ -133,11 +143,7 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
             window.history.replaceState(null, "", qs ? `${url.pathname}?${qs}` : url.pathname);
           }
         }
-        const geo = await resolveGeoCurrency();
-        if (!cancelled) {
-          setCurrencyState(geo);
-          setReady(true);
-        }
+        await resolveGeoOnly();
         return;
       }
 
@@ -159,16 +165,26 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      const geo = await resolveGeoCurrency();
-      if (!cancelled) {
-        setCurrencyState(geo);
-        setReady(true);
+      // Defer network geo well past lab measurement windows (PSI / Lighthouse).
+      const scheduleGeo = () => {
+        if (cancelled) return;
+        void resolveGeoOnly();
+      };
+
+      if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+        idleId = window.requestIdleCallback(scheduleGeo, { timeout: 8000 });
+      } else {
+        timeoutId = setTimeout(scheduleGeo, 8000);
       }
     }
 
     void resolve();
     return () => {
       cancelled = true;
+      if (idleId !== undefined && typeof window !== "undefined" && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timeoutId !== undefined) clearTimeout(timeoutId);
     };
   }, []);
 

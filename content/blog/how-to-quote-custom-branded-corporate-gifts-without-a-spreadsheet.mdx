@@ -12,14 +12,14 @@ Standard B2B quoting is largely a lookup: find the product, apply the customer's
 
 Consider what actually varies in a single order:
 
-- Base product and its own quantity break structure
-- Decoration method — screen print, pad print, embroidery, laser engraving, full-colour digital, each with different cost behaviour
-- Number of colours in the imprint, which changes cost for some methods and not others
-- Number of imprint locations — a logo on the front and a tagline on the back is two decorations, usually with separate setup
-- Setup or origination fees, which are typically fixed per colour per location regardless of quantity
-- Variant split — 400 units across three colours may or may not require separate production runs
-- Packaging — bulk pack, individual gift box, insert card, custom sleeve
-- Turnaround — standard versus rush, with rush often carrying a surcharge
+- **Base product** — And its own quantity break structure
+- **Decoration method** — Screen print, pad print, embroidery, laser engraving, full-colour digital, each with different cost behaviour
+- **Number of colours in the imprint** — Changes cost for some methods and not others
+- **Number of imprint locations** — A logo on the front and a tagline on the back is two decorations, usually with separate setup
+- **Setup or origination fees** — Typically fixed per colour per location regardless of quantity
+- **Variant split** — 400 units across three colours may or may not require separate production runs
+- **Packaging** — Bulk pack, individual gift box, insert card, custom sleeve
+- **Turnaround** — Standard versus rush, with rush often carrying a surcharge
 
 A spreadsheet can hold all of these. What it can't easily do is encode the relationships between them — that setup fees scale with colours multiplied by locations, that some decoration methods have per-colour costs and others don't, that a variant split may trigger a minimum-per-variant that changes the effective quantity break. Those relationships end up living in the head of whoever builds the quotes.
 
@@ -27,9 +27,8 @@ A spreadsheet can hold all of these. What it can't easily do is encode the relat
 
 The single most useful structural distinction in custom gift quoting is between costs that scale with quantity and costs that don't.
 
-**Fixed costs** occur once per order regardless of quantity: screen setup, digitising an embroidery file, plate origination, colour matching, sampling. These are the reason small custom orders have surprisingly high per-unit prices — a £60 setup fee across 50 units is £1.20 per unit; across 500 units it's £0.12.
-
-**Per-unit costs** scale directly: the base product, the decoration run cost per piece, individual packaging, per-unit handling.
+- **Fixed costs** — Occur once per order regardless of quantity: screen setup, digitising an embroidery file, plate origination, colour matching, sampling. These are the reason small custom orders have surprisingly high per-unit prices — a £60 setup fee across 50 units is £1.20 per unit; across 500 units it's £0.12.
+- **Per-unit costs** — Scale directly: the base product, the decoration run cost per piece, individual packaging, per-unit handling.
 
 Blending these into a single per-unit number — which is what most spreadsheet quotes end up producing — creates two problems. First, it makes quantity changes require a full recalculation rather than a simple adjustment, because the fixed portion doesn't scale. Second, it makes the quote hard for a client to interrogate. When a client asks "what if we did 600 instead of 400," a quote with separated components answers that instantly and shows why the per-unit price improves. A blended one requires starting over.
 
@@ -39,12 +38,12 @@ Structure the quote so these are distinct line components even if the client ult
 
 Decoration pricing is where the real complexity lives, and it's worth encoding once rather than reconstructing per quote. For each method you offer, define:
 
-- Setup cost basis — per colour, per location, per file, or flat
-- Whether setup repeats across variants — does a colour change in the base product require re-setup, or is the screen reusable
-- Per-unit run cost and how it varies by colour count or stitch count
-- Quantity breaks specific to decoration, which are often different from the base product's breaks
-- Minimum order quantity for the method
-- Additional cost triggers — colour matching to a brand standard, oversized imprints, difficult substrates
+- **Setup cost basis** — Per colour, per location, per file, or flat
+- **Whether setup repeats across variants** — Does a colour change in the base product require re-setup, or is the screen reusable
+- **Per-unit run cost** — And how it varies by colour count or stitch count
+- **Quantity breaks specific to decoration** — Often different from the base product's breaks
+- **Minimum order quantity** — For the method
+- **Additional cost triggers** — Colour matching to a brand standard, oversized imprints, difficult substrates
 
 Once these exist as rules, a quote becomes: pick the method, specify colours and locations, and the cost resolves. The rep isn't recalculating decoration logic under time pressure; they're selecting configuration options.
 
@@ -56,11 +55,9 @@ Splitting an order across variants — three bottle colours, four apparel sizes 
 
 The questions that need explicit answers in your pricing rules:
 
-**Does the total quantity or the per-variant quantity determine the quantity break?** A 400-unit order split three ways may be priced at the 400 break or at three separate ~133 breaks depending on how your supplier handles it. Getting this wrong in either direction is costly — either you underquote and absorb the difference, or you overquote and lose to a competitor who structured it correctly.
-
-**Is there a minimum per variant?** Many suppliers require a minimum per colour or size, which can force a client to adjust their split.
-
-**Does decoration setup repeat per variant?** Usually not for the same imprint on different colours of the same item, but sometimes yes if ink colour must change for contrast — a detail that's easy to miss and expensive to discover after quoting.
+- **Does the total quantity or the per-variant quantity determine the quantity break?** — A 400-unit order split three ways may be priced at the 400 break or at three separate ~133 breaks depending on how your supplier handles it. Getting this wrong in either direction is costly — either you underquote and absorb the difference, or you overquote and lose to a competitor who structured it correctly.
+- **Is there a minimum per variant?** — Many suppliers require a minimum per colour or size, which can force a client to adjust their split.
+- **Does decoration setup repeat per variant?** — Usually not for the same imprint on different colours of the same item, but sometimes yes if ink colour must change for contrast — a detail that's easy to miss and expensive to discover after quoting.
 
 These rules are stable across quotes. Encoding them once means every quote applies them correctly, rather than depending on the rep remembering the exception for a particular product line.
 
@@ -90,7 +87,7 @@ The protection is the same principle that applies across B2B pricing: a margin f
 
 Nova Core's CPQ treats custom configuration as structured data — decoration method, colour and location counts, setup fees, variant splits, packaging, and turnaround all defined as rules that resolve automatically when a rep configures a quote. Fixed and per-unit costs stay separated internally, so a quantity change or a specification revision recalculates in seconds. Margin floors apply to the fully configured cost, and the accepted configuration carries through to the order without re-entry, so what was quoted is what gets produced.
 
-[Start your free trial →](https://buyience.com/) — 14 days, no card required.
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
 
 Quoting custom-branded gifts with complex decoration or variant structures? [Request a demo](/request-a-demo) and we'll map your configuration rules.
 

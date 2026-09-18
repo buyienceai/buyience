@@ -1,68 +1,66 @@
-Traditional B2B commerce platforms were built to solve simpler problems. When they launched, the typical B2B workflow was relatively predictable.
-
 ## The B2B Commerce Architecture Crisis
-Traditional B2B commerce platforms were built to solve simpler problems. When they launched, the typical B2B workflow was relatively predictable: a buyer searched a catalog, added items to a cart, and checked out with net-30 terms. The platform handled pricing, inventory, and orders. Everything else happened in the ERP.
+The traditional B2B commerce model is now broken.
 
-That model is now broken.
+Modern B2B commerce isn't just catalog browsing. It includes:
 
-Modern B2B commerce isn't just catalog browsing. It's contract-based pricing that varies by customer, region, and volume. It's sales teams needing to quote complex configurations in real-time. It's procurement teams integrating with a dozen supply-chain systems. It's multinational companies managing pricing in different currencies, compliance rules in different regions, and approval workflows that route to different stakeholders.
+- Contract-based pricing that varies by customer, region, and volume
+- Sales teams needing to quote complex configurations in real-time
+- Procurement teams integrating with a dozen supply-chain systems
+- Multinational companies managing pricing in different currencies, compliance rules in different regions, and approval workflows that route to different stakeholders
 
 A single B2B buyer might access your platform through a mobile app, a desktop portal, a voice assistant, or embedded directly into their own procurement system via API. Each channel expects different features, different pricing rules, and different data formats.
 
 The real bottleneck isn't features anymore. It's architecture.
 
-Monolithic B2B platforms—where the commerce engine, pricing logic, storefront, and integrations are all built on a single codebase—hit walls fast. Every customization requires backend changes. Every new channel means extending the same system. Every integration increases technical debt. The platform becomes the constraint, not the accelerator.
+Monolithic B2B platforms—where the commerce engine, pricing logic, storefront, and integrations are all built on a single codebase—hit walls fast:
+
+- Every customization requires backend changes
+- Every new channel means extending the same system
+- Every integration increases technical debt
+
+The platform becomes the constraint, not the accelerator.
 
 This is where MACH architecture becomes more than a buzzword. For B2B commerce, it's become a requirement.
 
 ## What MACH Architecture Really Means (In Practice)
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/mach-architecture-for-modern-b2b-commerce-four-principles.png" alt="Four MACH principles forming one flexible B2B commerce layer for portals, quoting, and procurement" />
+</figure>
 MACH stands for Microservices, API-first, Cloud-native, and Headless. But these terms are often explained as definitions, not as solutions to real B2B problems.
 
 Here's what each layer actually enables:
 
-**Microservices** mean that pricing logic, order management, inventory, and customer-specific workflows run on independent services, not one monolith. You can update pricing rules without redeploying your checkout flow. You can scale your ERP adapter separately from your catalog service. Each service owns its own database and evolves independently.
-
-**API-first** means that every piece of functionality is exposed through structured APIs, not just UI layers. A sales team's quoting tool doesn't just submit orders through the website—it calls the pricing API directly, gets real-time margin analysis, and integrates with the CRM. Procurement systems call the order API to sync with their own systems of record.
-
-**Cloud-native** means your infrastructure doesn't run on legacy server hardware that forces you to provision a year in advance. It scales with demand. It's maintainable without a dedicated infrastructure team. New capabilities ship faster because deployment isn't a quarterly gate.
-
-**Headless** means the commerce logic layer is completely separate from the presentation layer. You're not building a single "Buyience storefront"—you're building multiple experiences: a self-service portal for retail buyers, a quote configuration tool for enterprise sales, an embedded procurement interface for OEM partners. All consume the same commerce layer, but each experience is optimized for its specific user.
+- **Microservices** — Pricing logic, order management, inventory, and customer-specific workflows run on independent services, not one monolith. You can update pricing rules without redeploying your checkout flow. You can scale your ERP adapter separately from your catalog service. Each service owns its own database and evolves independently.
+- **API-first** — Every piece of functionality is exposed through structured APIs, not just UI layers. A sales team's quoting tool doesn't just submit orders through the website—it calls the pricing API directly, gets real-time margin analysis, and integrates with the CRM. Procurement systems call the order API to sync with their own systems of record.
+- **Cloud-native** — Your infrastructure doesn't run on legacy server hardware that forces you to provision a year in advance. It scales with demand. It's maintainable without a dedicated infrastructure team. New capabilities ship faster because deployment isn't a quarterly gate.
+- **Headless** — The commerce logic layer is completely separate from the presentation layer. You're not building a single "Buyience storefront"—you're building multiple experiences: a self-service portal for retail buyers, a quote configuration tool for enterprise sales, an embedded procurement interface for OEM partners. All consume the same commerce layer, but each experience is optimized for its specific user.
 
 For B2B, this separation is critical. Your customers don't want your interface. They want to integrate with their systems and workflows. Headless is what makes that possible.
 
 ## How MACH Directly Solves B2B Complexity
 Map the complexity back to the architecture.
 
-B2B businesses deal with **contract-based pricing and approval workflows**. With MACH, pricing rules live in a dedicated microservice that evaluates customer-specific contracts, volume tiers, promotional agreements, and negotiated terms in real-time. When a sales rep quotes a configuration, the pricing service executes the entire contract logic and returns margin-adjusted pricing. When the buyer approves and submits an order, the order service enforces the same rules. The backend and the sales tool stay synchronized because they call the same API.
-
-In a monolith, pricing rules are baked into the database schema and business logic layer. Changing a customer's contract means data migrations and code redeploys. Sales tools sync separately, creating shadow pricing logic. Discrepancies multiply.
-
-B2B companies face **complex ERP integration**. With MACH, your ERP integration is its own microservice. It has a single responsibility: translate between your commerce APIs and your ERP's data model. When the ERP changes its schema, only this service changes. When you add a new commerce feature, the integration layer adapts to it without reverse-engineering the ERP. ERPs and commerce operate as peers, not as master-slave.
-
-In a monolith, the ERP sits behind the commerce platform. It's accessed through a single integration layer that entangles commerce logic, data mapping, and ERP workflows. Changing one thing breaks others.
-
-B2B requires **multi-channel buyer experiences**. With MACH and headless, your procurement team can embed a quote configurator directly into their own portal. Your sales team gets a mobile app for field quoting. Your distributors get a brand-customized storefront. Large accounts get a dedicated account management experience. Every experience runs on the same commerce layer, but each is architecturally independent. Deploying a fix to one channel doesn't affect the others.
-
-In a monolith, every new channel means extending the platform. Every extension increases risk. The QA surface explodes.
-
-**Scalability** across customers, regions, and catalogs becomes architectural, not organizational. With microservices, you can scale your catalog indexing separately from your order processing. You can run pricing calculations in multiple regions for low-latency responses. You can scale customer-specific workflows independently from your core commerce layer. This is infrastructure flexibility, not just engineering flexibility.
-
-In a monolith, scaling one feature means scaling the entire platform. You provision for your peak load, then pay idle capacity the rest of the time.
+- **Contract-based pricing and approval workflows** — With MACH, pricing rules live in a dedicated microservice that evaluates customer-specific contracts, volume tiers, promotional agreements, and negotiated terms in real-time. When a sales rep quotes a configuration, the pricing service executes the entire contract logic and returns margin-adjusted pricing. When the buyer approves and submits an order, the order service enforces the same rules. The backend and the sales tool stay synchronized because they call the same API. In a monolith, pricing rules are baked into the database schema and business logic layer. Changing a customer's contract means data migrations and code redeploys. Sales tools sync separately, creating shadow pricing logic. Discrepancies multiply.
+- **Complex ERP integration** — With MACH, your ERP integration is its own microservice. It has a single responsibility: translate between your commerce APIs and your ERP's data model. When the ERP changes its schema, only this service changes. When you add a new commerce feature, the integration layer adapts to it without reverse-engineering the ERP. ERPs and commerce operate as peers, not as master-slave. In a monolith, the ERP sits behind the commerce platform. It's accessed through a single integration layer that entangles commerce logic, data mapping, and ERP workflows. Changing one thing breaks others.
+- **Multi-channel buyer experiences** — With MACH and headless, your procurement team can embed a quote configurator directly into their own portal. Your sales team gets a mobile app for field quoting. Your distributors get a brand-customized storefront. Large accounts get a dedicated account management experience. Every experience runs on the same commerce layer, but each is architecturally independent. Deploying a fix to one channel doesn't affect the others. In a monolith, every new channel means extending the platform. Every extension increases risk. The QA surface explodes.
+- **Scalability across customers, regions, and catalogs** — Becomes architectural, not organizational. With microservices, you can scale your catalog indexing separately from your order processing. You can run pricing calculations in multiple regions for low-latency responses. You can scale customer-specific workflows independently from your core commerce layer. This is infrastructure flexibility, not just engineering flexibility. In a monolith, scaling one feature means scaling the entire platform. You provision for your peak load, then pay idle capacity the rest of the time.
 
 ## Why Monolithic B2B Platforms Struggle
 The technical challenges of monoliths are well-known in enterprise architecture. But they hit B2B commerce especially hard.
 
-**Tight coupling** means that a change to the customer management system affects pricing, order management, and fulfillment. Every release requires regression testing across all business workflows. Risk accumulates. Release cycles slow down. Features that should take days take weeks because they touch the shared codebase.
-
-**Slow innovation cycles** mean that new B2B requirements—like a contract-approval workflow or a specific ERP integration—take three to six months to ship. By then, the market has moved on. Your competitors who built with MACH shipped it in three weeks.
-
-**Risky upgrades** are a constant organizational cost. You're trapped on a version because the new version breaks a critical workflow. You can't upgrade your API framework because it'll require redeploying your entire system. Vendors lock you into old dependencies.
-
-**Limited customization without technical debt** is the real killer. B2B customers are all different. They have different pricing models, different approval hierarchies, different ERP systems. In a monolith, you customize by adding conditional logic. You add configuration tables. You create plugins. After three years, the codebase is unmaintainable. No engineer knows what actually runs in production anymore.
+- **Tight coupling** — A change to the customer management system affects pricing, order management, and fulfillment. Every release requires regression testing across all business workflows. Risk accumulates. Release cycles slow down. Features that should take days take weeks because they touch the shared codebase.
+- **Slow innovation cycles** — New B2B requirements—like a contract-approval workflow or a specific ERP integration—take three to six months to ship. By then, the market has moved on. Your competitors who built with MACH shipped it in three weeks.
+- **Risky upgrades** — A constant organizational cost. You're trapped on a version because the new version breaks a critical workflow. You can't upgrade your API framework because it'll require redeploying your entire system. Vendors lock you into old dependencies.
+- **Limited customization without technical debt** — The real killer. B2B customers are all different. They have different pricing models, different approval hierarchies, different ERP systems. In a monolith, you customize by adding conditional logic. You add configuration tables. You create plugins. After three years, the codebase is unmaintainable. No engineer knows what actually runs in production anymore.
 
 These aren't theoretical problems. They're why mature B2B companies abandon their platforms every seven to ten years.
 
 ## Headless Commerce as the B2B Experience Layer
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/mach-architecture-for-modern-b2b-commerce-every-b2b-experience.png" alt="One commerce core powering self-service, sales quoting, procurement, and partner portal experiences" />
+</figure>
 Headless is often explained as a UX trend—"you can design better storefronts now." That misses the point entirely.
 
 Headless is how B2B commerce becomes embedded, not visited.
@@ -87,6 +85,10 @@ This is fundamentally different from what monolithic platforms do. A monolith tr
 This approach matters because it means you're not betting your entire commerce operation on a single vendor. If you need a different PIM next year, you swap it. The commerce layer remains. If your ERP needs to change, you update the integration, not the whole stack.
 
 ## Architecture as a Competitive Advantage in B2B
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/mach-architecture-for-modern-b2b-commerce-tomarrows-growth.png" alt="Moving from today's B2B operations to tomorrow's growth with more open, agile commerce architecture" />
+</figure>
 The winners in B2B commerce aren't the companies that built faster websites or added one more feature. They're the ones that reduced the time to ship new commerce capabilities.
 
 A competitor wants to offer dynamic discounts based on customer lifetime value? With [MACH architecture](https://buyience.com/mach-architecture), it's a microservice change. Three weeks. With a monolith, it's a core platform enhancement. Six months.

@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="mb-14 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 lg:gap-8 xl:gap-10">
           {/* Brand */}
           <div className="flex flex-col items-start gap-3.5 lg:max-w-[220px]">
-            <Link href="/" className="flex items-center">
+            <Link prefetch={false} href="/" className="flex items-center">
               <Image
                 src="/images/buyience.png"
                 alt="Buyience"
@@ -103,7 +103,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-[11px]">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <Link
+                    <Link prefetch={false}
                       href={link.href}
                       className="text-[13px] font-normal leading-none text-[#6b7280] transition-colors hover:text-[#6E2CF4]"
                     >
@@ -119,19 +119,19 @@ export default function Footer() {
         <div className="flex flex-col items-start justify-between gap-3 border-t border-[#e6e2ee] pt-6 text-[11.5px] font-normal leading-relaxed text-[#9aa0ae] md:flex-row md:flex-wrap md:items-center md:gap-x-4 md:gap-y-2">
           <div>Copyright © 2026 Buyience All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <Link href="/terms-and-conditions" className="transition-colors hover:text-[#6E2CF4]">
+            <Link prefetch={false} href="/terms-and-conditions" className="transition-colors hover:text-[#6E2CF4]">
               Terms & Conditions
             </Link>
             <span className="text-[#c5c9d4]" aria-hidden="true">
               |
             </span>
-            <Link href="/privacy-policy" className="transition-colors hover:text-[#6E2CF4]">
+            <Link prefetch={false} href="/privacy-policy" className="transition-colors hover:text-[#6E2CF4]">
               Privacy Policy
             </Link>
             <span className="text-[#c5c9d4]" aria-hidden="true">
               |
             </span>
-            <Link href="/refund-policy" className="transition-colors hover:text-[#6E2CF4]">
+            <Link prefetch={false} href="/refund-policy" className="transition-colors hover:text-[#6E2CF4]">
               Refund Policy
             </Link>
           </div>

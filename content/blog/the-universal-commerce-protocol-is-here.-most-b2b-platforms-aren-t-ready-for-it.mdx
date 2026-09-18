@@ -1,5 +1,3 @@
-What agent-driven commerce actually demands from your pricing, quoting, and inventory infrastructure — and why the readiness gap is wider than most operators think.
-
 The Universal Commerce Protocol isn't a press release. It's an architectural shift.
 
 Co-developed by Google and Shopify, endorsed by more than 20 retailers and platforms — including Etsy, Wayfair, Target, and Walmart — UCP is an open standard that defines how AI agents discover merchants, negotiate terms, build carts, and complete transactions. It launched at NRF 2026 in January, and as of mid-2026, it's already powering native shopping experiences in Google Search AI Mode and the Gemini app.
@@ -11,6 +9,11 @@ For B2C retailers with standard catalogs and fixed pricing, UCP adoption is rela
 For B2B operators — wholesalers, distributors, manufacturers running complex pricing, negotiated contracts, multi-warehouse inventory, and approval workflows — the picture is fundamentally different. And far more consequential.
 
 ## The B2B Readiness Problem No One Is Talking About
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it-protocol-define.png" alt="UCP commerce verbs for discover, price, quote, and order executing against a B2B backend" />
+</figure>
+
 Most coverage of UCP and agentic commerce focuses on consumer scenarios: a shopper asks an AI assistant to find running shoes, the agent compares options across merchants, and checkout happens inside the chat. That's compelling. It's also the easy case.
 
 B2B commerce doesn't work that way. And the gap between what the protocol enables and what most B2B backends can actually deliver is where the real strategic risk lives.
@@ -26,6 +29,11 @@ This is where the readiness gap emerges. UCP assumes merchants can expose struct
 Most B2B platforms were not built for this. They were built for humans clicking through forms.
 
 ## What UCP Actually Requires From a B2B Commerce Stack
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it-agent-ready-b2b-commerce-require.png" alt="Agent-ready B2B commerce requiring API pricing, real-time inventory, workflow quoting, and structured product data" />
+</figure>
+
 Understanding UCP's operational demands requires looking beyond the protocol spec and into what it implies for the systems underneath it.
 
 ## Pricing must be API-addressable, not spreadsheet-dependent
@@ -68,29 +76,46 @@ This is why the agentic commerce discussion is fundamentally an infrastructure d
 ## Where B2B Platforms Typically Fall Short
 The gap between UCP's requirements and most B2B platforms' capabilities tends to concentrate in a few areas.
 
-Monolithic architectures that can't expose granular capabilities. UCP's model assumes merchants can declare specific capabilities — checkout, product discovery, identity linking, fulfillment — and agents can invoke them independently. Monolithic platforms that bundle everything into a single application layer can't selectively expose capabilities without significant re-architecture.
-
-Pricing logic locked inside ERPs. Many B2B operators run pricing through their ERP, which was designed for internal operations, not real-time external queries. When pricing rules live in ERP logic that requires synchronous database queries and multi-step calculations, response times measured in seconds become response times measured in minutes. Agents won't wait.
-
-Manual approval workflows with no programmatic interface. Approval chains that require a human to click "approve" in an email or internal tool are incompatible with agent-driven transaction flows. Approvals need rule-based automation with clear thresholds: auto-approve within margin bounds, escalate outside them. The approval logic needs to be as programmable as the pricing logic.
-
-Inventory systems that don't account for allocation. Showing aggregate stock across warehouses isn't the same as showing available-to-promise inventory that accounts for existing reservations, in-transit stock, and fulfillment constraints. Agents need ATP data, not raw stock counts.
+- **Monolithic architectures that can't expose granular capabilities** — UCP's model assumes merchants can declare specific capabilities — checkout, product discovery, identity linking, fulfillment — and agents can invoke them independently. Monolithic platforms that bundle everything into a single application layer can't selectively expose capabilities without significant re-architecture.
+- **Pricing logic locked inside ERPs** — Many B2B operators run pricing through their ERP, which was designed for internal operations, not real-time external queries. When pricing rules live in ERP logic that requires synchronous database queries and multi-step calculations, response times measured in seconds become response times measured in minutes. Agents won't wait.
+- **Manual approval workflows with no programmatic interface** — Approval chains that require a human to click "approve" in an email or internal tool are incompatible with agent-driven transaction flows. Approvals need rule-based automation with clear thresholds: auto-approve within margin bounds, escalate outside them. The approval logic needs to be as programmable as the pricing logic.
+- **Inventory systems that don't account for allocation** — Showing aggregate stock across warehouses isn't the same as showing available-to-promise inventory that accounts for existing reservations, in-transit stock, and fulfillment constraints. Agents need ATP data, not raw stock counts.
 
 ## What This Means for Operators Making Platform Decisions Now
 If you're evaluating B2B commerce platforms in 2026, agent readiness should be part of the assessment — even if your buyers aren't using AI procurement agents today. The infrastructure decisions you make now will determine whether your business is discoverable, quotable, and transactable in an agent-driven marketplace 18 to 24 months from now.
 
-The platforms that will thrive in an agentic commerce environment share specific architectural characteristics: API-first design that can expose capabilities independently, real-time data layers that serve current pricing and inventory without batch delays, programmable business rules that can evaluate and respond to agent queries without human intervention, and modular architectures that can adopt new protocol capabilities as they emerge.
+The platforms that will thrive in an agentic commerce environment share specific architectural characteristics:
+
+- **API-first design** — can expose capabilities independently
+- **Real-time data layers** — serve current pricing and inventory without batch delays
+- **Programmable business rules** — can evaluate and respond to agent queries without human intervention
+- **Modular architectures** — can adopt new protocol capabilities as they emerge
 
 This is why MACH architecture — Microservices, API-First, Cloud-Native, Headless — isn't just a technical preference for B2B platforms anymore. It's the structural prerequisite for participating in protocol-driven commerce. Platforms built on monolithic foundations can't selectively expose the capabilities that UCP requires. They can't respond in real time because their data layers weren't designed for it. And they can't evolve at the pace that an open, actively-developing protocol demands.
 
-Buyience's Nova Core was built on these principles — not because of UCP specifically, but because the operational problems UCP addresses are the same problems B2B operators face every day. Customer-specific pricing that evaluates in real time. Multi-warehouse inventory with unified availability. AI-assisted quoting that operates as a workflow, not a document generator. An API-first architecture where every capability is independently addressable.
+Buyience's Nova Core was built on these principles — not because of UCP specifically, but because the operational problems UCP addresses are the same problems B2B operators face every day:
+
+- Customer-specific pricing that evaluates in real time
+- Multi-warehouse inventory with unified availability
+- AI-assisted quoting that operates as a workflow, not a document generator
+- An API-first architecture where every capability is independently addressable
 
 The protocol formalizes what good B2B commerce architecture already requires. Platforms that were built for real-time, structured, machine-readable commerce don't need to retrofit for agent readiness. They're already there.
 
 ## The Window Is Open, but It Won't Stay Open
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it-should-be-a-node.png" alt="B2B platform as an agent-ready commerce node instead of a human-only destination" />
+</figure>
+
 UCP is evolving rapidly. Multi-item cart support, identity linking for loyalty programs, and post-purchase support for tracking and returns are already on the roadmap. As the protocol matures and procurement teams adopt AI agents for routine purchasing, the merchants whose backends can respond programmatically will capture the transactions. The merchants who can't will become invisible — not because their products are inferior, but because their infrastructure can't participate in the conversation.
 
-The competitive advantage in agent-driven commerce isn't about who adopts UCP first. It's about who already has the architectural foundation to support what the protocol demands: real-time pricing, structured product data, programmable business rules, and inventory systems that serve truth, not approximations.
+The competitive advantage in agent-driven commerce isn't about who adopts UCP first. It's about who already has the architectural foundation to support what the protocol demands:
+
+- Real-time pricing
+- Structured product data
+- Programmable business rules
+- Inventory systems that serve truth, not approximations
 
 For B2B operators, the question isn't whether agent-driven commerce is relevant to your business. It's whether your platform is capable of being a node on the network, or whether it's still a destination that requires humans to navigate it manually.
 

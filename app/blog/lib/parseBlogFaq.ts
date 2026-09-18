@@ -11,8 +11,10 @@ type ParsedArticle = {
  * + `### Question?` answers) and leave the rest of the article intact.
  */
 export function parseBlogFaq(source: string): ParsedArticle {
+  // Use [ \t:]* (not \s) so the optional spacer cannot consume the newline
+  // before the first ### question — e.g. `## FAQ's\n### What is…`.
   const match = source.match(
-    /^## ((?:FAQ'?s?[:\s]?[^\n]*|Frequently Asked Questions[^\n]*))\n/im,
+    /^## ((?:FAQ'?s?[ \t:]*[^\n]*|Frequently Asked Questions[^\n]*))\r?\n/im,
   );
   if (!match || match.index === undefined) {
     return { body: source, faqTitle: "Questions, answered", faqItems: [] };

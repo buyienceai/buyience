@@ -1,5 +1,3 @@
-**TL;DR:** Running inventory across more than one warehouse solves real problems — shorter delivery times, regional redundancy, room to grow — but it introduces a coordination problem that single-location distributors never have to solve: knowing, in real time, exactly what's available where. Distributors who get this wrong end up overselling stock that's already spoken for, or sitting on excess inventory in one location while another runs a stockout. This guide covers how to structure multi-warehouse inventory so the numbers stay trustworthy.
-
 Growing past a single warehouse is usually a good sign — it means you're covering more territory, serving more customers, or reducing the risk of a single point of failure in your supply chain. It's also the point where inventory management stops being simple. A fastener or MRO distributor running one location can generally trust that "50 units in stock" means 50 units, full stop. Add a second location, and that number splits into a question: 50 units where, and is that number actually current right now?
 
 ## Why multi-warehouse inventory gets complicated fast
@@ -8,13 +6,10 @@ The core challenge isn't storage — it's synchronization. Every sale, transfer,
 
 When that synchronization lags or breaks, a few predictable problems show up:
 
-**Overselling.** A customer orders a quantity that's technically in stock across your network but not actually available at the warehouse that would fulfill it, because the count they saw was stale or aggregated incorrectly.
-
-**Phantom stockouts.** The opposite problem — a warehouse actually has stock, but the system shows it as unavailable because a transfer or receipt hasn't been reconciled yet, so a sale gets declined or delayed unnecessarily.
-
-**Manual reconciliation becoming a full-time job.** Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
-
-**Inconsistent fulfillment logic.** Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
+- **Overselling** — A customer orders a quantity that's technically in stock across your network but not actually available at the warehouse that would fulfill it, because the count they saw was stale or aggregated incorrectly.
+- **Phantom stockouts** — The opposite problem: a warehouse actually has stock, but the system shows it as unavailable because a transfer or receipt hasn't been reconciled yet, so a sale gets declined or delayed unnecessarily.
+- **Manual reconciliation becoming a full-time job** — Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
+- **Inconsistent fulfillment logic** — Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
 
 ## Step 1: Decide what "available" actually means
 
@@ -64,7 +59,7 @@ Distributors managing multi-warehouse inventory without a system built for it us
 
 Nova Core's multi-warehouse inventory tracks live stock across locations with real-time updates that flow directly into quoting and the customer storefront — so a quote reflects actual, available-to-promise inventory at the moment it's built, not a stale snapshot. Combined with order tracking and supplier management, it gives distributors one system of record for inventory rather than a set of disconnected spreadsheets per location.
 
-[Start your free trial →](https://buyience.com/) — 14 days, no card required.
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
 
 Want to see how live multi-warehouse inventory flows into quoting in Nova Core? [Request a demo](/request-a-demo).
 
