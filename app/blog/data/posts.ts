@@ -389,7 +389,7 @@ export const blogPosts: BlogPost[] = [
       "AI-generated quote accuracy depending on product, pricing, inventory, and customer data quality",
   },
   {
-    slug: "the-universal-commerce-protocol-is-here-most-b2b-platforms-aren-t-ready-for-it",
+    slug: "the-universal-commerce-protocol-is-here.-most-b2b-platforms-aren-t-ready-for-it",
     title: "The Universal Commerce Protocol Is Here. Most B2B Platforms Aren't Ready for It",
     description: "What the Universal Commerce Protocol means for B2B platforms.",
     excerpt:
