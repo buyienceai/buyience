@@ -6262,7 +6262,6 @@ a.nav-btn-outline-block {
 
 .blog-page .blog-article-header h1 {
   margin: 0 0 12px;
-  width: 100%;
   max-width: none;
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 800;
@@ -6274,17 +6273,16 @@ a.nav-btn-outline-block {
 .blog-page .blog-article-dek {
   display: block;
   box-sizing: border-box;
-  width: 100%;
-  max-width: none;
+  width: 100% !important;
+  max-width: none !important;
   margin: 0 0 16px;
-  padding: 0;
   font-size: 18px;
   line-height: 1.65;
   color: var(--muted);
 }
 
 .blog-page .blog-article-cover {
-  margin: 0 0 28px;
+  margin: 24px 0 40px;
   border-radius: var(--radius-card);
   overflow: hidden;
   border: 1px solid var(--border);
