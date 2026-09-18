@@ -2,7 +2,6 @@
 Most B2B companies frame architecture decisions like this:
 
 - Should ERP control everything?
-
 - Or should ecommerce lead the experience?
 
 This is the wrong question.
@@ -25,17 +24,13 @@ Yet most architectures force one of them to take over.
 #### ERP-First Architecture
 
 - ERP is the source of truth
-
 - Ecommerce acts as a thin frontend
-
 - Pricing, inventory, and logic live in ERP
 
 #### Commerce-First Architecture
 
 - Ecommerce platform drives experience
-
 - ERP acts as backend support
-
 - Business logic moves into commerce layer
 
 ## The Reality
@@ -45,7 +40,6 @@ Yet most architectures force one of them to take over.
 ### Why companies choose it:
 
 - ERP already manages pricing, inventory, orders
-
 - Centralized control feels safer
 
 ### Where it fails:
@@ -57,9 +51,7 @@ Every action depends on ERP response time.
 **Result:**
 
 - Slow page loads
-
 - Delayed pricing
-
 - Poor UX
 
 #### 2\. Limited Flexibility
@@ -67,9 +59,7 @@ Every action depends on ERP response time.
 **ERP systems are not designed for:**
 
 - Complex pricing rules
-
 - Customer-specific experiences
-
 - Fast UI iterations
 
 #### 3\. Integration Overload
@@ -77,22 +67,18 @@ Every action depends on ERP response time.
 **Everything connects to ERP:**
 
 - Ecommerce
-
 - CRM
-
 - Mobile apps
 
 **Result:**
 
 - Fragile system
-
 - High maintenance
 
 ## Why Commerce-First Architecture Also Fails
 ### Why companies choose it:
 
 - Better frontend control
-
 - Faster UX improvements
 
 ### Where it fails:
@@ -104,7 +90,6 @@ Pricing, approvals, workflows move into ecommerce.
 **Result:**
 
 - Custom code everywhere
-
 - Difficult to maintain
 
 #### 2\. Data Duplication
@@ -112,9 +97,7 @@ Pricing, approvals, workflows move into ecommerce.
 Commerce starts storing:
 
 - Pricing
-
 - Customer rules
-
 - Product logic
 
 Now ERP and commerce disagree.
@@ -124,9 +107,7 @@ Now ERP and commerce disagree.
 **Every change requires:**
 
 - Developers
-
 - Testing
-
 - Deployment
 
 ## The Core Problem: Misplaced Ownership of Workflows
@@ -135,17 +116,13 @@ This is where most architectures break.
 #### Workflows Include:
 
 - Pricing logic
-
 - Quote approvals
-
 - Reordering
-
 - Customer-specific rules
 
 And here’s the issue:
 
 - ERP can’t handle dynamic workflows
-
 - Ecommerce shouldn’t own operational logic
 
 **So where do these workflows go?**
@@ -163,23 +140,18 @@ A scalable B2B architecture distributes responsibilities across systems instead 
 #### ERP
 
 - Master data (products, inventory, orders)
-
 - Financial records
 
 #### Ecommerce Platform
 
 - Customer experience
-
 - Order capture
 
 #### Workflow / Logic Layer
 
 - Pricing rules
-
 - Approval flows
-
 - Reordering logic
-
 - Business processes
 
 ### Why This Model Works
@@ -187,9 +159,7 @@ A scalable B2B architecture distributes responsibilities across systems instead 
 #### 1\. Each System Does What It’s Good At
 
 - ERP handles data integrity
-
 - Ecommerce handles UX
-
 - Workflow layer handles logic
 
 #### 2\. Reduced System Dependency
@@ -201,9 +171,7 @@ No single system becomes a bottleneck.
 You can:
 
 - Update pricing logic
-
 - Change workflows
-
 - Improve processes
 
 Without touching core systems.
@@ -212,103 +180,74 @@ Without touching core systems.
 #### ERP-First Setup
 
 - Pricing calculated in ERP
-
 - Ecommerce requests pricing in real-time
-
 - Slow performance
-
 - Limited flexibility
 
 #### Distributed Setup
 
 - Pricing handled by dedicated logic layer
-
 - ERP provides base data
-
 - Ecommerce displays results
 
 #### Result:
 
 - Faster experience
-
 - More flexibility
-
 - Better scalability
 
 ## Where Most Integration Projects Go Wrong
 #### Common Mistakes
 
 1. Treating ERP as the central brain
-
 2. Overloading ecommerce with business logic
-
 3. Ignoring workflow orchestration
-
 4. Building point-to-point integrations
-
 5. Not planning for scale
 
 ## The Hidden Cost of Choosing the Wrong Architecture
 #### 1\. Slower Sales Cycles
 
 - Delayed pricing
-
 - Manual approvals
 
 #### 2\. Higher Operational Costs
 
 - More manual work
-
 - More support tickets
 
 #### 3\. Technical Debt
 
 - Hardcoded logic
-
 - Fragile integrations
-
 - Expensive changes
 
 ## How Reordering and Quoting Fit Into This
 Architecture directly impacts:
 
 - Reordering speed
-
 - Pricing consistency
-
 - Quote generation
 
 If workflows are broken:
 
 - Reordering becomes manual
-
 - Pricing becomes inconsistent
-
 - Quotes slow down
 
 ## When Do You Need to Rethink Your Architecture?
 You likely have a problem if:
 
 - ERP is slowing down frontend performance
-
 - Ecommerce contains business logic
-
 - Pricing is inconsistent across systems
-
 - Integration projects keep failing
-
 - Scaling requires more developers
 
 ## The Bigger Shift: From System-Centric to Workflow-Centric
-#### Old model:
 
-➡ ERP-centric
-
-➡ Commerce-centric
-
-#### New model:
-
-➡ Workflow-centric
+- **Old model:** ERP-centric or commerce-centric
+- **New model:** Workflow-centric
 
 **Workflows should drive architecture—not systems.**
 
@@ -316,9 +255,7 @@ You likely have a problem if:
 Trying to make ERP or ecommerce do everything leads to:
 
 - Bottlenecks
-
 - Complexity
-
 - Technical debt
 
 The better approach is simple:
@@ -333,11 +270,8 @@ That’s how modern B2B systems scale.
 ERP ecommerce integration in B2B is the process of connecting your ERP system with your ecommerce platform to synchronize:
 
 - Pricing
-
 - Inventory
-
 - Orders
-
 - Customer data
 
 This enables consistent data flow across systems while supporting business operations and customer experience.
@@ -347,9 +281,7 @@ This enables consistent data flow across systems while supporting business opera
 ERP-first architecture means:
 
 - ERP controls most business logic
-
 - Ecommerce acts as a frontend layer
-
 - Pricing, inventory, and workflows are managed inside ERP
 
 This approach prioritizes centralized control but often limits flexibility and performance.
@@ -359,9 +291,7 @@ This approach prioritizes centralized control but often limits flexibility and p
 Commerce-first architecture means:
 
 - Ecommerce platform drives the customer experience
-
 - Business logic is handled within the commerce layer
-
 - ERP supports backend operations
 
 This approach improves flexibility but can lead to data duplication and maintenance complexity.
@@ -371,7 +301,6 @@ This approach improves flexibility but can lead to data duplication and maintena
 Neither approach is ideal on its own.
 
 - ERP-first creates bottlenecks and slow performance
-
 - Commerce-first leads to fragmented logic and technical debt
 
 The best approach is a distributed architecture, where each system handles its core responsibility.
@@ -385,9 +314,7 @@ ERP is forced to handle real-time workflows it wasn’t designed for.
 This results in:
 
 - Slow system performance
-
 - Limited flexibility
-
 - Difficult updates
 
 ### What is the biggest problem with commerce-first architecture?
@@ -399,9 +326,7 @@ Business logic gets hardcoded into the ecommerce platform.
 This leads to:
 
 - Increased development effort
-
 - Data inconsistencies
-
 - Scaling challenges
 
 ### What is the best architecture for B2B ecommerce?
@@ -409,9 +334,7 @@ This leads to:
 The most effective architecture is a distributed model, where:
 
 - ERP → manages data and transactions
-
 - Ecommerce → handles customer experience
-
 - Workflow layer → manages pricing, approvals, and logic
 
 ### Why should no single system own everything in B2B?
@@ -419,15 +342,12 @@ The most effective architecture is a distributed model, where:
 Because no system is designed to handle all responsibilities.
 
 - ERP is not built for customer-facing workflows
-
 - Ecommerce is not built for operational complexity
 
 Trying to centralize everything leads to:
 
 - Bottlenecks
-
 - Technical debt
-
 - Poor scalability
 
 ### How does architecture impact pricing and reordering?
@@ -435,17 +355,13 @@ Trying to centralize everything leads to:
 Architecture directly affects:
 
 - Pricing consistency
-
 - Quote generation speed
-
 - Reordering efficiency
 
 Poor architecture results in:
 
 - Inconsistent pricing
-
 - Slow workflows
-
 - Manual processes
 
 ### When should a B2B company rethink its architecture?
@@ -453,11 +369,8 @@ Poor architecture results in:
 You should reconsider your architecture if:
 
 - ERP is slowing down your ecommerce experience
-
 - Business logic exists in multiple systems
-
 - Integration projects keep failing
-
 - Scaling requires constant development effort
 
 ### What role does a workflow layer play in B2B architecture?
@@ -465,11 +378,8 @@ You should reconsider your architecture if:
 A workflow layer handles:
 
 - Pricing logic
-
 - Approval processes
-
 - Reordering systems
-
 - Business rules
 
 It acts as the bridge between ERP and ecommerce, ensuring scalability and flexibility.

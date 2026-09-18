@@ -9,16 +9,15 @@ The core issue isn't whether AI can improve quoting. It can. The issue is that A
 
 
 Strip away the marketing language and the current state of AI in B2B quoting falls into four functional categories. Each delivers different levels of real value.
+
 <figure className="blog-inline-figure">
   <img src="/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-not-all-ai-quoting.png" alt="AI quoting capabilities ranging from production-ready document parsing to data-dependent price suggestion" />
 </figure>
-**Document parsing and data extraction.** This is where AI delivers the most immediate, proven value. NLP that reads inbound RFQs — PDFs, emails, spreadsheets, forwarded purchase orders — and extracts product identifiers, quantities, delivery requirements, and customer details into structured data. This eliminates hours of manual data entry per quote request and is genuinely production-ready across multiple platforms today.
 
-**Configuration assistance.** For businesses selling configurable products, AI can guide product selection by interpreting buyer requirements and suggesting valid configurations. This is valuable when catalogs are large, configurations have complex dependency rules, and reps lack deep technical knowledge across every product line. It works well when product data and configuration rules are well-structured. It fails when they aren't.
-
-**Price suggestion and optimisation.** This is where marketing outpaces reality. Some vendors claim AI that "optimises" pricing by analysing historical win/loss data, competitor signals, and market conditions to recommend the ideal price point. In practice, it requires clean, comprehensive historical data that most B2B operations don't have. Win/loss data in most CRMs is incomplete, inconsistently coded, and rarely connected to the pricing variables that influenced outcomes. AI pricing optimisation is real in industries with high transaction volumes and clean data. In mid-market B2B with negotiated pricing, it's mostly aspirational.
-
-**Workflow automation.** AI-powered routing — determining which approval path a quote should follow, predicting whether a quote will need revision, flagging quotes that deviate from historical patterns. This is a legitimate application, but calling it "AI" is generous in most implementations. Rule-based routing with statistical pattern matching is more accurate. Useful, but not transformative.
+- **Document parsing and data extraction** — This is where AI delivers the most immediate, proven value. NLP that reads inbound RFQs — PDFs, emails, spreadsheets, forwarded purchase orders — and extracts product identifiers, quantities, delivery requirements, and customer details into structured data. This eliminates hours of manual data entry per quote request and is genuinely production-ready across multiple platforms today.
+- **Configuration assistance** — For businesses selling configurable products, AI can guide product selection by interpreting buyer requirements and suggesting valid configurations. This is valuable when catalogs are large, configurations have complex dependency rules, and reps lack deep technical knowledge across every product line. It works well when product data and configuration rules are well-structured. It fails when they aren't.
+- **Price suggestion and optimisation** — This is where marketing outpaces reality. Some vendors claim AI that "optimises" pricing by analysing historical win/loss data, competitor signals, and market conditions to recommend the ideal price point. In practice, it requires clean, comprehensive historical data that most B2B operations don't have. Win/loss data in most CRMs is incomplete, inconsistently coded, and rarely connected to the pricing variables that influenced outcomes. AI pricing optimisation is real in industries with high transaction volumes and clean data. In mid-market B2B with negotiated pricing, it's mostly aspirational.
+- **Workflow automation** — AI-powered routing — determining which approval path a quote should follow, predicting whether a quote will need revision, flagging quotes that deviate from historical patterns. This is a legitimate application, but calling it "AI" is generous in most implementations. Rule-based routing with statistical pattern matching is more accurate. Useful, but not transformative.
 
 ## The Data Problem Nobody Wants to Talk About
 
@@ -28,7 +27,12 @@ Strip away the marketing language and the current state of AI in B2B quoting fal
 
 Here's the uncomfortable truth about AI quoting: the intelligence layer is the easy part. The hard part — the part that determines whether AI quoting actually works in production — is the data layer underneath it.
 
-AI quoting software needs four data domains to generate an accurate, commercially defensible quote: product data (what's being sold and how it's configured), pricing data (what it costs for this specific customer, inclusive of contracted rates, volume tiers, and payment terms), inventory data (what's available, in which warehouse, at what lead time), and customer data (who's buying, what terms they've negotiated, what approval rules apply).
+AI quoting software needs four data domains to generate an accurate, commercially defensible quote:
+
+- **Product data** — what's being sold and how it's configured
+- **Pricing data** — what it costs for this specific customer, inclusive of contracted rates, volume tiers, and payment terms
+- **Inventory data** — what's available, in which warehouse, at what lead time
+- **Customer data** — who's buying, what terms they've negotiated, what approval rules apply
 
 In most B2B operations, these four domains live in different systems, updated at different frequencies, governed by different teams, and connected through manual processes or nightly batch syncs. The product catalog is in the PIM or ERP. The pricing rules are split across the ERP, spreadsheets, and rep memory. Inventory is in the WMS, queried through syncs that might be hours old. Customer terms live across the CRM, ERP, and a contract management system — or more commonly, in an email thread.
 
@@ -39,39 +43,25 @@ Research confirms this is widespread. Industry data suggests the majority of org
 ## The Three Levels of AI Quoting Maturity
 
 Not all AI quoting implementations are equal. The maturity of the implementation depends less on the AI model and more on the data infrastructure supporting it. Three distinct levels emerge.
+
 <figure className="blog-inline-figure">
   <img src="/blog/covers/ai-quote-generation-in-b2b-what-is-real-vs-marketing-ai-actually-live.png" alt="Three AI quoting maturity levels from fragmented data to AI native to the commerce data layer" />
 </figure>
-**Level 1: AI on top of fragmented data.** The most common implementation. An AI layer sits on top of existing systems — ERP, CRM, spreadsheets — and queries them at the moment of quote creation. The AI is genuinely intelligent, but it's working with data that's inconsistent, stale, or incomplete. Quotes are generated faster, but error rates don't meaningfully improve because the underlying data problems are unchanged. This is the "faster guessing" scenario: you're automating the assembly of a quote from unreliable inputs.
 
-**Level 2: AI on top of integrated data.** A meaningful step up. Data from the ERP, PIM, CRM, and WMS is integrated into a unified layer — typically through middleware or an integration platform. The AI queries a single source of truth rather than assembling from multiple systems. Quotes are more consistent, but the limitation is latency: integrated data is only as current as the last sync, and in B2B environments where pricing and inventory change within the same day, batch integration creates a window of inaccuracy.
-
-**Level 3: AI native to the commerce data layer.** The highest-maturity implementation. AI doesn't query external systems or integrated data warehouses — it operates within the same platform that owns the pricing logic, inventory state, customer terms, and approval rules. There's no sync lag because the data isn't being synchronised from somewhere else. The AI resolves the quote against live data, in real time, at the moment of creation. This is where AI quoting delivers its full potential: speed, accuracy, and commercial defensibility in a single transaction.
+- **Level 1: AI on top of fragmented data** — The most common implementation. An AI layer sits on top of existing systems — ERP, CRM, spreadsheets — and queries them at the moment of quote creation. The AI is genuinely intelligent, but it's working with data that's inconsistent, stale, or incomplete. Quotes are generated faster, but error rates don't meaningfully improve because the underlying data problems are unchanged. This is the "faster guessing" scenario: you're automating the assembly of a quote from unreliable inputs.
+- **Level 2: AI on top of integrated data** — A meaningful step up. Data from the ERP, PIM, CRM, and WMS is integrated into a unified layer — typically through middleware or an integration platform. The AI queries a single source of truth rather than assembling from multiple systems. Quotes are more consistent, but the limitation is latency: integrated data is only as current as the last sync, and in B2B environments where pricing and inventory change within the same day, batch integration creates a window of inaccuracy.
+- **Level 3: AI native to the commerce data layer** — The highest-maturity implementation. AI doesn't query external systems or integrated data warehouses — it operates within the same platform that owns the pricing logic, inventory state, customer terms, and approval rules. There's no sync lag because the data isn't being synchronised from somewhere else. The AI resolves the quote against live data, in real time, at the moment of creation. This is where AI quoting delivers its full potential: speed, accuracy, and commercial defensibility in a single transaction.
 
 The marketing narrative from most vendors describes Level 3 outcomes. The technical reality of most implementations is Level 1. The gap between the promise and the delivery is the data layer.
 
 ## What to Actually Evaluate When Buying AI Quoting Software
 If your team is evaluating AI quoting solutions, the questions that matter most aren't about the AI model. They're about the data architecture.
 
-**Where does the pricing data live, and how current is it?**
-
-If the AI queries an ERP or spreadsheet for pricing, ask how frequently that data is synchronised. If the answer is "nightly batch" or "weekly export," the AI is generating quotes from data that may be hours or days old. For customer-specific pricing, the question is sharper: when a contract is renegotiated, how quickly does the new rate appear in the quoting system? If the answer involves manual updates, the AI doesn't solve the pricing accuracy problem — it just generates inaccurate quotes faster.
-
-**Does the AI resolve pricing, inventory, and customer terms simultaneously?**
-
-A quote that shows the right price but can't confirm delivery is incomplete. A quote that confirms inventory but uses yesterday's pricing is commercially risky. The evaluation question is whether the AI resolves all four data domains — product, price, inventory, customer terms — in a single transaction or in sequential queries that may return inconsistent snapshots.
-
-**What happens when the AI encounters data it can't resolve?**
-
-This is the reliability question most buyers forget to ask. When the AI can't find a customer's contracted rate, does it fall back to list price (potentially underquoting or overquoting), flag the gap for human review, or block the quote until the data is resolved? The fallback behaviour determines whether AI quoting is a productivity tool or a margin risk.
-
-**Can you audit the AI's pricing decisions?**
-
-In B2B, every quote is a commercial commitment. Finance, commercial operations, and leadership need to understand why a specific price was quoted — which pricing rule was applied, which customer tier was referenced, whether the discount fell within approved parameters. If the AI generates a price without a traceable decision path, you've traded one opacity problem (rep-driven pricing with no audit trail) for another (AI-driven pricing with no audit trail).
-
-**What's the data infrastructure prerequisite?**
-
-The most honest AI quoting vendors will tell you what data quality and structure they require before their product delivers value. If the answer is "just connect your ERP and CRM and we'll handle the rest," be skeptical. AI quoting works when the data is clean, structured, real-time, and governed. Vendors who don't acknowledge that prerequisite are selling the intelligence layer without accounting for the foundation it needs.
+- **Where does the pricing data live, and how current is it?** — If the AI queries an ERP or spreadsheet for pricing, ask how frequently that data is synchronised. If the answer is "nightly batch" or "weekly export," the AI is generating quotes from data that may be hours or days old. For customer-specific pricing, the question is sharper: when a contract is renegotiated, how quickly does the new rate appear in the quoting system? If the answer involves manual updates, the AI doesn't solve the pricing accuracy problem — it just generates inaccurate quotes faster.
+- **Does the AI resolve pricing, inventory, and customer terms simultaneously?** — A quote that shows the right price but can't confirm delivery is incomplete. A quote that confirms inventory but uses yesterday's pricing is commercially risky. The evaluation question is whether the AI resolves all four data domains — product, price, inventory, customer terms — in a single transaction or in sequential queries that may return inconsistent snapshots.
+- **What happens when the AI encounters data it can't resolve?** — This is the reliability question most buyers forget to ask. When the AI can't find a customer's contracted rate, does it fall back to list price (potentially underquoting or overquoting), flag the gap for human review, or block the quote until the data is resolved? The fallback behaviour determines whether AI quoting is a productivity tool or a margin risk.
+- **Can you audit the AI's pricing decisions?** — In B2B, every quote is a commercial commitment. Finance, commercial operations, and leadership need to understand why a specific price was quoted — which pricing rule was applied, which customer tier was referenced, whether the discount fell within approved parameters. If the AI generates a price without a traceable decision path, you've traded one opacity problem (rep-driven pricing with no audit trail) for another (AI-driven pricing with no audit trail).
+- **What's the data infrastructure prerequisite?** — The most honest AI quoting vendors will tell you what data quality and structure they require before their product delivers value. If the answer is "just connect your ERP and CRM and we'll handle the rest," be skeptical. AI quoting works when the data is clean, structured, real-time, and governed. Vendors who don't acknowledge that prerequisite are selling the intelligence layer without accounting for the foundation it needs.
 
 ## Where This Connects to Platform Architecture
 The reason AI quoting maturity correlates with data architecture — not AI model sophistication — is that quoting is fundamentally a data resolution problem. The intelligence layer determines how efficiently resolution happens. The data layer determines whether it's accurate.
@@ -81,9 +71,21 @@ This is why AI quoting delivers the most value when it operates within a commerc
 ## The Readiness Assessment: Is Your Data Ready for AI Quoting?
 Before investing in AI quoting software, assess whether your data infrastructure can support it. The AI is only as reliable as the data it resolves against.
 
-These signals indicate your data is ready: customer-specific pricing exists as queryable structured data in real time; inventory reflects current state across all warehouses, not a periodic sync; product configuration rules are codified in a system, not in sales playbooks; customer contract terms are maintained as structured records with audit trails; and your quoting process already produces consistent outputs regardless of which rep generates the quote.
+These signals indicate your data is ready:
 
-These signals indicate you need data infrastructure work first: pricing lives primarily in spreadsheets; customer-specific rates require manual lookup across multiple systems; inventory is confirmed after quotes are sent; configuration depends on senior rep knowledge; and you've had quotes generated at prices that couldn't be fulfilled.
+- Customer-specific pricing exists as queryable structured data in real time
+- Inventory reflects current state across all warehouses, not a periodic sync
+- Product configuration rules are codified in a system, not in sales playbooks
+- Customer contract terms are maintained as structured records with audit trails
+- Your quoting process already produces consistent outputs regardless of which rep generates the quote
+
+These signals indicate you need data infrastructure work first:
+
+- Pricing lives primarily in spreadsheets
+- Customer-specific rates require manual lookup across multiple systems
+- Inventory is confirmed after quotes are sent
+- Configuration depends on senior rep knowledge
+- You've had quotes generated at prices that couldn't be fulfilled
 
 If the first set describes your operation, AI quoting will likely deliver measurable value. If the second set is more accurate, the prerequisite investment is data infrastructure — structuring, governing, and centralising the pricing, inventory, and customer data that AI needs to operate reliably.
 

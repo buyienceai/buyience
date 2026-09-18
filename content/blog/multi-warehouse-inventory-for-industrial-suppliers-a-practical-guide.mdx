@@ -6,13 +6,10 @@ The core challenge isn't storage — it's synchronization. Every sale, transfer,
 
 When that synchronization lags or breaks, a few predictable problems show up:
 
-**Overselling.** A customer orders a quantity that's technically in stock across your network but not actually available at the warehouse that would fulfill it, because the count they saw was stale or aggregated incorrectly.
-
-**Phantom stockouts.** The opposite problem — a warehouse actually has stock, but the system shows it as unavailable because a transfer or receipt hasn't been reconciled yet, so a sale gets declined or delayed unnecessarily.
-
-**Manual reconciliation becoming a full-time job.** Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
-
-**Inconsistent fulfillment logic.** Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
+- **Overselling** — A customer orders a quantity that's technically in stock across your network but not actually available at the warehouse that would fulfill it, because the count they saw was stale or aggregated incorrectly.
+- **Phantom stockouts** — The opposite problem: a warehouse actually has stock, but the system shows it as unavailable because a transfer or receipt hasn't been reconciled yet, so a sale gets declined or delayed unnecessarily.
+- **Manual reconciliation becoming a full-time job** — Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
+- **Inconsistent fulfillment logic** — Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
 
 ## Step 1: Decide what "available" actually means
 
