@@ -1,4 +1,4 @@
-**TL;DR:** Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.
+
 
 A client asks for 400 branded water bottles. Two colours in the logo, printed on one side, split across three bottle colours, delivered before an event in five weeks.
 
@@ -23,6 +23,10 @@ Consider what actually varies in a single order:
 
 A spreadsheet can hold all of these. What it can't easily do is encode the relationships between them — that setup fees scale with colours multiplied by locations, that some decoration methods have per-colour costs and others don't, that a variant split may trigger a minimum-per-variant that changes the effective quantity break. Those relationships end up living in the head of whoever builds the quotes.
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-custom-quoting-is-a-confiquration-problem.png" alt="Custom gift quoting is a configuration problem, not a simple price lookup" />
+</figure>
+
 ## Separate fixed costs from per-unit costs
 
 The single most useful structural distinction in custom gift quoting is between costs that scale with quantity and costs that don't.
@@ -33,6 +37,10 @@ The single most useful structural distinction in custom gift quoting is between 
 Blending these into a single per-unit number — which is what most spreadsheet quotes end up producing — creates two problems. First, it makes quantity changes require a full recalculation rather than a simple adjustment, because the fixed portion doesn't scale. Second, it makes the quote hard for a client to interrogate. When a client asks "what if we did 600 instead of 400," a quote with separated components answers that instantly and shows why the per-unit price improves. A blended one requires starting over.
 
 Structure the quote so these are distinct line components even if the client ultimately sees a per-unit price. The internal separation is what makes revision fast.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-the-true-cost-behind-a-custom-gift-quote.png" alt="The true cost behind a custom gift quote: fixed setup fees plus per-unit run costs" />
+</figure>
 
 ## Model decoration as a rule set, not a lookup
 
@@ -48,6 +56,10 @@ Decoration pricing is where the real complexity lives, and it's worth encoding o
 Once these exist as rules, a quote becomes: pick the method, specify colours and locations, and the cost resolves. The rep isn't recalculating decoration logic under time pressure; they're selecting configuration options.
 
 This is the core of what CPQ (configure, price, quote) means in a gifting context — the "configure" step is doing real work, not just choosing a product.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-define-the-decoration-rules-once.png" alt="Define decoration pricing rules once so every quote resolves from configuration options" />
+</figure>
 
 ## Handle variant splits explicitly
 
@@ -69,6 +81,10 @@ Treating turnaround as a quotable component — with rush tiers priced explicitl
 
 This connects to inventory: a quote should be built against available-to-promise stock, not catalogue availability. Committing to a date without confirming the base product can actually be sourced in time is where gifting quotes turn into fulfilment problems, a pattern covered further in our post on [managing custom and bulk gift orders](/blog/managing-custom-and-bulk-orders-for-corporate-gift-programs).
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-a-quote-is-more-than-just-a-price.png" alt="A custom gift quote is more than a price — it includes lead time, configuration, and delivery constraints" />
+</figure>
+
 ## Make revisions cheap
 
 Custom gift quotes get revised. The client changes quantity, drops a colour, adds a second imprint location, asks for individual gift boxing instead of bulk pack. In a spreadsheet workflow, each revision is a substantial rebuild — which means revisions are slow, which means the deal slows down, and each rebuild is a fresh opportunity for an arithmetic error.
@@ -76,6 +92,10 @@ Custom gift quotes get revised. The client changes quantity, drops a colour, add
 When the configuration logic is encoded, a revision is a change to one input. Quantity moves from 400 to 600, and every dependent cost — quantity break, fixed cost amortisation, decoration run cost — updates together. That's what makes it realistic to iterate with a client in a single conversation rather than across three days of email.
 
 Fast, accurate revision is also a competitive advantage in its own right: the supplier who can answer three what-ifs in one call frequently wins over the one who needs to come back tomorrow with each.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-make-revision-cheap.png" alt="Encoded configuration rules make quote revisions cheap and fast" />
+</figure>
 
 ## Keep margin visible through the configuration
 

@@ -42,61 +42,63 @@ export const blogPosts: BlogPost[] = [
     coverImageAlt:
       "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
-  /* Temporarily commented out
-  {
-    slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
-    title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
-    description:
-      "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
-    excerpt:
-      "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-09",
-    readingTime: "9 min read",
-    coverImage:
-      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
-    coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
-  },
-  {
-    slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
-    title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
-    description:
-      "Corporate gifting RFPs are won on response quality and speed. Here's how to qualify them, structure a response, and move from award to order without losing the details.",
-    excerpt:
-      "Corporate gifting RFPs are expensive to respond to and easy to lose for reasons unrelated to your actual capability — a missed compliance requirement, a slow response, or pricing that couldn't be revised fast enough during evaluation. The businesses that win consistently qualify hard before responding, build responses from reusable components rather than from scratch, and treat the gap between award and first order as a defined process rather than an improvisation.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-04",
-    readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
-    coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
-  },
-  {
-    slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
-    title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
-    description:
-      "Custom-branded gift quotes involve setup fees, per-unit decoration costs, and multi-variant configurations that spreadsheets handle badly. Here's how to structure them properly.",
-    excerpt:
-      "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-29",
-    readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
-    coverImageAlt: "Quoting custom-branded corporate gifts without a spreadsheet",
-  },
+ 
+  // {
+  //   slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
+  //   title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
+  //   description:
+  //     "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
+  //   excerpt:
+  //     "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Girish.K",
+  //   authorInitials: "GK",
+  //   authorImage: "/blog/authors/girish1.png",
+  //   publishedAt: "2026-10-01",
+  //   readingTime: "9 min read",
+  //   coverImage:
+  //     "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
+  //   coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
+  // },
+  // {
+  //   slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
+  //   title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
+  //   description:
+  //     "Corporate gifting RFPs are won on response quality and speed. Here's how to qualify them, structure a response, and move from award to order without losing the details.",
+  //   excerpt:
+  //     "Corporate gifting RFPs are expensive to respond to and easy to lose for reasons unrelated to your actual capability — a missed compliance requirement, a slow response, or pricing that couldn't be revised fast enough during evaluation. The businesses that win consistently qualify hard before responding, build responses from reusable components rather than from scratch, and treat the gap between award and first order as a defined process rather than an improvisation.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2026-09-28",
+  //   readingTime: "8 min read",
+  //   coverImage:
+  //     "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
+  //   coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
+  // },
+  
+  // {
+  //   slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
+  //   title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
+  //   description:
+  //     "Custom-branded gift quotes involve setup fees, per-unit decoration costs, and multi-variant configurations that spreadsheets handle badly. Here's how to structure them properly.",
+  //   excerpt:
+  //     "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Girish.K",
+  //   authorInitials: "GL",
+  //   authorImage: "/blog/authors/girish1.png",
+  //   publishedAt: "2026-09-24",
+  //   readingTime: "8 min read",
+  //   coverImage:
+  //     "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-herosection.png",
+  //   coverImageAlt:
+  //     "Quoting custom-branded corporate gifts with decoration rules instead of a spreadsheet",
+  // },
   {
     slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
     title: "Seasonal Demand Spikes: Inventory Planning for Corporate Gifting Brands",
@@ -109,13 +111,13 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-24",
+    publishedAt: "2026-09-21",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
-    coverImageAlt: "Seasonal inventory planning for corporate gifting brands",
+      "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands-herosection.png",
+    coverImageAlt:
+      "Seasonal inventory planning for corporate gifting brands around peak demand weeks",
   },
-  */
   {
     slug: "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide",
     title: "Multi-Warehouse Inventory for Industrial Suppliers: A Practical Guide",
@@ -148,8 +150,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-14",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works.png",
-    coverImageAlt: "Net 30/60/90 payment terms for industrial distributors",
+      "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works-herosection.png",
+    coverImageAlt:
+      "Net 30, 60, and 90 payment terms balanced against customer relationships and cash flow",
   },
   {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
@@ -527,8 +530,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-02-12",
     readingTime: "18 min read",
-    coverImage: "/blog/covers/why-manual-b2b-quoting-is-costing-you-deals.png",
-    coverImageAlt: "Cost of manual B2B quoting",
+    coverImage: "/blog/covers/why-manual-b2b-quoting-is-costing-you-deals-herosection.png",
+    coverImageAlt:
+      "Manual B2B quoting chaos versus Buyience generating quotes in minutes",
   },
   {
     slug: "mach-architecture-for-modern-b2b-commerce",
@@ -561,8 +565,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-10",
     readingTime: "10 min read",
-    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-    coverImageAlt: "AI Quote Engine for B2B",
+    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce-herosection.png",
+    coverImageAlt:
+      "AI Quote Engine turning product data, buyer history, and pricing into a ready-to-send B2B quote",
   },
   {
     slug: "b2b-commerce-and-headless-architecture",
@@ -578,8 +583,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-06",
     readingTime: "34 min read",
-    coverImage: "/blog/covers/b2b-commerce-and-headless-architecture.png",
-    coverImageAlt: "Headless architecture in B2B commerce",
+    coverImage: "/blog/covers/b2b-commerce-and-headless-architecture-herosection.png",
+    coverImageAlt:
+      "Headless B2B architecture separating frontend experiences from shared backend commerce systems",
   },
   {
     slug: "what-is-b2b-ecommerce-a-complete-guide",
@@ -594,8 +600,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-02",
     readingTime: "31 min read",
-    coverImage: "/blog/covers/what-is-b2b-ecommerce-a-complete-guide.png",
-    coverImageAlt: "What is B2B ecommerce",
+    coverImage: "/blog/covers/what-is-b2b-ecommerce-a-complete-guide-herosection.png",
+    coverImageAlt:
+      "B2B ecommerce connecting catalogs, customer-specific pricing, quotes, and order workflows",
   },
   {
     slug: "composable-commerce-for-b2b-businesses",
@@ -626,8 +633,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2025-12-29",
     readingTime: "22 min read",
-    coverImage: "/blog/covers/what-is-mach-architecture-a-complete-guide.png",
-    coverImageAlt: "What is MACH architecture",
+    coverImage: "/blog/covers/what-is-mach-architecture-a-complete-guide-herosection.png",
+    coverImageAlt:
+      "MACH architecture principles: microservices, API-first, cloud-native, and headless for B2B commerce",
   },
   {
     slug: "what-is-buyience-a-mordern-b2b-commerce-platform",
@@ -642,8 +650,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2025-12-28",
     readingTime: "19 min read",
-    coverImage: "/blog/covers/what-is-buyience-a-mordern-b2b-commerce-platform.png",
-    coverImageAlt: "What is Buyience",
+    coverImage: "/blog/covers/what-is-buyience-a-mordern-b2b-commerce-platform-herosection.png",
+    coverImageAlt:
+      "Buyience modular B2B commerce platform connecting quoting, orders, inventory, and storefronts",
   },
 ];
 

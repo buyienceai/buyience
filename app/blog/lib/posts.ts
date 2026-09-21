@@ -30,6 +30,21 @@ const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const
 
 const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contain: true }> = {
   "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
+  "net-30-60-90-terms-in-industrial-distribution-what-actually-works": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead": {
     width: 1672,
     height: 941,
@@ -135,6 +150,36 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "why-manual-b2b-quoting-is-costing-you-deals": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "ai-quote-engine-for-b2b-commerce": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "b2b-commerce-and-headless-architecture": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-buyience-a-mordern-b2b-commerce-platform": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-mach-architecture-a-complete-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-b2b-ecommerce-a-complete-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {
@@ -171,9 +216,15 @@ export function getAdjacentPosts(slug: string): {
   const posts = getAllPosts();
   const index = posts.findIndex((p) => p.slug === slug);
   if (index === -1) return { prev: null, next: null };
+
+  const n = posts.length;
+  // Need at least two posts to navigate; wrap so the newest post's
+  // "Previous" is the oldest, and the oldest post's "Next" is the newest.
+  if (n < 2) return { prev: null, next: null };
+
   return {
-    prev: index > 0 ? posts[index - 1] : null,
-    next: index < posts.length - 1 ? posts[index + 1] : null,
+    prev: posts[(index - 1 + n) % n],
+    next: posts[(index + 1) % n],
   };
 }
 
