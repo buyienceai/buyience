@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     coverImageAlt:
       "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
-  /* Temporarily commented out
+ 
   {
     slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
     title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
@@ -52,10 +52,10 @@ export const blogPosts: BlogPost[] = [
       "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
     category: "b2b",
     categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-09",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-01",
     readingTime: "9 min read",
     coverImage:
       "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
@@ -73,13 +73,13 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-04",
+    publishedAt: "2026-09-28",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
     coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
   },
-  */
+  
   {
     slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
     title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
