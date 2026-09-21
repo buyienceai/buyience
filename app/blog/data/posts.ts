@@ -95,8 +95,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-24",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
-    coverImageAlt: "Quoting custom-branded corporate gifts without a spreadsheet",
+      "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-herosection.png",
+    coverImageAlt:
+      "Quoting custom-branded corporate gifts with decoration rules instead of a spreadsheet",
   },
   {
     slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
@@ -113,8 +114,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-21",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
-    coverImageAlt: "Seasonal inventory planning for corporate gifting brands",
+      "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands-herosection.png",
+    coverImageAlt:
+      "Seasonal inventory planning for corporate gifting brands around peak demand weeks",
   },
   {
     slug: "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide",

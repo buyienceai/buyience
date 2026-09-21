@@ -35,6 +35,16 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead": {
     width: 1672,
     height: 941,
