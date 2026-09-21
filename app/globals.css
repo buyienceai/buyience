@@ -6499,6 +6499,17 @@ a.nav-btn-outline-block {
   border: 1px solid var(--border);
 }
 
+.blog-page .blog-prose .blog-inline-figure {
+  margin: 1.75em 0;
+}
+
+.blog-page .blog-prose .blog-inline-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
 .blog-page .blog-prose table {
   width: 100%;
   border-collapse: collapse;

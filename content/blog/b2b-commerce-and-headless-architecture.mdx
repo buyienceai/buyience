@@ -17,7 +17,9 @@ The term "headless" reflects this decoupling—the "head" (frontend) is separate
 
 Headless architecture emerged in response to limitations that became apparent as businesses tried to adapt monolithic commerce platforms to changing requirements.
 
-![](https://framerusercontent.com/images/rkusZacJ5vG6VdZCiN35HLz6I.png)
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/b2b-commerce-and-headless-architecture-monolithic.png" alt="Monolithic commerce stack tightly coupling storefront, business logic, and data versus a more flexible architecture" />
+</figure>
 
 - **The monolithic constraint** — In tightly coupled systems, modifying the storefront often meant touching backend code, which required development resources, testing cycles, and careful coordination to avoid breaking functionality. Simple design changes could take weeks or months because they cascaded through the entire system.
 - **Frontend flexibility demands** — Businesses wanted to experiment with different user experiences, test new design approaches, and update interfaces quickly in response to customer feedback. When the frontend and backend were coupled, this iteration speed was limited by backend complexity and deployment cycles.
@@ -46,6 +48,10 @@ While headless architecture does not solve core B2B workflow challenges, it prov
 
 **The pattern:** headless adds value when businesses need multiple interfaces serving different purposes, all accessing the same underlying data and business logic. The value comes from interface specialization, not from architectural elegance for its own sake.
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/b2b-commerce-and-headless-architecture-multiple-frontends-one-backend.png" alt="Multiple B2B frontends—buyer portal, sales tools, and partner portal—sharing one backend through APIs" />
+</figure>
+
 ## Headless vs Composable vs Monolithic (Clarified)
 These terms are often used interchangeably or confused, which obscures their actual meanings and relationships.
 
@@ -57,7 +63,9 @@ These terms are often used interchangeably or confused, which obscures their act
 
 The overlap is that composable systems are typically headless, because frontend decoupling aligns with the broader principle of component independence. But headless systems are not necessarily composable if the backend remains monolithic.
 
-![](https://framerusercontent.com/images/0WVJ6sArmmnvJQHutDleA8kDiA4.png)
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/b2b-commerce-and-headless-architecture-headless-gives-you-frontend-flexibility.png" alt="Headless architecture giving frontend flexibility while backend pricing, quoting, and workflow logic stay unchanged" />
+</figure>
 
 ## How Buyience Thinks About Headless
 Buyience is built as a backend B2B layer that extends existing e-commerce platforms. The architecture prioritizes workflows—quote-to-order, [pricing](https://buyience.com/pricing), CPQ, sales collaboration—over frontend flexibility.

@@ -135,6 +135,36 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "why-manual-b2b-quoting-is-costing-you-deals": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "ai-quote-engine-for-b2b-commerce": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "b2b-commerce-and-headless-architecture": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-buyience-a-mordern-b2b-commerce-platform": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-mach-architecture-a-complete-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "what-is-b2b-ecommerce-a-complete-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

@@ -97,6 +97,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
     coverImageAlt: "Quoting custom-branded corporate gifts without a spreadsheet",
   },
+  */
   {
     slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
     title: "Seasonal Demand Spikes: Inventory Planning for Corporate Gifting Brands",
@@ -109,13 +110,12 @@ export const blogPosts: BlogPost[] = [
     authorName: "Jordian F.",
     authorInitials: "JF",
     authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-24",
+    publishedAt: "2026-09-21",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands.png",
     coverImageAlt: "Seasonal inventory planning for corporate gifting brands",
   },
-  */
   {
     slug: "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide",
     title: "Multi-Warehouse Inventory for Industrial Suppliers: A Practical Guide",
@@ -527,8 +527,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-02-12",
     readingTime: "18 min read",
-    coverImage: "/blog/covers/why-manual-b2b-quoting-is-costing-you-deals.png",
-    coverImageAlt: "Cost of manual B2B quoting",
+    coverImage: "/blog/covers/why-manual-b2b-quoting-is-costing-you-deals-herosection.png",
+    coverImageAlt:
+      "Manual B2B quoting chaos versus Buyience generating quotes in minutes",
   },
   {
     slug: "mach-architecture-for-modern-b2b-commerce",
@@ -561,8 +562,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-10",
     readingTime: "10 min read",
-    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-    coverImageAlt: "AI Quote Engine for B2B",
+    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce-herosection.png",
+    coverImageAlt:
+      "AI Quote Engine turning product data, buyer history, and pricing into a ready-to-send B2B quote",
   },
   {
     slug: "b2b-commerce-and-headless-architecture",
@@ -578,8 +580,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-06",
     readingTime: "34 min read",
-    coverImage: "/blog/covers/b2b-commerce-and-headless-architecture.png",
-    coverImageAlt: "Headless architecture in B2B commerce",
+    coverImage: "/blog/covers/b2b-commerce-and-headless-architecture-herosection.png",
+    coverImageAlt:
+      "Headless B2B architecture separating frontend experiences from shared backend commerce systems",
   },
   {
     slug: "what-is-b2b-ecommerce-a-complete-guide",
@@ -594,8 +597,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-02",
     readingTime: "31 min read",
-    coverImage: "/blog/covers/what-is-b2b-ecommerce-a-complete-guide.png",
-    coverImageAlt: "What is B2B ecommerce",
+    coverImage: "/blog/covers/what-is-b2b-ecommerce-a-complete-guide-herosection.png",
+    coverImageAlt:
+      "B2B ecommerce connecting catalogs, customer-specific pricing, quotes, and order workflows",
   },
   {
     slug: "composable-commerce-for-b2b-businesses",
@@ -626,8 +630,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2025-12-29",
     readingTime: "22 min read",
-    coverImage: "/blog/covers/what-is-mach-architecture-a-complete-guide.png",
-    coverImageAlt: "What is MACH architecture",
+    coverImage: "/blog/covers/what-is-mach-architecture-a-complete-guide-herosection.png",
+    coverImageAlt:
+      "MACH architecture principles: microservices, API-first, cloud-native, and headless for B2B commerce",
   },
   {
     slug: "what-is-buyience-a-mordern-b2b-commerce-platform",
@@ -642,8 +647,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2025-12-28",
     readingTime: "19 min read",
-    coverImage: "/blog/covers/what-is-buyience-a-mordern-b2b-commerce-platform.png",
-    coverImageAlt: "What is Buyience",
+    coverImage: "/blog/covers/what-is-buyience-a-mordern-b2b-commerce-platform-herosection.png",
+    coverImageAlt:
+      "Buyience modular B2B commerce platform connecting quoting, orders, inventory, and storefronts",
   },
 ];
 
