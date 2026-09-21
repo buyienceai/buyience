@@ -6821,10 +6821,10 @@ a.nav-btn-outline-block {
 .blog-page .blog-nav-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1488 / 720;
   border-radius: 14px;
   overflow: hidden;
-  background: var(--surface-2);
+  background: #fff;
 }
 
 .blog-page .blog-nav-media::after {
@@ -6834,7 +6834,7 @@ a.nav-btn-outline-block {
   background: linear-gradient(
     180deg,
     transparent 55%,
-    rgba(27, 16, 51, 0.08) 100%
+    rgba(27, 16, 51, 0.06) 100%
   );
   pointer-events: none;
   opacity: 0;
@@ -6852,7 +6852,8 @@ a.nav-btn-outline-block {
 .blog-page .blog-nav-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
   transition: transform .45s ease;
 }
@@ -6862,7 +6863,7 @@ a.nav-btn-outline-block {
 }
 
 .blog-page .blog-nav-card:hover .blog-nav-img {
-  transform: scale(1.045);
+  transform: scale(1.02);
 }
 
 .blog-page .blog-nav-body {

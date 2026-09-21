@@ -67,9 +67,7 @@ function NavCard({
         ) : null}
       </span>
 
-      <span
-        className={`blog-nav-media${cover.contain ? " blog-nav-media--contain" : ""}`}
-      >
+      <span className="blog-nav-media blog-nav-media--contain">
         <Image
           src={post.coverImage}
           alt=""
@@ -95,12 +93,12 @@ function NavCard({
 export default function BlogNavigation({ prev, next }: Props) {
   if (!prev && !next) return null;
 
-  const single = !prev || !next;
+  const single = Boolean(prev) !== Boolean(next);
 
   return (
     <nav className="blog-nav" aria-label="Adjacent articles">
       <div className={`blog-nav-grid${single ? " blog-nav-grid--single" : ""}`}>
-        {prev ? <NavCard post={prev} direction="prev" /> : null}
+        {prev ? <NavCard post={prev} direction="prev" /> : <span aria-hidden="true" />}
         {next ? <NavCard post={next} direction="next" /> : null}
       </div>
     </nav>

@@ -201,9 +201,15 @@ export function getAdjacentPosts(slug: string): {
   const posts = getAllPosts();
   const index = posts.findIndex((p) => p.slug === slug);
   if (index === -1) return { prev: null, next: null };
+
+  const n = posts.length;
+  // Need at least two posts to navigate; wrap so the newest post's
+  // "Previous" is the oldest, and the oldest post's "Next" is the newest.
+  if (n < 2) return { prev: null, next: null };
+
   return {
-    prev: index > 0 ? posts[index - 1] : null,
-    next: index < posts.length - 1 ? posts[index + 1] : null,
+    prev: posts[(index - 1 + n) % n],
+    next: posts[(index + 1) % n],
   };
 }
 
