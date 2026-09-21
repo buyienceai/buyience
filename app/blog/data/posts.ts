@@ -43,62 +43,62 @@ export const blogPosts: BlogPost[] = [
       "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
  
-  {
-    slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
-    title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
-    description:
-      "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
-    excerpt:
-      "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Girish.K",
-    authorInitials: "GK",
-    authorImage: "/blog/authors/girish1.png",
-    publishedAt: "2026-10-01",
-    readingTime: "9 min read",
-    coverImage:
-      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
-    coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
-  },
-  {
-    slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
-    title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
-    description:
-      "Corporate gifting RFPs are won on response quality and speed. Here's how to qualify them, structure a response, and move from award to order without losing the details.",
-    excerpt:
-      "Corporate gifting RFPs are expensive to respond to and easy to lose for reasons unrelated to your actual capability — a missed compliance requirement, a slow response, or pricing that couldn't be revised fast enough during evaluation. The businesses that win consistently qualify hard before responding, build responses from reusable components rather than from scratch, and treat the gap between award and first order as a defined process rather than an improvisation.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-28",
-    readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
-    coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
-  },
+  // {
+  //   slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
+  //   title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
+  //   description:
+  //     "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
+  //   excerpt:
+  //     "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Girish.K",
+  //   authorInitials: "GK",
+  //   authorImage: "/blog/authors/girish1.png",
+  //   publishedAt: "2026-10-01",
+  //   readingTime: "9 min read",
+  //   coverImage:
+  //     "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
+  //   coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
+  // },
+  // {
+  //   slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
+  //   title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
+  //   description:
+  //     "Corporate gifting RFPs are won on response quality and speed. Here's how to qualify them, structure a response, and move from award to order without losing the details.",
+  //   excerpt:
+  //     "Corporate gifting RFPs are expensive to respond to and easy to lose for reasons unrelated to your actual capability — a missed compliance requirement, a slow response, or pricing that couldn't be revised fast enough during evaluation. The businesses that win consistently qualify hard before responding, build responses from reusable components rather than from scratch, and treat the gap between award and first order as a defined process rather than an improvisation.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2026-09-28",
+  //   readingTime: "8 min read",
+  //   coverImage:
+  //     "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
+  //   coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
+  // },
   
-  {
-    slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
-    title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
-    description:
-      "Custom-branded gift quotes involve setup fees, per-unit decoration costs, and multi-variant configurations that spreadsheets handle badly. Here's how to structure them properly.",
-    excerpt:
-      "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Girish.K",
-    authorInitials: "GL",
-    authorImage: "/blog/authors/girish1.png",
-    publishedAt: "2026-09-24",
-    readingTime: "8 min read",
-    coverImage:
-      "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-herosection.png",
-    coverImageAlt:
-      "Quoting custom-branded corporate gifts with decoration rules instead of a spreadsheet",
-  },
+  // {
+  //   slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
+  //   title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
+  //   description:
+  //     "Custom-branded gift quotes involve setup fees, per-unit decoration costs, and multi-variant configurations that spreadsheets handle badly. Here's how to structure them properly.",
+  //   excerpt:
+  //     "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Girish.K",
+  //   authorInitials: "GL",
+  //   authorImage: "/blog/authors/girish1.png",
+  //   publishedAt: "2026-09-24",
+  //   readingTime: "8 min read",
+  //   coverImage:
+  //     "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet-herosection.png",
+  //   coverImageAlt:
+  //     "Quoting custom-branded corporate gifts with decoration rules instead of a spreadsheet",
+  // },
   {
     slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
     title: "Seasonal Demand Spikes: Inventory Planning for Corporate Gifting Brands",
