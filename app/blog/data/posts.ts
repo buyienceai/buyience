@@ -79,6 +79,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
     coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
   },
+  */
   {
     slug: "how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet",
     title: "How to Quote Custom-Branded Corporate Gifts Without a Spreadsheet",
@@ -88,16 +89,15 @@ export const blogPosts: BlogPost[] = [
       "Quoting a custom-branded gift order is a configuration problem, not a pricing lookup. Decoration method, setup fees, colour counts, placement counts, and variant splits all interact — and a spreadsheet forces you to rebuild that logic by hand for every quote. The fix is defining your cost components as rules once, so any combination prices itself. This guide covers how to break down a custom gift quote into its actual components and structure them so they're reusable.",
     category: "b2b",
     categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-09-29",
+    authorName: "Girish.K",
+    authorInitials: "GL",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-09-24",
     readingTime: "8 min read",
     coverImage:
       "/blog/covers/how-to-quote-custom-branded-corporate-gifts-without-a-spreadsheet.png",
     coverImageAlt: "Quoting custom-branded corporate gifts without a spreadsheet",
   },
-  */
   {
     slug: "seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands",
     title: "Seasonal Demand Spikes: Inventory Planning for Corporate Gifting Brands",
