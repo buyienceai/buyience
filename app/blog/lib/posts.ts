@@ -30,6 +30,11 @@ const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const
 
 const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contain: true }> = {
   "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
+  "net-30-60-90-terms-in-industrial-distribution-what-actually-works": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead": {
     width: 1672,
     height: 941,

@@ -148,8 +148,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-14",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works.png",
-    coverImageAlt: "Net 30/60/90 payment terms for industrial distributors",
+      "/blog/covers/net-30-60-90-terms-in-industrial-distribution-what-actually-works-herosection.png",
+    coverImageAlt:
+      "Net 30, 60, and 90 payment terms balanced against customer relationships and cash flow",
   },
   {
     slug: "managing-custom-and-bulk-orders-for-corporate-gift-programs",
