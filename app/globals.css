@@ -6415,8 +6415,7 @@ a.nav-btn-outline-block {
 
 .blog-page .blog-prose a {
   color: var(--violet);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 /* Trial / demo CTAs: highlight only, no underline */
