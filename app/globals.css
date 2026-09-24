@@ -6049,6 +6049,7 @@ a.nav-btn-outline-block {
   aspect-ratio: 1488 / 720;
   overflow: hidden;
   background: var(--surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .blog-page .blog-card-img {

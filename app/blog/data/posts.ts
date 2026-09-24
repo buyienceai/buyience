@@ -43,24 +43,24 @@ export const blogPosts: BlogPost[] = [
       "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
  
-  // {
-  //   slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
-  //   title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
-  //   description:
-  //     "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
-  //   excerpt:
-  //     "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Girish.K",
-  //   authorInitials: "GK",
-  //   authorImage: "/blog/authors/girish1.png",
-  //   publishedAt: "2026-10-01",
-  //   readingTime: "9 min read",
-  //   coverImage:
-  //     "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
-  //   coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
-  // },
+  {
+    slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
+    title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
+    description:
+      "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
+    excerpt:
+      "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-01",
+    readingTime: "9 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
+    coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
+  },
   {
     slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
     title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",
