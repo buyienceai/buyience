@@ -180,6 +180,11 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "composable-commerce-for-b2b-businesses": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
 };
 
 export function getBlogCoverDisplay(slug: string) {

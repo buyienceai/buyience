@@ -617,8 +617,8 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-01-01",
     readingTime: "19 min read",
-    coverImage: "/blog/covers/composable-commerce-for-b2b-businesses.png",
-    coverImageAlt: "Composable commerce for B2B",
+    coverImage: "/blog/covers/composable-commerce-for-b2b-businesses-herosection.png",
+    coverImageAlt: "Composable commerce for modern B2B businesses — modular capabilities including pricing, inventory, orders, storefront, and customer data",
   },
   {
     slug: "what-is-mach-architecture-a-complete-guide",
