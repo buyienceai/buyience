@@ -76,8 +76,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-09-28",
     readingTime: "8 min read",
     coverImage:
-      "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process.png",
-    coverImageAlt: "Corporate gifting RFPs and quote-to-order process",
+      "/blog/covers/corporate-gifting-rfps-streamlining-the-quote-to-order-process-herosection.png",
+    coverImageAlt:
+      "Corporate gifting RFPs streamlined from qualification through quote to first order",
   },
   
   {
@@ -132,8 +133,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/girish1.png",
     publishedAt: "2026-09-17",
     readingTime: "8 min read",
-    coverImage: "/blog/covers/multi-warehouse-inventory-herosection.png",
-    coverImageAlt: "Multi-warehouse inventory for industrial suppliers",
+    coverImage:
+      "/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide-herosection.png",
+    coverImageAlt:
+      "Multi-warehouse inventory tracking available stock across locations for industrial suppliers",
   },
   {
     slug: "net-30-60-90-terms-in-industrial-distribution-what-actually-works",

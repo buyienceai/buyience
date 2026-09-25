@@ -45,6 +45,16 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "corporate-gifting-rfps-streamlining-the-quote-to-order-process": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "why-corporate-gifting-companies-outgrow-shopify-and-what-to-use-instead": {
     width: 1672,
     height: 941,

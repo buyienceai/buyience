@@ -11,6 +11,10 @@ When that synchronization lags or breaks, a few predictable problems show up:
 - **Manual reconciliation becoming a full-time job** — Without a system built for multi-location tracking, someone ends up manually cross-checking spreadsheets or separate systems per warehouse — a process that doesn't scale as SKU count or warehouse count grows, and that introduces its own errors.
 - **Inconsistent fulfillment logic** — Without clear rules for which warehouse fulfills a given order, decisions end up made ad hoc — sometimes by whichever warehouse manager happens to see the order first, which doesn't necessarily produce the fastest or most cost-effective outcome for the customer.
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide-why-multi-warehouse-inventory-gets-complicated.png" alt="Why multi-warehouse inventory gets complicated for industrial distributors" />
+</figure>
+
 ## Step 1: Decide what "available" actually means
 
 Before anything else, define what counts as available inventory at a given location — because it's rarely just "units physically on the shelf." Available stock typically needs to exclude:
@@ -21,6 +25,10 @@ Before anything else, define what counts as available inventory at a given locat
 - Safety stock your business has deliberately decided not to sell below
 
 Getting this definition wrong is one of the most common causes of overselling — a warehouse shows 200 units, but 60 of those are already committed to orders in process, meaning true available inventory is 140. If your systems don't distinguish between total on-hand and available-to-promise, every quote and every storefront listing built on that number is slightly wrong.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide-what-actually-available.png" alt="Define what available inventory actually means across warehouses" />
+</figure>
 
 ## Step 2: Set clear fulfillment logic per warehouse
 
@@ -33,6 +41,10 @@ Once you can trust the numbers, the next question is which warehouse fulfills wh
 
 The specific logic matters less than having one that's consistent and applied automatically. Ad hoc fulfillment decisions, made order by order without a defined rule set, are where inconsistent delivery times and unnecessary shipping costs creep in.
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide-fulfillment-logic-for-multi-warehouse-inventory.png" alt="Clear fulfillment logic for which warehouse ships each order" />
+</figure>
+
 ## Step 3: Build real-time visibility into quoting and sales, not just operations
 
 A lot of distributors get [multi-warehouse inventory](/inventory-management) right on the operations side — the warehouse team knows what's where — but the information doesn't make it back to sales and quoting in real time. A rep quoting a customer needs to know, at the moment of quoting, what's actually available and where it would ship from, not a number that was accurate as of this morning's manual export.
@@ -44,6 +56,10 @@ This connects directly to the same pattern that shows up in [manual quoting and 
 Moving stock between warehouses — to rebalance inventory, respond to [seasonal demand spikes](/blog/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands) or regional demand shifts, or consolidate for a large order — needs its own clear process, because a transfer in progress is inventory that exists but isn't cleanly assignable to either location's available count.
 
 A workable approach treats a transfer as its own tracked state: stock is deducted from the originating warehouse's available count as soon as the transfer is initiated (even before physical pickup, in most cases), and only added to the destination warehouse's available count once received and counted there — not the moment it arrives on a truck. The gap in between should be visible in reporting, not invisible, so nobody assumes stock is available at either end when it's actually in transit.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide-in-transit-is-its-own-state.png" alt="Treat inventory in transit between warehouses as its own tracked state" />
+</figure>
 
 ## Step 5: Set stockout and reorder rules per location, not just company-wide
 
