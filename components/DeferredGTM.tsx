@@ -44,9 +44,9 @@ export default function DeferredGTM() {
     );
 
     // Fallback so analytics / GTM schema still load for passive visitors.
-    // 3s keeps most of the LCP/TBT window clear while Tag Assistant and
+    // 1.5s keeps most of the LCP/TBT window clear while Tag Assistant and
     // crawlers that wait briefly can still pick up the container.
-    timeoutId = setTimeout(load, 3000);
+    timeoutId = setTimeout(load, 1500);
 
     return cleanup;
   }, []);
