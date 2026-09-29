@@ -33,6 +33,14 @@ Set `SEO_INDEXING=true` only on the real production Vercel environment (e.g. `bu
 
 Optional: set `NEXT_PUBLIC_SITE_URL=https://buyience.com` on production for stable canonicals.
 
+### Future-dated blogs (stage only)
+
+Posts with `publishedAt` after today (UTC) are hidden on production by default.
+
+Set `SHOW_FUTURE_BLOGS=true` on Preview / stage (and local) so those scheduled posts appear in `/blog` and are routable for review. Leave it unset on production.
+
+Production builds also run `npm run check:blog-dates` (via `build`) and fail if any future-dated posts are still in `app/blog/data/posts.ts`. Stage skips that check when `SHOW_FUTURE_BLOGS=true`.
+
 ### Environment variables
 
 Copy [`.env.example`](.env.example) to `.env.local`:

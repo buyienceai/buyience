@@ -2,6 +2,16 @@ import { blogPosts, type BlogPost, type BlogPostCategory } from "../data/posts";
 import type { BlogCategoryId } from "../data/categories";
 
 /**
+ * When true, scheduled (future-dated) posts are listed and routable.
+ * Set `SHOW_FUTURE_BLOGS=true` on Preview / stage (buyience.vercel.app) and local
+ * so drafts go live for review. Leave unset on production so posts stay hidden
+ * until their `publishedAt` calendar day (UTC).
+ */
+export function showFutureBlogs(): boolean {
+  return process.env.SHOW_FUTURE_BLOGS === "true";
+}
+
+/**
  * Parse publish dates as UTC calendar days so sorting is stable across timezones.
  * Accepts `YYYY-MM-DD` and fuller ISO strings.
  */
@@ -14,16 +24,28 @@ function publishedAtMs(iso: string): number {
   return Number.isNaN(ms) ? 0 : ms;
 }
 
+function utcTodayMs(): number {
+  const now = new Date();
+  return Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+}
+
+function isPublished(post: BlogPost): boolean {
+  if (showFutureBlogs()) return true;
+  return publishedAtMs(post.publishedAt) <= utcTodayMs();
+}
+
 function byPublishedAtDesc(a: BlogPost, b: BlogPost): number {
   return publishedAtMs(b.publishedAt) - publishedAtMs(a.publishedAt);
 }
 
 export function getAllPosts(): BlogPost[] {
-  return [...blogPosts].sort(byPublishedAtDesc);
+  return blogPosts.filter(isPublished).sort(byPublishedAtDesc);
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
+  if (!post || !isPublished(post)) return undefined;
+  return post;
 }
 
 const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const;

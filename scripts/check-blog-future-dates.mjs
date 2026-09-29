@@ -7,8 +7,9 @@
  *   node scripts/check-blog-future-dates.mjs --production-only
  *   npm run check:blog-dates
  *
- * --production-only: no-op unless VERCEL_ENV=production or SEO_INDEXING=true
- *   (so stage/preview can keep scheduled posts; live builds cannot).
+ * --production-only: no-op when SHOW_FUTURE_BLOGS=true (stage/preview), or when
+ *   neither VERCEL_ENV=production nor SEO_INDEXING=true. Live builds still fail
+ *   if future-dated posts are present.
  */
 import fs from "fs";
 import path from "path";
@@ -19,9 +20,17 @@ const root = path.join(__dirname, "..");
 const postsPath = path.join(root, "app/blog/data/posts.ts");
 
 const productionOnly = process.argv.includes("--production-only");
+const showFutureBlogs = process.env.SHOW_FUTURE_BLOGS === "true";
 const isProduction =
   process.env.VERCEL_ENV === "production" ||
   process.env.SEO_INDEXING === "true";
+
+if (productionOnly && showFutureBlogs) {
+  console.log(
+    "check-blog-future-dates: skip (SHOW_FUTURE_BLOGS=true — scheduled posts allowed).",
+  );
+  process.exit(0);
+}
 
 if (productionOnly && !isProduction) {
   console.log(
@@ -79,6 +88,10 @@ console.error(
 for (const p of future) {
   console.error(`  - ${p.publishedAt}  /blog/${p.slug}`);
 }
-console.error(`\nFix: set publishedAt to today or earlier before merging to live.`);
-console.error(`Or keep them on stage only — this check runs on production builds.`);
+console.error(
+  `\nFix: set publishedAt to today or earlier before merging to live.`,
+);
+console.error(
+  `Stage/preview: set SHOW_FUTURE_BLOGS=true so scheduled posts stay visible and this check is skipped.`,
+);
 process.exit(1);
