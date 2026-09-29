@@ -43,9 +43,10 @@ export default function DeferredGTM() {
       window.addEventListener(event, onInteract, { once: true, passive: true }),
     );
 
-    // Fallback so analytics still loads for passive visitors.
-    // Long enough that lab tools (PSI / Lighthouse) finish measuring first.
-    timeoutId = setTimeout(load, 12000);
+    // Fallback so analytics / GTM schema still load for passive visitors.
+    // 3s keeps most of the LCP/TBT window clear while Tag Assistant and
+    // crawlers that wait briefly can still pick up the container.
+    timeoutId = setTimeout(load, 3000);
 
     return cleanup;
   }, []);

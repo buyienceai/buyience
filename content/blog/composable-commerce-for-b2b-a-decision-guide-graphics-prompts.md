@@ -1,6 +1,6 @@
 # Graphics prompts — Composable Commerce for B2B
 
-**Blog:** [Composable Commerce for B2B — A Decision Guide](https://buyience.com/blog/composable-commerce-for-b2b-a-decision-guide)
+**Blog:** [Composable Commerce for B2B — A Decision Guide](/blog/composable-commerce-for-b2b-a-decision-guide)
 
 **Slug:** `composable-commerce-for-b2b-a-decision-guide`
 
@@ -202,7 +202,7 @@ Same readiness scorecard as desktop, portrait 1080×1350. Stack “Ready” pane
 ## Optional — Cover refresh
 
 **Current cover:** `public/blog/covers/composable-commerce-for-b2b-a-decision-guide.png`  
-**Used on:** [blog post page](https://buyience.com/blog/composable-commerce-for-b2b-a-decision-guide) (hero + OG)
+**Used on:** [blog post page](/blog/composable-commerce-for-b2b-a-decision-guide) (hero + OG)
 
 Only if replacing the portrait-style cover with a topic visual:
 

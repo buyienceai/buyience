@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import EyebrowPill from "@/components/EyebrowPill";
 
 export type FaqItem = {
   q: string;
@@ -43,7 +44,7 @@ export default function FaqSection({
       transition={{ duration: 0.5 }}
       className="center-head reveal in"
     >
-      <p className="eyebrow">{eyebrow}</p>
+      <EyebrowPill>{eyebrow}</EyebrowPill>
       <h2>{title}</h2>
     </motion.div>
   );
