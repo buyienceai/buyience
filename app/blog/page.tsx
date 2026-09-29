@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Expert insights on B2B commerce, wholesale operations, and AI in sales. Practical guides for wholesalers, distributors & manufacturers.",
   path: "/blog",
-});
+});  
 
 export default function BlogPage() {
   const posts = getAllPosts();
