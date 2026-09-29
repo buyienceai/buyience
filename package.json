@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/check-blog-future-dates.mjs --production-only && next build",
     "start": "next start",
     "lint": "eslint",
+    "check:blog-dates": "node scripts/check-blog-future-dates.mjs",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"
