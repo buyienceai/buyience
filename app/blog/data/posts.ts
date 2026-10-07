@@ -25,6 +25,24 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "best-b2b-commerce-platforms-for-smb-distributors",
+    title: "The Best B2B Commerce Platforms for SMB Distributors in 2026",
+    description:
+      "An honest comparison of B2B commerce platforms for small and mid-sized distributors — real published pricing, where each genuinely fits, and which ones to rule out fast.",
+    excerpt:
+      "Most \"best B2B platform\" lists are published by vendors who rank themselves first. This one is too — we build Buyience — so the useful thing we can offer is published pricing where it exists, honest placement of where each platform actually fits, and a clear statement of which distributors should rule us out. For SMB distributors the real shortlist is short: BigCommerce B2B or Shopify for catalogue-led wholesale, Sana or an ERP-led option if your ERP governs pricing, OroCommerce if you have genuine enterprise complexity and the budget, and quoting-led platforms including ours if your revenue arrives through negotiated quotes.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-05",
+    readingTime: "11 min read",
+    coverImage: "/blog/covers/best-b2b-commerce-platforms-for-smb-distributors.png",
+    coverImageAlt:
+      "Comparison of B2B commerce platforms for SMB distributors by fit and published pricing",
+  },
+  {
     slug: "digital-sales-room-dsr",
     title: "Digital Sales Room (DSR)",
     description:
