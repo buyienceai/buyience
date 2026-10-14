@@ -25,6 +25,64 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals",
+    title: "Spreadsheet-to-Quote: Why Manual B2B Quoting Is Costing You Deals",
+    description:
+      "Manual quoting loses deals through delay and margin through inconsistency — without either showing up clearly in the CRM. Here are the five stages where spreadsheet quotes leak, and what to fix first.",
+    excerpt:
+      "Manual quoting rarely loses a deal in a way anyone records. It loses deals through delay — the quote that arrives after the buyer decided — and it loses margin through inconsistency nobody traces back. The cost is invisible precisely because the failures look like normal business: a slow week, a competitive loss, a thin month. This post maps the five stages where a spreadsheet quote leaks, and which one to fix first.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-15",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+    coverImageAlt:
+      "Spreadsheet-based manual B2B quoting delaying deals and eroding margin",
+  },
+  {
+    slug: "headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference",
+    title:
+      "Headless B2B Commerce vs Traditional Platforms: What's the Real Difference",
+    description:
+      "An honest comparison of headless vs traditional B2B commerce — what the architecture actually means, what it costs, and when SMB distributors should choose each.",
+    excerpt:
+      "Headless decouples the storefront from the commerce backend, connecting them through APIs. Traditional platforms ship both together. Neither is better in the abstract — headless buys flexibility and pays for it in engineering capacity, and traditional buys speed and pays for it in constraint. For most SMB distributors without a front-end development team, traditional or lightly decoupled is the correct answer, and the honest version of this comparison says so.",
+    category: "technology",
+    categoryLabel: "Technology",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-12",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+    coverImageAlt:
+      "Headless B2B commerce versus traditional platforms — storefront and backend separation",
+  },
+  {
+    slug: "buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison",
+    title: "Buyience vs BigCommerce B2B Edition: A Side-by-Side Comparison",
+    description:
+      "An honest side-by-side of BigCommerce B2B Edition and Buyience — native quoting, published cost tiers, negotiation vs structured quotes, and which fit SMB distributors.",
+    excerpt:
+      "BigCommerce B2B Edition is a genuinely capable B2B platform with native quoting, company accounts, price lists and purchase order workflows — it is not a consumer cart with wholesale bolted on. The honest comparison with Buyience comes down to two things: cost tier, since B2B Edition is Enterprise-only with custom pricing, and what happens during negotiation rather than during quoting. If you have the budget and your quoting is structured rather than negotiated, B2B Edition is a strong choice.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-08",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+    coverImageAlt:
+      "Side-by-side comparison of Buyience and BigCommerce B2B Edition for wholesale distributors",
+  },
+  {
     slug: "best-b2b-commerce-platforms-for-smb-distributors",
     title: "The Best B2B Commerce Platforms for SMB Distributors in 2026",
     description:

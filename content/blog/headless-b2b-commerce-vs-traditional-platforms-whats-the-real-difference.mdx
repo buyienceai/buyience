@@ -1,0 +1,110 @@
+Architecture debates in commerce tend to be argued as though one option is modern and the other is obsolete. That framing is useful for vendors selling the newer option and not useful for anyone choosing a platform.
+
+The real difference is narrower than the discourse suggests, and the right answer depends almost entirely on one question that has nothing to do with architecture: do you have, or will you pay for, front-end engineering capacity?
+
+## The actual technical difference
+
+A traditional (sometimes called monolithic) platform ships the storefront and the commerce backend as one connected system. Themes, templates, catalogue, cart, checkout and admin all come from the same vendor, designed to work together.
+
+A headless platform separates them. The backend handles catalogue, pricing, orders and inventory, exposing them through APIs. The storefront is built separately, consuming those APIs, and can be built in whatever framework you choose.
+
+That's genuinely it. Everything else — composable architecture, [MACH](/mach-architecture), microservices — describes how far you take that separation and whether you also decompose the backend into independently replaceable services. For a deeper treatment of what headless solves and what it doesn't, see our longer guide on [B2B commerce and headless architecture](/blog/b2b-commerce-and-headless-architecture).
+
+Worth noting that this is not binary. Many traditional platforms now support a decoupled front end while keeping backend components integrated, which is where a lot of mid-market B2B actually lands. The choice is usually a position on a spectrum rather than one of two camps.
+
+## What headless genuinely gives you
+
+**Front-end freedom.** You control the storefront entirely — framework, structure, interaction, performance characteristics. If your buying experience needs to work in a way the platform's theming can't express, this matters a great deal.
+
+**Multi-surface delivery from one backend.** A web storefront, a mobile app, an in-field sales tool, a partner portal and a procurement punchout can all consume the same APIs. For distributors selling through several channels, this avoids maintaining parallel systems.
+
+**Independent release cycles.** Front-end changes don't require backend deployment and vice versa, which matters when both are moving quickly.
+
+**Replaceability.** If the commerce backend needs to change later, the storefront can survive the transition. This is a real long-term hedge, though it's often cited more than it's exercised.
+
+## What it costs — and this is the part that gets understated
+
+**You now own the front end.** Every page, component, state and edge case. A traditional platform gives you a working storefront with category pages, search, cart, checkout and account management already built and maintained. Headless gives you APIs and the responsibility to build all of that.
+
+**You need engineering capacity permanently, not just at launch.** This is the single most underestimated cost. Browsers change, dependencies need patching, frameworks release breaking versions, and performance regresses. A headless storefront without a maintainer degrades. We unpack that more fully in [the real cost of headless commerce for B2B companies](/blog/the-real-cost-of-headless-commerce-for-b2b-companies).
+
+**Launch takes longer.** Weeks on a traditional platform versus months on a headless build, for comparable functionality.
+
+**Features you assumed were included are now your build.** SEO handling, structured data, accessibility, image optimisation, internationalisation, search, faceted navigation. All available as libraries or services, all requiring decisions and integration work.
+
+**More moving parts.** More vendors, more contracts, more potential failure points, and a less obvious answer to "who do we call when something breaks."
+
+## Where the costs actually land
+
+It helps to see the cost profiles side by side, because they differ in shape as well as size.
+
+Traditional front-loads very little and carries a predictable subscription. The storefront is maintained by the vendor, so browser changes, security patches and framework updates arrive as platform updates rather than as work on your backlog. The cost you accept instead is constraint: when you need something the theming can't express, your options are custom development against the platform's extension model, a workaround, or doing without.
+
+Headless front-loads a build and carries two ongoing costs rather than one — the commerce backend subscription plus the engineering capacity to maintain a storefront you now own. The build is visible and gets quoted. The maintenance is continuous and usually doesn't.
+
+A useful way to pressure-test a headless proposal: ask what happens in month 18 when a major framework version ships a breaking change and the developer who built the storefront has moved on. If the answer is "we'd find someone," cost that in. If the answer is a retained agency, that retainer is part of the platform's true cost and belongs in the comparison.
+
+None of this makes headless wrong. It makes the comparison a different shape than "which platform costs more per month," which is how it's often presented.
+
+## Who should choose which
+
+**Traditional makes sense when:** you have no dedicated front-end developer, your storefront requirements are well served by configurable themes, you need to launch in weeks, your catalogue and buying flow are conventional, or you'd rather spend limited engineering time on integrations and operations than on building UI.
+
+That describes most SMB distributors, which is why the honest answer for a lot of this audience is "traditional, or lightly decoupled."
+
+**Headless makes sense when:** you have front-end engineers already, you're delivering to multiple surfaces from one backend, your buying experience is genuinely unusual and theme constraints have become a real blocker, or you're deliberately building toward replaceable components for strategic reasons.
+
+A middle path exists and is frequently the right one. Keep an integrated storefront and decouple only what needs it, or use a platform with an API-first backend that also ships a usable default storefront — so you can start fast and decouple later if requirements change. Platform sales processes rarely present this, because it's harder to sell than a clean architectural choice.
+
+## How to decide without the architecture debate
+
+Four questions, none of them about architecture:
+
+1. **Who maintains the storefront in two years?** If you can't name a person or a retained agency with budget attached, headless is a risk you're taking on without a mitigation.
+2. **What specifically can't your current theming do?** If you can name concrete blocked requirements, that's a real case for decoupling. If the answer is general dissatisfaction with appearance, that's a redesign, not a replatform.
+3. **How many surfaces are you actually delivering to?** One web storefront is a weak case for headless. Web plus mobile app plus field sales tool plus partner portal is a strong one.
+4. **What's your realistic launch deadline?** If it's inside three months with a small team, that constrains the decision regardless of architectural preference.
+
+## What actually matters more for B2B distributors
+
+Here's the uncomfortable part for an architecture discussion: for most distributors, the storefront architecture is not where deals are won or lost.
+
+B2B distribution revenue typically turns on pricing accuracy, quote speed, inventory visibility and negotiation — not on how the catalogue page is rendered. A beautifully engineered headless storefront sitting on top of pricing that lives in a spreadsheet solves the wrong problem expensively.
+
+If you're choosing between architectures and your reps are still building quotes by hand, the architecture decision isn't your highest-leverage one. It's worth being honest with yourself about where the actual constraint sits before committing to an expensive project in a different layer — a theme we also cover when comparing [ERP-first vs commerce-first architecture](/blog/erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works).
+
+## Where Buyience sits
+
+[Nova Core](/nova-core) is API-first — the commerce, pricing, quoting and order logic are exposed through APIs, so you can build a custom front end against them if you have the capacity and the requirement. But it also ships a usable [B2B storefront](/b2b-storefront), so you don't have to.
+
+That's the middle position described above, and it's deliberate: it lets a distributor start without front-end engineering and decouple later if the need becomes real, rather than committing to that cost upfront on the strength of an architecture argument.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+## FAQ: Headless vs Traditional B2B Commerce
+
+### What's the difference between headless and traditional commerce?
+
+A traditional platform ships the storefront and commerce backend together as one system. Headless separates them, with the backend exposing catalogue, pricing, orders and inventory through APIs while the storefront is built independently against those APIs.
+
+### Is headless better than a traditional platform?
+
+Neither is better in the abstract. Headless buys front-end flexibility and multi-surface delivery at the cost of permanent engineering capacity and longer launch timelines. Traditional buys speed and lower maintenance at the cost of theming constraints.
+
+### Should an SMB distributor choose headless?
+
+Usually not, unless front-end engineering capacity already exists or multiple delivery surfaces are genuinely required. Without a named maintainer for the storefront in two years' time, headless is a cost commitment without a mitigation.
+
+### What's the most underestimated cost of going headless?
+
+Ongoing front-end maintenance. Launch cost gets quoted; the permanent requirement for engineering capacity to handle dependency updates, framework changes and performance regressions usually doesn't.
+
+### Is it a binary choice between headless and traditional?
+
+No. Many platforms now support a decoupled front end while keeping backend components integrated, and some API-first platforms ship a usable default storefront. Starting integrated and decoupling later is a legitimate path.
+
+### Does storefront architecture affect B2B sales outcomes much?
+
+Less than most architecture discussions imply. For distributors, pricing accuracy, quote turnaround, inventory visibility and negotiation typically drive revenue more than storefront rendering. If quoting is still manual, that's usually the higher-leverage problem.
+
+Trying to work out whether architecture is actually your constraint? [Request a demo](/request-a-demo) and we'll give you a straight read.
