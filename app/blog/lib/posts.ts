@@ -51,6 +51,31 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 const DEFAULT_BLOG_COVER = { width: 1488, height: 720, contain: false } as const;
 
 const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contain: true }> = {
+  "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference": {
+    width: 1670,
+    height: 941,
+    contain: true,
+  },
+  "buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "best-b2b-commerce-platforms-for-smb-distributors": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
   "net-30-60-90-terms-in-industrial-distribution-what-actually-works": {
     width: 1672,

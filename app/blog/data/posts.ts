@@ -39,9 +39,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-15",
     readingTime: "10 min read",
     coverImage:
-      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+      "/blog/covers/spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals-hero.png",
     coverImageAlt:
-      "Spreadsheet-based manual B2B quoting delaying deals and eroding margin",
+      "Spreadsheet quote moving into a structured quote with price, quantity, and stock",
   },
   {
     slug: "headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference",
@@ -59,9 +59,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-12",
     readingTime: "10 min read",
     coverImage:
-      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+      "/blog/covers/headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference-hero.png",
     coverImageAlt:
-      "Headless B2B commerce versus traditional platforms — storefront and backend separation",
+      "Traditional all-in-one commerce versus headless commerce with a separate frontend and API backend",
   },
   {
     slug: "buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison",
@@ -78,9 +78,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-08",
     readingTime: "10 min read",
     coverImage:
-      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison.png",
+      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison-different-strengths.png",
     coverImageAlt:
-      "Side-by-side comparison of Buyience and BigCommerce B2B Edition for wholesale distributors",
+      "BigCommerce B2B Edition catalogue flow versus Buyience quotation, negotiation, and margin control",
   },
   {
     slug: "best-b2b-commerce-platforms-for-smb-distributors",
@@ -96,9 +96,9 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-10-05",
     readingTime: "11 min read",
-    coverImage: "/blog/covers/best-b2b-commerce-platforms-for-smb-distributors.png",
+    coverImage: "/blog/covers/best-b2b-commerce-platforms-for-smb-distributors-hero.png",
     coverImageAlt:
-      "Comparison of B2B commerce platforms for SMB distributors by fit and published pricing",
+      "Find a B2B commerce platform that fits catalogue, quoting, and ERP operations",
   },
   {
     slug: "digital-sales-room-dsr",
@@ -134,8 +134,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-01",
     readingTime: "9 min read",
     coverImage:
-      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
-    coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
+      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-hero.png",
+    coverImageAlt:
+      "Catalogue-led Shopify Plus ordering versus quote-led Buyience commerce",
   },
   {
     slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
