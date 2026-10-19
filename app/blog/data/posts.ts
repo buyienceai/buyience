@@ -24,6 +24,100 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
+  // {
+  //   slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
+  //   title: "When to Replace Your Legacy B2B Ecommerce Platform",
+  //   description:
+  //     "Replatforming is expensive and often done for the wrong reasons. Six signals that justify replacing a legacy B2B platform — and three triggers that look urgent but usually aren't.",
+  //   excerpt:
+  //     "The test isn't whether your platform is old or frustrating. It's whether the platform itself is now blocking revenue, or costing more to work around than to replace. Six signals genuinely justify it. Three common triggers look urgent but usually aren't.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2026-10-19",
+  //   readingTime: "11 min read",
+  //   coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+  //   coverImageAlt:
+  //     "Signals that justify replacing a legacy B2B ecommerce platform versus triggers that usually don't",
+  // },
+  {
+    slug: "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals",
+    title: "Spreadsheet-to-Quote: Why Manual B2B Quoting Is Costing You Deals",
+    description:
+      "Manual quoting loses deals through delay and margin through inconsistency — without either showing up clearly in the CRM. Here are the five stages where spreadsheet quotes leak, and what to fix first.",
+    excerpt:
+      "Manual quoting rarely loses a deal in a way anyone records. It loses deals through delay — the quote that arrives after the buyer decided — and it loses margin through inconsistency nobody traces back. The cost is invisible precisely because the failures look like normal business: a slow week, a competitive loss, a thin month. This post maps the five stages where a spreadsheet quote leaks, and which one to fix first.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-15",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals-hero.png",
+    coverImageAlt:
+      "Spreadsheet quote moving into a structured quote with price, quantity, and stock",
+  },
+  {
+    slug: "headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference",
+    title:
+      "Headless B2B Commerce vs Traditional Platforms: What's the Real Difference",
+    description:
+      "An honest comparison of headless vs traditional B2B commerce — what the architecture actually means, what it costs, and when SMB distributors should choose each.",
+    excerpt:
+      "Headless decouples the storefront from the commerce backend, connecting them through APIs. Traditional platforms ship both together. Neither is better in the abstract — headless buys flexibility and pays for it in engineering capacity, and traditional buys speed and pays for it in constraint. For most SMB distributors without a front-end development team, traditional or lightly decoupled is the correct answer, and the honest version of this comparison says so.",
+    category: "technology",
+    categoryLabel: "Technology",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-12",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference-hero.png",
+    coverImageAlt:
+      "Traditional all-in-one commerce versus headless commerce with a separate frontend and API backend",
+  },
+  {
+    slug: "buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison",
+    title: "Buyience vs BigCommerce B2B Edition: A Side-by-Side Comparison",
+    description:
+      "An honest side-by-side of BigCommerce B2B Edition and Buyience — native quoting, published cost tiers, negotiation vs structured quotes, and which fit SMB distributors.",
+    excerpt:
+      "BigCommerce B2B Edition is a genuinely capable B2B platform with native quoting, company accounts, price lists and purchase order workflows — it is not a consumer cart with wholesale bolted on. The honest comparison with Buyience comes down to two things: cost tier, since B2B Edition is Enterprise-only with custom pricing, and what happens during negotiation rather than during quoting. If you have the budget and your quoting is structured rather than negotiated, B2B Edition is a strong choice.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-08",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-bigcommerce-b2b-edition-a-side-by-side-comparison-different-strengths.png",
+    coverImageAlt:
+      "BigCommerce B2B Edition catalogue flow versus Buyience quotation, negotiation, and margin control",
+  },
+  {
+    slug: "best-b2b-commerce-platforms-for-smb-distributors",
+    title: "The Best B2B Commerce Platforms for SMB Distributors in 2026",
+    description:
+      "An honest comparison of B2B commerce platforms for small and mid-sized distributors — real published pricing, where each genuinely fits, and which ones to rule out fast.",
+    excerpt:
+      "Most \"best B2B platform\" lists are published by vendors who rank themselves first. This one is too — we build Buyience — so the useful thing we can offer is published pricing where it exists, honest placement of where each platform actually fits, and a clear statement of which distributors should rule us out. For SMB distributors the real shortlist is short: BigCommerce B2B or Shopify for catalogue-led wholesale, Sana or an ERP-led option if your ERP governs pricing, OroCommerce if you have genuine enterprise complexity and the budget, and quoting-led platforms including ours if your revenue arrives through negotiated quotes.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-05",
+    readingTime: "11 min read",
+    coverImage: "/blog/covers/best-b2b-commerce-platforms-for-smb-distributors-hero.png",
+    coverImageAlt:
+      "Find a B2B commerce platform that fits catalogue, quoting, and ERP operations",
+  },
   {
     slug: "digital-sales-room-dsr",
     title: "Digital Sales Room (DSR)",
@@ -43,24 +137,25 @@ export const blogPosts: BlogPost[] = [
       "Shared digital sales room where B2B buyers and sellers negotiate quotes online",
   },
  
-  // {
-  //   slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
-  //   title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
-  //   description:
-  //     "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
-  //   excerpt:
-  //     "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Girish.K",
-  //   authorInitials: "GK",
-  //   authorImage: "/blog/authors/girish1.png",
-  //   publishedAt: "2026-10-01",
-  //   readingTime: "9 min read",
-  //   coverImage:
-  //     "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors.png",
-  //   coverImageAlt: "Buyience vs Shopify Plus for wholesale distributors",
-  // },
+  {
+    slug: "buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors",
+    title: "Buyience vs Shopify Plus for B2B: Which Fits Wholesale Distributors",
+    description:
+      "An honest comparison of Shopify Plus and Buyience for wholesale distributors in 2026 — where each genuinely fits, what Shopify's native B2B now covers, and where quoting-led selling needs something else.",
+    excerpt:
+      "Shopify Plus and Buyience solve different problems. Shopify is catalogue-and-checkout commerce with a strong B2B layer added — excellent if your wholesale motion is buyers logging in and ordering from a catalogue at their agreed prices. Buyience is quoting-and-negotiation commerce — built for distributors whose deals are won or lost on how fast and how accurately they can quote, revise, and negotiate. If most of your revenue arrives through self-service reordering, Shopify is likely the better fit. If most of it arrives through quotes, it probably isn't.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-01",
+    readingTime: "9 min read",
+    coverImage:
+      "/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-hero.png",
+    coverImageAlt:
+      "Catalogue-led Shopify Plus ordering versus quote-led Buyience commerce",
+  },
   {
     slug: "corporate-gifting-rfps-streamlining-the-quote-to-order-process",
     title: "Corporate Gifting RFPs: Streamlining the Quote-to-Order Process",

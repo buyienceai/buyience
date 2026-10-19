@@ -7,11 +7,15 @@ Any comparison written before mid-2026 is now misleading, because Shopify materi
 
 As of April 2026, most B2B features are available on every paid Shopify plan — company accounts, customer-specific pricing catalogues, net payment terms including Net 30/60/90, purchase order numbers, self-serve buyer ordering, quick order lists, and Flow automations no longer require a Plus subscription. What remains Plus-only is a narrower set: unlimited pricing catalogues, a dedicated B2B storefront on its own domain, vaulted card storage for buyer accounts, deposit and partial payment workflows, and checkout extensibility.
 
-This matters for anyone evaluating platforms, because several capabilities distributors used to shop around for are now table stakes on Shopify. Company profiles, custom catalogues and pricing, net terms, and a dedicated B2B checkout now run on the same backend as DTC commerce. If you read older comparison content claiming Shopify can't do tiered B2B pricing or payment terms, that content is out of date.
+This matters for anyone evaluating platforms, because several capabilities distributors used to shop around for are now table stakes on Shopify. Company profiles, custom catalogues and pricing, net terms, and a dedicated B2B checkout now run on the same backend as DTC commerce. If you read older comparison content claiming Shopify can't do tiered [B2B pricing](/pricing) or payment terms, that content is out of date.
 
-Shopify's other genuine strength is implementation speed. Shopify Plus B2B implementations using native features consistently launch in around 90 days, with ERP integration often achieved in roughly 30 days — considerably faster than legacy enterprise B2B platforms.
+Shopify's other genuine strength is implementation speed. Shopify Plus B2B implementations using native features consistently launch in around 90 days, with ERP integration often achieved in roughly 30 days — though [ERP integration considerations](/blog/why-most-b2b-erp-integrations-fail) still apply — considerably faster than legacy enterprise B2B platforms.
 
 ## Where Shopify Plus is genuinely the better choice
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-works-best.png" alt="Catalogue ordering works best when buyers order known products at agreed prices" />
+</figure>
 
 - **You sell a catalogue, and buyers order from it** — If your wholesale customers log in, see their agreed prices, and place orders without negotiation, Shopify's B2B layer covers that well. Adding a quoting-led platform to a catalogue-led business adds complexity you don't need.
 - **You run DTC and wholesale together** — This is Shopify's strongest structural advantage. One product catalogue, one inventory pool, one order stream serving both retail and trade customers. A gifting brand selling to consumers and corporate clients, or a manufacturer with a consumer line alongside trade accounts, gets real value from not running two systems.
@@ -22,15 +26,23 @@ If those describe your business, the rest of this post probably isn't relevant t
 
 ## Where the fit breaks down for distributors
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-complex-deal.png" alt="Complex wholesale deals need quote revisions, negotiation history, and margin control" />
+</figure>
+
 The gap isn't in Shopify's B2B feature list. It's architectural: Shopify is built around a catalogue and a checkout. The B2B layer, however capable, extends that model rather than replacing it. For distributors whose sales motion is fundamentally quote-led rather than catalogue-led, that difference shows up in specific places.
 
 - **Quoting isn't the centre of the model** — Shopify supports draft orders and, with apps, various RFQ workflows. But the platform's primary path is a buyer choosing from a catalogue at a pre-set price. A distributor whose typical deal starts with a customer describing a requirement, receives a quote, negotiates it, and converts it to an order is working against the grain of that model. Independent implementation guidance identifies this directly: forcing complex RFQ and approval workflows into a platform designed for simpler B2B models is a recognised implementation mistake.
-- **Negotiation happens elsewhere** — In a quote-led business, the negotiation is the sale. On Shopify, that conversation happens in email or on a call, outside the platform — which means no single current version of the quote, no preserved negotiation history, and no visibility into what the buyer actually engaged with.
+- **Negotiation happens elsewhere** — In a quote-led business, the negotiation is the sale. On Shopify, that conversation happens in email or on a call, outside the platform — which means no single current version of the quote, no preserved negotiation history, and no visibility into what the buyer actually engaged with. That gap is exactly what a [digital sales room](/blog/digital-sales-room-dsr) is built to close.
 - **Margin protection isn't enforced at the point of concession** — Catalogue pricing assumes the price is the price. When a rep negotiates below agreed rates, there's no native margin floor checking that concession against cost before it's committed.
-- **Line-level complexity** — A multi-line quote where the buyer pushes on three specific lines, with volume breaks and contract rates resolving differently per line, is a different problem from a cart with per-company pricing applied.
+- **Line-level complexity** — A multi-line quote where the buyer pushes on three specific lines, with volume breaks and contract rates needing [line-level pricing resolution](/blog/how-b2b-teams-manage-customer-specific-pricing-at-scale), is a different problem from a cart with per-company pricing applied.
 - **Cost at the distributor scale** — Shopify Plus runs in the region of $2,300/month before apps and implementation. For an SMB distributor with a handful of reps, that's a substantial commitment — reasonable if the platform's strengths match your model, expensive if you're mainly using it as a place for quotes to end up.
 
 ## Side-by-side
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-different-sales-motions.png" alt="Shopify Plus catalogue checkout versus Buyience quote, line-level pricing, and margin control" />
+</figure>
 
 <div className="blog-table-wrap">
   <table>
@@ -105,13 +117,17 @@ Two entries deserve emphasis, in fairness: Shopify's ecosystem and maturity are 
 
 ## The question that actually decides it
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-wholesale-deal-start.png" alt="Wholesale deals that start from a catalogue fit Shopify Plus; deals that start from a quote fit Buyience" />
+</figure>
+
 Not "which platform has more features," but: does your revenue arrive through a catalogue or through a quote?
 
 Look at last quarter's orders. What share came from a buyer selecting from known products at known prices, versus a buyer describing a requirement and receiving a quote that was then discussed?
 
 If it's mostly the first, Shopify's model matches your business and its maturity is a genuine asset.
 
-If it's mostly the second — common in fastener and MRO distribution, industrial supply, and custom or configured products — then the platform's core path isn't the path your revenue takes. You'd be running your actual sales process in email and using the platform to record the outcome. That works, but you're paying enterprise pricing for a fit that's partial, and the parts that matter most to your win rate and margin sit outside the system.
+If it's mostly the second — common in fastener and [MRO](/mro-solutions) distribution, industrial supply, and custom or configured products — then the platform's core path isn't the path your revenue takes. You'd be running your actual sales process in email and using the platform to record the outcome. That works, but you're paying enterprise pricing for a fit that's partial, and the parts that matter most to your win rate and margin sit outside the system.
 
 ## What we don't do well
 
@@ -119,7 +135,11 @@ Worth stating plainly, since a comparison that finds no weaknesses in its own pr
 
 We're newer, with a much smaller ecosystem and partner network. If you need a specific app integration that exists on Shopify, we may not have it. We don't serve DTC alongside wholesale — if you need one platform for both, that's a real reason to choose Shopify. Our track record is shorter, and for some buyers that matters appropriately.
 
-What we do offer is a platform built around quoting and negotiation as the primary motion, at SMB pricing, for distributors whose deals are won on quote speed and lost on margin erosion.
+What we do offer is a [NOVA Core B2B commerce platform](/nova-core) built around quoting and negotiation as the primary motion, at SMB pricing, for distributors whose deals are won on quote speed and lost on margin erosion.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/buyience-vs-shopify-plus-for-b2b-which-fits-wholesale-distributors-quote-to-order.png" alt="Quote-to-order flow from customer requirement through AI-assisted quote and negotiation to order" />
+</figure>
 
 [Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
 
