@@ -24,24 +24,24 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
-  {
-    slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
-    title: "When to Replace Your Legacy B2B Ecommerce Platform",
-    description:
-      "Replatforming is expensive and often done for the wrong reasons. Six signals that justify replacing a legacy B2B platform — and three triggers that look urgent but usually aren't.",
-    excerpt:
-      "The test isn't whether your platform is old or frustrating. It's whether the platform itself is now blocking revenue, or costing more to work around than to replace. Six signals genuinely justify it. Three common triggers look urgent but usually aren't.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-19",
-    readingTime: "11 min read",
-    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-    coverImageAlt:
-      "Signals that justify replacing a legacy B2B ecommerce platform versus triggers that usually don't",
-  },
+  // {
+  //   slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
+  //   title: "When to Replace Your Legacy B2B Ecommerce Platform",
+  //   description:
+  //     "Replatforming is expensive and often done for the wrong reasons. Six signals that justify replacing a legacy B2B platform — and three triggers that look urgent but usually aren't.",
+  //   excerpt:
+  //     "The test isn't whether your platform is old or frustrating. It's whether the platform itself is now blocking revenue, or costing more to work around than to replace. Six signals genuinely justify it. Three common triggers look urgent but usually aren't.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2026-10-19",
+  //   readingTime: "11 min read",
+  //   coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+  //   coverImageAlt:
+  //     "Signals that justify replacing a legacy B2B ecommerce platform versus triggers that usually don't",
+  // },
   {
     slug: "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals",
     title: "Spreadsheet-to-Quote: Why Manual B2B Quoting Is Costing You Deals",
