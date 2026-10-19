@@ -1,0 +1,116 @@
+Replatforming is expensive, disruptive and frequently done for the wrong reasons. The test isn't whether your platform is old or frustrating — it's whether the platform itself is now blocking revenue or costing more to work around than to replace. Six signals genuinely justify it: workarounds becoming the process, pricing logic living outside the system, unsupportable technology, integration cost exceeding platform cost, buyer expectations you can't meet, and vendor direction diverging from yours. Three common triggers look urgent but usually aren't.
+
+Every B2B platform eventually frustrates the people using it. That frustration is not, on its own, a reason to replace it — replatforming consumes months, costs more than the quoted figure, and carries real risk of disrupting customer relationships that took years to build.
+
+So the useful question isn't "is our platform good." It's narrower: is the platform now the constraint on what we're trying to do, and is working around it costing more than replacing it?
+
+## Six signals that genuinely justify replacement
+
+### 1. The workarounds have become the process
+
+Every platform has gaps covered by a spreadsheet, a manual step, or a side system. That's normal. It becomes a replacement signal when the workarounds stop being exceptions and become how the business actually runs.
+
+A practical test: list the steps in your quote-to-cash process, and mark which ones happen inside the platform. If pricing is calculated in a spreadsheet, quotes are built in a document, approvals happen over email, and the platform's role is to record the outcome, the platform isn't running your commerce — it's a system of record for decisions made elsewhere.
+
+That matters because every step outside the system is a place where errors, inconsistency and delay enter, and no amount of training fixes a structural gap.
+
+### 2. Pricing logic lives outside the system
+
+This is the specific version of the above that costs the most, which is why it deserves its own signal.
+
+If your tier structure, volume breaks and [contract rates](/blog/how-b2b-teams-manage-customer-specific-pricing-at-scale) can't be expressed as rules the platform applies automatically — so reps look them up and apply them by hand — you're exposed to inconsistent pricing, stale rates, and margin erosion that nobody can trace afterwards. A platform that can't hold your actual pricing model is a platform that can't support your actual business.
+
+### 3. The technology is genuinely unsupportable
+
+Not "old," which is different. Unsupportable means specific things:
+
+- The vendor has ended support, or announced an end-of-life date
+- You can't hire for the stack, or your single developer who understands it is a retention risk
+- Security patches are no longer issued, or you're stuck on an unsupported dependency
+- Required integrations no longer offer connectors for your version
+
+Age alone isn't a reason. A ten-year-old platform that's supported, secure, staffed and doing its job is not a problem. A three-year-old platform you can't hire for is.
+
+### 4. Integration cost now exceeds platform cost
+
+Track what you spend keeping the platform connected to everything else — [ERP sync](/blog/why-most-b2b-erp-integrations-fail), custom middleware, developer time on connector maintenance, failed-sync firefighting. When that annual figure approaches or exceeds what a modern platform with native connectors would cost including migration, the economics have flipped.
+
+This creeps up gradually, which is why it's worth calculating deliberately rather than noticing eventually.
+
+### 5. Buyers are asking for things you structurally can't deliver
+
+Buyer expectations in B2B have moved. [Self-service ordering](/blog/industrial-supply-distributors-moving-from-phone-email-orders-to-self-service), real-time stock visibility, order history, reorder lists, visible account pricing — these are increasingly assumed rather than requested.
+
+The signal isn't a single feature request. It's a pattern of requests your platform can't satisfy without custom development, combined with evidence that competitors are satisfying them. If you're losing accounts for reasons that trace back to platform capability rather than price or service, that's data.
+
+### 6. The vendor's direction has diverged from yours
+
+Platforms get repositioned. A vendor that once served mid-market distributors may move upmarket, deprecate the features you rely on, or shift focus to a different segment. If roadmap updates consistently deliver nothing relevant to you, and features you depend on are in maintenance mode, you're on a platform whose future doesn't include your use case — even if it works fine today.
+
+## Three triggers that look urgent but usually aren't
+
+**"It looks dated."** Storefront appearance is often fixable without replatforming, particularly on platforms supporting a [decoupled front end](/blog/headless-b2b-commerce-vs-traditional-platforms-whats-the-real-difference). Redesign is a fraction of replatforming cost. Appearance alone is rarely sufficient justification, though it frequently gets used as the argument because it's the most visible problem.
+
+**One person hates it.** Strong opinions about a platform are often about a specific workflow or an unresolved frustration rather than the platform's overall fit. Worth understanding properly before committing the business to a migration. The reverse applies too — one enthusiast for a new platform isn't a business case.
+
+**A competitor announced a replatform.** Their constraints aren't yours. This is one of the most common informal triggers and one of the weakest, particularly since you don't know whether their project went well.
+
+## How to decide, concretely
+
+If several genuine signals apply, work the numbers before the vendor conversations.
+
+**Cost of staying.** Annualise it: developer time on workarounds and maintenance, integration upkeep, manual process labour, errors and rework, and an honest estimate of revenue lost to capability gaps. That last figure is uncomfortable and usually the largest.
+
+**Cost of moving.** Platform subscription, implementation, data migration, integration rebuild, training, and productivity dip during transition. Add contingency — replatforming projects commonly run over, and a plan assuming they won't is optimistic rather than realistic.
+
+**Cost of partial moves.** Replacement isn't binary. You may be able to keep the storefront and replace the quoting and pricing layer, or move one product line first, or add capability alongside the existing system before migrating fully. These are often lower-risk and faster to value than a full rebuild, and they're frequently skipped because platform sales processes are built around full replacement.
+
+**Timing.** If your business is [seasonal](/blog/seasonal-demand-spikes-inventory-planning-for-corporate-gifting-brands), migrate in a trough, never approaching a peak. A platform transition during your highest-volume weeks compounds two kinds of risk at once.
+
+## What to check before committing to any replacement
+
+**Can it hold your pricing model?** Not "does it support tiered pricing" in a feature list, but: can it express your actual tier, volume and contract structure as rules, resolved at line level, without custom development. Test this with your real pricing during evaluation, not a simplified example.
+
+**What happens to your data?** Order history, customer accounts, negotiated pricing, quote records. Clarify what migrates, in what form, and what's lost. Historical pricing data matters more than people expect when a customer queries a rate twelve months later.
+
+**What's the realistic timeline?** Ask for references from businesses of similar size and complexity, and ask those references what overran.
+
+**What does the integration actually involve?** "[Native ERP connector](/blog/erp-first-vs-commerce-first-architecture-in-b2b-what-actually-works)" covers a wide range. Confirm which fields sync, in which direction, how often, and what happens when a sync fails.
+
+**Is there a smaller first step?** If a vendor can only sell you a full replacement, and your problem is confined to quoting and pricing, that mismatch is worth noticing.
+
+## Where Buyience fits
+
+We're most relevant to the second signal — pricing and quoting logic living outside the system — and to the partial-move option. [Nova Core](/nova-core) handles tier, volume and contract pricing resolved per line item, quoting with enforced margin floors, and live negotiation, with an API-first architecture that lets it sit alongside an existing storefront rather than requiring you to replace everything at once.
+
+If your storefront is fine and your quoting is the constraint, that's a narrower and faster project than a full replatform.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+## FAQ: Replacing a Legacy B2B Ecommerce Platform
+
+### How do I know if my B2B platform needs replacing?
+
+The test is whether the platform is blocking revenue or costing more to work around than to replace. The strongest signals are workarounds becoming the standard process, pricing logic living outside the system, genuinely unsupportable technology, integration cost exceeding platform cost, buyer requirements you structurally can't meet, and a vendor roadmap that no longer includes your use case.
+
+### Is an old platform automatically a problem?
+
+No. Age alone isn't a reason to replace. A supported, secure, well-staffed platform that does its job is fine regardless of age. The problem is unsupportability — ended vendor support, inability to hire for the stack, missing security patches, or integrations that no longer support your version.
+
+### Do I have to replace everything at once?
+
+No, and this option gets skipped more often than it should. You may be able to replace the quoting and pricing layer while keeping your storefront, migrate one product line first, or run new capability alongside the existing system. These are usually lower-risk and faster to value than a full rebuild.
+
+### What's the most underestimated cost of replatforming?
+
+The productivity dip during transition, and the revenue impact of capability gaps while staff adapt. Implementation quotes rarely include these, and projects commonly run longer than planned.
+
+### When in the year should a replatform happen?
+
+In a seasonal trough, never approaching a peak. Migrating during your highest-volume period compounds platform risk and demand risk simultaneously.
+
+### What should I test during platform evaluation?
+
+Your actual pricing model — real tiers, volume breaks and contract rates resolved at line level, not a simplified demo example. Also confirm exactly what historical data migrates and in what form, since customers query old pricing more often than expected.
+
+*Unsure whether you need a full replatform or just a quoting layer? [Request a demo](/request-a-demo) and we'll be straight about which your situation calls for.*

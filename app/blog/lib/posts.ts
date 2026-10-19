@@ -76,6 +76,11 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "when-to-replace-your-legacy-b2b-ecommerce-platform": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "digital-sales-room-dsr": { width: 1672, height: 941, contain: true },
   "net-30-60-90-terms-in-industrial-distribution-what-actually-works": {
     width: 1672,
