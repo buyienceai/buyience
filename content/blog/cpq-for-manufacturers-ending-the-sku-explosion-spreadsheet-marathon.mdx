@@ -1,0 +1,110 @@
+SKU explosion isn't a catalogue management problem you can solve with better organisation — it's a combinatorial one. A product with five option groups of four choices each has 1,024 valid combinations, and no amount of tidying makes that maintainable as a SKU list. CPQ solves it by storing rules instead of rows: option groups, compatibility constraints and [pricing](/pricing) logic that generate a valid configuration on demand. This covers what that actually means in practice and what to model first.
+
+A manufacturer sells a pump. It comes in four body materials, three impeller types, five motor ratings, two seal configurations and eight port fittings.
+
+That's not a product. That's 960 products, and someone has to decide how they're going to live in a system that expects a list.
+
+The usual answer is that they don't, quite. A subset gets created as real SKUs — the combinations that sell often enough to justify the effort. Everything else lives in an options matrix in a spreadsheet, and a rep builds the quote by hand: look up the base, add the material premium, check the impeller is compatible with the motor rating, apply the fitting cost, total it up. Twenty minutes if nothing is unusual.
+
+This works. It also quietly sets a ceiling on how fast the business can quote, how consistently it prices, and how reliably what gets sold is something the factory can actually build.
+
+## Why SKU explosion resists catalogue management
+
+The instinct is to treat this as an organisational problem — better naming conventions, a cleaner hierarchy, more disciplined catalogue hygiene. It isn't, and understanding why saves a lot of wasted effort.
+
+The variant count is the product of the option counts, not the sum. Adding one more option group with four choices to that pump doesn't add four SKUs; it multiplies the existing 960 by four, producing 3,840. A product line that feels manageable at launch becomes unmaintainable after two or three feature additions, and nothing about how you organise the catalogue changes that arithmetic.
+
+Which leads to the second problem: most of those combinations are invalid. The 960 figure assumes every option works with every other option, and in engineered products it never does. A high motor rating may require a reinforced seal. A particular body material may be incompatible with certain fittings. A fitting size may constrain the impeller options.
+
+So the real list isn't 960 valid products. It's some unknowable subset, defined by engineering constraints that live in people's heads and in a few notes in the margin of a spreadsheet.
+
+## The actual cost of the spreadsheet approach
+
+Quoting is slow, and the slowness scales with complexity. Every configured quote is built by hand, and a more complex product takes proportionally longer. The products with the best margins are often the ones that take longest to quote.
+
+Pricing drifts. Option premiums, material surcharges and fitting costs change. The spreadsheet gets updated — usually. The three other copies of it that reps have saved locally do not.
+
+Invalid configurations reach the factory. This is the expensive one. A rep quotes a combination that can't actually be built, the customer accepts, and the problem surfaces in production planning or, worse, on the floor. Now you're going back to the customer to change something they already agreed to, or absorbing the cost of making it work.
+
+Knowledge concentrates in individuals. The person who knows which combinations are valid becomes a dependency. When they're unavailable, complex quotes wait. When they leave, the constraints leave with them.
+
+Lead times get guessed. Different configurations have genuinely different manufacturing lead times, but without that modelled anywhere, promised dates are estimates based on recollection.
+
+## What CPQ actually does differently
+
+CPQ — configure, price, quote — inverts the storage model. Instead of storing products and hoping the list covers what customers want, it stores rules that generate a valid product when someone configures one.
+
+Four things make up that model:
+
+**Option groups.** The dimensions of choice — body material, impeller type, motor rating. Each holds its available options.
+
+**Constraint rules.** The engineering reality, expressed as logic rather than tribal knowledge. Motor rating above X requires seal type B. Body material C excludes fittings 6 and 7. Impeller type 2 requires port size 40mm or greater. These rules do the work that currently depends on someone remembering.
+
+**Pricing rules.** How each selection affects price — a base price plus option premiums, material surcharges, quantity breaks that may differ by configuration, and any rule where one selection changes another's cost.
+
+**Validation.** The configurator won't let a rep build something invalid in the first place. The constraint isn't a note to check; it's enforced at the point of selection.
+
+The shift is from enumerating products to describing the rules that define them. Store 1,024 rows and you maintain 1,024 rows. Store five option groups and a dozen constraints and you maintain seventeen things — and adding a sixth option group adds one more, rather than multiplying everything.
+
+## Why this matters more for manufacturers than distributors
+
+A distributor's complexity is usually in pricing — tiers, volume breaks, contract rates applied to a known product. The product itself is fixed.
+
+A manufacturer's complexity is in the product definition. Configure-to-order and engineer-to-order businesses are selling a specification rather than an item, and the quote is simultaneously a commercial document and a manufacturing instruction. Getting the configuration wrong doesn't just misprice a deal; it commits the factory to something it may not be able to build at the cost assumed.
+
+That's why CPQ tends to matter more, and earlier, for manufacturers. The downside of a bad configuration is operational, not just commercial.
+
+## What to model first
+
+The common failure in CPQ projects is attempting to model the entire catalogue before anything goes live. These projects stall, because the modelling work is substantial and the payoff only arrives at the end.
+
+A more reliable sequence:
+
+1. **Start with one product family** — the one that's quoted most often, not the one that's most complex. The goal of the first implementation is to prove the model and build the team's confidence in it, which is easier on familiar territory.
+2. **Capture the constraints before the pricing.** Constraints are the part that lives in people's heads and takes longest to extract. Sit with whoever currently knows which combinations are valid and write the rules down. This step has value even if the CPQ project stops — you've documented engineering knowledge that was previously undocumented.
+3. **Model pricing as rules, not a matrix.** Base price plus option modifiers, with any interactions expressed explicitly. If a surcharge depends on a combination rather than a single option, that's a rule, and it should be written as one.
+4. **Validate against historical quotes.** Take twenty real quotes from the last quarter, reconstruct them in the configurator, and compare. Differences are either bugs in the model or inconsistencies in how those quotes were originally priced — and both are worth knowing about.
+5. **Add lead time to the model.** If configuration affects manufacturing time, that belongs in the rules too, so quoted dates come from the configuration rather than from an estimate.
+6. **Expand one family at a time.** Each addition is faster than the last, because the modelling patterns are established.
+
+## The thing people underestimate
+
+The hard part of CPQ isn't the software. It's the extraction — getting constraint knowledge out of experienced people's heads and into explicit rules.
+
+That work is genuinely difficult, because the people who hold it often don't experience it as knowledge. They just know that you don't put that impeller with that motor, in the way that an experienced person knows a lot of things without being able to immediately say why. Surfacing it takes sessions, prototypes and someone saying "no, that's not right" to a wrong configuration.
+
+Worth budgeting for honestly. And worth noticing that it's valuable work independent of the software — a documented constraint model is an asset your business currently doesn't have.
+
+## How Nova Core handles configuration
+
+Nova Core's [CPQ configurator](/cpq-configurator) stores products as option groups with constraint and pricing rules rather than as enumerated variants, so a rep configures within the valid space and the price resolves from the rules. Invalid combinations can't be selected, pricing updates propagate from a single definition rather than from several spreadsheet copies, and the accepted configuration carries through to the order without re-entry.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+*Working out how your product family would model as configuration rules? [Request a demo](/request-a-demo) and we'll map one with you.*
+
+## FAQ: CPQ for Manufacturers
+
+### What is SKU explosion?
+
+The combinatorial growth in product variants when a configurable product has multiple option groups. The variant count is the product of the option counts, not the sum — so a product with five option groups of four choices each has 1,024 combinations, and adding a sixth group of four takes it to 4,096.
+
+### Why can't SKU explosion be solved with better catalogue management?
+
+Because it's arithmetic rather than organisation. No naming convention or hierarchy changes the fact that variants multiply. It also assumes every combination is valid, which in engineered products is rarely true — many combinations are excluded by engineering constraints that a flat SKU list can't express.
+
+### What does CPQ actually store instead of SKUs?
+
+Rules: option groups defining the dimensions of choice, constraint rules expressing which combinations are valid, pricing rules determining how selections affect cost, and validation that prevents invalid configurations being built. A valid product is generated on demand rather than stored in advance.
+
+### Why does CPQ matter more for manufacturers than distributors?
+
+A distributor's complexity is usually in pricing applied to a fixed product. A manufacturer's is in the product definition itself — the quote is both a commercial document and a manufacturing instruction, so a wrong configuration commits the factory to something it may not be able to build at the assumed cost.
+
+### What should a manufacturer model first in a CPQ implementation?
+
+One product family — the most frequently quoted one, not the most complex. Capture constraints before pricing, since constraint knowledge is the hardest part to extract. Then validate the model against twenty real historical quotes before expanding.
+
+### What's the hardest part of a CPQ project?
+
+Extracting constraint knowledge from experienced staff and turning it into explicit rules. The people who hold it often don't experience it as knowledge, so surfacing it takes sessions and prototypes rather than a single interview. Budget for it, and note that a documented constraint model has value independent of the software.

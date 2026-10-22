@@ -25,6 +25,25 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon",
+    title: "CPQ for Manufacturers: Ending the SKU Explosion Spreadsheet Marathon",
+    description:
+      "SKU explosion is combinatorial, not a catalogue-hygiene problem. CPQ stores option groups, constraints and pricing rules so a valid configuration is generated on demand instead of maintained as thousands of rows.",
+    excerpt:
+      "A product with five option groups of four choices each has 1,024 combinations, and most of them are invalid. Tidying the catalogue does not fix that arithmetic. CPQ stores the rules instead of the rows, and this is what to model first.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-22",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon.png",
+    coverImageAlt:
+      "Configured B2B quote with price, quantity and product options instead of a spreadsheet SKU list",
+  },
+  {
     slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
     title: "When to Replace Your Legacy B2B Ecommerce Platform",
     description:
