@@ -39,9 +39,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-22",
     readingTime: "10 min read",
     coverImage:
-      "/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon.png",
+      "/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-hero.png",
     coverImageAlt:
-      "Configured B2B quote with price, quantity and product options instead of a spreadsheet SKU list",
+      "Pump options for body, motor, seal, and fitting combining into one valid configured product instead of a spreadsheet of variants",
   },
   {
     slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
@@ -57,9 +57,10 @@ export const blogPosts: BlogPost[] = [
     authorImage: "/blog/authors/jordian.jpg",
     publishedAt: "2026-10-19",
     readingTime: "11 min read",
-    coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImage:
+      "/blog/covers/when-to-replace-your-legacy-b2b-ecommerce-platform-hero.png",
     coverImageAlt:
-      "Signals that justify replacing a legacy B2B ecommerce platform versus triggers that usually don't",
+      "Legacy workarounds such as spreadsheets and email orders moving to a platform with customer-specific pricing, live inventory, and automated quotations",
   },
   {
     slug: "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals",

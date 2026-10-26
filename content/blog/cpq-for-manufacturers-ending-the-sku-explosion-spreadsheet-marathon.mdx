@@ -10,9 +10,17 @@ This works. It also quietly sets a ceiling on how fast the business can quote, h
 
 ## Why SKU explosion resists catalogue management
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-thousands-of-combinations.png" alt="Five pump option groups of four choices each multiplying into 1,024 combinations" />
+</figure>
+
 The instinct is to treat this as an organisational problem — better naming conventions, a cleaner hierarchy, more disciplined catalogue hygiene. It isn't, and understanding why saves a lot of wasted effort.
 
 The variant count is the product of the option counts, not the sum. Adding one more option group with four choices to that pump doesn't add four SKUs; it multiplies the existing 960 by four, producing 3,840. A product line that feels manageable at launch becomes unmaintainable after two or three feature additions, and nothing about how you organise the catalogue changes that arithmetic.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-more-valid-products.png" alt="One pump configuration marked compatible and another marked incompatible because the seal does not work with that motor" />
+</figure>
 
 Which leads to the second problem: most of those combinations are invalid. The 960 figure assumes every option works with every other option, and in engineered products it never does. A high motor rating may require a reinforced seal. A particular body material may be incompatible with certain fittings. A fitting size may constrain the impeller options.
 
@@ -32,6 +40,10 @@ Lead times get guessed. Different configurations have genuinely different manufa
 
 ## What CPQ actually does differently
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-with-cpq.png" alt="Thousands of spreadsheet SKUs replaced by option groups, compatibility rules, and pricing rules that produce one valid product" />
+</figure>
+
 CPQ — configure, price, quote — inverts the storage model. Instead of storing products and hoping the list covers what customers want, it stores rules that generate a valid product when someone configures one.
 
 Four things make up that model:
@@ -44,7 +56,15 @@ Four things make up that model:
 
 **Validation.** The configurator won't let a rep build something invalid in the first place. The constraint isn't a note to check; it's enforced at the point of selection.
 
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-configure-validate.png" alt="Configure product options, run a compatibility check, then price and generate the quote" />
+</figure>
+
 The shift is from enumerating products to describing the rules that define them. Store 1,024 rows and you maintain 1,024 rows. Store five option groups and a dozen constraints and you maintain seventeen things — and adding a sixth option group adds one more, rather than multiplying everything.
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-maintain-rules.png" alt="Maintain option groups, compatibility rules, and pricing rules instead of thousands of SKU rows" />
+</figure>
 
 ## Why this matters more for manufacturers than distributors
 
@@ -55,6 +75,10 @@ A manufacturer's complexity is in the product definition. Configure-to-order and
 That's why CPQ tends to matter more, and earlier, for manufacturers. The downside of a bad configuration is operational, not just commercial.
 
 ## What to model first
+
+<figure className="blog-inline-figure">
+  <img src="/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-then-expand.png" alt="Model one product family, document constraints and pricing, validate against real quotes, then expand to more families" />
+</figure>
 
 The common failure in CPQ projects is attempting to model the entire catalogue before anything goes live. These projects stall, because the modelling work is substantial and the payoff only arrives at the end.
 
