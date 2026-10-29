@@ -24,24 +24,44 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
-  // {
-  //   slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
-  //   title: "When to Replace Your Legacy B2B Ecommerce Platform",
-  //   description:
-  //     "Replatforming is expensive and often done for the wrong reasons. Six signals that justify replacing a legacy B2B platform — and three triggers that look urgent but usually aren't.",
-  //   excerpt:
-  //     "The test isn't whether your platform is old or frustrating. It's whether the platform itself is now blocking revenue, or costing more to work around than to replace. Six signals genuinely justify it. Three common triggers look urgent but usually aren't.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Jordian F.",
-  //   authorInitials: "JF",
-  //   authorImage: "/blog/authors/jordian.jpg",
-  //   publishedAt: "2026-10-19",
-  //   readingTime: "11 min read",
-  //   coverImage: "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-  //   coverImageAlt:
-  //     "Signals that justify replacing a legacy B2B ecommerce platform versus triggers that usually don't",
-  // },
+  {
+    slug: "cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon",
+    title: "CPQ for Manufacturers: Ending the SKU Explosion Spreadsheet Marathon",
+    description:
+      "SKU explosion is combinatorial, not a catalogue-hygiene problem. CPQ stores option groups, constraints and pricing rules so a valid configuration is generated on demand instead of maintained as thousands of rows.",
+    excerpt:
+      "A product with five option groups of four choices each has 1,024 combinations, and most of them are invalid. Tidying the catalogue does not fix that arithmetic. CPQ stores the rules instead of the rows, and this is what to model first.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-22",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon-hero.png",
+    coverImageAlt:
+      "Pump options for body, motor, seal, and fitting combining into one valid configured product instead of a spreadsheet of variants",
+  },
+  {
+    slug: "when-to-replace-your-legacy-b2b-ecommerce-platform",
+    title: "When to Replace Your Legacy B2B Ecommerce Platform",
+    description:
+      "Replatforming is expensive and often done for the wrong reasons. Six signals that justify replacing a legacy B2B platform — and three triggers that look urgent but usually aren't.",
+    excerpt:
+      "The test isn't whether your platform is old or frustrating. It's whether the platform itself is now blocking revenue, or costing more to work around than to replace. Six signals genuinely justify it. Three common triggers look urgent but usually aren't.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-19",
+    readingTime: "11 min read",
+    coverImage:
+      "/blog/covers/when-to-replace-your-legacy-b2b-ecommerce-platform-hero.png",
+    coverImageAlt:
+      "Legacy workarounds such as spreadsheets and email orders moving to a platform with customer-specific pricing, live inventory, and automated quotations",
+  },
   {
     slug: "spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals",
     title: "Spreadsheet-to-Quote: Why Manual B2B Quoting Is Costing You Deals",
