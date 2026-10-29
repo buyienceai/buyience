@@ -1,0 +1,115 @@
+**TL;DR:** A win-probability score estimates how likely a quote is to convert. The useful version tells a rep which way a decision moves the odds and why. The misleading version is a confident two-digit percentage produced from too little history to support it. The distinction matters because a number carries authority a hunch doesn't, and an uncalibrated number carries exactly the same authority as a calibrated one.
+
+Your quoting system shows 73% next to a quote.
+
+The honest question is what that number is entitled to claim. A probability is a statement about frequency: if you quoted a hundred deals that looked like this one, roughly seventy-three would close. That's a strong claim, and it's only true if the system has seen enough comparable deals to know.
+
+Most B2B quoting systems haven't — not because the software is bad, but because B2B deal volume per segment is genuinely thin. A distributor doing a few hundred quotes a year, spread across product categories, customer tiers and order sizes, may have fewer than twenty genuinely comparable historical deals for any given quote. You cannot derive a reliable two-digit percentage from twenty observations, and presenting one anyway is false precision — a number that looks like measurement but is closer to a weighted guess wearing a lab coat.
+
+That's not an argument against scoring. It's an argument for being clear about what the score is doing.
+
+## What actually drives a win-probability score
+
+Strip away the presentation and most B2B win-probability scores are reading a handful of signals that a quoting system genuinely has access to:
+
+**Discount depth relative to this customer's norm.** Not the absolute discount, but how this one compares to what this customer usually receives. A 12% discount means something different to an account that normally gets 5% than to one that normally gets 15%.
+
+**Price position against the margin floor.** How much room is left. A quote sitting near the floor has little negotiating space, which affects both the odds of closing and what closing costs you.
+
+**Order size versus their typical order.** An unusually large quote behaves differently from a routine reorder — longer decision cycles, more approvers, higher likelihood of competitive comparison.
+
+**Relationship recency and cadence.** A customer who orders monthly and is on schedule behaves differently from one who hasn't ordered in eight months.
+
+**Revision count.** How many rounds this quote has already been through. Movement through revisions carries information in both directions — engagement, but also distance from agreement.
+
+**Response latency.** How quickly the buyer came back last time, and how quickly they came back on this one.
+
+**Category patterns.** Whether this product category tends to close quickly or tends to be shopped around.
+
+None of that is exotic. The signals are mostly retrieval and comparison against history — which is worth saying plainly, because the gap between "we compare this quote against your past deals" and "our AI predicts your win rate" is mostly a gap in description, not in mechanism.
+
+## Why a single percentage is the wrong output
+
+The problem with 73% isn't that it's wrong. It's that it's unfalsifiable in practice and it invites the wrong behaviour.
+
+**It can't be checked.** Calibration means that across all quotes scored at 70%, roughly 70% actually closed. Verifying that requires a large sample of scored quotes with known outcomes, segmented finely enough to be meaningful. Most B2B businesses will never have that volume in a given segment, which means the score can't be validated even in principle.
+
+**It implies precision the inputs don't support.** The difference between 71% and 76% is noise when the underlying sample is twenty deals. Showing two significant figures invites a rep to treat that difference as real.
+
+**It gets anchored on.** A rep who sees 73% and a rep who sees "reasonably likely" make different decisions, even with identical underlying information. The number is more persuasive than the evidence behind it, which is precisely the failure mode.
+
+**It discourages the useful question.** "73%" is an answer. "Why?" is the useful question, and a bare score doesn't prompt it.
+
+## A more honest output: tiers, direction and reasoning
+
+What a scoring system can support depends on how much history it has for the situation in front of it. Three cases, which deserve three different presentations:
+
+**Rich history** — enough comparable deals to say something meaningful. Here a range is defensible where a point estimate isn't: likely to close, in line with similar accepted quotes. A range is honest about the uncertainty in a way a single figure isn't.
+
+**Thin history** — some signal, not enough for a number. Direction and comparison still work: this discount is deeper than this customer usually needs; similar quotes at this depth have gone both ways. Useful, and not pretending.
+
+**Cold start** — new customer, new category, no comparable history. The right output is the inputs themselves, with no score: first quote for this account; discount is 9% against a 22% floor. Showing nothing is better than showing a number the system can't stand behind.
+
+Running alongside all three: the reasoning has to be visible. A score a rep can interrogate gets used well. A score they can't gets either ignored or over-trusted, and both are worse than no score.
+
+## How a rep should actually use it
+
+**As a prompt, not an instruction.** The score's job is to make a rep pause on a quote they'd otherwise send without thinking, and to flag when a concession isn't buying what they assume.
+
+**Comparatively, not absolutely.** The useful operation is holding two versions of the same quote side by side: what does another 3% do to the odds, and to the margin? Relative movement between two configurations is far more trustworthy than either number alone.
+
+**Alongside the margin, never instead of it.** A higher win probability bought with a deeper discount is not automatically a better deal. Probability and margin move in opposite directions, and the decision is about the trade, not either number on its own. This is why a [margin floor](/pricing-and-margin-control) matters more than a score — the floor is a hard constraint, the score is an estimate.
+
+**With the rep's own judgement on top.** A rep often knows things the system doesn't: the buyer mentioned a budget cycle, a competitor just had a supply problem, the procurement contact is new. When a rep overrides the score, the reason is worth capturing — not to second-guess them, but because those reasons are the raw material for ever making the scoring better.
+
+## What to ask a vendor about their win-probability feature
+
+If you're evaluating quoting software and a win-probability score is part of the pitch, these questions separate the substantive answers from the confident ones:
+
+**What inputs drive it?** A vendor who can name them has a system. One who says "the AI learns" has a slide.
+
+**What happens on a new customer with no history?** The answer reveals whether cold start was designed for or ignored.
+
+**Can a rep see why a quote scored the way it did?** If not, the number is decoration.
+
+**How is it calibrated, and against what sample?** A straight answer here is rare and worth a lot. "We haven't validated it at your volume yet" is a better answer than a figure with no sample behind it.
+
+**What's the smallest history it needs before showing a score at all?** A system with no such threshold will show a confident number on its first day, which tells you how seriously the scoring was taken.
+
+That fourth question is the one to press. Any vendor quoting a precise accuracy figure should be able to say over what sample, which segments and what timeframe. If those don't come easily, the figure is marketing.
+
+## How Buyience approaches it
+
+[Nova Core](/nova-core) shows win probability alongside a suggested price, negotiation options and the resulting margin when a buyer counter-offer arrives — so the trade between odds and margin is visible in one place rather than inferred. The [AI Quote Engine](/ai-quote-engine) is built around that same design: the score sits next to price and margin, not instead of them.
+
+The design position behind it is the one argued above: the score is built on retrieval and rules over your own quote history, the reasoning is inspectable rather than opaque, and the margin floor remains a hard constraint that the score never overrides. Where history is thin, the honest output is direction and comparison rather than a confident percentage.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+*Want to see how the score, the suggested price and the resulting margin sit together on a live counter-offer? [Request a demo](/request-a-demo).*
+
+## FAQ: Win-Probability Scoring
+
+### What is win-probability scoring in B2B quoting?
+
+An estimate of how likely a given quote is to convert, based on how it compares to past quotes — discount depth relative to that customer's norm, position against the margin floor, order size versus their typical, relationship recency, revision count and category patterns.
+
+### Why are win-probability percentages often misleading?
+
+Because a percentage is a claim about frequency that requires a large sample of comparable deals to support. B2B volume per segment is usually thin, so a two-digit figure often implies precision the underlying data cannot provide, and the difference between 71% and 76% is noise rather than signal.
+
+### What does calibration mean for a win-probability model?
+
+A model is calibrated if, across all quotes it scored at 70%, roughly 70% actually closed. Verifying that needs a large sample of scored quotes with known outcomes, segmented finely enough to be meaningful — which many B2B businesses will never reach in a given segment.
+
+### What should a scoring system show when there's no history for a customer?
+
+The inputs rather than a score — first quote for this account, discount depth, position against the floor. Showing a confident number the system cannot stand behind is worse than showing none.
+
+### How should a sales rep use a win-probability score?
+
+As a prompt rather than an instruction, comparatively rather than absolutely, and always alongside margin. Comparing two versions of the same quote is more trustworthy than either score in isolation, since relative movement is more reliable than the absolute figure.
+
+### What should I ask a vendor about their win-probability feature?
+
+What inputs drive it, what happens with a new customer, whether a rep can see the reasoning, how it's calibrated and against what sample, and the minimum history before a score appears at all. A precise accuracy claim with no stated sample, segment or timeframe is marketing.

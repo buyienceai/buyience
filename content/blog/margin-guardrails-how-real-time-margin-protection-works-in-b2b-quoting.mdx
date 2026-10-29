@@ -1,0 +1,132 @@
+**TL;DR:** A margin floor is a computed threshold enforced at the moment a price is set, not a policy anyone is asked to remember. Whether it actually protects anything comes down to three things most implementations get wrong: which cost basis it's calculated from, whether it's enforced per line or on the blended quote total, and whether breaching it is a soft warning or a routed approval. Get those wrong and you have a number that produces confidence without protection.
+
+Most distributors have a margin policy. Far fewer have a margin floor.
+
+The difference is enforcement timing. A policy is a target people are asked to hold to, checked after the fact in a monthly review. A floor is a threshold the system computes and applies at the moment a rep sets a price — before the quote is sent, while the decision is still reversible.
+
+That timing distinction is the whole thing. Margin reviewed monthly tells you what you lost. Margin enforced at quote time is the only point in the process where the outcome can still change.
+
+## What a margin floor actually is
+
+A floor is a minimum acceptable margin, expressed per line item, computed from a cost basis and compared against the price a rep is proposing. Three components:
+
+**A cost basis** — what this item actually costs you, which is less obvious than it sounds and is covered below.
+
+**A threshold** — the minimum margin percentage or absolute contribution you'll accept, which may vary by product category, customer tier, or order type.
+
+**An enforcement behaviour** — what happens when a proposed price falls below it.
+
+Each of those is a decision, and the quality of the protection depends far more on those decisions than on having the feature at all.
+
+## The cost basis question nobody asks early enough
+
+This is where margin floors most often fail quietly, so it's worth being specific.
+
+A floor computed against the wrong cost produces a number that looks like protection and isn't. Four candidates, each defensible in different circumstances:
+
+**Last purchase cost.** What you most recently paid. Simple and current, but volatile — a single unusual purchase skews it, and it says nothing about what replacing the stock will cost.
+
+**Weighted average cost.** Blends your current stock holdings. Stable and widely used in accounting, but it lags reality: in a rising-cost category, your average is below replacement, so a floor built on it is systematically too low.
+
+**Replacement cost.** What you'd pay to buy it again today. The most economically correct basis for a pricing decision, and the hardest to maintain, since it requires current supplier pricing rather than recorded history.
+
+**Standard cost.** A set figure, periodically revised. Predictable, but only as good as the revision discipline — a standard cost set last January in a category where steel has since moved is actively misleading.
+
+Two things sit on top of whichever you choose:
+
+**Landed versus unit cost.** If freight, duty, and handling aren't in the cost basis, your floor is too low by exactly that amount. For heavy or imported goods, that gap is not small.
+
+**Staleness.** A floor is only as current as the cost feeding it. The most dangerous version of this feature is one computed from cost data that stopped updating months ago, because it produces a green light on quotes that are losing money — and nobody checks a green light.
+
+Decide the cost basis deliberately, write down what it is, and know how often it refreshes.
+
+## Line level, not quote level
+
+A floor applied to the blended margin of an entire quote is close to no floor at all.
+
+On a multi-line quote, a healthy-margin line averages out a loss-making one. The quote total clears the threshold, the system shows green, and you've sold something below cost inside something profitable. Over hundreds of multi-line quotes this is one of the larger silent leaks in distribution, and the blended check is exactly what hides it.
+
+Line-level enforcement checks every line independently. The quote total may still be reported, but the constraint binds per item — so instead of "this quote is thin," a rep sees which line is the problem and adjusts that one rather than discounting everything further to compensate.
+
+## What should happen at the moment of breach
+
+Three options, and the choice matters more than it appears.
+
+**A soft warning** — a flag the rep can proceed past. Low friction, and almost entirely ineffective after the first few weeks. Warnings that can be dismissed get dismissed, and a rep under pressure to close will click through anything that isn't a stop.
+
+**A hard block** — the quote cannot be sent below the floor. Genuinely protective, and too rigid for real selling, since there are legitimate reasons to go below: a strategic account, a loss leader into a larger order, clearing slow stock. A system with no path through those cases gets worked around, usually by someone editing the quote outside the system — which costs you the audit trail as well as the margin.
+
+**A routed approval** — below the floor, the quote requires sign-off before it can go out. This is the version that works, because it preserves the exception while making it visible and deliberate. The rep isn't blocked; they're asked to justify it to someone with the authority to say yes.
+
+Approval has to be fast, though. If sign-off takes a day, reps avoid triggering it — quoting just above the floor regardless of whether that's the right price, or taking the conversation offline. An approval path actioned in minutes rather than hours is what keeps the mechanism from being routed around.
+
+## The audit trail is half the value
+
+A floor stops individual bad quotes. The record of what happened to it is what tells you whether your pricing is drifting.
+
+A price-change history — every price set, by whom, against what floor, with any override and its reason — supports three things that nothing else does:
+
+**Dispute resolution.** When a customer asks why their price is different from last quarter, the answer exists rather than depending on recollection.
+
+**Drift detection.** If the same category is overridden repeatedly, the floor is probably wrong, or the cost basis is stale, or the market has moved. A pattern of exceptions is information about the rule, not just about the reps.
+
+**Coaching rather than policing.** The useful management conversation isn't "you discounted too much." It's "these five deals all went below floor on the same product category — what are you seeing that the floor isn't?" Sometimes the rep is right and the floor needs changing.
+
+That last point matters, because margin tooling is easily read as surveillance. The framing that survives contact with a sales team is that the floor protects the rep too — it lets them say "I can't go below this" with institutional backing rather than personal judgement.
+
+## Decisions you have to make, whatever tool you use
+
+**One floor or many?** A single company-wide percentage is simple and wrong for at least one category. Floors by product category, and sometimes by customer tier, reflect reality better at the cost of more maintenance.
+
+**Who can override, and by how much?** Unlimited override authority for everyone is the same as no floor. A tiered structure — rep can approve to X, manager to Y, owner beyond — is the common answer.
+
+**Percentage or absolute contribution?** A 20% floor on a low-value item is trivially easy to clear while contributing almost nothing. For small-value, high-handling items, a minimum absolute contribution per line is often more meaningful.
+
+**Does the floor move with volume?** Larger orders often justify thinner margins legitimately. If so, express that in the floor rules rather than handling it as a constant stream of overrides.
+
+**How often does it get reviewed?** Costs move. A floor set once and never revisited becomes either an obstruction or a false reassurance, and which one it becomes is just a function of which way costs went.
+
+## How to set your first floor
+
+If you're starting from no floor at all, don't model the whole catalogue.
+
+1. **Pick your highest-volume category.** Not the most complex — the one where getting it right changes the most money.
+2. **Establish the true landed cost** for that category, including freight and handling, and decide which cost basis you're using.
+3. **Set the floor from historical outcomes, not aspiration.** Look at what margins you've actually achieved on that category over the last year. Setting a floor above what you've ever achieved guarantees an override on every quote, which trains everyone to treat the floor as noise.
+4. **Run it in observe mode first.** Log which quotes would have breached without blocking anything. A few weeks of that tells you whether the floor is calibrated before it starts creating friction. Then turn on approval routing, and expand once the first category is behaving.
+
+## How Nova Core implements this
+
+[Margin floor](/pricing-and-margin-control) enforcement, approval routing and price-change history are live in [Nova Core](/nova-core). Floors are enforced at line level, a quote below floor routes for approval rather than being silently sent or hard-blocked, and the margin-floor audit log is included on every plan rather than reserved for higher tiers — the record is only useful if it's complete.
+
+For negotiated deals, a rep can bring an owner, manager or senior colleague into the [Digital Sales Room](/digital-sales-room) to approve a discount and continue the negotiation in the same place, so the approval doesn't pull the deal out of the conversation it's happening in.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+*Want to see how line-level floors and approval routing behave on a live quote? [Request a demo](/request-a-demo).*
+
+## FAQ: Margin Guardrails in B2B Quoting
+
+### What is a margin floor?
+
+A minimum acceptable margin computed per line item from a cost basis and enforced when a rep sets a price — before the quote is sent, rather than reviewed after the fact. It differs from a margin policy in enforcement timing, which is the only point where the outcome can still change.
+
+### Which cost basis should a margin floor use?
+
+Last purchase cost, weighted average, replacement cost or standard cost each suit different situations. Replacement cost is the most economically correct for pricing decisions but hardest to maintain. Whichever you choose, include landed costs like freight and handling, and know how often the figure refreshes — a floor on stale cost data gives a green light to loss-making quotes.
+
+### Why does line-level enforcement matter?
+
+Because a floor applied to a whole quote's blended margin lets a healthy line average out a loss-making one. The total clears, the system shows green, and an item has been sold below cost inside a profitable quote. Enforcing per line surfaces exactly which item is the problem.
+
+### Should breaching the floor block the quote?
+
+Generally no. Hard blocks get worked around, usually outside the system, costing you the audit trail as well as the margin. Soft warnings get dismissed within weeks. Routing below-floor quotes for fast approval preserves legitimate exceptions while making them deliberate and visible.
+
+### What should a margin audit log record?
+
+Every price set, by whom, against what floor, with any override and the reason given. That record supports customer dispute resolution, detection of pricing drift, and coaching conversations about whether a repeatedly overridden floor is actually set correctly.
+
+### How do I set a margin floor for the first time?
+
+Start with your highest-volume category, establish true landed cost, and set the floor from margins you've historically achieved rather than aspirational ones. Run it in observe mode to log breaches without blocking, confirm it's calibrated, then enable approval routing and expand category by category.
