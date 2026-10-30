@@ -134,6 +134,17 @@ export default function Footer() {
             <Link prefetch={false} href="/refund-policy" className="transition-colors hover:text-[#6E2CF4]">
               Refund Policy
             </Link>
+            <span className="text-[#c5c9d4]" aria-hidden="true">
+              |
+            </span>
+            <a
+              href="https://status.buyience.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[#6E2CF4]"
+            >
+              Status
+            </a>
           </div>
           <div className="md:ml-auto lg:ml-0">Company No: 14871419. Registered in England and Wales.</div>
         </div>
