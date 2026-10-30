@@ -24,44 +24,44 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
-  // {
-  //   slug: "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting",
-  //   title: "Margin Guardrails: How Real-Time Margin Protection Works in B2B Quoting",
-  //   description:
-  //     "A margin floor is a computed threshold enforced when a price is set — not a policy to remember later. Cost basis, line-level enforcement, and routed approval decide whether it actually protects margin.",
-  //   excerpt:
-  //     "Most distributors have a margin policy. Far fewer have a margin floor. Whether the floor protects anything comes down to three decisions: cost basis, line-level vs blended enforcement, and soft warning vs routed approval.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Girish.K",
-  //   authorInitials: "GK",
-  //   authorImage: "/blog/authors/girish1.png",
-  //   publishedAt: "2026-10-29",
-  //   readingTime: "11 min read",
-  //   coverImage:
-  //     "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-  //   coverImageAlt:
-  //     "Margin floor enforced at quote time with cost basis, line-level checks, and approval routing",
-  // },
-  // {
-  //   slug: "ai-quote-engine-explained-how-win-probability-scoring-actually-works",
-  //   title: "AI Quote Engine Explained: How Win-Probability Scoring Actually Works",
-  //   description:
-  //     "A win-probability score estimates how likely a quote is to convert. The useful version shows direction and why; the misleading version is a confident percentage from too little history. Here's what the number is actually entitled to claim.",
-  //   excerpt:
-  //     "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Jordian F.",
-  //   authorInitials: "JF",
-  //   authorImage: "/blog/authors/jordian.jpg",
-  //   publishedAt: "2026-10-26",
-  //   readingTime: "10 min read",
-  //   coverImage:
-  //     "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-  //   coverImageAlt:
-  //     "AI quote engine showing win-probability scoring with suggested price and margin on a B2B quote",
-  // },
+  {
+    slug: "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting",
+    title: "Margin Guardrails: How Real-Time Margin Protection Works in B2B Quoting",
+    description:
+      "A margin floor is a computed threshold enforced when a price is set — not a policy to remember later. Cost basis, line-level enforcement, and routed approval decide whether it actually protects margin.",
+    excerpt:
+      "Most distributors have a margin policy. Far fewer have a margin floor. Whether the floor protects anything comes down to three decisions: cost basis, line-level vs blended enforcement, and soft warning vs routed approval.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-10-29",
+    readingTime: "11 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "Margin floor enforced at quote time with cost basis, line-level checks, and approval routing",
+  },
+  {
+    slug: "ai-quote-engine-explained-how-win-probability-scoring-actually-works",
+    title: "AI Quote Engine Explained: How Win-Probability Scoring Actually Works",
+    description:
+      "A win-probability score estimates how likely a quote is to convert. The useful version shows direction and why; the misleading version is a confident percentage from too little history. Here's what the number is actually entitled to claim.",
+    excerpt:
+      "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-10-26",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "AI quote engine showing win-probability scoring with suggested price and margin on a B2B quote",
+  },
   {
     slug: "cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon",
     title: "CPQ for Manufacturers: Ending the SKU Explosion Spreadsheet Marathon",
