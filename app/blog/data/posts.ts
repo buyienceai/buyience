@@ -24,6 +24,47 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
+  // Unpublished — uncomment and set a real publishedAt to schedule.
+  // {
+  //   slug: "win-probability-scoring-in-b2b-quoting",
+  //   title: "Win-Probability Scoring in B2B Quoting: What the Number Actually Means",
+  //   description:
+  //     "Win-probability scores look precise and often aren't. What drives the number, why point estimates mislead on thin data, and how a rep should use one.",
+  //   excerpt:
+  //     "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2099-12-31",
+  //   readingTime: "10 min read",
+  //   coverImage:
+  //     "/blog/covers/win-probability-scoring-in-b2b-quoting-hero.png",
+  //   coverImageAlt:
+  //     "Win-probability score shown alongside suggested price and resulting margin on a B2B quote",
+  // },
+  // Unpublished — uncomment and set a real publishedAt to schedule.
+  // Cover image not yet created: add public/blog/covers/how-to-run-a-b2b-price-negotiation-hero.png first.
+  // {
+  //   slug: "how-to-run-a-b2b-price-negotiation",
+  //   title: "How to Run a B2B Price Negotiation: A Distributor's Playbook",
+  //   description:
+  //     "Your buyer negotiates for a living; your rep negotiates occasionally. A practical playbook — preparation, what to trade instead of price, concession discipline.",
+  //   excerpt:
+  //     "A procurement manager negotiates for a living; your rep negotiates between other duties. That asymmetry is where most distribution margin goes — and preparation, trading non-price variables and concession discipline are the counters.",
+  //   category: "b2b",
+  //   categoryLabel: "B2B",
+  //   authorName: "Jordian F.",
+  //   authorInitials: "JF",
+  //   authorImage: "/blog/authors/jordian.jpg",
+  //   publishedAt: "2099-12-31",
+  //   readingTime: "10 min read",
+  //   coverImage:
+  //     "/blog/covers/how-to-run-a-b2b-price-negotiation-hero.png",
+  //   coverImageAlt:
+  //     "B2B price negotiation between a distributor rep and a procurement buyer",
+  // },
   {
     slug: "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting",
     title: "Margin Guardrails: How Real-Time Margin Protection Works in B2B Quoting",

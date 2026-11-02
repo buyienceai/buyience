@@ -86,6 +86,16 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
+  "win-probability-scoring-in-b2b-quoting": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
+  "how-to-run-a-b2b-price-negotiation": {
+    width: 1672,
+    height: 941,
+    contain: true,
+  },
   "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting": {
     width: 1672,
     height: 941,
