@@ -86,11 +86,6 @@ const BLOG_COVER_BY_SLUG: Record<string, { width: number; height: number; contai
     height: 941,
     contain: true,
   },
-  "ai-quote-engine-explained-how-win-probability-scoring-actually-works": {
-    width: 1672,
-    height: 941,
-    contain: true,
-  },
   "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting": {
     width: 1672,
     height: 941,

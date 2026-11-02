@@ -44,25 +44,6 @@ export const blogPosts: BlogPost[] = [
       "Margin floor enforced at quote time with cost basis, line-level checks, and approval routing",
   },
   {
-    slug: "ai-quote-engine-explained-how-win-probability-scoring-actually-works",
-    title: "AI Quote Engine Explained: How Win-Probability Scoring Actually Works",
-    description:
-      "A win-probability score estimates how likely a quote is to convert. The useful version shows direction and why; the misleading version is a confident percentage from too little history. Here's what the number is actually entitled to claim.",
-    excerpt:
-      "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
-    category: "b2b",
-    categoryLabel: "B2B",
-    authorName: "Jordian F.",
-    authorInitials: "JF",
-    authorImage: "/blog/authors/jordian.jpg",
-    publishedAt: "2026-10-26",
-    readingTime: "10 min read",
-    coverImage:
-      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
-    coverImageAlt:
-      "AI quote engine showing win-probability scoring with suggested price and margin on a B2B quote",
-  },
-  {
     slug: "cpq-for-manufacturers-ending-the-sku-explosion-spreadsheet-marathon",
     title: "CPQ for Manufacturers: Ending the SKU Explosion Spreadsheet Marathon",
     description:
