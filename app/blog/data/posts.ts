@@ -25,6 +25,25 @@ export type BlogPost = {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "what-b2b-buyers-actually-need-from-a-storefront",
+    title: "What B2B Buyers Actually Need From a Storefront",
+    description:
+      "A B2B storefront wins on accuracy, not polish: account price, reliable stock, payment terms, fast reorder, and a clean handoff when judgment is needed.",
+    excerpt:
+      "Buyers judge a storefront on whether they can trust it enough to act without calling you — their price, real stock, their terms, reorder speed, and a path to a person when the order needs judgment.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-11-16",
+    readingTime: "11 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "B2B buyer portal showing account-specific price, live stock, payment terms, and reorder from order history",
+  },
+  {
     slug: "woocommerce-b2b-quoting-why-request-a-quote-plugins-arent-quoting",
     title: "WooCommerce B2B Quoting: Why Request-a-Quote Plugins Aren't Quoting",
     description:
