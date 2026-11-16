@@ -1,0 +1,108 @@
+ WooCommerce has no native request-a-quote flow, so merchants add a plugin. Those plugins solve the capture problem well — a buyer submits a quote request, it lands in an admin dashboard. What almost none of them do is price it. The merchant still sets each price by hand. That's the manual quoting problem with a tidier inbox, and it gets more expensive as B2B volume grows, not less.
+
+WooCommerce runs an enormous number of stores, and a growing share of them sell to businesses as well as consumers. The platform handles that about as well as you would expect from software designed for one product, one price, one buyer.
+
+The gaps are well documented. WooCommerce has no built-in way to show [different prices to different logged-in customers](/blog/how-b2b-teams-manage-customer-specific-pricing-at-scale), so trade pricing needs a plugin or custom code. There is no request-for-quote flow at all — without a plugin, a buyer wanting a quote gets sent to a contact form. Default registration asks for a name and email with no approval step, so nothing vets a trade customer before they can order. Minimum order quantities aren't included. Invoice and purchase-order payment methods come from plugins too.
+
+None of that is a criticism. WooCommerce was built for retail, it's open, and the plugin ecosystem exists precisely so people can extend it. The question is what you end up with once you have.
+
+## The stack that results
+
+A WooCommerce store selling B2B typically accumulates something like this:
+
+- a wholesale or role-based pricing plugin, for trade prices
+- a request-a-quote plugin, for buyers who need a price rather than a cart
+- a registration-approval plugin, so trade accounts get vetted
+- a minimum-order-quantity plugin
+- a payment-terms or invoice plugin, for Net 30
+- sometimes a wholesale order form, for fast bulk entry
+
+Each of these works. Collectively they are five or six plugins from four or five vendors, each with its own settings screen, its own update cycle and its own idea of what a customer is.
+
+The practical consequence is that your pricing logic is now distributed across several plugins that do not know about each other. The wholesale plugin knows a customer's tier. The quote plugin does not necessarily apply it. The MOQ plugin enforces a minimum that may or may not interact correctly with a tiered price break. Nobody owns the whole picture.
+
+## The specific gap: capture is not quoting
+
+This is the part worth being precise about, because it's where the real cost sits.
+
+Request-a-quote plugins do what their name says. A buyer either adds products to a quote list and submits it, or fills in a form describing what they need. The request appears in an admin dashboard. The merchant reviews it, sets a price manually, and emails the quote back, often with a link to accept and check out. Better plugins add expiry dates and follow-up emails, and can convert an accepted quote into a WooCommerce order.
+
+Read that sequence again and notice what is automated and what isn't. The capture is automated — the buyer's request arrives structured rather than as an email. The response is not. A person still works out the price.
+
+So the plugin has replaced an inbox with a dashboard. That's a genuine improvement in organisation, and it is not quoting automation. The rep still has to:
+
+- look up what this customer's tier should be
+- check whether a volume break applies at this quantity
+- confirm the current cost, since the price sheet may have moved
+- work out whether the resulting margin is acceptable
+- type the number in
+
+Every one of those steps is manual judgement over data the system already holds somewhere — just not anywhere the quote screen can reach. That's [manual quoting](/blog/spreadsheet-to-quote-why-manual-b2b-quoting-is-costing-you-deals) with a tidier inbox.
+
+## Why this gets worse rather than better
+
+Most merchants adopt this stack when B2B is a small side of the business, and at that scale it's entirely reasonable. Ten quote requests a month is an afternoon's work.
+
+Three things change as B2B grows.
+
+**Quote volume scales linearly with staff time.** Because pricing is manual, doubling quote requests roughly doubles the hours spent pricing them. There is no efficiency to find, because the work is the same work each time.
+
+**Pricing consistency degrades.** Two people pricing the same customer on the same item in the same month will reach different numbers, because what's being applied is recollection rather than a rule. Customers notice this before you do.
+
+**Margin visibility disappears.** Nothing in the quote screen knows your [floor](/blog/margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting). A rep discounts to close, and the question of whether that price was above cost gets answered afterwards, if at all.
+
+That third point is the one with money attached, and it's invisible by design: a manually priced quote looks exactly as confident as a correctly priced one.
+
+## When the plugin stack is genuinely fine
+
+Worth saying plainly, because the answer isn't always "buy something else."
+
+Stay as you are if your B2B pricing is simple — one trade price per product, or a flat percentage off retail for all trade customers. If your quote requests are occasional rather than constant. If your catalogue is small enough that the person pricing quotes genuinely knows the right number without looking it up. If B2B is a small share of revenue and you'd rather spend effort elsewhere.
+
+That describes a lot of WooCommerce stores, and for them, plugins are the correct answer.
+
+## What changes the calculation
+
+The stack stops being adequate at a fairly specific point: when pricing stops being a lookup and becomes a calculation.
+
+If a given customer's price depends on their tier and the quantity and a contract rate and whether this product is in a promotion, that's a rules problem, and rules belong in a system rather than in a person's head. Once you're there, adding another plugin usually makes it worse — it's one more place for the logic to live.
+
+The alternative isn't necessarily replacing WooCommerce. For a lot of merchants the storefront is working fine; it's the pricing and quoting layer underneath that has outgrown the plugin approach. Keeping the front end and moving that logic to a system built for it is a smaller, less disruptive project than a [replatform](/blog/when-to-replace-your-legacy-b2b-ecommerce-platform), and it leaves your theme, content and SEO alone.
+
+## Where Buyience fits
+
+Buyience's [WordPress plugin](/wordpress-plugin-buyience-novacore-b2b-quote-engine) connects a WooCommerce storefront to [Nova Core](/nova-core), so the quoting and pricing logic runs in a system designed for it while WooCommerce continues to serve the storefront.
+
+What that means in practice: customer tier, volume breaks and contract rates resolve automatically rather than being applied by hand, [margin floors](/pricing-and-margin-control) are enforced before a quote goes out rather than reviewed afterwards, and an accepted quote becomes an order without anyone retyping it.
+
+The storefront stays yours. The part that changes is what happens after someone asks for a price.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+## FAQ: WooCommerce B2B Quoting
+
+### Does WooCommerce have a built-in request-a-quote feature?
+
+No. WooCommerce has no native request-for-quote flow. Without a plugin, a buyer who needs a price has to use a contact form, which adds friction and gives you an unstructured request to work from.
+
+### What do WooCommerce quote request plugins actually do?
+
+They capture the request. A buyer adds items to a quote list or fills in a form, and the request appears in an admin dashboard where the merchant reviews it, sets a price manually, and emails it back. Some add expiry dates, follow-up emails, and conversion of an accepted quote into an order. The pricing step itself is manual in almost all of them.
+
+### Why is manual pricing a problem if the plugin organises the requests?
+
+Because the organising is the cheap part. The expensive part is working out the right price — checking the customer's tier, whether a volume break applies, whether cost has moved, and whether the margin is acceptable. That work doesn't shrink as volume grows, and it's where pricing inconsistency and margin erosion come from.
+
+### Can WooCommerce handle customer-specific pricing natively?
+
+No. WooCommerce's default model is one product, one price, with no built-in way to show different prices to different logged-in customers. Trade pricing requires a plugin or custom code.
+
+### When are B2B plugins enough for a WooCommerce store?
+
+When pricing is a lookup rather than a calculation — one trade price per product or a flat trade discount — quote requests are occasional, and the catalogue is small enough that whoever prices quotes knows the right number without checking. That covers many stores.
+
+### Do I have to leave WooCommerce to fix the quoting problem?
+
+Not necessarily. If the storefront is working, the issue is usually the pricing and quoting layer behind it. Moving that logic to a system built for it, while keeping WooCommerce as the front end, is a smaller project than replatforming and leaves your theme, content and SEO untouched.
+
+Running B2B on WooCommerce and pricing quotes by hand? [Request a demo](/request-a-demo) and we'll show you what the plugin changes.

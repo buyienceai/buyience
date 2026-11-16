@@ -24,47 +24,82 @@ export type BlogPost = {
  * Slugs match existing SEO routes in /blog/[slug].
  */
 export const blogPosts: BlogPost[] = [
-  // Unpublished — uncomment and set a real publishedAt to schedule.
-  // {
-  //   slug: "win-probability-scoring-in-b2b-quoting",
-  //   title: "Win-Probability Scoring in B2B Quoting: What the Number Actually Means",
-  //   description:
-  //     "Win-probability scores look precise and often aren't. What drives the number, why point estimates mislead on thin data, and how a rep should use one.",
-  //   excerpt:
-  //     "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Jordian F.",
-  //   authorInitials: "JF",
-  //   authorImage: "/blog/authors/jordian.jpg",
-  //   publishedAt: "2099-12-31",
-  //   readingTime: "10 min read",
-  //   coverImage:
-  //     "/blog/covers/win-probability-scoring-in-b2b-quoting-hero.png",
-  //   coverImageAlt:
-  //     "Win-probability score shown alongside suggested price and resulting margin on a B2B quote",
-  // },
-  // Unpublished — uncomment and set a real publishedAt to schedule.
-  // Cover image not yet created: add public/blog/covers/how-to-run-a-b2b-price-negotiation-hero.png first.
-  // {
-  //   slug: "how-to-run-a-b2b-price-negotiation",
-  //   title: "How to Run a B2B Price Negotiation: A Distributor's Playbook",
-  //   description:
-  //     "Your buyer negotiates for a living; your rep negotiates occasionally. A practical playbook — preparation, what to trade instead of price, concession discipline.",
-  //   excerpt:
-  //     "A procurement manager negotiates for a living; your rep negotiates between other duties. That asymmetry is where most distribution margin goes — and preparation, trading non-price variables and concession discipline are the counters.",
-  //   category: "b2b",
-  //   categoryLabel: "B2B",
-  //   authorName: "Jordian F.",
-  //   authorInitials: "JF",
-  //   authorImage: "/blog/authors/jordian.jpg",
-  //   publishedAt: "2099-12-31",
-  //   readingTime: "10 min read",
-  //   coverImage:
-  //     "/blog/covers/how-to-run-a-b2b-price-negotiation-hero.png",
-  //   coverImageAlt:
-  //     "B2B price negotiation between a distributor rep and a procurement buyer",
-  // },
+  {
+    slug: "woocommerce-b2b-quoting-why-request-a-quote-plugins-arent-quoting",
+    title: "WooCommerce B2B Quoting: Why Request-a-Quote Plugins Aren't Quoting",
+    description:
+      "WooCommerce quote plugins capture requests well — then leave pricing to a person. Why that gap gets more expensive as B2B volume grows, and when the plugin stack is still the right answer.",
+    excerpt:
+      "Request-a-quote plugins solve capture, not pricing. The merchant still sets each price by hand — manual quoting with a tidier inbox, and it gets more expensive as B2B volume grows, not less.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-11-12",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "WooCommerce storefront connected to automated B2B quoting instead of a manual request-a-quote inbox",
+  },
+  {
+    slug: "how-to-run-a-b2b-price-negotiation",
+    title: "How to Run a B2B Price Negotiation: A Distributor's Playbook",
+    description:
+      "Your buyer negotiates for a living; your rep negotiates occasionally. A practical playbook — preparation, what to trade instead of price, concession discipline.",
+    excerpt:
+      "A procurement manager negotiates for a living; your rep negotiates between other duties. That asymmetry is where most distribution margin goes — and preparation, trading non-price variables and concession discipline are the counters.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-11-09",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "B2B price negotiation between a distributor rep and a procurement buyer",
+  },
+  {
+    slug: "win-probability-scoring-in-b2b-quoting",
+    title: "Win-Probability Scoring in B2B Quoting: What the Number Actually Means",
+    description:
+      "Win-probability scores look precise and often aren't. What drives the number, why point estimates mislead on thin data, and how a rep should use one.",
+    excerpt:
+      "A quoting system that shows 73% next to a quote is making a strong claim. Most B2B businesses don't have enough comparable deals to support a two-digit percentage — which is an argument for clearer scoring, not against scoring at all.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Girish.K",
+    authorInitials: "GK",
+    authorImage: "/blog/authors/girish1.png",
+    publishedAt: "2026-11-05",
+    readingTime: "10 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "Win-probability score shown alongside suggested price and resulting margin on a B2B quote",
+  },
+  {
+    slug: "supplier-management-for-distributors-what-to-automate-first",
+    title: "Supplier Management for Distributors: What to Automate First",
+    description:
+      "Supplier management produces the cost data every pricing decision depends on. Automate supplier records, POs, receiving, cost-to-pricing, lead times, then reorder points — in that order.",
+    excerpt:
+      "Supplier management is usually automated last because no customer sees it. That's backwards: it produces the cost data every margin floor depends on. The sequence that works is supplier records → POs → receiving → cost into pricing → measured lead times → reorder points.",
+    category: "b2b",
+    categoryLabel: "B2B",
+    authorName: "Jordian F.",
+    authorInitials: "JF",
+    authorImage: "/blog/authors/jordian.jpg",
+    publishedAt: "2026-11-02",
+    readingTime: "12 min read",
+    coverImage:
+      "/blog/covers/ai-quote-engine-for-b2b-commerce.png",
+    coverImageAlt:
+      "Supplier records, purchase orders, and receiving flowing into pricing for distributors",
+  },
   {
     slug: "margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting",
     title: "Margin Guardrails: How Real-Time Margin Protection Works in B2B Quoting",

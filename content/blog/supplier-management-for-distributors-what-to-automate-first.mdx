@@ -1,0 +1,135 @@
+ Supplier management is usually automated last because no customer ever sees it. That's backwards — it produces the cost data every pricing decision depends on, so a margin floor built on costs captured by hand is only as good as the typing. The sequence that works runs supplier records → PO creation → receiving reconciliation → cost flowing to pricing → measured lead times → reorder points. Each step depends on the one before it, which is why order matters more than which tool you buy.
+
+Ask a distributor what they'd automate next and supplier management rarely comes up. Quoting is customer-facing and the pain is loud. Inventory affects what you can sell. Supplier management is back-office — the work happens whether or not anyone notices, and no buyer has ever complained about how a purchase order was raised.
+
+That reasoning is understandable and it's also why the cost side of so many distribution businesses runs on a spreadsheet and somebody's memory.
+
+Here's the part that reframes it: your supplier process is where your cost data comes from. Every margin calculation, every floor, every pricing decision traces back to a landed cost that someone captured at some point. If that capture is manual, delayed, or incomplete, everything downstream inherits the error — and inherits it silently, because a wrong cost produces a confident-looking margin rather than an obvious failure.
+
+Supplier management isn't back-office. It's upstream of every pricing decision you make.
+
+## Why the sequence matters more than the software
+
+The common mistake isn't choosing the wrong tool. It's automating in the order of visible pain rather than dependency.
+
+Reorder point automation is the clearest example. It's the most attractive thing on the list — the system tells you what to buy and when, which feels like the whole problem solved. But a reorder point is calculated from average usage and lead time. Automate it before you've measured actual lead times and you've automated a calculation built on quoted lead times, which suppliers publish optimistically. You'll now generate confident purchase recommendations that are systematically early or late, at scale, with less human scrutiny than the manual process had.
+
+Each step below produces the data the next one needs. Done in order, each is straightforward. Done out of order, you get automation that's precise and wrong.
+
+## 1. Supplier records and terms
+
+The unglamorous foundation. For every supplier: what they supply, at what price, with what minimum order quantity, what lead time they quote, what payment terms you have, and who the contact is.
+
+Most distributors have most of this somewhere — across an accounting system, an inbox, a spreadsheet and one person's knowledge. Consolidating it is the step people skip because it feels like admin rather than progress.
+
+It isn't optional, because every subsequent step reads from it. A PO can't be generated without knowing the supplier's MOQ. A reorder point can't be calculated without a lead time. A three-way match can't run without agreed pricing.
+
+**Done when:** one record per supplier, per product, with price, MOQ, lead time and terms, and a known owner for keeping it current.
+
+## 2. Purchase order creation
+
+Raising a PO by retyping details from a stock report or a sales order is both slow and a transcription risk — wrong quantity, wrong unit, wrong supplier code.
+
+The automation is generating the PO from the data that triggered it, whether that's a reorder point, a sales order requiring stock you don't hold, or a manual decision. The supplier's details, pricing and MOQ come from the record rather than from memory.
+
+Two things worth building in from the start: an approval threshold, so POs above a value need sign-off, and a clear record of who raised and who approved each one.
+
+**Done when:** POs generate from existing data with no retyping, and every PO has a traceable origin and approver.
+
+## 3. Receiving reconciliation
+
+The step that catches errors before they become cost problems: what was ordered, what actually arrived, and what the supplier invoiced. The three-way match.
+
+Discrepancies here are common and routinely absorbed — a short delivery that nobody logged, an invoice at a different unit price than the PO, a substitution accepted on the dock. Each one quietly corrupts the cost data and inventory count that everything downstream relies on.
+
+Linking POs to goods received, and receipts to stock levels, means a short delivery updates your available stock rather than leaving a phantom quantity in the system that someone later promises to a customer.
+
+**Done when:** receiving against a PO updates stock automatically, and price or quantity discrepancies are flagged rather than absorbed.
+
+## 4. Cost flowing through to pricing
+
+This is the step most distributors never connect, and it's where the compounding value is.
+
+When a PO lands at a new cost, does your pricing know? Does your [margin floor](/blog/margin-guardrails-how-real-time-margin-protection-works-in-b2b-quoting) recalculate? If the answer is that someone updates a cost field when they get round to it, then your floors are computed against costs of unknown age — and a floor on stale cost gives a green light to quotes that are losing money.
+
+Connecting receiving to cost, and cost to the margin floor, closes the loop between what you pay and what you charge. It also makes cost increases visible as they happen rather than at a quarterly review, which is the difference between repricing in response and discovering the problem afterwards.
+
+**Done when:** a received PO updates landed cost, and that cost feeds the floor that governs quoting.
+
+## 5. Lead times measured, not quoted
+
+Suppliers quote lead times. Those quotes are a starting position, and the real figure is whatever has actually happened over your last several orders.
+
+Once PO dates and receipt dates are both captured — which steps 2 and 3 give you — this is close to free: promised date versus actual date, per supplier, per product. A few months of that produces a real lead time distribution rather than a number from a price list.
+
+That distribution is more useful than an average, because the thing that causes stockouts isn't typical lead time, it's variability. A supplier averaging 14 days with a range of 12 to 16 is easier to plan around than one averaging 12 days with a range of 7 to 25.
+
+**Done when:** you can see actual versus promised lead time per supplier, with the spread, not just the mean.
+
+## 6. Reorder points
+
+Now this works, because the inputs are real.
+
+A reorder point is roughly average usage over the lead time, plus safety stock sized to the variability you measured in step 5. Both numbers now come from your own history rather than from assumption.
+
+Set these [per location](/blog/multi-warehouse-inventory-for-industrial-suppliers-a-practical-guide) rather than company-wide, since a warehouse serving a high-volume region needs a different threshold from one serving a quieter territory.
+
+**Done when:** reorder points are calculated from measured usage and measured lead time, reviewed on a schedule as both shift.
+
+## 7. Supplier performance
+
+With the previous steps in place, this is mostly reporting on data you now have: on-time delivery rate, fill rate against ordered quantity, price stability over time, and discrepancy frequency.
+
+The value isn't a scorecard for its own sake. It's that supplier negotiations change character when you can say "your last eleven deliveries averaged nine days late" rather than "you always seem to run late." It also tells you which single-source dependencies carry real risk.
+
+**Done when:** you can rank suppliers on reliability using your own records, and take that into a renewal conversation.
+
+## What not to automate early
+
+**Supplier discovery and sourcing.** Choosing who to buy from is judgement-heavy and relationship-dependent. Software helps you evaluate, not decide.
+
+**Negotiation.** Same reason the sales side resists it. Tools support the conversation; they don't hold it.
+
+**Exceptional purchases.** One-off or unusual buys often need a human precisely because they don't fit the pattern. Forcing them through an automated flow designed for routine replenishment creates workarounds.
+
+## The honest sequencing test
+
+Before automating any step, ask whether the data it depends on is reliable yet. Automating a calculation over unreliable inputs doesn't just fail — it fails confidently and at volume, with fewer people checking than before.
+
+If you only do two things from this list, do steps 1 and 3: consolidated supplier records, and receiving reconciliation that updates stock and flags discrepancies. Those two produce most of the data the rest depends on, and both pay back immediately without needing anything else in place first.
+
+## How Nova Core handles this
+
+[Supplier management](/supplier-management), purchase order creation and the PO-to-stock link are live in [Nova Core](/nova-core), alongside [multi-warehouse](/inventory-management) sync — so a received PO updates stock in the location it arrived at, and that stock is visible to quoting rather than sitting in a separate system.
+
+Because [pricing](/pricing-and-margin-control), margin floors and quoting run on the same platform, the loop in step 4 closes without an integration project: cost captured at receiving is the cost the floor is computed against.
+
+[Start your free trial →](https://app.buyience.com/register) — 14 days, no card required.
+
+## FAQ: Supplier Management Automation
+
+### What should a distributor automate first in supplier management?
+
+Consolidated supplier records — what each supplies, at what price, with what minimum order quantity, lead time and terms. Every later step reads from this, so automating anything downstream without it produces unreliable results.
+
+### Why shouldn't reorder points be automated early?
+
+Because a reorder point is calculated from average usage and lead time, and suppliers quote lead times optimistically. Automating the calculation before measuring actual lead times generates confident purchase recommendations that are systematically early or late, with less human scrutiny than the manual process had.
+
+### What is three-way matching in distribution?
+
+Comparing what was ordered on the purchase order, what physically arrived, and what the supplier invoiced. Discrepancies between the three are common and routinely absorbed, which quietly corrupts both cost data and inventory counts.
+
+### How does supplier management affect pricing?
+
+It produces the landed cost that margin calculations depend on. If cost is updated manually and late, margin floors are computed against costs of unknown age — and a floor on stale cost gives a green light to quotes that are actually losing money.
+
+### Should lead times come from suppliers or from your own records?
+
+Your own records. A quoted lead time is a starting position; the useful figure is the distribution of actual delivery times over recent orders, including the spread. Variability causes stockouts more often than a long average does.
+
+### What shouldn't be automated in supplier management?
+
+Supplier discovery and sourcing, negotiation, and one-off or unusual purchases. These are judgement-heavy and relationship-dependent, and forcing them through a flow designed for routine replenishment creates workarounds.
+
+Want to see how a received PO flows through to stock and cost? [Request a demo](/request-a-demo).
