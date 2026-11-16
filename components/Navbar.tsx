@@ -611,19 +611,10 @@ export default function Navbar() {
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Guides on B2B commerce</span>
                               </div>
                             </Link>
-                            <Link prefetch={false} href="/admin-documentation" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
-                              <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
-                                {icons.doc}
-                              </span>
-                              <div>
-                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Seller Dashboard Guidelines</span>
-                                <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">How-to manuals for admins &amp; sellers</span>
-                              </div>
-                            </Link>
                           </div>
                         </div>
 
-                        {/* Partners */}
+                        {/* Partners + Documentation (right column) */}
                         <div>
                           <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3">
                             Partners
@@ -645,6 +636,30 @@ export default function Navbar() {
                               <div>
                                 <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Technology Partners</span>
                                 <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Integrate with Nova Core</span>
+                              </div>
+                            </Link>
+                          </div>
+
+                          <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
+                            Documentation
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <Link prefetch={false} href="/admin-documentation" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                              <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
+                                {icons.doc}
+                              </span>
+                              <div>
+                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Seller Dashboard Guidelines</span>
+                                <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">How-to manuals for admins &amp; sellers</span>
+                              </div>
+                            </Link>
+                            <Link prefetch={false} href="/storefront-user-guide" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                              <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-emerald-50 text-emerald-600 group-hover/item:bg-emerald-100 transition-colors">
+                                {icons.layout}
+                              </span>
+                              <div>
+                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Storefront User Guide</span>
+                                <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Buyer how-to for the customer storefront</span>
                               </div>
                             </Link>
                           </div>
@@ -865,7 +880,9 @@ export default function Navbar() {
                         <Link prefetch={false} href="/become-a-solution-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Solution Partners</Link>
                         <Link prefetch={false} href="/become-a-technology-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Technology Partners</Link>
                         <Link prefetch={false} href="/blog" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Blog</Link>
+                        <p className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono pt-2">Documentation</p>
                         <Link prefetch={false} href="/admin-documentation" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Seller Dashboard Guidelines</Link>
+                        <Link prefetch={false} href="/storefront-user-guide" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Storefront User Guide</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
