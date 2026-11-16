@@ -13,9 +13,11 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@c15t/integrations": "^3.2.2",
     "@neondatabase/serverless": "^1.1.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "c15t": "^3.2.2",
     "cobe": "^0.6.5",
     "drizzle-orm": "^0.45.2",
     "framer-motion": "^12.42.2",

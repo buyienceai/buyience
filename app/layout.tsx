@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Manrope, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import {
+  ConsentBanner,
+  ConsentDialog,
+  ConsentRoot,
+  ConsentTheme,
+} from "c15t/next";
+import { resolveConsent } from "c15t/next/server";
 import { CurrencyProvider } from "@/components/CurrencyProvider";
 import DeferredAnalytics from "@/components/DeferredAnalytics";
-import DeferredGTM from "@/components/DeferredGTM";
+import { buyienceConsentTheme } from "@/lib/c15t-theme";
 import { getSiteUrl, isSeoIndexingEnabled, seoRobots } from "@/lib/seo";
 import "./globals.css";
-
-const GTM_ID = "GTM-KMWGZ8VH";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -80,19 +85,15 @@ export default function RootLayout({
       className={`${manrope.variable} ${bricolage.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
-        <CurrencyProvider>{children}</CurrencyProvider>
-        <DeferredGTM />
-        <DeferredAnalytics />
+        <ConsentTheme theme={buyienceConsentTheme} />
+        {/* Not awaited: page streams while consent resolves; optional tags stay denied until then. */}
+        <ConsentRoot state={resolveConsent()}>
+          <CurrencyProvider>{children}</CurrencyProvider>
+          <ConsentBanner />
+          <ConsentDialog />
+          {/* Vercel first-party analytics — not ad/marketing pixels; keep deferred for CWV. */}
+          <DeferredAnalytics />
+        </ConsentRoot>
       </body>
     </html>
   );

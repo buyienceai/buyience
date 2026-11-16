@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 import { fileURLToPath } from "url";
+import { withConsentManifest } from "c15t/next/build";
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
@@ -33,4 +34,8 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Bundles Inth policy at build when NEXT_PUBLIC_C15T_BACKEND_URL is set.
+// With local() (no backend URL), the fetch is skipped and the app still builds.
+export default withConsentManifest(nextConfig, {
+  onBuildError: "runtime",
+});

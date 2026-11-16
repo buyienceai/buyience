@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ConsentDialogLink } from "c15t/next";
 import Container from "./Container";
 
 export default function Footer() {
@@ -136,6 +137,12 @@ export default function Footer() {
             <Link prefetch={false} href="/refund-policy" className="transition-colors hover:text-[#6E2CF4]">
               Refund Policy
             </Link>
+            <span className="text-[#c5c9d4]" aria-hidden="true">
+              |
+            </span>
+            <ConsentDialogLink className="transition-colors hover:text-[#6E2CF4]">
+              Cookie settings
+            </ConsentDialogLink>
             <span className="text-[#c5c9d4]" aria-hidden="true">
               |
             </span>
