@@ -89,7 +89,7 @@ export default function RootLayout({
         {/* Not awaited: page streams while consent resolves; optional tags stay denied until then. */}
         <ConsentRoot state={resolveConsent()}>
           <CurrencyProvider>{children}</CurrencyProvider>
-          <ConsentBanner />
+          <ConsentBanner hideBranding />
           <ConsentDialog />
           {/* Vercel first-party analytics — not ad/marketing pixels; keep deferred for CWV. */}
           <DeferredAnalytics />
