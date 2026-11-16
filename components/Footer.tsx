@@ -42,6 +42,7 @@ export default function Footer() {
       title: "Resources",
       links: [
         { label: "Blog", href: "/blog" },
+        { label: "Seller Dashboard Guidelines", href: "/admin-documentation" },
         { label: "Solution Partners", href: "/become-a-solution-partner" },
         { label: "Technology Partners", href: "/become-a-technology-partner" },
         { label: "Integrations", href: "/integrations" },

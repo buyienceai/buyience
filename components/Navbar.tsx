@@ -601,15 +601,26 @@ export default function Navbar() {
                           <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase font-mono border-b border-slate-50 pb-2 mb-3 mt-6">
                             Learn
                           </div>
-                          <Link prefetch={false} href="/blog" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
-                            <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
-                              {icons.book}
-                            </span>
-                            <div>
-                              <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Blog</span>
-                              <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Guides on B2B commerce</span>
-                            </div>
-                          </Link>
+                          <div className="flex flex-col gap-2">
+                            <Link prefetch={false} href="/blog" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                              <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 transition-colors">
+                                {icons.book}
+                              </span>
+                              <div>
+                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Blog</span>
+                                <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">Guides on B2B commerce</span>
+                              </div>
+                            </Link>
+                            <Link prefetch={false} href="/admin-documentation" className="flex gap-3 items-start p-2.5 rounded-2xl hover:bg-slate-50 transition-colors group/item">
+                              <span className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-violet-50 text-violet-600 group-hover/item:bg-violet-100 transition-colors">
+                                {icons.doc}
+                              </span>
+                              <div>
+                                <span className="block text-sm font-medium text-slate-900 group-hover/item:text-violet-600 transition-colors">Seller Dashboard Guidelines</span>
+                                <span className="block text-[12px] text-slate-600 font-semibold mt-0.5 leading-relaxed">How-to manuals for admins &amp; sellers</span>
+                              </div>
+                            </Link>
+                          </div>
                         </div>
 
                         {/* Partners */}
@@ -854,6 +865,7 @@ export default function Navbar() {
                         <Link prefetch={false} href="/become-a-solution-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Solution Partners</Link>
                         <Link prefetch={false} href="/become-a-technology-partner" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Technology Partners</Link>
                         <Link prefetch={false} href="/blog" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Blog</Link>
+                        <Link prefetch={false} href="/admin-documentation" className="text-sm font-semibold text-slate-700 hover:text-violet-600 block py-1" onClick={() => setIsDrawerOpen(false)}>Seller Dashboard Guidelines</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
